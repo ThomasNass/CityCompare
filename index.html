@@ -10,9 +10,41 @@
 </head>
 
 <body>
-    <header id="header"></header>
-    <main id="main"></main>
-    <footer id="footer"></footer>
+    <header id="header">
+        <nav class="navbar is-black" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">
+                    <h1 class="title is-1 CC">CityCompare</h1>
+                </a>
+
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                    data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="app.html">
+                        Applikation
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main id="main" class="container">
+        <img src="../images/Sweden.png" width="33%">
+
+    </main>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong>CityCompare</strong> by <a href="https://github.com/ThomasNass">Thomas Näss</a>.
+            </p>
+        </div>
+    </footer>
     <script type="module" src="main.js"></script>
 </body>
 

@@ -1,7 +1,38 @@
-button {
-    transition: all ease 1s;
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+
+.CC {
+    color: rgb(146, 245, 110);
 }
 
-button:hover {
-    transform: scale(1.5);
+html {
+    background-color: rgb(146, 245, 110);
+    height: 100%;
+}
+
+.green {
+    background-color: rgb(146, 245, 110);
+}
+
+body {
+    height: 100%;
+}
+
+.footer {
+    background-color: rgb(0, 0, 0);
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    height: 100%;
+    padding: 10px 200px;
+}
+
+.navbar-start .navbar-item {
+    user-select: none;
+    transition: .5s;
+}
+
+.navbar-start .navbar-item:hover {
+    font-size: 120%;
 }
