@@ -9,9 +9,12 @@ export class Page {
         while (main.firstChild) {
             main.firstChild.remove();
         }
+        const contentDiv = document.createElement("div");
+        contentDiv.classList.add("content");
         for (const element of this.content) {
-            main.append(element);
+            contentDiv.append(element)
         }
+        main.append(contentDiv);
         console.log(this.name, this.content);
 
 
@@ -41,9 +44,9 @@ export class Page {
             const allElements = document.querySelectorAll(".activatable");
 
             for (let element of allElements) {
-                element.classList.remove("green");
+                element.classList.remove("yellow");
             }
-            el.classList.add("green");
+            el.classList.add("yellow");
         })
 
         renderTo.append(el);

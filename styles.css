@@ -1,38 +1,91 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
 
+:root {
+    --blue: rgba(1, 68, 156, 0.652);
+    --yellow: rgb(255, 238, 0);
+}
+
 .CC {
-    color: rgb(146, 245, 110);
+    color: var(--yellow);
+}
+
+.navbar {
+    background-color: var(--blue);
 }
 
 html {
-    background-color: rgb(146, 245, 110);
+    overflow: hidden;
+    background-image: url(images/sundsvall.jpg);
     height: 100%;
 }
 
-.green {
-    background-color: rgb(146, 245, 110);
-}
 
 body {
     height: 100%;
 }
 
-.footer {
-    background-color: rgb(0, 0, 0);
+
+
+footer {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background-color: var(--blue);
 }
+
+footer p,
+strong,
+a {
+    color: var(--yellow);
+}
+
+
 
 .container {
     text-align: center;
-    background-color: white;
-    height: 100%;
+    background-color: rgba(255, 255, 255, 0.718);
+    height: 87%;
     padding: 10px 200px;
+    overflow: scroll;
+    color: black;
+}
+
+.column {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 }
 
 .navbar-start .navbar-item {
     user-select: none;
+    color: var(--yellow);
     transition: .5s;
 }
 
 .navbar-start .navbar-item:hover {
     font-size: 120%;
+    background-color: var(--yellow);
+}
+
+.navbar-start .yellow {
+    background-color: var(--yellow);
+    color: var(--blue);
+}
+
+.navbar-burger {
+    color: var(--yellow);
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        padding: 0;
+
+    }
+
+
 }
