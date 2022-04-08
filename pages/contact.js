@@ -1,13 +1,14 @@
 //kontaktuppgifter
-import { Page } from "../Page.js";
+import { Contact } from "../classes/Contact.js";
 
-export const contact = new Page("Kontakt");
+export const contact = new Contact("Kontakt");
 
-contact.elementCreator("p", "kontakt", "Namn: Thomas Näss");
-contact.elementCreator("p", "kontakt", "Telefonnummer: 0763360168");
-contact.elementCreator("p", "kontakt", "Mail: tn900323@gmail.com");
-contact.elementCreator("p", "kontakt", "CV: https://thomasnass.github.io/");
-contact.elementCreator("p", "kontakt", "GitHub: https://github.com/ThomasNass?tab=repositories");
+contact.elementCreator("h1", "kontakt", "Thomas Näss");
+contact.linkCreator("CV", "ThomasNass.github.io", "https://thomasnass.github.io/");
+contact.linkCreator("GitHub", "github.com/ThomasNass", " https://github.com/ThomasNass?tab=repositories");
+contact.linkCreator("Mail", "tn900323@gmail.com", "mailto: tn900323@gmail.com");
+
+contact.linkCreator("Telefonnummer", "0763360168", "tel:0763360168")
 
 
 

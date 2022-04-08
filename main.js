@@ -1,4 +1,3 @@
-//Här är filen som hämtar och skapar sidorna baserat på vilken knapp som trycks på i headern
 import { productIdea } from "./pages/product-idea.js";
 import { contact } from "./pages/contact.js";
 import { buisnessPlan } from "./pages/buisness-plan.js"
@@ -10,6 +9,8 @@ buisnessPlan.renderTitle(navbarStart);
 contact.renderTitle(navbarStart);
 
 
+
+//This is code from bulma, for the hamburger to work
 document.addEventListener('DOMContentLoaded', () => {
 
     // Get all "navbar-burger" elements

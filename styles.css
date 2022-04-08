@@ -10,28 +10,53 @@
 }
 
 .navbar {
+    height: 100%;
+    position: relative;
     background-color: var(--blue);
 }
 
+.navbar-brand {
+    height: 100%;
+}
+
+header {
+    height: 8%;
+}
+
 html {
-    overflow: hidden;
     background-image: url(images/sundsvall.jpg);
     height: 100%;
 }
 
+.navbar-menu {
+    background-color: var(--blue);
+}
 
 body {
+    overflow: none;
     height: 100%;
 }
 
+.container {
+    position: relative;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.732);
+    height: 87%;
+    overflow: auto;
+    padding: 10px 200px;
+    color: black;
+}
 
+.container p {
+    font-size: 1.3rem;
+}
 
 footer {
     text-align: center;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
-    height: 30px;
+    height: 5%;
     background-color: var(--blue);
 }
 
@@ -43,13 +68,22 @@ a {
 
 
 
-.container {
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.718);
-    height: 87%;
-    padding: 10px 200px;
-    overflow: scroll;
-    color: black;
+
+.container::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+.container::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+.container::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #F5F5F5;
 }
 
 .column {
@@ -81,9 +115,13 @@ a {
     color: var(--yellow);
 }
 
+a.navbar-burger {
+    color: var(--yellow);
+}
+
 @media screen and (max-width: 800px) {
     .container {
-        padding: 0;
+        padding: 5px;
 
     }
 

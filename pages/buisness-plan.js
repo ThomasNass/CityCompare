@@ -1,5 +1,4 @@
-//denna vyn ska beskriva affärsidéen const bp = new Page("namnet","innehållet");
-import { Page } from "../Page.js";
+import { Page } from "../classes/Page.js";
 
 
 
