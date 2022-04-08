@@ -1,0 +1,129 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+
+:root {
+    --blue: rgba(1, 68, 156, 0.652);
+    --yellow: rgb(255, 238, 0);
+}
+
+.CC {
+    color: var(--yellow);
+}
+
+.navbar {
+    height: 100%;
+    position: relative;
+    background-color: var(--blue);
+}
+
+.navbar-brand {
+    height: 100%;
+}
+
+header {
+    height: 8%;
+}
+
+html {
+    background-image: url(images/sundsvall.jpg);
+    height: 100%;
+}
+
+.navbar-menu {
+    background-color: var(--blue);
+}
+
+body {
+    overflow: none;
+    height: 100%;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.732);
+    height: 87%;
+    overflow: auto;
+    padding: 10px 200px;
+    color: black;
+}
+
+.container p {
+    font-size: 1.3rem;
+}
+
+footer {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 5%;
+    background-color: var(--blue);
+}
+
+footer p,
+strong,
+a {
+    color: var(--yellow);
+}
+
+
+
+
+.container::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+.container::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+.container::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #F5F5F5;
+}
+
+.column {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.navbar-start .navbar-item {
+    user-select: none;
+    color: var(--yellow);
+    transition: .5s;
+}
+
+.navbar-start .navbar-item:hover {
+    font-size: 120%;
+    background-color: var(--yellow);
+}
+
+.navbar-start .yellow {
+    background-color: var(--yellow);
+    color: var(--blue);
+}
+
+.navbar-burger {
+    color: var(--yellow);
+}
+
+a.navbar-burger {
+    color: var(--yellow);
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        padding: 5px;
+
+    }
+
+
+}
