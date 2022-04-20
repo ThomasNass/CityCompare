@@ -1,0 +1,48 @@
+[
+    {
+        "City": [
+            {
+                "name": "Mockholm"
+            },
+            {
+                "buisness": [
+                    {
+                        "name": "Jula"
+                    },
+                    {
+                        "name": "McDonalds"
+                    },
+                    {
+                        "name": "Biltema"
+                    },
+                    {
+                        "name": "Cervera"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "City": [
+            {
+                "name": "Mockköping"
+            },
+            {
+                "buisness": [
+                    {
+                        "name": "Jula"
+                    },
+                    {
+                        "name": "McDonalds"
+                    },
+                    {
+                        "name": "Biltema"
+                    },
+                    {
+                        "name": "Ikea"
+                    }
+                ]
+            }
+        ]
+    }
+]

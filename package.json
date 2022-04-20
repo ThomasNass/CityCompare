@@ -1,5 +1,29 @@
 {
   "dependencies": {
-    "bulma": "^0.9.3"
+    "bulma": "^0.9.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "name": "citycompare",
+  "description": "Kravlista för källkodsprojektet\r Nummer\tMax.Poäng\tKriterium\tBeskrivning\r 1\t1\t\tDin inlämning på Canvas ska bestå av en PDF fil (rapport), rapporten ska innehålla namnet på uppgiften + ditt namn.\r 2\t1\t\t\r Bifoga i din rapport en länk där källkoden är tillgänglig, det ska gå att se och granska koden enligt övriga krav.",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "parcel app.html --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThomasNass/CityCompare.git"
+  },
+  "keywords": [],
+  "author": "Thomas Näss <tn900323@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThomasNass/CityCompare/issues"
+  },
+  "homepage": "https://github.com/ThomasNass/CityCompare#readme",
+  "devDependencies": {
+    "parcel": "^2.4.1"
   }
 }
