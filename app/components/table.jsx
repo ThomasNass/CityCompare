@@ -1,34 +1,31 @@
-export class Table extends React.Component {
+import React from "react";
 
+export class Table extends React.Component {
 
     render() {
 
-
-        const noDuplicats = AllBuisnesses(this.props.city1, this.props.city2);
+        const CitiesCompared = AllBuisnesses(this.props.buisnesses1, this.props.buisnesses2);
 
         return (
 
-            <div className="page" >
+            <div className="Table" >
                 <table>
                     <thead>
                         <tr>
                             <td>Företag</td>
-                            <td>Stad 1</td>
-                            <td>Stad 2</td>
+                            <td>{this.props.cityName1}</td>
+                            <td>{this.props.cityName2}</td>
                         </tr>
                     </thead>
                     <tbody>
 
-                        {noDuplicats.map((comparison) => (
+                        {CitiesCompared.map((comparison) => (
                             <tr>
                                 <td>{comparison.buisness}</td>
-                                <td>{comparison.city1}</td>
-                                <td>{comparison.city2}</td>
+                                {(comparison.buisnesses1 == "ja") ? <td className="green">{comparison.buisnesses1}</td> : <td className="red">{comparison.buisnesses1}</td>}
+                                {(comparison.buisnesses2 == "ja") ? <td className="green">{comparison.buisnesses2}</td> : <td className="red">{comparison.buisnesses2}</td>}
                             </tr>
                         ))}
-
-
-
                     </tbody>
                 </table>
             </div>
@@ -38,13 +35,13 @@ export class Table extends React.Component {
 
 }
 
-const AllBuisnesses = (city1, city2) => {
+const AllBuisnesses = (buisnesses1, buisnesses2) => {
     let combinedArrays = [];
     let CitiesCompared = [];
-    city1.forEach(buisness => {
+    buisnesses1.forEach(buisness => {
         combinedArrays.push(buisness.name)
     });
-    city2.forEach(buisness => {
+    buisnesses2.forEach(buisness => {
         combinedArrays.push(buisness.name)
     });
 
@@ -55,16 +52,16 @@ const AllBuisnesses = (city1, city2) => {
     for (let i = 0; i < uniqueList.length; i++) {
         let comparison = {};
         comparison.buisness = uniqueList[i];
-        comparison.city1 = "no";
-        comparison.city2 = "no";
-        city1.forEach(rest => {
+        comparison.buisnesses1 = "nej";
+        comparison.buisnesses2 = "nej";
+        buisnesses1.forEach(rest => {
             if (rest.name == uniqueList[i]) {
-                comparison.city1 = "yes";
+                comparison.buisnesses1 = "ja";
             }
         });
-        city2.forEach(rest => {
+        buisnesses2.forEach(rest => {
             if (rest.name == uniqueList[i]) {
-                comparison.city2 = "yes";
+                comparison.buisnesses2 = "ja";
             }
         });
         CitiesCompared.push(comparison);
