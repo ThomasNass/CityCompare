@@ -1,12 +1,14 @@
+import React from "react";
 import CompareButton from "./compare-button.jsx";
 import SearchField from "./search-field.jsx";
+import LogOutButton from "./logout-button.jsx";
 
 export default class SearchForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            city1: "",
-            city2: ""
+            search1: "",
+            search2: ""
         }
     }
 
@@ -14,20 +16,11 @@ export default class SearchForm extends React.Component {
         const town1 = this.props.town1;
         const town2 = this.props.town2;
 
-        return (<form>
-            <label>
-                Stad 1
-                <input
-                    name="city1"
-                    placeholder={town1[0].name} />
-            </label>
-            <label>
-                Stad 2
-                <input
-                    name="city2"
-                    placeholder={town2[0].name} />
-            </label>
-            <input type="submit" value="Jämför" />
-        </form>)
+        return (<>
+            <LogOutButton onClick={() => { this.props.saveLocalStorage(false); this.props.onClick("", ""); }} />
+            <SearchField city={town1[0].name} onChange={(search1) => this.setState({ search1 })} />
+            <SearchField city={town2[0].name} onChange={(search2) => this.setState({ search2 })} />
+            <CompareButton onClick={() => this.props.onClick(this.state.search1, this.state.search2)} />
+        </>)
     }
 }
