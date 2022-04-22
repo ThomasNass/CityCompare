@@ -1,3 +1,14 @@
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+
 #site-name {
     color: white;
     font-size: 12rem;
@@ -62,6 +73,10 @@ main {
     right: 10px;
 }
 
+#logout:hover {
+    animation: spin 4s infinite linear;
+}
+
 button {
     color: var(--color);
     font-size: 1.2rem;
@@ -74,6 +89,7 @@ button {
 
 button:hover {
     background-color: rgba(255, 255, 255, 0.101);
+
 }
 
 input {
