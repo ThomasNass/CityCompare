@@ -42,7 +42,6 @@ export default class Page extends React.Component {
         const town2 = this.state.cities[1].City;
         const buisnesses1 = town1.buisness;
         const buisnesses2 = town2.buisness;
-        console.log(this.state.loggedIn);
         return <>
             {(this.state.loggedIn.bool == true || this.state.loggedIn == true)
                 ? <>
