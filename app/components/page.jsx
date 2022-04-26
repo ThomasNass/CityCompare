@@ -38,18 +38,14 @@ export default class Page extends React.Component {
 
 
     render() {
-        const town1 = this.state.cities[0].City;
-        const town2 = this.state.cities[1].City;
-        const buisnesses1 = town1.buisness;
-        const buisnesses2 = town2.buisness;
         return <>
             {(this.state.loggedIn.bool == true || this.state.loggedIn == true)
                 ? <>
-                    <SearchForm town1={town1} town2={town2} onClick={this.onClick} saveLocalStorage={this.saveLocalStorage} />
+                    <SearchForm onClick={this.onClick} saveLocalStorage={this.saveLocalStorage} />
 
                     {(this.state.search1 == "Mockholm" && this.state.search2 == "Mockköping")
                         ?
-                        <Table buisnesses1={buisnesses1} buisnesses2={buisnesses2} cityName1={this.state.search1} cityName2={this.state.search2} />
+                        <Table buisnesses1={this.state.cities[0].buisness} buisnesses2={this.state.cities[1].buisness} cityName1={this.state.cities[0].name} cityName2={this.state.cities[1].name} />
                         :
                         null
                     }
