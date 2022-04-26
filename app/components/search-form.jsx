@@ -13,13 +13,11 @@ export default class SearchForm extends React.Component {
     }
 
     render() {
-        const town1 = this.props.town1;
-        const town2 = this.props.town2;
 
         return (<>
             <LogOutButton onClick={() => { this.props.saveLocalStorage(false); this.props.onClick("", ""); }} />
-            <SearchField city={town1[0].name} onChange={(search1) => this.setState({ search1 })} />
-            <SearchField city={town2[0].name} onChange={(search2) => this.setState({ search2 })} />
+            <SearchField placeholder={"Mockholm"} onChange={(search1) => this.setState({ search1 })} />
+            <SearchField placeholder={"Mockköping"} onChange={(search2) => this.setState({ search2 })} />
             <CompareButton onClick={() => this.props.onClick(this.state.search1, this.state.search2)} />
         </>)
     }
