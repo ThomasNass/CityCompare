@@ -2,6 +2,7 @@ import React from "react";
 import cities from '../mock-cities.json'
 import { Table } from './table.jsx';
 import SearchForm from './search-form.jsx';
+import LoginForm from "./login-form.jsx";
 
 export default class Page extends React.Component {
     constructor(props) {
@@ -10,8 +11,6 @@ export default class Page extends React.Component {
             cities: cities,
             search1: "",
             search2: "",
-            username: "",
-            password: "",
             loggedIn: JSON.parse(localStorage.getItem("loggedIn")) || false
         }
     }
@@ -19,13 +18,6 @@ export default class Page extends React.Component {
     onClick = (search1, search2) => {
         this.setState({ search1: search1 })
         this.setState({ search2: search2 })
-    }
-
-    onChangeName = (e) => {
-        this.setState({ username: e.target.value })
-    }
-    onChangePassword = (e) => {
-        this.setState({ password: e.target.value })
     }
 
 
@@ -51,15 +43,7 @@ export default class Page extends React.Component {
                     }
                 </>
                 : <>
-                    <input type="text" placeholder="användarnamn" onChange={this.onChangeName} value={this.state.username}></input>
-                    <input type="password" placeholder="lösenord" onChange={this.onChangePassword} value={this.state.password} ></input>
-                    <>{(this.state.username == "Användare" && this.state.password == "Lösenord")
-                        ?
-                        <button onClick={() => this.saveLocalStorage(true)}> Logga in</button>
-                        :
-                        <button onClick={() => this.saveLocalStorage(false)} > Logga in</button>
-                    }
-                    </>
+                    <LoginForm onClick={this.saveLocalStorage} />
                 </>
             }
         </>
