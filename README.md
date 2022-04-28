@@ -13,7 +13,8 @@ run "npm ci"
 
 ## start
 
-run "npm start" (detta startar appen)
+"npm start" och öppna en terminal till där du kör "run npm start-server" (detta startar appen och servern)
+
 "npx parcel index.html --open" (För att öppna sidan om appen)
 
 ## Build
