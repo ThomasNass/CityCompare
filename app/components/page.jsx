@@ -3,6 +3,7 @@ import cities from '../mock-cities.json'
 import { Table } from './table.jsx';
 import SearchForm from './search-form.jsx';
 import LoginForm from "./login-form.jsx";
+import getData from "../services/services.js"
 
 export default class Page extends React.Component {
     constructor(props) {
@@ -28,6 +29,10 @@ export default class Page extends React.Component {
 
     }
 
+
+    componentDidMount() {
+        getData();
+    }
 
     render() {
         return <>
