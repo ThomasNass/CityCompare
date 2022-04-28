@@ -107,7 +107,8 @@ input {
     width: 97%;
 }
 
-#compare-button {
+#compare-button,
+#login-button {
     width: 100%;
 }
 
