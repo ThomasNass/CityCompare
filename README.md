@@ -13,7 +13,9 @@ run "npm ci"
 
 ## start
 
-"npm start" och öppna en terminal till där du kör "run npm start-server" (detta startar appen och servern)
+"run npm start-server" för att starta servern som mockdatan finns på
+
+öppna en till terminal och kör "npm start" för att starta appen
 
 "npx parcel index.html --open" (För att öppna sidan om appen)
 
