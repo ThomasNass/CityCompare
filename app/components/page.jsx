@@ -3,7 +3,7 @@ import cities from '../mock-cities.json'
 import { Table } from './table.jsx';
 import SearchForm from './search-form.jsx';
 import LoginForm from "./login-form.jsx";
-import getData from "../services/services.js"
+
 
 export default class Page extends React.Component {
     constructor(props) {
@@ -30,22 +30,12 @@ export default class Page extends React.Component {
     }
 
 
-    componentDidMount() {
-        getData();
-    }
 
     render() {
         return <>
             {(this.state.loggedIn.bool == true || this.state.loggedIn == true)
                 ? <>
                     <SearchForm onClick={this.onClick} saveLocalStorage={this.saveLocalStorage} />
-
-                    {(this.state.search1 == "Mockholm" && this.state.search2 == "Mockköping")
-                        ?
-                        <Table buisnesses1={this.state.cities[0].buisness} buisnesses2={this.state.cities[1].buisness} cityName1={this.state.cities[0].name} cityName2={this.state.cities[1].name} />
-                        :
-                        null
-                    }
                 </>
                 : <>
                     <LoginForm onClick={this.saveLocalStorage} />
