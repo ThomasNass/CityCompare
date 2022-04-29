@@ -1,6 +1,5 @@
 import React from "react";
 import cities from '../mock-cities.json'
-import { Table } from './table.jsx';
 import SearchForm from './search-form.jsx';
 import LoginForm from "./login-form.jsx";
 

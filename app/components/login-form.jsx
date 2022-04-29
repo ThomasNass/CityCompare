@@ -11,16 +11,40 @@ export default class LoginForm extends React.Component {
         }
     }
 
+    handleChange = (event) => {
+        const target = event.target;
+        const value = target.value;
+        const name = target.name;
+        this.setState({ [name]: value })
+    }
+
     render() {
 
         return (<>
-            <InputField placeholder={"Användarnamn"} type={"text"} onChange={(username) => this.setState({ username })} />
-            <InputField placeholder={"Lösenord"} type={"password"} onChange={(password) => this.setState({ password })} />
+            <InputField
+                placeholder={"Användarnamn"}
+                type={"text"}
+                name={"username"}
+                value={this.state.username}
+                onChange={this.handleChange} />
+            <InputField
+                placeholder={"Lösenord"}
+                type={"password"}
+                name={"password"}
+                value={this.state.value}
+                onChange={this.handleChange} />
+
             <>{(this.state.username == "Användare" && this.state.password == "Lösenord")
                 ?
-                <Button id={"login-button"} text={"Logga in"} onClick={() => this.props.onClick(true)} />
+                <Button
+                    id={"login-button"}
+                    text={"Logga in"}
+                    onClick={() => this.props.onClick(true)} />
                 :
-                <Button id={"login-button"} text={"Logga in"} onClick={() => this.props.onClick(false)} />
+                <Button
+                    id={"login-button"}
+                    text={"Logga in"}
+                    onClick={() => this.props.onClick(false)} />
 
             }
             </>
