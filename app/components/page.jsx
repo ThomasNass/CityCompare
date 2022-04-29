@@ -10,15 +10,8 @@ export default class Page extends React.Component {
         super(props);
         this.state = {
             cities: cities,
-            search1: "",
-            search2: "",
             loggedIn: JSON.parse(localStorage.getItem("loggedIn")) || false
         }
-    }
-
-    onClick = (search1, search2) => {
-        this.setState({ search1: search1 })
-        this.setState({ search2: search2 })
     }
 
 
