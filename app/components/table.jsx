@@ -54,13 +54,13 @@ const AllBuisnesses = (buisnesses1, buisnesses2) => {
         comparison.buisness = uniqueList[i];
         comparison.buisnesses1 = "nej";
         comparison.buisnesses2 = "nej";
-        buisnesses1.forEach(rest => {
-            if (rest.name == uniqueList[i]) {
+        buisnesses1.forEach(buisness => {
+            if (buisness.name == uniqueList[i]) {
                 comparison.buisnesses1 = "ja";
             }
         });
-        buisnesses2.forEach(rest => {
-            if (rest.name == uniqueList[i]) {
+        buisnesses2.forEach(buisness => {
+            if (buisness.name == uniqueList[i]) {
                 comparison.buisnesses2 = "ja";
             }
         });
