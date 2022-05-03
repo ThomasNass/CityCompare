@@ -3,7 +3,7 @@ import InputField from "./input-field.jsx";
 import Button from "./button.jsx";
 import { getCityData, getPopulation } from "../services/services.js";
 import { FilterableTable } from "./filterable-table.jsx";
-import Population from "./population.jsx";
+import PopulationChart from "./population-chart.jsx";
 
 export default class SearchForm extends react.Component {
     constructor(props) {
@@ -61,9 +61,9 @@ export default class SearchForm extends react.Component {
             {(this.state.city1.length > 0 && this.state.city2.length > 0)
                 ?
                 <>
-                    <Population
-                        city1Population={this.state.city1[0].population}
-                        city2Population={this.state.city2[0].population}
+                    <PopulationChart
+                        population1={this.state.city1[0].population}
+                        Population2={this.state.city2[0].population}
                         cityName1={this.state.city1[0].name}
                         cityName2={this.state.city2[0].name} />
                     <FilterableTable
