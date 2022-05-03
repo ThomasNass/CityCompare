@@ -1,10 +1,11 @@
-import React from "react";
+import react from "react";
 import InputField from "./input-field.jsx";
 import Button from "./button.jsx";
-import { axiosTest } from "../services/services.js";
+import { getCityData, getPopulation } from "../services/services.js";
 import { FilterableTable } from "./filterable-table.jsx";
+import Population from "./population.jsx";
 
-export default class SearchForm extends React.Component {
+export default class SearchForm extends react.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -16,8 +17,13 @@ export default class SearchForm extends React.Component {
     }
 
     getCities = async (search1, search2) => {
-        const city1 = await axiosTest(search1);
-        const city2 = await axiosTest(search2);
+        const city1 = await getCityData(search1);
+        const city2 = await getCityData(search2);
+        const pop1 = await getPopulation(search1);
+        const pop2 = await getPopulation(search2);
+
+        city1[0].population = Object.values(pop1.results[0]).at(1);
+        city2[0].population = Object.values(pop2.results[0]).at(1);
 
         this.setState({ city1: city1 });
         this.setState({ city2: city2 });
@@ -40,12 +46,12 @@ export default class SearchForm extends React.Component {
             <InputField
                 name={"search1"}
                 value={this.state.search1}
-                placeholder={"Mockholm"}
+                placeholder={"Falköping"}
                 onChange={this.handleChange} />
             <InputField
                 name={"search2"}
                 value={this.state.search2}
-                placeholder={"Mockköping"}
+                placeholder={"Vetlanda"}
                 onChange={this.handleChange} />
             <Button
                 id={"compare-button"}
@@ -54,7 +60,19 @@ export default class SearchForm extends React.Component {
 
             {(this.state.city1.length > 0 && this.state.city2.length > 0)
                 ?
-                <FilterableTable buisnesses1={this.state.city1[0].buisness} cityName1={this.state.city1[0].name} buisnesses2={this.state.city2[0].buisness} cityName2={this.state.city2[0].name} />
+                <>
+                    <Population
+                        city1Population={this.state.city1[0].population}
+                        city2Population={this.state.city2[0].population}
+                        cityName1={this.state.city1[0].name}
+                        cityName2={this.state.city2[0].name} />
+                    <FilterableTable
+                        buisnesses1={this.state.city1[0].buisness}
+                        buisnesses2={this.state.city2[0].buisness}
+                        cityName1={this.state.city1[0].name}
+                        cityName2={this.state.city2[0].name}
+                    />
+                </>
                 :
                 null
             }

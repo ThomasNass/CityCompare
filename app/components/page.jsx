@@ -1,10 +1,10 @@
-import React from "react";
+import react from "react";
 import cities from '../mock-cities.json'
 import SearchForm from './search-form.jsx';
 import LoginForm from "./login-form.jsx";
 
 
-export default class Page extends React.Component {
+export default class Page extends react.Component {
     constructor(props) {
         super(props);
         this.state = {

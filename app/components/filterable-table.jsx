@@ -1,8 +1,8 @@
-import React from "react";
+import react from "react";
 import BuisenessRows from "./buisness-rows";
 import InputField from "./input-field";
 
-export class FilterableTable extends React.Component {
+export class FilterableTable extends react.Component {
     constructor(props) {
         super(props);
         this.state = {

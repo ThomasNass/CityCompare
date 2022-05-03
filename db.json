@@ -1,7 +1,7 @@
 {
     "cities": [
         {
-            "name": "Mockholm",
+            "name": "Vetlanda",
             "buisness": [
                 {
                     "name": "Jula"
@@ -18,7 +18,7 @@
             ]
         },
         {
-            "name": "Mockköping",
+            "name": "Falköping",
             "buisness": [
                 {
                     "name": "Jula"

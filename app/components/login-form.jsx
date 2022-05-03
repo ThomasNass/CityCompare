@@ -1,8 +1,8 @@
-import React from "react";
+import react from "react";
 import InputField from "./input-field.jsx";
 import Button from "./button.jsx";
 
-export default class LoginForm extends React.Component {
+export default class LoginForm extends react.Component {
     constructor(props) {
         super(props);
         this.state = {

@@ -1,21 +1,13 @@
 import axios from "axios";
 
-
-const getData = (cityname) => {
-    axios.get(`http://localhost:3000/cities?name=${cityname}`, {})
-        .then(res => {
-            const data = res.data;
-            console.log(data);
-            return data;
-        })
-        .catch((error) => {
-            console.error(error)
-        });
-}
-
-export async function axiosTest(cityname) {
-    const response = await axios.get(`http://localhost:3000/cities?name=${cityname}`)
+export async function getCityData(cityName) {
+    const response = await axios.get(`http://localhost:3000/cities?name=${cityName}`)
     return response.data;
 }
 
-export default getData;
+
+export async function getPopulation(cityName) {
+    const response = await axios.get(`https://catalog.skl.se/rowstore/dataset/b80d412c-9a81-4de3-a62c-724192295677?kommun=${cityName}`);
+    return response.data;
+
+}

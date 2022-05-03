@@ -1,6 +1,6 @@
-import React from "react";
+import react from "react";
 
-export default class InputField extends React.Component {
+export default class InputField extends react.Component {
 
     render() {
         return (

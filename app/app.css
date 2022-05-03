@@ -90,6 +90,10 @@ input {
     width: 97%;
 }
 
+.filter-input {
+    width: 97%;
+}
+
 #compare-button,
 #login-button {
     width: 100%;
