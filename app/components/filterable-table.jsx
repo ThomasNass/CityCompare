@@ -1,4 +1,5 @@
 import React from "react";
+import BuisenessRows from "./buisness-rows";
 import InputField from "./input-field";
 
 export class FilterableTable extends React.Component {
@@ -58,7 +59,7 @@ export class FilterableTable extends React.Component {
         return (
 
             <div className="Table" >
-                <InputField id={"filter-field"} placeholder={"Filtrera..."} name={"filterText"} onChange={this.handleChange} />
+                <InputField className={"filter-input"} placeholder={"Filtrera..."} name={"filterText"} onChange={this.handleChange} />
                 <table>
                     <thead>
                         <tr>
@@ -69,13 +70,7 @@ export class FilterableTable extends React.Component {
                     </thead>
                     <tbody>
 
-                        {citiesFiltered.map((comparison) => (
-                            <tr>
-                                <td>{comparison.buisness}</td>
-                                {(comparison.buisnesses1 == "ja") ? <td className="green">{comparison.buisnesses1}</td> : <td className="red">{comparison.buisnesses1}</td>}
-                                {(comparison.buisnesses2 == "ja") ? <td className="green">{comparison.buisnesses2}</td> : <td className="red">{comparison.buisnesses2}</td>}
-                            </tr>
-                        ))}
+                        <BuisenessRows cities={citiesFiltered} />
                     </tbody>
                 </table>
             </div>
