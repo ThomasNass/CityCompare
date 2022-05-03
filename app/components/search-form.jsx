@@ -2,7 +2,7 @@ import React from "react";
 import InputField from "./input-field.jsx";
 import Button from "./button.jsx";
 import { axiosTest } from "../services/services.js";
-import { Table } from "./table.jsx";
+import { FilterableTable } from "./filterable-table.jsx";
 
 export default class SearchForm extends React.Component {
     constructor(props) {
@@ -54,7 +54,7 @@ export default class SearchForm extends React.Component {
 
             {(this.state.city1.length > 0 && this.state.city2.length > 0)
                 ?
-                <Table buisnesses1={this.state.city1[0].buisness} cityName1={this.state.city1[0].name} buisnesses2={this.state.city2[0].buisness} cityName2={this.state.city2[0].name} />
+                <FilterableTable buisnesses1={this.state.city1[0].buisness} cityName1={this.state.city1[0].name} buisnesses2={this.state.city2[0].buisness} cityName2={this.state.city2[0].name} />
                 :
                 null
             }
