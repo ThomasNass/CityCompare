@@ -89,8 +89,8 @@ export default class SearchForm extends react.Component {
             {(this.state.city1.length > 0 && this.state.city2.length > 0)
                 ?
                 <CityComparison
-                    city1={this.props.city1}
-                    city2={this.props.city2}
+                    city1={this.state.city1}
+                    city2={this.state.city2}
                 />
                 :
                 null

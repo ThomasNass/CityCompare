@@ -2,6 +2,7 @@ import react from "react";
 import { FilterableTable } from "./filterable-table.jsx";
 import PopulationBarChart from "./population-barchart.jsx";
 import DisplayTax from "./display-tax.jsx";
+import LineChart from "./line-chart.jsx";
 
 export default class CityComparison extends react.Component {
 
@@ -14,14 +15,18 @@ export default class CityComparison extends react.Component {
     }
 
     render() {
-        console.log(this.props.city1)
         return (
             <>
-                <PopulationBarChart
-                    population1={this.state.city1[0].population}
-                    population2={this.state.city2[0].population}
-                    cityName1={this.state.city1[0].name}
-                    cityName2={this.state.city2[0].name} />
+                <div className="bar-wrapper">
+                    <h1>Folkmängd 2020</h1>
+                    <div className="bar-div">
+                        <PopulationBarChart
+                            population1={this.state.city1[0].population}
+                            population2={this.state.city2[0].population}
+                            cityName1={this.state.city1[0].name}
+                            cityName2={this.state.city2[0].name} />
+                    </div>
+                </div>
                 <div className="tax-wrapper">
                     <h1>Skattesats 2022</h1>
                     <div className="tax-div">
@@ -33,7 +38,13 @@ export default class CityComparison extends react.Component {
                             cityName={this.state.city2[0].name} />
                     </div>
                 </div>
-
+                <div className="entries-wrapper">
+                    <h1>Sökningar till kronofogden</h1>
+                    <div className="entries-div">
+                        <LineChart cityName={this.state.city1[0].name} entries={this.state.city1[0].kronofogdenEntries} />
+                        <LineChart cityName={this.state.city2[0].name} entries={this.state.city2[0].kronofogdenEntries} />
+                    </div>
+                </div>
                 <FilterableTable
                     buisnesses1={this.state.city1[0].buisness}
                     buisnesses2={this.state.city2[0].buisness}

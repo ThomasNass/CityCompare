@@ -10,7 +10,7 @@ export default class PopulationBarChart extends react.Component {
         this.state = {
             labels: [this.props.cityName1, this.props.cityName2],
             datasets: [{
-                label: "Folkmängd 2020",
+                label: "Folkmängd",
                 backgroundColor: "pink",
 
                 data: [this.props.population1, this.props.population2]
@@ -23,21 +23,21 @@ export default class PopulationBarChart extends react.Component {
     render() {
         return (
             <>
-                <div className="bar-chart">
-                    <Bar
-                        data={this.state}
-                        options={{
-                            title: {
-                                display: true,
-                                text: "Folkmängden i valda städer",
-                                fontSize: 20
-                            },
-                            legend: {
-                                display: true,
-                                position: "right"
-                            }
-                        }} />
-                </div>
+
+                <Bar
+                    data={this.state}
+                    options={{
+                        title: {
+                            display: true,
+                            text: "Folkmängden i valda städer",
+                            fontSize: 20
+                        },
+                        legend: {
+                            display: true,
+                            position: "right"
+                        }
+                    }} />
+
             </>
         )
 
