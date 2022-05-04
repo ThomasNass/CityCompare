@@ -2,9 +2,9 @@ import react from "react";
 import InputField from "./input-field.jsx";
 import Button from "./button.jsx";
 import { getCityData, getKronofogdenEntries, getPopulation, getTaxes } from "../services/services.js";
-import { FilterableTable } from "./filterable-table.jsx";
-import PopulationBarChart from "./population-barchart.jsx";
-import DisplayTax from "./display-tax.jsx";
+
+import CityComparison from "./city-comparison.jsx";
+//import { registry } from "chart.js";
 
 export default class SearchForm extends react.Component {
     constructor(props) {
@@ -29,15 +29,11 @@ export default class SearchForm extends react.Component {
 
         console.log(entries1.results)
 
-        const entriesArray = [];
-        entries1.results.forEach(entry => {
-            let obj = {};
-            obj.amount = entry["antal ansökningar"];
-            obj.year = entry.år;
-            entriesArray.push(obj);
-        });
-        console.log(entriesArray);
-        city1[0].kronofogdenEntries = entriesArray;
+        const entriesArray1 = this.getYearsAndEntries(entries1);
+        const entriesArray2 = this.getYearsAndEntries(entries2);
+
+        city1[0].kronofogdenEntries = entriesArray1;
+        city2[0].kronofogdenEntries = entriesArray2;
 
         city1[0].tax = parseFloat(taxes1.results[0]["summa, inkl. kyrkoavgift"])
         city2[0].tax = parseFloat(taxes2.results[0]["summa, inkl. kyrkoavgift"])
@@ -48,6 +44,17 @@ export default class SearchForm extends react.Component {
         console.log(city1, city2)
         this.setState({ city1: city1 });
         this.setState({ city2: city2 });
+    }
+
+    getYearsAndEntries = (array) => {
+        const entriesArray = [];
+        array.results.forEach(entry => {
+            let obj = {};
+            obj.amount = entry["antal ansökningar"];
+            obj.year = entry.år;
+            entriesArray.push(obj);
+        });
+        return entriesArray;
     }
 
     handleChange = (event) => {
@@ -81,31 +88,10 @@ export default class SearchForm extends react.Component {
 
             {(this.state.city1.length > 0 && this.state.city2.length > 0)
                 ?
-                <>
-                    <PopulationBarChart
-                        population1={this.state.city1[0].population}
-                        population2={this.state.city2[0].population}
-                        cityName1={this.state.city1[0].name}
-                        cityName2={this.state.city2[0].name} />
-                    <div className="tax-wrapper">
-                        <h1>Skattesats 2022</h1>
-                        <div className="tax-div">
-                            <DisplayTax
-                                tax={this.state.city1[0].tax}
-                                cityName={this.state.city1[0].name} />
-                            <DisplayTax
-                                tax={this.state.city2[0].tax}
-                                cityName={this.state.city2[0].name} />
-                        </div>
-                    </div>
-
-                    <FilterableTable
-                        buisnesses1={this.state.city1[0].buisness}
-                        buisnesses2={this.state.city2[0].buisness}
-                        cityName1={this.state.city1[0].name}
-                        cityName2={this.state.city2[0].name}
-                    />
-                </>
+                <CityComparison
+                    city1={this.props.city1}
+                    city2={this.props.city2}
+                />
                 :
                 null
             }
