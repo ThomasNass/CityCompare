@@ -22,9 +22,10 @@ export default class SearchForm extends react.Component {
         const pop1 = await getPopulation(search1);
         const pop2 = await getPopulation(search2);
 
-        city1[0].population = Object.values(pop1.results[0]).at(1);
-        city2[0].population = Object.values(pop2.results[0]).at(1);
+        city1[0].population = parseInt(Object.values(pop1.results[0]).at(1).replace(/ /g, ""));
+        city2[0].population = parseInt(Object.values(pop2.results[0]).at(1).replace(/ /g, ""));
 
+        console.log(city1, city2)
         this.setState({ city1: city1 });
         this.setState({ city2: city2 });
     }
@@ -63,7 +64,7 @@ export default class SearchForm extends react.Component {
                 <>
                     <PopulationChart
                         population1={this.state.city1[0].population}
-                        Population2={this.state.city2[0].population}
+                        population2={this.state.city2[0].population}
                         cityName1={this.state.city1[0].name}
                         cityName2={this.state.city2[0].name} />
                     <FilterableTable

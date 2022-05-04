@@ -1,5 +1,6 @@
 import react from "react";
 import { Bar } from "react-chartjs-2";
+import { Chart as ChartJS } from "chart.js/auto";
 
 
 export default class PopulationChart extends react.Component {
@@ -21,21 +22,23 @@ export default class PopulationChart extends react.Component {
 
     render() {
         return (
-            <div>
-                <Bar
-                    data={this.state}
-                    options={{
-                        title: {
-                            display: true,
-                            text: "Folkmängden i valda städer",
-                            fontSize: 20
-                        },
-                        legend: {
-                            display: true,
-                            position: "right"
-                        }
-                    }} />
-            </div>
+            <>
+                <div className="bar-chart">
+                    <Bar
+                        data={this.state}
+                        options={{
+                            title: {
+                                display: true,
+                                text: "Folkmängden i valda städer",
+                                fontSize: 20
+                            },
+                            legend: {
+                                display: true,
+                                position: "right"
+                            }
+                        }} />
+                </div>
+            </>
         )
 
     }

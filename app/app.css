@@ -117,6 +117,12 @@ td {
     padding: 5px;
 }
 
+.bar-chart {
+    margin-top: 3%;
+    width: 100%;
+    background-color: white;
+}
+
 .green {
     background-color: var(--green);
 }
