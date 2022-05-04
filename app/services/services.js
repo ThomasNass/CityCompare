@@ -17,9 +17,8 @@ export async function getTaxes(cityName) {
     return response.data;
 }
 
-export async function getKronofogdenEntries(cityName) {
+export async function getKronofogdenApplications(cityName) {
     const response = await axios.get(`https://kronofogden.entryscape.net/rowstore/dataset/84b8876c-091a-4b00-a625-918060ce10b9?kommun=${cityName}`);
     return response.data;
 }
 
-//https://kronofogden.entryscape.net/rowstore/dataset/84b8876c-091a-4b00-a625-918060ce10b9?kommun=Falköping

@@ -39,10 +39,10 @@ export default class CityComparison extends react.Component {
                     </div>
                 </div>
                 <div className="entries-wrapper">
-                    <h1>Sökningar till kronofogden</h1>
+                    <h1>Skuldsaneringsansökningar till kronofogden</h1>
                     <div className="entries-div">
-                        <LineChart cityName={this.state.city1[0].name} entries={this.state.city1[0].kronofogdenEntries} />
-                        <LineChart cityName={this.state.city2[0].name} entries={this.state.city2[0].kronofogdenEntries} />
+                        <LineChart cityName={this.state.city1[0].name} applications={this.state.city1[0].kronofogdenApplications} />
+                        <LineChart cityName={this.state.city2[0].name} applications={this.state.city2[0].kronofogdenApplications} />
                     </div>
                 </div>
                 <FilterableTable

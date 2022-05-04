@@ -8,12 +8,12 @@ export default class LineChart extends react.Component {
     constructor(props) {
         super(props)
         this.state = {
-            labels: this.props.entries.map((entry) => entry.year),
+            labels: this.props.applications.map((application) => application.year),
             datasets: [{
                 label: `${this.props.cityName}`,
                 backgroundColor: "pink",
 
-                data: this.props.entries.map((entry) => entry.amount)
+                data: this.props.applications.map((application) => application.amount)
             }
             ]
         }

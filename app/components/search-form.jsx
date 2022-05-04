@@ -1,7 +1,7 @@
 import react from "react";
 import InputField from "./input-field.jsx";
 import Button from "./button.jsx";
-import { getCityData, getKronofogdenEntries, getPopulation, getTaxes } from "../services/services.js";
+import { getCityData, getKronofogdenApplications, getPopulation, getTaxes } from "../services/services.js";
 
 import CityComparison from "./city-comparison.jsx";
 //import { registry } from "chart.js";
@@ -24,16 +24,16 @@ export default class SearchForm extends react.Component {
         const pop2 = await getPopulation(search2);
         const taxes1 = await getTaxes(search1.toUpperCase());
         const taxes2 = await getTaxes(search2.toUpperCase());
-        const entries1 = await getKronofogdenEntries(search1);
-        const entries2 = await getKronofogdenEntries(search2);
+        const applications1 = await getKronofogdenApplications(search1);
+        const applications2 = await getKronofogdenApplications(search2);
 
-        console.log(entries1.results)
+        console.log(applications1.results)
 
-        const entriesArray1 = this.getYearsAndEntries(entries1);
-        const entriesArray2 = this.getYearsAndEntries(entries2);
+        const applicationArray1 = this.getYearsAndApplications(applications1);
+        const applicationArray2 = this.getYearsAndApplications(applications2);
 
-        city1[0].kronofogdenEntries = entriesArray1;
-        city2[0].kronofogdenEntries = entriesArray2;
+        city1[0].kronofogdenApplications = applicationArray1;
+        city2[0].kronofogdenApplications = applicationArray2;
 
         city1[0].tax = parseFloat(taxes1.results[0]["summa, inkl. kyrkoavgift"])
         city2[0].tax = parseFloat(taxes2.results[0]["summa, inkl. kyrkoavgift"])
@@ -46,15 +46,15 @@ export default class SearchForm extends react.Component {
         this.setState({ city2: city2 });
     }
 
-    getYearsAndEntries = (array) => {
-        const entriesArray = [];
-        array.results.forEach(entry => {
+    getYearsAndApplications = (array) => {
+        const applicationArray = [];
+        array.results.forEach(application => {
             let obj = {};
-            obj.amount = entry["antal ansökningar"];
-            obj.year = entry.år;
-            entriesArray.push(obj);
+            obj.amount = application["antal ansökningar"];
+            obj.year = application.år;
+            applicationArray.push(obj);
         });
-        return entriesArray;
+        return applicationArray;
     }
 
     handleChange = (event) => {
