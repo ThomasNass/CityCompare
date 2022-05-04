@@ -126,6 +126,23 @@ td {
     background-color: rgb(255, 255, 255);
 }
 
+.tax-wrapper {
+    border-radius: 5px;
+    text-align: center;
+    width: 100%;
+    margin-top: 3%;
+    background-color: rgba(255, 192, 203, 0.889);
+}
+
+.tax-div {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    background-color: rgba(255, 255, 255, 0.844);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
 .green {
     background-color: var(--green);
 }

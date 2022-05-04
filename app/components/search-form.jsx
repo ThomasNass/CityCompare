@@ -1,7 +1,7 @@
 import react from "react";
 import InputField from "./input-field.jsx";
 import Button from "./button.jsx";
-import { getCityData, getPopulation, getTaxes } from "../services/services.js";
+import { getCityData, getKronofogdenEntries, getPopulation, getTaxes } from "../services/services.js";
 import { FilterableTable } from "./filterable-table.jsx";
 import PopulationBarChart from "./population-barchart.jsx";
 import DisplayTax from "./display-tax.jsx";
@@ -24,6 +24,20 @@ export default class SearchForm extends react.Component {
         const pop2 = await getPopulation(search2);
         const taxes1 = await getTaxes(search1.toUpperCase());
         const taxes2 = await getTaxes(search2.toUpperCase());
+        const entries1 = await getKronofogdenEntries(search1);
+        const entries2 = await getKronofogdenEntries(search2);
+
+        console.log(entries1.results)
+
+        const entriesArray = [];
+        entries1.results.forEach(entry => {
+            let obj = {};
+            obj.amount = entry["antal ansökningar"];
+            obj.year = entry.år;
+            entriesArray.push(obj);
+        });
+        console.log(entriesArray);
+        city1[0].kronofogdenEntries = entriesArray;
 
         city1[0].tax = parseFloat(taxes1.results[0]["summa, inkl. kyrkoavgift"])
         city2[0].tax = parseFloat(taxes2.results[0]["summa, inkl. kyrkoavgift"])
@@ -73,14 +87,16 @@ export default class SearchForm extends react.Component {
                         population2={this.state.city2[0].population}
                         cityName1={this.state.city1[0].name}
                         cityName2={this.state.city2[0].name} />
-                    <div className="tax-div">
-                        <h1>Skattesats</h1>
-                        <DisplayTax
-                            tax={this.state.city1[0].tax}
-                            cityName={this.state.city1[0].name} />
-                        <DisplayTax
-                            tax={this.state.city2[0].tax}
-                            cityName={this.state.city2[0].name} />
+                    <div className="tax-wrapper">
+                        <h1>Skattesats 2022</h1>
+                        <div className="tax-div">
+                            <DisplayTax
+                                tax={this.state.city1[0].tax}
+                                cityName={this.state.city1[0].name} />
+                            <DisplayTax
+                                tax={this.state.city2[0].tax}
+                                cityName={this.state.city2[0].name} />
+                        </div>
                     </div>
 
                     <FilterableTable
