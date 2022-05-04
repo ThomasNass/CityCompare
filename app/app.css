@@ -38,6 +38,8 @@ body {
     height: 100%;
     background-image: url(./images/citysky.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -118,9 +120,10 @@ td {
 }
 
 .bar-chart {
+    border-radius: 5px;
     margin-top: 3%;
     width: 100%;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
 }
 
 .green {
@@ -134,11 +137,6 @@ td {
 @media screen and (max-width:1200px) {
     #site-name {
         font-size: 5rem;
-    }
-
-    body {
-        background-size: cover;
-        background-repeat: no-repeat;
     }
 
     #root {

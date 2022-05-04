@@ -11,3 +11,8 @@ export async function getPopulation(cityName) {
     return response.data;
 
 }
+
+export async function getTaxes(cityName) {
+    const response = await axios.get(`https://skatteverket.entryscape.net/rowstore/dataset/c67b320b-ffee-4876-b073-dd9236cd2a99?år=2022&kommun=${cityName}`);
+    return response.data;
+}
