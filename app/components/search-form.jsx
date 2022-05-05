@@ -1,8 +1,9 @@
 import react from "react";
 import InputField from "./input-field.jsx";
 import Button from "./button.jsx";
-import { getCityData, getKronofogdenApplications, getKronofogdenEvictions, getPopulation, getTaxes } from "../services/services.js";
+import { getCityData, allaKommuner } from "../services/api-caller.js";
 import CityComparison from "./city-comparison.jsx";
+import { getAPIData, formatInput } from "../services/services.js";
 
 export default class SearchForm extends react.Component {
     constructor(props) {
@@ -16,34 +17,26 @@ export default class SearchForm extends react.Component {
         }
     }
 
+
     getCities = async (search1, search2) => {
         this.setState({ remove_comparison: true });//Aktiverar flaggan ifall en jämförelse redan har gjorts för att ta bort den
         const city1 = await getCityData("Vetlanda");//Hämtar de hårdkodade städerna som har de hårdkodade företagen
         const city2 = await getCityData("Falköping");
 
-        search1 = this.formatInput(search1);//Formaterar om till små bokstäver med stor i början
-        search2 = this.formatInput(search2);
+        search1 = formatInput(search1);//Formaterar om till små bokstäver med stor i början
+        search2 = formatInput(search2);
+        const result = await allaKommuner()
 
+        let kommuner = [];
+
+        result.results.forEach(element => {
+            kommuner.push(element.kommun);
+        });
+        console.log(kommuner)
         city1[0].name = search1;//Ändrar namnet på städerna så att de ska matcha datan som hämtas från sökningarna
         city2[0].name = search2;
         try {
-            const pop1 = await getPopulation(search1);
-            const pop2 = await getPopulation(search2);
-            const taxes1 = await getTaxes(search1.toUpperCase());
-            const taxes2 = await getTaxes(search2.toUpperCase());
-            const applications1 = await getKronofogdenApplications(search1);
-            const applications2 = await getKronofogdenApplications(search2);
-            const evictions1 = await getKronofogdenEvictions(search1.toUpperCase());
-            const evictions2 = await getKronofogdenEvictions(search2.toUpperCase());
-
-            city1[0].kronofogdenApplications = this.getYearsAndApplications(applications1);
-            city2[0].kronofogdenApplications = this.getYearsAndApplications(applications2);
-            city1[0].kronofogdenEvictions = this.getEvictions(evictions1);
-            city2[0].kronofogdenEvictions = this.getEvictions(evictions2);
-            city1[0].tax = parseFloat(taxes1.results[0]["summa, exkl. kyrkoavgift"])
-            city2[0].tax = parseFloat(taxes2.results[0]["summa, exkl. kyrkoavgift"])
-            city1[0].population = parseInt(pop1.results[0]["folkmängd 31 december 2020"].replace(/ /g, ""));
-            city2[0].population = parseInt(pop2.results[0]["folkmängd 31 december 2020"].replace(/ /g, ""));
+            await getAPIData(city1, city2, search1, search2);//Här görs alla riktiga API-anrop
 
             console.log(city1, city2)
             this.setState({ city1: city1 });
@@ -55,33 +48,6 @@ export default class SearchForm extends react.Component {
         }
     }
 
-    formatInput = (string) => {
-        let lower = string.toLowerCase();
-        let firstUpper = lower.charAt(0).toUpperCase() + lower.substr(1);
-        return firstUpper;
-    }
-
-    getEvictions = (array) => {
-        const evictionsArray = [];
-        array.results.forEach(eviction => {
-            let obj = {};
-            obj.evictions = eviction["antal genomförda vräkningar"];
-            obj.applications = eviction["antal ansökningar om vräkning"];
-            evictionsArray.push(obj);
-        })
-        return evictionsArray;
-    }
-
-    getYearsAndApplications = (array) => {
-        const applicationArray = [];
-        array.results.forEach(application => {
-            let obj = {};
-            obj.amount = application["antal ansökningar"];
-            obj.year = application.år;
-            applicationArray.push(obj);
-        });
-        return applicationArray;
-    }
 
     handleChange = (event) => {
         const target = event.target;
