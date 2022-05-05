@@ -1,19 +1,19 @@
 import react from "react";
-import { Line } from "react-chartjs-2";
+import { Pie } from "react-chartjs-2";
 import { Chart as ChartJS } from "chart.js/auto";
 
 
 
-export default class LineChart extends react.Component {
+export default class PieChart extends react.Component {
     constructor(props) {
         super(props)
         this.state = {
-            labels: this.props.applications.map((application) => application.year),
+            labels: ["Vräkningar", "Vräkningsansökningar"],
             datasets: [{
                 label: `${this.props.cityName}`,
-                backgroundColor: "pink",
+                backgroundColor: ["red", "pink"],
 
-                data: this.props.applications.map((application) => application.amount)
+                data: [this.props.evictions[0].evictions, this.props.evictions[0].applications]
             }
             ]
         }
@@ -23,13 +23,14 @@ export default class LineChart extends react.Component {
     render() {
         return (
             <>
-                <div className="line-chart">
-                    <Line
+                <div className="pie-chart">
+                    <h2>{this.props.cityName}</h2>
+                    <Pie
                         data={this.state}
                         options={{
                             title: {
                                 display: true,
-                                text: "Skuldsaneringar",
+                                text: "Vräkningsdata",
                                 fontSize: 20
                             },
                             legend: {

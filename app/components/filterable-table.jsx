@@ -59,7 +59,7 @@ export class FilterableTable extends react.Component {
         return (
 
             <div className="Table" >
-                <InputField className={"filter-input"} placeholder={"Filtrera..."} name={"filterText"} onChange={this.handleChange} />
+                <InputField className={"filter-input"} placeholder={"Filtrera tabell.."} name={"filterText"} onChange={this.handleChange} />
                 <table>
                     <thead>
                         <tr>

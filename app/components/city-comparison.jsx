@@ -3,6 +3,7 @@ import { FilterableTable } from "./filterable-table.jsx";
 import PopulationBarChart from "./population-barchart.jsx";
 import DisplayTax from "./display-tax.jsx";
 import LineChart from "./line-chart.jsx";
+import PieChart from "./pie-chart.jsx";
 
 export default class CityComparison extends react.Component {
 
@@ -17,7 +18,7 @@ export default class CityComparison extends react.Component {
     render() {
         return (
             <>
-                <div className="bar-wrapper">
+                <div className="bar-wrapper wrapper">
                     <h1>Folkmängd 2020</h1>
                     <div className="bar-div">
                         <PopulationBarChart
@@ -27,7 +28,7 @@ export default class CityComparison extends react.Component {
                             cityName2={this.state.city2[0].name} />
                     </div>
                 </div>
-                <div className="tax-wrapper">
+                <div className="tax-wrapper wrapper">
                     <h1>Skattesats 2022</h1>
                     <div className="tax-div">
                         <DisplayTax
@@ -38,11 +39,26 @@ export default class CityComparison extends react.Component {
                             cityName={this.state.city2[0].name} />
                     </div>
                 </div>
-                <div className="entries-wrapper">
+                <div className="entries-wrapper wrapper">
                     <h1>Skuldsaneringsansökningar till kronofogden</h1>
                     <div className="entries-div">
-                        <LineChart cityName={this.state.city1[0].name} applications={this.state.city1[0].kronofogdenApplications} />
-                        <LineChart cityName={this.state.city2[0].name} applications={this.state.city2[0].kronofogdenApplications} />
+                        <LineChart
+                            cityName={this.state.city1[0].name}
+                            applications={this.state.city1[0].kronofogdenApplications} />
+                        <LineChart
+                            cityName={this.state.city2[0].name}
+                            applications={this.state.city2[0].kronofogdenApplications} />
+                    </div>
+                </div>
+                <div className="pie-wrapper wrapper">
+                    <h1>Vräkningar / Vräkningsansökningar 2020</h1>
+                    <div className="pie-div">
+                        <PieChart
+                            evictions={this.state.city1[0].kronofogdenEvictions}
+                            cityName={this.state.city1[0].name} />
+                        <PieChart
+                            evictions={this.state.city2[0].kronofogdenEvictions}
+                            cityName={this.state.city2[0].name} />
                     </div>
                 </div>
                 <FilterableTable

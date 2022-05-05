@@ -22,3 +22,10 @@ export async function getKronofogdenApplications(cityName) {
     return response.data;
 }
 
+export async function getKronofogdenEvictions(cityName) {
+    const response = await axios.get(`https://kronofogden.entryscape.net/rowstore/dataset/cca1e1ba-ed4d-411e-be40-abe6f4441fa7?år=2020&kommun=${cityName}`);
+    return response.data;
+}
+
+
+
