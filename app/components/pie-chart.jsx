@@ -25,19 +25,21 @@ export default class PieChart extends react.Component {
             <>
                 <div className="pie-chart">
                     <h2>{this.props.cityName}</h2>
-                    <Pie
-                        data={this.state}
-                        options={{
-                            title: {
-                                display: true,
-                                text: "Vräkningsdata",
-                                fontSize: 20
-                            },
-                            legend: {
-                                display: true,
-                                position: "right"
-                            }
-                        }} />
+                    {(this.props.evictions[0].evictions != 0 && this.props.evictions[0].applications != 0) ?
+                        <Pie
+                            data={this.state}
+                            options={{
+                                title: {
+                                    display: true,
+                                    text: "Vräkningsdata",
+                                    fontSize: 20
+                                },
+                                legend: {
+                                    display: true,
+                                    position: "right"
+                                }
+                            }} /> :
+                        <h2>I {this.props.cityName} gjordes inga vräkningar eller Vräkningsansökningar</h2>}
                 </div>
             </>
         )
