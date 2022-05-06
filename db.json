@@ -1,0 +1,38 @@
+{
+    "cities": [
+        {
+            "name": "Vetlanda",
+            "buisness": [
+                {
+                    "name": "Jula"
+                },
+                {
+                    "name": "McDonalds"
+                },
+                {
+                    "name": "Biltema"
+                },
+                {
+                    "name": "Cervera"
+                }
+            ]
+        },
+        {
+            "name": "Falköping",
+            "buisness": [
+                {
+                    "name": "Jula"
+                },
+                {
+                    "name": "McDonalds"
+                },
+                {
+                    "name": "Biltema"
+                },
+                {
+                    "name": "Ikea"
+                }
+            ]
+        }
+    ]
+}

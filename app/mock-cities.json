@@ -1,47 +1,35 @@
 [
     {
-        "City": [
+        "name": "Mockholm",
+        "buisness": [
             {
-                "name": "Mockholm"
+                "name": "Jula"
             },
             {
-                "buisness": [
-                    {
-                        "name": "Jula"
-                    },
-                    {
-                        "name": "McDonalds"
-                    },
-                    {
-                        "name": "Biltema"
-                    },
-                    {
-                        "name": "Cervera"
-                    }
-                ]
+                "name": "McDonalds"
+            },
+            {
+                "name": "Biltema"
+            },
+            {
+                "name": "Cervera"
             }
         ]
     },
     {
-        "City": [
+        "name": "Mockköping",
+        "buisness": [
             {
-                "name": "Mockköping"
+                "name": "Jula"
             },
             {
-                "buisness": [
-                    {
-                        "name": "Jula"
-                    },
-                    {
-                        "name": "McDonalds"
-                    },
-                    {
-                        "name": "Biltema"
-                    },
-                    {
-                        "name": "Ikea"
-                    }
-                ]
+                "name": "McDonalds"
+            },
+            {
+                "name": "Biltema"
+            },
+            {
+                "name": "Ikea"
             }
         ]
     }
