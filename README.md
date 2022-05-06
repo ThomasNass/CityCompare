@@ -28,7 +28,7 @@ run "npm ci"
 axios - Används för att göra http-anrop på ett smidigare sätt än fetch. Min applikation är datadriven, så jag använder detta mycket. 
 chart.js - Används för att göra olika diagram. Använder för att presentera datan på ett snyggt och enkelt sätt.
 react-chartjs-2 - Används specifikt för react. Det är egentligen detta jag använder, men det fungerar inte utan chart.js
-json-server - Används för att sätta upp ett eget REST-API. Jag använder den till att lagra mockdata för att kunna rendrera tabellen med företag i.
+json-server - Används för att sätta upp ett eget REST-API. Jag använder den till att lagra mockdata för att kunna rendera tabellen med företag i.
 
 
 ## Tjänster
