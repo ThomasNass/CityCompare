@@ -26,17 +26,7 @@ export default class LineChart extends react.Component {
                 <div className="line-chart">
                     <Line
                         data={this.state}
-                        options={{
-                            title: {
-                                display: true,
-                                text: "Skuldsaneringar",
-                                fontSize: 20
-                            },
-                            legend: {
-                                display: true,
-                                position: "right"
-                            }
-                        }} />
+                    />
                 </div>
             </>
         )

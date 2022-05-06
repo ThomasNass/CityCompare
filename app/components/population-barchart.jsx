@@ -26,17 +26,7 @@ export default class PopulationBarChart extends react.Component {
 
                 <Bar
                     data={this.state}
-                    options={{
-                        title: {
-                            display: true,
-                            text: "Folkmängden i valda städer",
-                            fontSize: 20
-                        },
-                        legend: {
-                            display: true,
-                            position: "right"
-                        }
-                    }} />
+                />
 
             </>
         )
