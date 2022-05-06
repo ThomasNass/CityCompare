@@ -1,9 +1,9 @@
 import react from "react";
 import InputField from "./input-field.jsx";
 import Button from "./button.jsx";
-import { getCityData, allaKommuner } from "../services/api-caller.js";
+import { getMockCities, allaKommuner } from "../services/api-caller.js";
 import CityComparison from "./city-comparison.jsx";
-import { getAPIData, formatInput } from "../services/services.js";
+import { getActualCityData, formatInput } from "../services/services.js";
 
 export default class SearchForm extends react.Component {
     constructor(props) {
@@ -20,23 +20,27 @@ export default class SearchForm extends react.Component {
 
     getCities = async (search1, search2) => {
         this.setState({ remove_comparison: true });//Aktiverar flaggan ifall en jämförelse redan har gjorts för att ta bort den
-        const city1 = await getCityData("Vetlanda");//Hämtar de hårdkodade städerna som har de hårdkodade företagen
-        const city2 = await getCityData("Falköping");
+        const city1 = await getMockCities("Vetlanda");//Hämtar de hårdkodade städerna som har de hårdkodade företagen
+        const city2 = await getMockCities("Falköping");
 
         search1 = formatInput(search1);//Formaterar om till små bokstäver med stor i början
         search2 = formatInput(search2);
-        const result = await allaKommuner()
 
-        let kommuner = [];
+        //Denna ska användas för att fylla sökinput med de tillgängliga kommunerna som man kan söka på 
+        // const result = await allaKommuner()
 
-        result.results.forEach(element => {
-            kommuner.push(element.kommun);
-        });
-        console.log(kommuner)
+        // let kommuner = [];
+
+        // result.results.forEach(element => {
+        //     kommuner.push(element.kommun);
+        // });
+        // console.log(kommuner)
+
+
         city1[0].name = search1;//Ändrar namnet på städerna så att de ska matcha datan som hämtas från sökningarna
         city2[0].name = search2;
         try {
-            await getAPIData(city1, city2, search1, search2);//Här görs alla riktiga API-anrop
+            await getActualCityData(city1, city2, search1, search2);//Här görs alla riktiga API-anrop
 
             console.log(city1, city2)
             this.setState({ city1: city1 });

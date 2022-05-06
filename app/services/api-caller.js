@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export async function getCityData(cityName) {
+export async function getMockCities(cityName) {
     const response = await axios.get(`http://localhost:3000/cities?name=${cityName}`)
     return response.data;
 }

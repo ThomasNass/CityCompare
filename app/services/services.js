@@ -1,6 +1,6 @@
 import { getKronofogdenApplications, getKronofogdenEvictions, getPopulation, getTaxes } from "./api-caller.js";
 
-export async function getAPIData(city1, city2, search1, search2) {
+export async function getActualCityData(city1, city2, search1, search2) {
     const pop1 = await getPopulation(search1);
     const pop2 = await getPopulation(search2);
     const taxes1 = await getTaxes(search1.toUpperCase());
