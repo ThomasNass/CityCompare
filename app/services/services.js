@@ -43,6 +43,7 @@ getYearsAndApplications = (array) => {
     return applicationArray;
 }
 
+//Funktion för att Formatera en sträng till Stor bokstav i början och små bokstäver efter det
 export function formatInput(string) {
     let lower = string.toLowerCase();
     let firstUpper = lower.charAt(0).toUpperCase() + lower.substr(1);

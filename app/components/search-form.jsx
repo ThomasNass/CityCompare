@@ -2,7 +2,7 @@ import react from "react";
 import InputField from "./input-field.jsx";
 import DataList from "./data-list.jsx";
 import Button from "./button.jsx";
-import { getMockCities, allaKommuner } from "../services/api-caller.js";
+import { getMockCities } from "../services/api-caller.js";
 import CityComparison from "./city-comparison.jsx";
 import { getActualCityData, formatInput } from "../services/services.js";
 export default class SearchForm extends react.Component {
@@ -19,15 +19,19 @@ export default class SearchForm extends react.Component {
 
 
     getCities = async (search1, search2) => {
-        this.setState({ remove_comparison: true });//Aktiverar flaggan ifall en jämförelse redan har gjorts för att ta bort den
-        const city1 = await getMockCities("Vetlanda");//Hämtar de hårdkodade städerna som har de hårdkodade företagen
+        //Sätter boolen till true ifall en jämförelse redan har gjorts för att ta bort den
+        this.setState({ remove_comparison: true });
+
+        //Hämtar de hårdkodade städerna som har de hårdkodade företagen
+        const city1 = await getMockCities("Vetlanda");
         const city2 = await getMockCities("Falköping");
 
-        search1 = formatInput(search1);//Formaterar om till små bokstäver med stor i början
+        //Formaterar om till små bokstäver med stor i början
+        search1 = formatInput(search1);
         search2 = formatInput(search2);
 
-
-        city1[0].name = search1;//Ändrar namnet på städerna så att de ska matcha datan som hämtas från sökningarna
+        //Ändrar namnet på städerna så att de ska matcha datan som hämtas från sökningarna
+        city1[0].name = search1;
         city2[0].name = search2;
         try {
             await getActualCityData(city1, city2, search1, search2);//Här görs alla riktiga API-anrop
