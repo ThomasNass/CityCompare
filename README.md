@@ -1,7 +1,7 @@
 # CityCompare
 
-En app som ska komma att jämföra städer.
-Just nu finns enbart två hårdkodade städer att söka på; Mockholm och Mockköping.
+En app som jämför kommuner. Tanken är att den ska jämföra städers utbud av butiker, restauranger etc i tabellen som dyker upp längst ner i appen, men jag har ännu inte fått appen att fungera med googles api eller hitta.se:s api, så den datan har mockdata för stunden. 
+
 För att logga in så är uppgifterna:
 användarnamn: Användare
 Lösenord:   Lösenord
@@ -19,9 +19,6 @@ run "npm ci"
 
 "npx parcel index.html --open" (För att öppna sidan om appen)
 
-## Build
-
-"npx parcel build 'htmlfil' " funkar ej, då "main":"main.js" inte är filen som parcel vill ha där. Om man ändrar från main.js så kan man dock inte starta programmet längre.
 
 
 ## Externa bibliotek
@@ -42,4 +39,3 @@ SKULDSANERING: https://www.dataportal.se/sv/datasets/265_3115/antal-skuldsanerin
 
 VRÄKNINGSDATA : https://www.dataportal.se/sv/datasets/265_3861/antal-ansokningar-om-vrakning-och-hur-manga-som-genomforts-i-sverige#ref=?p=1&q=&s=8&t=100&f=http%3A%2F%2Fpurl.org%2Fdc%2Fterms%2Fformat%7C%7Capplication%2Fjson%7C%7Cfalse%7C%7Cliteral_s%7C%7CFormat%7C%7Capplication%2Fjson%24http%3A%2F%2Fpurl.org%2Fdc%2Fterms%2Fpublisher%7C%7Chttps%3A%2F%2Fkronofogden.entryscape.net%2Fstore%2F2%2Fresource%2F1%7C%7Cfalse%7C%7Curi%7C%7COrganisation%7C%7CKronofogdemyndigheten&rt=esterms_IndependentDataService%24esterms_ServedByDataService&c=false
 
-Alla anrop sker för tillfället i search-form komponenten, för att det är där sökningen görs och det är i ett till search-form som datan ska presenteras. 

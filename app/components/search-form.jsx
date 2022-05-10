@@ -1,10 +1,10 @@
 import react from "react";
 import InputField from "./input-field.jsx";
+import DataList from "./data-list.jsx";
 import Button from "./button.jsx";
 import { getMockCities, allaKommuner } from "../services/api-caller.js";
 import CityComparison from "./city-comparison.jsx";
 import { getActualCityData, formatInput } from "../services/services.js";
-
 export default class SearchForm extends react.Component {
     constructor(props) {
         super(props);
@@ -25,16 +25,6 @@ export default class SearchForm extends react.Component {
 
         search1 = formatInput(search1);//Formaterar om till små bokstäver med stor i början
         search2 = formatInput(search2);
-
-        //Denna ska användas för att fylla sökinput med de tillgängliga kommunerna som man kan söka på 
-        // const result = await allaKommuner()
-
-        // let kommuner = [];
-
-        // result.results.forEach(element => {
-        //     kommuner.push(element.kommun);
-        // });
-        // console.log(kommuner)
 
 
         city1[0].name = search1;//Ändrar namnet på städerna så att de ska matcha datan som hämtas från sökningarna
@@ -67,16 +57,11 @@ export default class SearchForm extends react.Component {
                 id={"logout-button"}
                 text={"Logga ut"}
                 onClick={() => { this.props.saveLocalStorage(false) }} />
-            <InputField
-                name={"search1"}
-                value={this.state.search1}
-                placeholder={"Ange stad"}
-                onChange={this.handleChange} />
-            <InputField
-                name={"search2"}
-                value={this.state.search2}
-                placeholder={"Ange stad"}
-                onChange={this.handleChange} />
+
+
+            <DataList name={"search1"} placeholder={"Ange stad"} onChange={this.handleChange} />
+            <DataList name={"search2"} placeholder={"Ange stad"} onChange={this.handleChange} />
+
             <Button
                 id={"compare-button"}
                 text={"Jämför"}
