@@ -27,8 +27,5 @@ export async function getKronofogdenEvictions(cityName) {
     return response.data;
 }
 
-export async function allaKommuner() {
-    const response = await axios.get("https://catalog.skl.se/rowstore/dataset/b80d412c-9a81-4de3-a62c-724192295677");
-    return response.data;
-}
+
 

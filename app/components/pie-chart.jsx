@@ -21,11 +21,12 @@ export default class PieChart extends react.Component {
 
 
     render() {
+        console.log(this.props.evictions[0].evictions, this.props.evictions[0].applications)
         return (
             <>
                 <div className="pie-chart">
                     <h2>{this.props.cityName}</h2>
-                    {(this.props.evictions[0].evictions != 0 && this.props.evictions[0].applications != 0) ?
+                    {(this.props.evictions[0].evictions > 0 && this.props.evictions[0].applications > 0) ?
                         <Pie
                             data={this.state}
                         /> :
