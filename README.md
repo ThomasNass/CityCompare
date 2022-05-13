@@ -13,7 +13,7 @@ run "npm ci"
 
 ## start
 
-"run npm start-server" för att starta servern som mockdatan finns på
+ "npm run start-server" för att starta servern som mockdatan finns på
 
 öppna en till terminal och kör "npm start" för att starta appen
 
