@@ -4,6 +4,7 @@ import PopulationBarChart from "./population-barchart.jsx";
 import DisplayTax from "./display-tax.jsx";
 import LineChart from "./line-chart.jsx";
 import PieChart from "./pie-chart.jsx";
+import Jobs from "./jobs.jsx";
 
 export default class CityComparison extends react.Component {
 
@@ -37,6 +38,19 @@ export default class CityComparison extends react.Component {
                             cityName={this.props.city1[0].name} />
                         <DisplayTax
                             tax={this.props.city2[0].tax}
+                            cityName={this.props.city2[0].name} />
+                    </div>
+                </div>
+                <div className="tax-wrapper wrapper">
+                    <h1>Lediga jobb</h1>
+                    <div className="tax-div">
+                        <Jobs
+                            jobs={this.props.city1[0].jobs}
+                            cityName={this.props.city1[0].name} />
+                    </div>
+                    <div className="tax-div">
+                        <Jobs
+                            jobs={this.props.city2[0].jobs}
                             cityName={this.props.city2[0].name} />
                     </div>
                 </div>

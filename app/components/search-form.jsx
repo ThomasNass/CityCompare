@@ -29,16 +29,16 @@ export default class SearchForm extends react.Component {
         //Formaterar om till små bokstäver med stor i början
         search1 = formatInput(search1);
         search2 = formatInput(search2);
-
         //Ändrar namnet på städerna så att de ska matcha datan som hämtas från sökningarna
         city1[0].name = search1;
         city2[0].name = search2;
+
         try {
             await getActualCityData(city1, city2, search1, search2);//Här görs alla riktiga API-anrop
 
             console.log(city1, city2)
-            this.setState({ city1: city1 });
-            this.setState({ city2: city2 });
+            this.setState({ city1 });
+            this.setState({ city2 });
             this.setState({ remove_comparison: false })//Deaktiverar boolen för att en jämförelse ska kunna visas på nytt
         }
         catch (error) {

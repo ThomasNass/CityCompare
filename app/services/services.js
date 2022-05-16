@@ -1,4 +1,4 @@
-import { getKronofogdenApplications, getKronofogdenEvictions, getPopulation, getTaxes } from "./api-caller.js";
+import { getJobListings, getKronofogdenApplications, getKronofogdenEvictions, getPopulation, getTaxes } from "./api-caller.js";
 
 export async function getActualCityData(city1, city2, search1, search2) {
     const pop1 = await getPopulation(search1);
@@ -9,6 +9,10 @@ export async function getActualCityData(city1, city2, search1, search2) {
     const applications2 = await getKronofogdenApplications(search2);
     const evictions1 = await getKronofogdenEvictions(search1.toUpperCase());
     const evictions2 = await getKronofogdenEvictions(search2.toUpperCase());
+    city1[0].jobs = await getJobListings(search1);
+    city2[0].jobs = await getJobListings(search2);
+
+
 
     city1[0].kronofogdenApplications = getYearsAndApplications(applications1);
     city2[0].kronofogdenApplications = getYearsAndApplications(applications2);
@@ -18,6 +22,7 @@ export async function getActualCityData(city1, city2, search1, search2) {
     city2[0].tax = parseFloat(taxes2.results[0]["summa, exkl. kyrkoavgift"])
     city1[0].population = parseInt(pop1.results[0]["folkmängd 31 december 2020"].replace(/ /g, ""));
     city2[0].population = parseInt(pop2.results[0]["folkmängd 31 december 2020"].replace(/ /g, ""));
+
 
 }
 

@@ -29,7 +29,7 @@ export async function getKronofogdenEvictions(cityName) {
 
 
 export async function getJobListings(cityName) {
-    const response = await axios.get(`https://links.api.jobtechdev.se/joblinks?q=${cityName}`);
+    const response = await axios.get(`https://links.api.jobtechdev.se/joblinks?q=${cityName}&limit=10`);
     return response.data;
 }
 
