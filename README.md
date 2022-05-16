@@ -38,3 +38,6 @@ SKULDSANERING: https://www.dataportal.se/sv/datasets/265_3115/antal-skuldsanerin
 
 VRÄKNINGSDATA : https://www.dataportal.se/sv/datasets/265_3861/antal-ansokningar-om-vrakning-och-hur-manga-som-genomforts-i-sverige#ref=?p=1&q=&s=8&t=100&f=http%3A%2F%2Fpurl.org%2Fdc%2Fterms%2Fformat%7C%7Capplication%2Fjson%7C%7Cfalse%7C%7Cliteral_s%7C%7CFormat%7C%7Capplication%2Fjson%24http%3A%2F%2Fpurl.org%2Fdc%2Fterms%2Fpublisher%7C%7Chttps%3A%2F%2Fkronofogden.entryscape.net%2Fstore%2F2%2Fresource%2F1%7C%7Cfalse%7C%7Curi%7C%7COrganisation%7C%7CKronofogdemyndigheten&rt=esterms_IndependentDataService%24esterms_ServedByDataService&c=false
 
+JobTechDev - används för att hämta in jobbannonser relevanta för kommunen
+
+https://links.api.jobtechdev.se/
