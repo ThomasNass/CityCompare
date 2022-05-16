@@ -13,9 +13,7 @@ run "npm ci"
 
 ## start
 
- "npm run start-server" för att starta servern som mockdatan finns på
-
-öppna en till terminal och kör "npm start" för att starta appen
+ "npm start" för att starta app och json-server
 
 "npx parcel index.html --open" (För att öppna sidan om appen)
 
@@ -26,6 +24,7 @@ axios - Används för att göra http-anrop på ett smidigare sätt än fetch. Mi
 chart.js - Används för att göra olika diagram. Använder för att presentera datan på ett snyggt och enkelt sätt.
 react-chartjs-2 - Används specifikt för react. Det är egentligen detta jag använder, men det fungerar inte utan chart.js
 json-server - Används för att sätta upp ett eget REST-API. Jag använder den till att lagra mockdata för att kunna rendera tabellen med företag i.
+npm-run-all - Används för att köra flera scripts samtidigt
 
 
 ## Tjänster
