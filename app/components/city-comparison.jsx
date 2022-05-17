@@ -41,14 +41,14 @@ export default class CityComparison extends react.Component {
                             cityName={this.props.city2[0].name} />
                     </div>
                 </div>
-                <div className="tax-wrapper wrapper">
+                <div className="job-wrapper wrapper">
                     <h1>Lediga jobb</h1>
-                    <div className="tax-div">
+                    <div className="job-div">
                         <Jobs
                             jobs={this.props.city1[0].jobs}
                             cityName={this.props.city1[0].name} />
                     </div>
-                    <div className="tax-div">
+                    <div className="job-div">
                         <Jobs
                             jobs={this.props.city2[0].jobs}
                             cityName={this.props.city2[0].name} />

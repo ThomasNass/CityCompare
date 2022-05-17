@@ -69,6 +69,13 @@ main {
     right: 10px;
 }
 
+#job-button {
+    background-color: black;
+}
+
+#job-button:hover {
+    background-color: pink;
+}
 
 button {
     color: var(--color);
@@ -128,17 +135,15 @@ td {
 .bar-div,
 .tax-div,
 .entries-div,
-.pie-div {
+.pie-div,
+.job-div {
     justify-content: space-around;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     background-color: rgb(255, 255, 255);
 }
 
-.bar-wrapper,
-.tax-wrapper,
-.entries-wrapper,
-.pie-wrapper {
+.wrapper {
     border-radius: 5px;
     text-align: center;
     width: 100%;
@@ -146,12 +151,33 @@ td {
     background-color: rgba(255, 192, 203, 0.889);
 }
 
-.tax-div {
+.job-wrapper {
+    justify-content: center;
+    align-items: center;
+}
+
+.tax-div,
+.job-div {
     display: flex;
     text-align: center;
 }
 
+.job-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.job-hit-div {
+    text-align: left;
+    width: 80%;
+    border: 1px solid gray;
+    border-width: 1px 1px 0 1px;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 
 .green {

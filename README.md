@@ -41,3 +41,4 @@ VRÄKNINGSDATA : https://www.dataportal.se/sv/datasets/265_3861/antal-ansokninga
 JobTechDev - används för att hämta in jobbannonser relevanta för kommunen
 
 https://links.api.jobtechdev.se/
+
