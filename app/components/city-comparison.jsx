@@ -8,14 +8,6 @@ import Jobs from "./jobs.jsx";
 
 export default class CityComparison extends react.Component {
 
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         city1: this.props.city1,//Gör inte så här, används props direkt i barnen istället
-    //         city2: this.props.city2
-    //     }
-    // }
-
     render() {
         return (
 

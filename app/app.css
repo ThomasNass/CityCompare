@@ -47,6 +47,7 @@ body {
 }
 
 main {
+    width: 80%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -98,11 +99,11 @@ input {
     margin-bottom: 2px;
     text-align: center;
     padding: 8px;
-    width: 98%;
+    width: 99%;
 }
 
 .filter-input {
-    width: 98%;
+    width: 99%;
 }
 
 .filter-input::placeholder {
@@ -128,6 +129,7 @@ table {
 }
 
 td {
+    width: 33%;
     border-bottom: 1px solid rgba(0, 0, 0, 0.143);
     padding: 5px;
 }
@@ -166,13 +168,15 @@ td {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 20px;
 }
 
 .job-hit-div {
     text-align: left;
     width: 80%;
+    margin: 20px 0;
     border: 1px solid gray;
-    border-width: 1px 1px 0 1px;
+    border-radius: 5px;
     padding-left: 10px;
     display: flex;
     flex-direction: column;

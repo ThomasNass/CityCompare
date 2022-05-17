@@ -10,9 +10,6 @@ export default class Jobs extends react.Component {
         }
     }
 
-    // flipBool = () => {
-    //     this.setState({ showJob: true });
-    // }
 
     render() {
 
@@ -30,8 +27,8 @@ export default class Jobs extends react.Component {
                             <h2>{hit.headline}</h2>
                             <h3>Typ av tjänst: {hit.occupation_group.label}</h3>
                             <h3>Anställare: {hit.employer.name}</h3>
-                            <p>Beskrivning: {hit.brief}</p>
-                            <p>Sök här: <a href={hit.source_links[0].url}>{hit.source_links[0].url}</a> </p>
+                            <h4>{hit.brief}</h4>
+                            <p><a href={hit.source_links[0].url} target="_blank"><Button id={"job-button"} text={"Sök här"} /></a> </p>
                         </div>
                     ))
                     :

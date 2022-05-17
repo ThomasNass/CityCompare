@@ -1,16 +1,17 @@
 import { getJobListings, getKronofogdenApplications, getKronofogdenEvictions, getPopulation, getTaxes } from "./api-caller.js";
 
-export async function getActualCityData(city1, city2, search1, search2) {
-    const pop1 = await getPopulation(search1);
-    const pop2 = await getPopulation(search2);
-    const taxes1 = await getTaxes(search1.toUpperCase());
-    const taxes2 = await getTaxes(search2.toUpperCase());
-    const applications1 = await getKronofogdenApplications(search1);
-    const applications2 = await getKronofogdenApplications(search2);
-    const evictions1 = await getKronofogdenEvictions(search1.toUpperCase());
-    const evictions2 = await getKronofogdenEvictions(search2.toUpperCase());
-    city1[0].jobs = await getJobListings(search1);
-    city2[0].jobs = await getJobListings(search2);
+export async function getActualCityData(city1, city2) {
+    console.log(city1[0].name, city2[0].name)
+    const pop1 = await getPopulation(city1[0].name);
+    const pop2 = await getPopulation(city2[0].name);
+    const taxes1 = await getTaxes(city1[0].name.toUpperCase());
+    const taxes2 = await getTaxes(city2[0].name.toUpperCase());
+    const applications1 = await getKronofogdenApplications(city1[0].name);
+    const applications2 = await getKronofogdenApplications(city2[0].name);
+    const evictions1 = await getKronofogdenEvictions(city1[0].name.toUpperCase());
+    const evictions2 = await getKronofogdenEvictions(city2[0].name.toUpperCase());
+    city1[0].jobs = await getJobListings(city1[0].name);
+    city2[0].jobs = await getJobListings(city2[0].name);
 
 
 

@@ -34,7 +34,7 @@ export default class SearchForm extends react.Component {
         city2[0].name = search2;
 
         try {
-            await getActualCityData(city1, city2, search1, search2);//Här görs alla riktiga API-anrop
+            await getActualCityData(city1, city2);//Här görs alla riktiga API-anrop
 
             console.log(city1, city2)
             this.setState({ city1 });
