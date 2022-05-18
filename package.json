@@ -15,7 +15,7 @@
   "scripts": {
     "start-app": "parcel app.html --open",
     "start-server": "json-server --watch db.json",
-    "start": "run-p start-app start-server"
+    "start": "run-p start-server start-app"
   },
   "repository": {
     "type": "git",

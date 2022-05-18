@@ -15,11 +15,7 @@ export default class CityComparison extends react.Component {
                 <div className="bar-wrapper wrapper">
                     <h1>Folkmängd 2020</h1>
                     <div className="bar-div">
-                        <PopulationBarChart
-                            population1={this.props.city1[0].population}
-                            population2={this.props.city2[0].population}
-                            cityName1={this.props.city1[0].name}
-                            cityName2={this.props.city2[0].name} />
+                        <PopulationBarChart />
                     </div>
                 </div>
                 <div className="tax-wrapper wrapper">
@@ -60,11 +56,9 @@ export default class CityComparison extends react.Component {
                 <div className="pie-wrapper wrapper">
                     <h1>Vräkningar / Vräkningsansökningar 2020</h1>
                     <div className="pie-div">
-                        {
-                            <PieChart
-                                evictions={this.props.city1[0].kronofogdenEvictions}
-                                cityName={this.props.city1[0].name} />
-                        }
+                        <PieChart
+                            evictions={this.props.city1[0].kronofogdenEvictions}
+                            cityName={this.props.city1[0].name} />
                         <PieChart
                             evictions={this.props.city2[0].kronofogdenEvictions}
                             cityName={this.props.city2[0].name} />

@@ -1,7 +1,6 @@
 import { getJobListings, getKronofogdenApplications, getKronofogdenEvictions, getPopulation, getTaxes } from "./api-caller.js";
 
 export async function getActualCityData(city1, city2) {
-    console.log(city1[0].name, city2[0].name)
     const pop1 = await getPopulation(city1[0].name);
     const pop2 = await getPopulation(city2[0].name);
     const taxes1 = await getTaxes(city1[0].name.toUpperCase());
@@ -10,6 +9,7 @@ export async function getActualCityData(city1, city2) {
     const applications2 = await getKronofogdenApplications(city2[0].name);
     const evictions1 = await getKronofogdenEvictions(city1[0].name.toUpperCase());
     const evictions2 = await getKronofogdenEvictions(city2[0].name.toUpperCase());
+
     city1[0].jobs = await getJobListings(city1[0].name);
     city2[0].jobs = await getJobListings(city2[0].name);
 

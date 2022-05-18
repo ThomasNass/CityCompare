@@ -21,7 +21,6 @@ export default class PieChart extends react.Component {
 
 
     render() {
-        console.log(this.props.evictions[0].evictions, this.props.evictions[0].applications)
         return (
             <>
                 <div className="pie-chart">

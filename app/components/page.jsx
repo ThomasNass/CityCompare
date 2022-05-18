@@ -2,6 +2,7 @@ import react from "react";
 import cities from '../mock-cities.json'
 import SearchForm from './search-form.jsx';
 import LoginForm from "./login-form.jsx";
+import { ErrorView } from "../error/error-view.js";
 
 
 export default class Page extends react.Component {
@@ -24,16 +25,20 @@ export default class Page extends react.Component {
 
 
     render() {
-        return <>
-            {(this.state.loggedIn.bool == true || this.state.loggedIn == true)
-                ? <>
-                    <SearchForm onClick={this.onClick} saveLocalStorage={this.saveLocalStorage} />
-                </>
-                : <>
-                    <LoginForm onClick={this.saveLocalStorage} />
-                </>
-            }
-        </>
+        return (
+            <>
+                {(this.state.loggedIn.bool == true || this.state.loggedIn == true)
+                    ? <> <ErrorView>
+                        <SearchForm onClick={this.onClick} saveLocalStorage={this.saveLocalStorage} />
+                    </ErrorView>
+                    </>
+                    : <>
+                        <LoginForm onClick={this.saveLocalStorage} />
+                    </>
+                }
+
+            </>)
+
 
 
     }

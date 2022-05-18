@@ -42,3 +42,6 @@ JobTechDev - används för att hämta in jobbannonser relevanta för kommunen
 
 https://links.api.jobtechdev.se/
 
+## data-list - en genrell och återanvändingsbar komponent
+Komponenten är ett datalist-input element. Den tar en rad egenskaper som man vanligtvis kan sätta på ett html-element så som class, placeholder etc. Den tar även en onChange för att användaren ska kunna bestämma vad som händer när den förändras. Det som är mest spännande med komponenten är att den tar en array som den sedan genererar de olika valen i datalistan som användaren sedan kan klicka på.
+

@@ -1,31 +1,29 @@
 import react from "react";
 import { Bar } from "react-chartjs-2";
 import { Chart as ChartJS } from "chart.js/auto";
+import CityContext from "../context/city-context.js";
 
 
 
 export default class PopulationBarChart extends react.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            labels: [this.props.cityName1, this.props.cityName2],
-            datasets: [{
-                label: "Folkmängd",
-                backgroundColor: "pink",
-
-                data: [this.props.population1, this.props.population2]
-            }
-            ]
-        }
-    }
 
 
+    static contextType = CityContext
     render() {
         return (
             <>
 
                 <Bar
-                    data={this.state}
+                    data={{
+                        labels: [this.context.city1[0].name, this.context.city2[0].name],
+                        datasets: [{
+                            label: "Folkmängd",
+                            backgroundColor: "pink",
+
+                            data: [this.context.city1[0].population, this.context.city2[0].population]
+                        }
+                        ]
+                    }}
                 />
 
             </>

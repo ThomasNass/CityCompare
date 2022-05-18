@@ -1,5 +1,5 @@
 import react from "react";
-import cities from "../cities.json"
+
 
 export default class DataList extends react.Component {
 
@@ -7,7 +7,7 @@ export default class DataList extends react.Component {
         return (
             <>
                 <input
-                    className={this.props.className || "search-input"}
+                    className={this.props.className}
                     name={this.props.name}
                     type="text"
                     list="data"
@@ -16,8 +16,8 @@ export default class DataList extends react.Component {
 
                 </input>
                 <datalist id="data">
-                    {cities.cities.map((city, key) =>
-                        <option key={key} value={city} />)}
+                    {this.props.array.map((element, key) =>
+                        <option key={key} value={element} />)}
                 </datalist>
             </>
         )
