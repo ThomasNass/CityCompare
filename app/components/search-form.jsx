@@ -66,8 +66,8 @@ export default class SearchForm extends react.Component {
                 onClick={() => { this.props.saveLocalStorage(false) }} />
 
 
-            <DataList array={cityArray.cities} className={"search-input"} name={"search1"} placeholder={"Ange stad"} onChange={this.handleChange} />
-            <DataList array={cityArray.cities} className={"search-input"} name={"search2"} placeholder={"Ange stad"} onChange={this.handleChange} />
+            <DataList type={"text"} dataListId={"data"} array={cityArray.cities} className={"search-input"} name={"search1"} placeholder={"Ange stad"} onChange={this.handleChange} />
+            <DataList type={"text"} dataListId={"data"} array={cityArray.cities} className={"search-input"} name={"search2"} placeholder={"Ange stad"} onChange={this.handleChange} />
 
             <Button
                 id={"compare-button"}
