@@ -3,7 +3,7 @@ import cities from '../mock-cities.json'
 import SearchForm from './search-form.jsx';
 import LoginForm from "./login-form.jsx";
 import { ErrorView } from "../error/error-view.js";
-
+import { CityProvider } from "../context/city-context.js";
 
 export default class Page extends react.Component {
     constructor(props) {
@@ -28,9 +28,21 @@ export default class Page extends react.Component {
         return (
             <>
                 {(this.state.loggedIn.bool == true || this.state.loggedIn == true)
-                    ? <> <ErrorView>
-                        <SearchForm saveLocalStorage={this.saveLocalStorage} />
-                    </ErrorView>
+                    ? <>
+                        <CityProvider>
+                            <ErrorView>
+                                <SearchForm saveLocalStorage={this.saveLocalStorage} />
+                                {(this.context.hasCities === true)
+                                    ?
+                                    <CityComparison
+                                        city1={this.context.city1}
+                                        city2={this.context.city2}
+                                    />
+                                    :
+                                    null
+                                }
+                            </ErrorView>
+                        </CityProvider>
                     </>
                     : <>
                         <LoginForm onClick={this.saveLocalStorage} />

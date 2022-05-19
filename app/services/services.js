@@ -24,17 +24,25 @@ export async function getActualCityData(city1, city2) {
     city1[0].population = parseInt(pop1.results[0]["folkmängd 31 december 2020"].replace(/ /g, ""));
     city2[0].population = parseInt(pop2.results[0]["folkmängd 31 december 2020"].replace(/ /g, ""));
 
-
 }
 
 getEvictions = (array) => {
     const evictionsArray = [];
-    array.results.forEach(eviction => {
-        let obj = {};
-        obj.evictions = eviction["antal genomförda vräkningar"];
-        obj.applications = eviction["antal ansökningar om vräkning"];
-        evictionsArray.push(obj);
-    })
+    let obj = {};
+    if (array.results.length > 0) {
+        array.results.forEach(eviction => {
+            obj.evictions = eviction["antal genomförda vräkningar"];
+            obj.applications = eviction["antal ansökningar om vräkning"];
+
+        })
+    }
+    else {
+        obj.evictions = 0;
+        obj.applications = 0;
+    }
+
+    console.log("Här kollar vi efter loopen", obj)
+    evictionsArray.push(obj);
     return evictionsArray;
 }
 
