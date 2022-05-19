@@ -25,6 +25,7 @@ chart.js - Används för att göra olika diagram. Använder för att presentera 
 react-chartjs-2 - Används specifikt för react. Det är egentligen detta jag använder, men det fungerar inte utan chart.js
 json-server - Används för att sätta upp ett eget REST-API. Jag använder den till att lagra mockdata för att kunna rendera tabellen med företag i.
 npm-run-all - Används för att köra flera scripts samtidigt
+PropTypes - Används för att tvinga användingen av rätt type på props i komponenterna.
 
 
 ## Tjänster
