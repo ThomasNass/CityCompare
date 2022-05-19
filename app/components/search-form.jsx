@@ -6,7 +6,8 @@ import { getMockCities } from "../services/api-caller.js";
 import CityComparison from "./city-comparison.jsx";
 import { getActualCityData, formatInput } from "../services/services.js";
 import { CityProvider } from "../context/city-context.js";
-import cityArray from "../cities.json"
+import cityArray from "../cities.json";
+import propTypes from "prop-types";
 
 export default class SearchForm extends react.Component {
     constructor(props) {
@@ -66,8 +67,8 @@ export default class SearchForm extends react.Component {
                 onClick={() => { this.props.saveLocalStorage(false) }} />
 
 
-            <DataList type={"text"} dataListId={"data"} array={cityArray.cities} className={"search-input"} name={"search1"} placeholder={"Ange stad"} onChange={this.handleChange} />
-            <DataList type={"text"} dataListId={"data"} array={cityArray.cities} className={"search-input"} name={"search2"} placeholder={"Ange stad"} onChange={this.handleChange} />
+            <DataList type={"text"} array={cityArray.cities} className={"search-input"} name={"search1"} placeholder={"Ange stad"} onChange={this.handleChange} />
+            <DataList type={"text"} array={cityArray.cities} className={"search-input"} name={"search2"} placeholder={"Ange stad"} onChange={this.handleChange} />
 
             <Button
                 id={"compare-button"}
@@ -88,3 +89,7 @@ export default class SearchForm extends react.Component {
         </>)
     }
 }
+
+SearchForm.propTypes = {
+    saveLocalStorage: propTypes.func
+};

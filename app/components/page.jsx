@@ -29,7 +29,7 @@ export default class Page extends react.Component {
             <>
                 {(this.state.loggedIn.bool == true || this.state.loggedIn == true)
                     ? <> <ErrorView>
-                        <SearchForm onClick={this.onClick} saveLocalStorage={this.saveLocalStorage} />
+                        <SearchForm saveLocalStorage={this.saveLocalStorage} />
                     </ErrorView>
                     </>
                     : <>

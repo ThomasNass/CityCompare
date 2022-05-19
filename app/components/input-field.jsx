@@ -1,3 +1,4 @@
+import propTypes from "prop-types";
 import react from "react";
 
 export default class InputField extends react.Component {
@@ -15,4 +16,8 @@ export default class InputField extends react.Component {
             </input>
         )
     }
+}
+
+InputField.propTypes = {
+    name: propTypes.string
 }
