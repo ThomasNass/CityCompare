@@ -1,11 +1,8 @@
 import react from "react";
-import InputField from "./input-field.jsx";
 import DataList from "./data-list.jsx";
 import Button from "./button.jsx";
-import { getMockCities } from "../services/api-caller.js";
 import CityComparison from "./city-comparison.jsx";
-import { getActualCityData, formatInput } from "../services/services.js";
-import { CityProvider } from "../context/city-context.js";
+import CityContext from "../context/city-context.js";
 import cityArray from "../cities.json";
 import propTypes from "prop-types";
 
@@ -21,33 +18,7 @@ export default class SearchForm extends react.Component {
         }
     }
 
-
-    getCities = async (search1, search2) => {
-        //Sätter boolen till true ifall en jämförelse redan har gjorts för att ta bort den
-        this.setState({ remove_comparison: true });
-
-        //Hämtar de hårdkodade städerna som har de hårdkodade företagen
-        const city1 = await getMockCities("Vetlanda");
-        const city2 = await getMockCities("Falköping");
-
-        //Formaterar om till små bokstäver med stor i början
-        search1 = formatInput(search1);
-        search2 = formatInput(search2);
-        //Ändrar namnet på städerna så att de ska matcha datan som hämtas från sökningarna
-        city1[0].name = search1;
-        city2[0].name = search2;
-
-
-        await getActualCityData(city1, city2);//Här görs alla riktiga API-anrop
-
-        this.setState({ city1 });
-        this.setState({ city2 });
-        this.setState({ remove_comparison: false })//Deaktiverar boolen för att en jämförelse ska kunna visas på nytt
-
-
-        throw { code: "Räv", message: "Det är en räv i search-form" }
-
-    }
+    static contextType = CityContext
 
 
     handleChange = (event) => {
@@ -58,7 +29,7 @@ export default class SearchForm extends react.Component {
     }
 
     render() {
-        const cities = { city1: this.state.city1, city2: this.state.city2 }//Här försöker jag lägga till cities i Context dvs CityProvider
+        console.log(this.context)
         return (<>
 
             <Button
@@ -73,15 +44,14 @@ export default class SearchForm extends react.Component {
             <Button
                 id={"compare-button"}
                 text={"Jämför"}
-                onClick={() => this.getCities(this.state.search1, this.state.search2)} />
+                onClick={() => this.context.setContext(this.state.search1, this.state.search2)} />
 
-            {(this.state.remove_comparison === false)
-                ? <CityProvider value={cities}>
-                    <CityComparison
-                        city1={this.state.city1}
-                        city2={this.state.city2}
-                    />
-                </CityProvider>
+            {(this.context.hasCities === true)
+                ?
+                <CityComparison
+                    city1={this.context.city1}
+                    city2={this.context.city2}
+                />
                 :
                 null
             }

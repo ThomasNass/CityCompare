@@ -5,8 +5,16 @@ import DisplayTax from "./display-tax.jsx";
 import LineChart from "./line-chart.jsx";
 import PieChart from "./pie-chart.jsx";
 import Jobs from "./jobs.jsx";
+import Button from "./button.jsx";
 
 export default class CityComparison extends react.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            showTable: false
+        }
+    }
+
 
     render() {
         return (
@@ -64,12 +72,20 @@ export default class CityComparison extends react.Component {
                             cityName={this.props.city2[0].name} />
                     </div>
                 </div>
-                <FilterableTable
-                    buisnesses1={this.props.city1[0].buisness}
-                    buisnesses2={this.props.city2[0].buisness}
-                    cityName1={this.props.city1[0].name}
-                    cityName2={this.props.city2[0].name}
-                />
+                <>
+                    <Button id={"job-button"} onClick={() => this.setState({ showTable: !this.state.showTable })} text={(this.state.showTable) ? "Dölj butiker" : "Visa butiker"}></Button>
+                    {(this.state.showTable)
+                        ?
+                        <FilterableTable
+                            buisnesses1={this.props.city1[0].buisness}
+                            buisnesses2={this.props.city2[0].buisness}
+                            cityName1={this.props.city1[0].name}
+                            cityName2={this.props.city2[0].name}
+                        />
+                        :
+                        null
+                    }
+                </>
             </>
         )
     }
