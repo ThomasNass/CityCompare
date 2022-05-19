@@ -20,14 +20,7 @@ export class ErrorView extends react.Component {
     }
 
     render() {
-        /* if (this.state.errCode == "lang") {
-            return (
-                <>
-                    <p>{this.state.errMess}</p>
-                    <button onClick={() => alert("ändra språk")}>Reset language</button>
-                </>
-            )
-        } */
+
         if (this.state.errCode) {
             return (
                 <>

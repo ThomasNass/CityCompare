@@ -45,7 +45,7 @@ export default class SearchForm extends react.Component {
         this.setState({ remove_comparison: false })//Deaktiverar boolen för att en jämförelse ska kunna visas på nytt
 
 
-        throw new Error("Räven")
+        throw { code: "Räv", message: "Det är en räv i search-form" }
 
     }
 
