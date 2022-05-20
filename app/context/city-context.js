@@ -2,6 +2,7 @@ import react from "react";
 import { useState, useEffect } from "react";
 import { getMockCities } from "../services/api-caller.js";
 import { formatInput, getActualCityData } from "../services/services.js";
+
 const CityContext = react.createContext();
 
 export const CityProvider = (props) => {
@@ -19,8 +20,7 @@ export const CityProvider = (props) => {
     }, [city1, city2])
 
     getCities = async (search1, search2) => {
-        //Sätter boolen till true ifall en jämförelse redan har gjorts för att ta bort den
-        // this.setState({ remove_comparison: true });
+        
         //Hämtar de hårdkodade städerna som har de hårdkodade företagen
         const city1 = await getMockCities("Vetlanda");
         const city2 = await getMockCities("Falköping");
@@ -37,8 +37,6 @@ export const CityProvider = (props) => {
 
         setCity1(city1);
         setCity2(city2);
-        // this.setState({ remove_comparison: false })//Deaktiverar boolen för att en jämförelse ska kunna visas på nytt
-
 
         // throw { code: "Räv", message: "Det är en räv i search-form" }
 

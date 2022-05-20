@@ -1,4 +1,5 @@
 import react from "react";
+import CityContext from "../context/city-context.js";
 import Button from "./button";
 
 export default class Jobs extends react.Component {
@@ -10,17 +11,17 @@ export default class Jobs extends react.Component {
         }
     }
 
-
+    static contextType = CityContext
     render() {
-
+        const city = this.context[this.props.city][0]
         return (
             <>
-                <h2>{this.props.cityName}</h2>
-                <h2>{this.props.jobs.total.value}</h2>
+                <h2>{city.name}</h2>
+                <h2>{city.jobs.total.value}</h2>
                 <Button id={"job-button"} onClick={() => this.setState({ showJob: !this.state.showJob })} text={(this.state.showJob) ? "Dölj lediga jobb" : "Visa lediga jobb"}></Button>
                 {(this.state.showJob)
                     ?
-                    this.props.jobs.hits.map((hit) => (
+                    city.jobs.hits.map((hit) => (
 
                         <div className="job-hit-div">
 

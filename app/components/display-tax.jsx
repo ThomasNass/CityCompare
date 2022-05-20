@@ -1,13 +1,17 @@
 import react from "react";
+import CityContext from "../context/city-context";
 
 export default class DisplayTax extends react.Component {
 
+    static contextType = CityContext
     render() {
-        return (
+        const city = this.context[this.props.city][0]
+        return (<>
             <div>
-                <h2>{this.props.cityName}</h2>
-                <h2>{this.props.tax}</h2>
+                <h2>{city.name}</h2>
+                <h2>{city.tax}</h2>
             </div>
+        </>
         )
     }
 }

@@ -2,7 +2,7 @@ import react from "react";
 import cities from '../mock-cities.json'
 import SearchForm from './search-form.jsx';
 import LoginForm from "./login-form.jsx";
-import { ErrorView } from "../error/error-view.js";
+import { ErrorView } from "../error/error-view.jsx";
 import { CityProvider } from "../context/city-context.js";
 
 export default class Page extends react.Component {

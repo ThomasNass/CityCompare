@@ -29,47 +29,37 @@ export default class CityComparison extends react.Component {
                 <div className="tax-wrapper wrapper">
                     <h1>Skattesats 2022</h1>
                     <div className="tax-div">
-                        <DisplayTax
-                            tax={this.props.city1[0].tax}
-                            cityName={this.props.city1[0].name} />
-                        <DisplayTax
-                            tax={this.props.city2[0].tax}
-                            cityName={this.props.city2[0].name} />
+                        <DisplayTax city={"city1"} />
+                        <DisplayTax city={"city2"} />
                     </div>
                 </div>
                 <div className="job-wrapper wrapper">
                     <h1>Lediga jobb</h1>
                     <div className="job-div">
                         <Jobs
-                            jobs={this.props.city1[0].jobs}
-                            cityName={this.props.city1[0].name} />
+                            city={"city1"} />
                     </div>
                     <div className="job-div">
                         <Jobs
-                            jobs={this.props.city2[0].jobs}
-                            cityName={this.props.city2[0].name} />
+                            city={"city2"} />
                     </div>
                 </div>
                 <div className="entries-wrapper wrapper">
                     <h1>Skuldsaneringsansökningar till kronofogden</h1>
                     <div className="entries-div">
                         <LineChart
-                            cityName={this.props.city1[0].name}
-                            applications={this.props.city1[0].kronofogdenApplications} />
+                            city={"city1"} />
                         <LineChart
-                            cityName={this.props.city2[0].name}
-                            applications={this.props.city2[0].kronofogdenApplications} />
+                            city={"city2"} />
                     </div>
                 </div>
                 <div className="pie-wrapper wrapper">
                     <h1>Vräkningar / Vräkningsansökningar 2020</h1>
                     <div className="pie-div">
                         <PieChart
-                            evictions={this.props.city1[0].kronofogdenEvictions}
-                            cityName={this.props.city1[0].name} />
+                            city={"city1"} />
                         <PieChart
-                            evictions={this.props.city2[0].kronofogdenEvictions}
-                            cityName={this.props.city2[0].name} />
+                            city={"city2"} />
                     </div>
                 </div>
                 <>
