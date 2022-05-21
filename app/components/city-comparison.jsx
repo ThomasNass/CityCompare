@@ -67,10 +67,6 @@ export default class CityComparison extends react.Component {
                     {(this.state.showTable)
                         ?
                         <FilterableTable
-                            buisnesses1={this.props.city1[0].buisness}
-                            buisnesses2={this.props.city2[0].buisness}
-                            cityName1={this.props.city1[0].name}
-                            cityName2={this.props.city2[0].name}
                         />
                         :
                         null

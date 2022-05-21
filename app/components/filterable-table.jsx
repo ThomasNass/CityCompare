@@ -1,46 +1,57 @@
 import react from "react";
 import BuisenessRows from "./buisness-rows";
 import InputField from "./input-field";
+import { getBuisnesses } from "../services/services.js";
+import CityContext from "../context/city-context.js";
+import Button from "./button";
 
 export class FilterableTable extends react.Component {
     constructor(props) {
         super(props);
         this.state = {
-            filterText: ""
+            filterText: "",
+            citiesCompared: [],
+            done: false
         }
     }
 
 
-    allBuisnesses = (buisnesses1, buisnesses2) => {
-        let combinedArrays = [];
-        let CitiesCompared = [];
-        buisnesses1.forEach(buisness => {
-            combinedArrays.push(buisness.name)
-        });
-        buisnesses2.forEach(buisness => {
-            combinedArrays.push(buisness.name)
-        });
+    // allBuisnesses = (buisnesses1, buisnesses2) => {
+    //     let combinedArrays = [];
+    //     let CitiesCompared = [];
+    //     buisnesses1.forEach(buisness => {
+    //         combinedArrays.push(buisness.name)
+    //     });
+    //     buisnesses2.forEach(buisness => {
+    //         combinedArrays.push(buisness.name)
+    //     });
 
-        const uniqueList = [...new Set(combinedArrays)];
-        for (let i = 0; i < uniqueList.length; i++) {
-            let comparison = {};
-            comparison.buisness = uniqueList[i];
-            comparison.buisnesses1 = "nej";
-            comparison.buisnesses2 = "nej";
-            buisnesses1.forEach(buisness => {
-                if (buisness.name == uniqueList[i]) {
-                    comparison.buisnesses1 = "ja";
-                }
-            });
-            buisnesses2.forEach(buisness => {
-                if (buisness.name == uniqueList[i]) {
-                    comparison.buisnesses2 = "ja";
-                }
-            });
-            CitiesCompared.push(comparison);
-        }
-        return CitiesCompared;
+    //     const uniqueList = [...new Set(combinedArrays)];
+    //     for (let i = 0; i < uniqueList.length; i++) {
+    //         let comparison = {};
+    //         comparison.buisness = uniqueList[i];
+    //         comparison.buisnesses1 = "nej";
+    //         comparison.buisnesses2 = "nej";
+    //         buisnesses1.forEach(buisness => {
+    //             if (buisness.name == uniqueList[i]) {
+    //                 comparison.buisnesses1 = "ja";
+    //             }
+    //         });
+    //         buisnesses2.forEach(buisness => {
+    //             if (buisness.name == uniqueList[i]) {
+    //                 comparison.buisnesses2 = "ja";
+    //             }
+    //         });
+    //         CitiesCompared.push(comparison);
+    //     }
+    //     return CitiesCompared;
 
+    // }
+
+    async componentDidMount() {
+        const citiesCompared = await getBuisnesses(this.context.city1[0].name.toLowerCase(), this.context.city2[0].name.toLowerCase());
+        this.setState({ citiesCompared })
+        this.setState({ done: true })
     }
 
     handleChange = (event) => {
@@ -50,31 +61,44 @@ export class FilterableTable extends react.Component {
         this.setState({ [name]: value })
     }
     filteredBuisnesses = (cities, filter) => cities.filter(city => city.buisness.toLowerCase().indexOf(filter.toLowerCase()) !== -1);
-
+    static contextType = CityContext
     render() {
 
-        const citiesCompared = this.allBuisnesses(this.props.buisnesses1, this.props.buisnesses2);
-        const citiesFiltered = this.filteredBuisnesses(citiesCompared, this.state.filterText);
-
+        let citiesFiltered;
+        if (this.state.done) {
+            citiesFiltered = this.filteredBuisnesses(this.state.citiesCompared, this.state.filterText);
+        }
         return (
+            <>
+                {this.state.done ?
+                    <>
+                        <div className="Table" >
+                            <InputField className={"filter-input"} placeholder={"Filtrera tabell.."} name={"filterText"} onChange={this.handleChange} />
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>Företag</td>
+                                        <td>{this.context.city1[0].name}</td>
+                                        <td>{this.context.city2[0].name}</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
 
-            <div className="Table" >
-                <InputField className={"filter-input"} placeholder={"Filtrera tabell.."} name={"filterText"} onChange={this.handleChange} />
-                <table>
-                    <thead>
-                        <tr>
-                            <td>Företag</td>
-                            <td>{this.props.cityName1}</td>
-                            <td>{this.props.cityName2}</td>
-                        </tr>
-                    </thead>
-                    <tbody>
+                                    <BuisenessRows cities={citiesFiltered} />
+                                </tbody>
+                            </table>
 
-                        <BuisenessRows cities={citiesFiltered} />
-                    </tbody>
-                </table>
-            </div>
-        )
+                        </div>
+                        <InputField className={"filter-input"} placeholder={"Saknar du något?"} name={"search"} onChange={this.handleChange} />
+                        <Button id={"extra-search"} text={"Sök"} onClick={ } />
+                    </>
+                    :
+                    <p>
+                        Rendering
+                    </p>
+
+
+                }       </>)
 
     }
 

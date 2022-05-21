@@ -1,5 +1,6 @@
 import { getJobListings, getKronofogdenApplications, getKronofogdenEvictions, getPopulation, getTaxes } from "./api-caller.js";
-
+import { hitta } from "./api-hitta.js";
+import franchises from "./franchises.json"
 export async function getActualCityData(city1, city2) {
     const pop1 = await getPopulation(city1[0].name);
     const pop2 = await getPopulation(city2[0].name);
@@ -62,4 +63,19 @@ export function formatInput(string) {
     let lower = string.toLowerCase();
     let firstUpper = lower.charAt(0).toUpperCase() + lower.substr(1);
     return firstUpper;
+}
+
+
+export async function getBuisnesses(city1, city2) {
+    let citiesCompared = [];
+    for (const franchise in franchises.franchises) {
+        let comparison = {}
+        comparison.buisness = franchises.franchises[franchise];
+        comparison.city1 = await hitta(city1, franchises.franchises[franchise])
+        comparison.city2 = await hitta(city2, franchises.franchises[franchise])
+        citiesCompared.push(comparison);
+    }
+    console.log(citiesCompared);
+    return citiesCompared;
+
 }
