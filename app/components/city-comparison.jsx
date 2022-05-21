@@ -62,16 +62,19 @@ export default class CityComparison extends react.Component {
                             city={"city2"} />
                     </div>
                 </div>
-                <>
-                    <Button id={"job-button"} onClick={() => this.setState({ showTable: !this.state.showTable })} text={(this.state.showTable) ? "Dölj butiker" : "Visa butiker"}></Button>
-                    {(this.state.showTable)
-                        ?
-                        <FilterableTable
-                        />
-                        :
-                        null
-                    }
-                </>
+                <div className="table-wrapper wrapper">
+                    <h1>Butiker och företag</h1>
+                    <div className="table-div">
+                        <Button id={"table-button"} onClick={() => this.setState({ showTable: !this.state.showTable })} text={(this.state.showTable) ? "Dölj butiker" : "Visa butiker"}></Button>
+                        {(this.state.showTable)
+                            ?
+                            <FilterableTable
+                            />
+                            :
+                            null
+                        }
+                    </div>
+                </div>
             </>
         )
     }

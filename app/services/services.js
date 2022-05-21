@@ -79,3 +79,13 @@ export async function getBuisnesses(city1, city2) {
     return citiesCompared;
 
 }
+
+export async function getBuiseness(city1, city2, buisness) {
+    let citiesCompared = [];
+    let comparison = {};
+    comparison.buisness = buisness;
+    comparison.city1 = await hitta(city1, buisness)
+    comparison.city2 = await hitta(city2, buisness)
+    citiesCompared.push(comparison);
+    return citiesCompared;
+}

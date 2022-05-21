@@ -6,8 +6,8 @@
 :root {
     --background: rgba(0, 0, 0, 0.369);
     --color: rgb(255, 255, 255);
-    --green: rgba(172, 255, 47, 0.571);
-    --red: rgba(252, 69, 69, 0.54);
+    --green: rgb(172, 255, 47);
+    --red: rgb(252, 69, 69);
 }
 
 ::placeholder {
@@ -70,13 +70,7 @@ main {
     right: 10px;
 }
 
-#job-button {
-    background-color: black;
-}
 
-#job-button:hover {
-    background-color: pink;
-}
 
 button {
     color: var(--color);
@@ -91,6 +85,20 @@ button:hover {
     background-color: rgba(255, 255, 255, 0.101);
 }
 
+#job-button,
+#job-extra,
+#table-button,
+#extra-search-button {
+    background-color: black;
+}
+
+#job-button:hover,
+#job-extra:hover,
+#table-button:hover,
+#extra-search-button:hover {
+    background-color: pink;
+}
+
 input {
     border: none;
     background-color: var(--background);
@@ -98,12 +106,12 @@ input {
     font-size: 1.2rem;
     margin-bottom: 2px;
     text-align: center;
-    padding: 8px;
-    width: 99%;
+    padding: 8px 0;
+    width: 100%;
 }
 
 .filter-input {
-    width: 99%;
+    width: 100%;
 }
 
 .filter-input::placeholder {
@@ -111,34 +119,61 @@ input {
 }
 
 #compare-button,
-#login-button {
+#login-button,
+#table-button {
     width: 100%;
 }
 
+.table-div {
+    padding: 20px 0;
+}
+
 .Table {
+    /* padding: 20px 0; */
     margin-top: 10px;
     width: 100%;
 }
 
 table {
-    color: white;
+    padding: 20px 0;
+    color: black;
     text-align: center;
     font-size: 1.2rem;
     width: 100%;
-    background-color: var(--background);
+    background-color: white;
+    border-radius: 5px;
+}
+
+thead {
+    background-color: rgba(255, 192, 203, 0.889);
+}
+
+tr,
+thead,
+tbody {
+    width: 100%;
 }
 
 td {
-    width: 33%;
+    width: 33.3%;
     border-bottom: 1px solid rgba(0, 0, 0, 0.143);
     padding: 5px;
+}
+
+#extra-search-button {
+    width: 15%;
+}
+
+.extra-search-input {
+    width: 85%;
 }
 
 .bar-div,
 .tax-div,
 .entries-div,
 .pie-div,
-.job-div {
+.job-div,
+.table-div {
     justify-content: space-around;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -183,6 +218,15 @@ td {
     justify-content: center;
 }
 
+.job-hit-div h2 {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.job-hit-div h2 button {
+    margin-right: 5px;
+}
 
 .green {
     background-color: var(--green);
