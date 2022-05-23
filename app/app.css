@@ -180,6 +180,11 @@ td {
     background-color: rgb(255, 255, 255);
 }
 
+.pie-div {
+    display: flex;
+    flex-direction: row;
+}
+
 .wrapper {
     border-radius: 5px;
     text-align: center;
@@ -255,6 +260,10 @@ td {
     .wrapper h1 {
 
         font-size: medium;
+    }
+
+    .pie-div {
+        flex-direction: column;
     }
 
 }
