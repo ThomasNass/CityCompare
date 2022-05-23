@@ -9,7 +9,7 @@ export default class PieChart extends react.Component {
 
     static contextType = CityContext
     render() {
-        const city = this.context[this.props.city][0]
+        const city = this.context[this.props.city]
         return (
             <>
                 <div className="pie-chart">

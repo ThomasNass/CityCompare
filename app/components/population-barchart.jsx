@@ -15,12 +15,12 @@ export default class PopulationBarChart extends react.Component {
 
                 <Bar
                     data={{
-                        labels: [this.context.city1[0].name, this.context.city2[0].name],
+                        labels: [this.context.city1.name, this.context.city2.name],
                         datasets: [{
                             label: "Folkmängd",
                             backgroundColor: "pink",
 
-                            data: [this.context.city1[0].population, this.context.city2[0].population]
+                            data: [this.context.city1.population, this.context.city2.population]
                         }
                         ]
                     }}

@@ -5,7 +5,7 @@ export default class DisplayTax extends react.Component {
 
     static contextType = CityContext
     render() {
-        const city = this.context[this.props.city][0]
+        const city = this.context[this.props.city]
         return (<>
             <div>
                 <h2>{city.name}</h2>

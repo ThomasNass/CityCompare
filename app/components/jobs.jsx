@@ -14,7 +14,7 @@ export default class Jobs extends react.Component {
 
     static contextType = CityContext
     render() {
-        const city = this.context[this.props.city][0]
+        const city = this.context[this.props.city]
         return (
             <>
                 <h2>{city.name}</h2>

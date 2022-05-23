@@ -2,28 +2,28 @@ import { getJobListings, getKronofogdenApplications, getKronofogdenEvictions, ge
 import { hitta } from "./api-hitta.js";
 import franchises from "./franchises.json"
 export async function getActualCityData(city1, city2) {
-    const pop1 = await getPopulation(city1[0].name);
-    const pop2 = await getPopulation(city2[0].name);
-    const taxes1 = await getTaxes(city1[0].name.toUpperCase());
-    const taxes2 = await getTaxes(city2[0].name.toUpperCase());
-    const applications1 = await getKronofogdenApplications(city1[0].name);
-    const applications2 = await getKronofogdenApplications(city2[0].name);
-    const evictions1 = await getKronofogdenEvictions(city1[0].name.toUpperCase());
-    const evictions2 = await getKronofogdenEvictions(city2[0].name.toUpperCase());
+    const pop1 = await getPopulation(city1.name);
+    const pop2 = await getPopulation(city2.name);
+    const taxes1 = await getTaxes(city1.name.toUpperCase());
+    const taxes2 = await getTaxes(city2.name.toUpperCase());
+    const applications1 = await getKronofogdenApplications(city1.name);
+    const applications2 = await getKronofogdenApplications(city2.name);
+    const evictions1 = await getKronofogdenEvictions(city1.name.toUpperCase());
+    const evictions2 = await getKronofogdenEvictions(city2.name.toUpperCase());
 
-    city1[0].jobs = await getJobListings(city1[0].name);
-    city2[0].jobs = await getJobListings(city2[0].name);
+    city1.jobs = await getJobListings(city1.name);
+    city2.jobs = await getJobListings(city2.name);
 
 
 
-    city1[0].kronofogdenApplications = getYearsAndApplications(applications1);
-    city2[0].kronofogdenApplications = getYearsAndApplications(applications2);
-    city1[0].kronofogdenEvictions = getEvictions(evictions1);
-    city2[0].kronofogdenEvictions = getEvictions(evictions2);
-    city1[0].tax = parseFloat(taxes1.results[0]["summa, exkl. kyrkoavgift"])
-    city2[0].tax = parseFloat(taxes2.results[0]["summa, exkl. kyrkoavgift"])
-    city1[0].population = parseInt(pop1.results[0]["folkmängd 31 december 2020"].replace(/ /g, ""));
-    city2[0].population = parseInt(pop2.results[0]["folkmängd 31 december 2020"].replace(/ /g, ""));
+    city1.kronofogdenApplications = getYearsAndApplications(applications1);
+    city2.kronofogdenApplications = getYearsAndApplications(applications2);
+    city1.kronofogdenEvictions = getEvictions(evictions1);
+    city2.kronofogdenEvictions = getEvictions(evictions2);
+    city1.tax = parseFloat(taxes1.results[0]["summa, exkl. kyrkoavgift"])
+    city2.tax = parseFloat(taxes2.results[0]["summa, exkl. kyrkoavgift"])
+    city1.population = parseInt(pop1.results[0]["folkmängd 31 december 2020"].replace(/ /g, ""));
+    city2.population = parseInt(pop2.results[0]["folkmängd 31 december 2020"].replace(/ /g, ""));
 
 }
 

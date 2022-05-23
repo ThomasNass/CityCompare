@@ -52,7 +52,7 @@ export class FilterableTable extends react.Component {
     // }
 
     async componentDidMount() {
-        const citiesCompared = await getBuisnesses(this.context.city1[0].name.toLowerCase(), this.context.city2[0].name.toLowerCase());
+        const citiesCompared = await getBuisnesses(this.context.city1.name.toLowerCase(), this.context.city2.name.toLowerCase());
         this.setState({ citiesCompared })
         this.setState({ done: true })
     }
@@ -62,7 +62,7 @@ export class FilterableTable extends react.Component {
             e => e.buisness ===
                 this.state.search
         )) {
-            const extra = await getBuiseness(this.context.city1[0].name.toLowerCase(), this.context.city2[0].name.toLowerCase(), this.state.search);
+            const extra = await getBuiseness(this.context.city1.name.toLowerCase(), this.context.city2.name.toLowerCase(), this.state.search);
             const extraComparison = this.state.extraComparison.concat(extra);
             this.setState({ extraComparison })
             this.setState({ extra: true })
@@ -93,8 +93,8 @@ export class FilterableTable extends react.Component {
                                 <thead>
                                     <tr>
                                         <td>Företag</td>
-                                        <td>{this.context.city1[0].name}</td>
-                                        <td>{this.context.city2[0].name}</td>
+                                        <td>{this.context.city1.name}</td>
+                                        <td>{this.context.city2.name}</td>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -113,8 +113,8 @@ export class FilterableTable extends react.Component {
                                     <thead>
                                         <tr>
                                             <td>Extra jämförelse</td>
-                                            <td>{this.context.city1[0].name}</td>
-                                            <td>{this.context.city2[0].name}</td>
+                                            <td>{this.context.city1.name}</td>
+                                            <td>{this.context.city2.name}</td>
                                         </tr>
                                     </thead>
                                     <tbody>

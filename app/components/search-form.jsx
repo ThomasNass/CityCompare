@@ -12,8 +12,6 @@ export default class SearchForm extends react.Component {
         this.state = {
             search1: "",
             search2: "",
-            city1: [],
-            city2: [],
             remove_comparison: true
         }
     }

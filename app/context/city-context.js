@@ -20,17 +20,19 @@ export const CityProvider = (props) => {
     }, [city1, city2])
 
     getCities = async (search1, search2) => {
-        
+
         //Hämtar de hårdkodade städerna som har de hårdkodade företagen
-        const city1 = await getMockCities("Vetlanda");
-        const city2 = await getMockCities("Falköping");
+        // const city1 = await getMockCities("Vetlanda");
+        // const city2 = await getMockCities("Falköping");
+        const city1 = {}
+        const city2 = {}
 
         //Formaterar om till små bokstäver med stor i början
         search1 = formatInput(search1);
         search2 = formatInput(search2);
         //Ändrar namnet på städerna så att de ska matcha datan som hämtas från sökningarna
-        city1[0].name = search1;
-        city2[0].name = search2;
+        city1.name = search1;
+        city2.name = search2;
 
 
         await getActualCityData(city1, city2);//Här görs alla riktiga API-anrop
