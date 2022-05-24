@@ -31,7 +31,7 @@ const body = {
         }
     ],
     "response": {
-        "format": "px"
+        "format": "json"
     }
 }
 
@@ -52,6 +52,6 @@ getData = async () => {
     return data;
 }
 
-export default async function getIt() {
+export async function getIt() {
     return await getData();
 }

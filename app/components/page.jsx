@@ -3,7 +3,7 @@ import SearchForm from './search-form.jsx';
 import LoginForm from "./login-form.jsx";
 import { ErrorView } from "../error/error-view.jsx";
 import { CityProvider } from "../context/city-context.js";
-// import { getIt } from "../services/api-scb.js"
+import { getIt } from "../services/api-scb.js"
 
 export default class Page extends react.Component {
     constructor(props) {
@@ -13,10 +13,10 @@ export default class Page extends react.Component {
         }
     }
 
-    // async componentDidMount() {
-    //     const thing = await getIt();
-    //     console.log(thing)
-    // }
+    async componentDidMount() {
+        const thing = await getIt();
+        console.log(thing)
+    }
 
     saveLocalStorage = (loggedIn) => {
         this.setState({ loggedIn: loggedIn }, () => {

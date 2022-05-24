@@ -1,5 +1,3 @@
-
-
 const callerId = "MuniMatch";
 const key = "";
 let random = makeRandom(16);
@@ -16,13 +14,14 @@ const getHash = async () => {
 
 
 
-getData = async (headers, buisness, city) => {
+const getData = async (headers, buisness, city) => {
     const response = await fetch(`/api/hitta/${buisness}/${city}`,
         {
             method: "GET",
             headers: headers
         });
     const data = await response.json();
+    console.log(data)
     return data;
 }
 
@@ -38,6 +37,7 @@ export async function hitta(city, buisness) {
     }
     let data = await getData(headers, city, buisness);
     console.log(buisness);
+    console.log(data)
     if (data.result.companies.total > 0) {
         console.log(data, data.result.companies.company[0].displayName);
         return "ja";
