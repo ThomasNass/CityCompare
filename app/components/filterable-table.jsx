@@ -5,6 +5,7 @@ import { getBuiseness, getBuisnesses } from "../services/services.js";
 import CityContext from "../context/city-context.js";
 import Button from "./button";
 
+
 export class FilterableTable extends react.Component {
     constructor(props) {
         super(props);
@@ -18,38 +19,6 @@ export class FilterableTable extends react.Component {
         }
     }
 
-
-    // allBuisnesses = (buisnesses1, buisnesses2) => {
-    //     let combinedArrays = [];
-    //     let CitiesCompared = [];
-    //     buisnesses1.forEach(buisness => {
-    //         combinedArrays.push(buisness.name)
-    //     });
-    //     buisnesses2.forEach(buisness => {
-    //         combinedArrays.push(buisness.name)
-    //     });
-
-    //     const uniqueList = [...new Set(combinedArrays)];
-    //     for (let i = 0; i < uniqueList.length; i++) {
-    //         let comparison = {};
-    //         comparison.buisness = uniqueList[i];
-    //         comparison.buisnesses1 = "nej";
-    //         comparison.buisnesses2 = "nej";
-    //         buisnesses1.forEach(buisness => {
-    //             if (buisness.name == uniqueList[i]) {
-    //                 comparison.buisnesses1 = "ja";
-    //             }
-    //         });
-    //         buisnesses2.forEach(buisness => {
-    //             if (buisness.name == uniqueList[i]) {
-    //                 comparison.buisnesses2 = "ja";
-    //             }
-    //         });
-    //         CitiesCompared.push(comparison);
-    //     }
-    //     return CitiesCompared;
-
-    // }
 
     async componentDidMount() {
         const citiesCompared = await getBuisnesses(this.context.city1.name.toLowerCase(), this.context.city2.name.toLowerCase());
