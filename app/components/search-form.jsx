@@ -47,8 +47,6 @@ export default class SearchForm extends react.Component {
             {(this.context.hasCities === true)
                 ?
                 <CityComparison
-                // city1={this.context.city1}
-                // city2={this.context.city2}
                 />
                 :
                 null
