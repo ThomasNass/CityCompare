@@ -1,0 +1,86 @@
+[
+    {
+        "taxonomy/id": "X82t_awd_Qyc",
+        "taxonomy/preferred-label": "Administration, ekonomi, juridik"
+    },
+    {
+        "taxonomy/id": "j7Cq_ZJe_GkT",
+        "taxonomy/preferred-label": "Bygg och anläggning"
+    },
+    {
+        "taxonomy/id": "apaJ_2ja_LuF",
+        "taxonomy/preferred-label": "Data/IT"
+    },
+    {
+        "taxonomy/id": "Uuf1_GMh_Uvw",
+        "taxonomy/preferred-label": "Kropps- och skönhetsvård"
+    },
+    {
+        "taxonomy/id": "RPTn_bxG_ExZ",
+        "taxonomy/preferred-label": "Försäljning, inköp, marknadsföring"
+    },
+    {
+        "taxonomy/id": "PaxQ_o1G_wWH",
+        "taxonomy/preferred-label": "Hantverk"
+    },
+    {
+        "taxonomy/id": "ScKy_FHB_7wT",
+        "taxonomy/preferred-label": "Hotell, restaurang, storhushåll"
+    },
+    {
+        "taxonomy/id": "NYW6_mP6_vwf",
+        "taxonomy/preferred-label": "Hälso- och sjukvård"
+    },
+    {
+        "taxonomy/id": "wTEr_CBC_bqh",
+        "taxonomy/preferred-label": "Industriell tillverkning"
+    },
+    {
+        "taxonomy/id": "yhCP_AqT_tns",
+        "taxonomy/preferred-label": "Installation, drift, underhåll"
+    },
+    {
+        "taxonomy/id": "9puE_nYg_crq",
+        "taxonomy/preferred-label": "Kultur, media, design"
+    },
+    {
+        "taxonomy/id": "whao_Q6A_ScE",
+        "taxonomy/preferred-label": "Sanering och renhållning"
+    },
+    {
+        "taxonomy/id": "VuuL_7CH_adj",
+        "taxonomy/preferred-label": "Naturbruk"
+    },
+    {
+        "taxonomy/id": "kJeN_wmw_9wX",
+        "taxonomy/preferred-label": "Naturvetenskap"
+    },
+    {
+        "taxonomy/id": "MVqp_eS8_kDZ",
+        "taxonomy/preferred-label": "Pedagogik"
+    },
+    {
+        "taxonomy/id": "GazW_2TU_kJw",
+        "taxonomy/preferred-label": "Yrken med social inriktning"
+    },
+    {
+        "taxonomy/id": "E7hm_BLq_fqZ",
+        "taxonomy/preferred-label": "Säkerhet och bevakning"
+    },
+    {
+        "taxonomy/id": "6Hq3_tKo_V57",
+        "taxonomy/preferred-label": "Yrken med teknisk inriktning"
+    },
+    {
+        "taxonomy/id": "ASGV_zcE_bWf",
+        "taxonomy/preferred-label": "Transport, distribution, lager"
+    },
+    {
+        "taxonomy/id": "bh3H_Y3h_5eD",
+        "taxonomy/preferred-label": "Chefer och verksamhetsledare"
+    },
+    {
+        "taxonomy/id": "bH5L_uXD_ZAX",
+        "taxonomy/preferred-label": "Militära yrken"
+    }
+]

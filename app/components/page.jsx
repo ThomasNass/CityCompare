@@ -1,19 +1,22 @@
 import react from "react";
-import cities from '../mock-cities.json'
 import SearchForm from './search-form.jsx';
 import LoginForm from "./login-form.jsx";
 import { ErrorView } from "../error/error-view.jsx";
 import { CityProvider } from "../context/city-context.js";
+// import { getIt } from "../services/api-scb.js"
 
 export default class Page extends react.Component {
     constructor(props) {
         super(props);
         this.state = {
-            cities: cities,
             loggedIn: JSON.parse(localStorage.getItem("loggedIn")) || false
         }
     }
 
+    // async componentDidMount() {
+    //     const thing = await getIt();
+    //     console.log(thing)
+    // }
 
     saveLocalStorage = (loggedIn) => {
         this.setState({ loggedIn: loggedIn }, () => {

@@ -1,8 +1,7 @@
 import react from "react";
 import { useState, useEffect } from "react";
-import { getMockCities } from "../services/api-caller.js";
 import { formatInput, getActualCityData } from "../services/services.js";
-
+import cityArray from "../cities.json"
 const CityContext = react.createContext();
 
 export const CityProvider = (props) => {
@@ -33,6 +32,17 @@ export const CityProvider = (props) => {
         //Ändrar namnet på städerna så att de ska matcha datan som hämtas från sökningarna
         city1.name = search1;
         city2.name = search2;
+
+        cityArray.jobMunicipality.forEach(element => {
+            if (element["taxonomy/preferred-label"] == search1) {
+                city1.lauCode = element["taxonomy/lau-2-code-2015"];
+                city1.id = element["taxonomy/id"];
+            }
+            if (element["taxonomy/preferred-label"] == search2) {
+                city2.lauCode = element["taxonomy/lau-2-code-2015"];
+                city2.id = element["taxonomy/id"];
+            }
+        });
 
 
         await getActualCityData(city1, city2);//Här görs alla riktiga API-anrop

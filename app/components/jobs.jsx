@@ -16,20 +16,27 @@ export default class Jobs extends react.Component {
     render() {
         const city = this.context[this.props.city]
         return (
-            <>
-                <h2>{city.name}</h2>
-                <h2>{city.jobs.total.value}</h2>
-                <Button id={"job-button"} onClick={() => this.setState({ showJob: !this.state.showJob })} text={(this.state.showJob) ? "Dölj lediga jobb" : "Visa lediga jobb"}></Button>
-                {(this.state.showJob)
-                    ?
-                    city.jobs.hits.map((hit) =>
-                        <JobExtraInfo key={hit.id} hit={hit} />
-                    )
-                    :
-                    null
-                }
+            <>{("total" in city.jobs) ?
+                <>
+                    <h2>{city.name}</h2>
+                    <h2>{city.jobs.total.value}</h2>
+                    <Button id={"job-button"} onClick={() => this.setState({ showJob: !this.state.showJob })} text={(this.state.showJob) ? "Dölj lediga jobb" : "Visa lediga jobb"}></Button>
+                    {(this.state.showJob)
+                        ?
+                        city.jobs.hits.map((hit) =>
+                            <JobExtraInfo key={hit.id} hit={hit} />
+                        )
+                        :
+                        null
+                    }
 
+
+                </> :
+                <p>Det gick inte att hämta jobbdata</p>
+
+            }
             </>
+
         )
     }
 }
