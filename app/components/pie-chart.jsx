@@ -14,20 +14,20 @@ export default class PieChart extends react.Component {
             <>
                 <div className="pie-chart">
                     <h2>{city.name}</h2>
-                    {(city.kronofogdenEvictions[0].evictions > 0 || city.kronofogdenEvictions[0].applications > 0) ?
+                    {(city.population.men > 0 || city.population.fem > 0) ?
                         <Pie
                             data={{
-                                labels: ["Vräkningar", "Vräkningsansökningar"],
+                                labels: ["Män", "Kvinnor"],
                                 datasets: [{
                                     label: `${this.props.cityName}`,
                                     backgroundColor: ["red", "pink"],
 
-                                    data: [city.kronofogdenEvictions[0].evictions, city.kronofogdenEvictions[0].applications]
+                                    data: [city.population.men, city.population.fem]
                                 }
                                 ]
                             }}
                         /> :
-                        <h2>I {city.name} gjordes inga vräkningar eller vräkningsansökningar</h2>}
+                        <h2>Gick ej att hämta data</h2>}
                 </div>
             </>
         )

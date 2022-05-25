@@ -15,12 +15,12 @@ export default class LineChart extends react.Component {
                 <div className="line-chart">
                     <Line
                         data={{
-                            labels: city.kronofogdenApplications.map((application) => application.year),
+                            labels: city.population.growth.year.map((element) => element),
                             datasets: [{
                                 label: `${city.name}`,
                                 backgroundColor: "pink",
 
-                                data: city.kronofogdenApplications.map((application) => application.amount)
+                                data: city.population.growth.population.map((pop) => pop)
                             }
                             ]
                         }}

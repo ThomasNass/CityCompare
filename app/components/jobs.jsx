@@ -32,17 +32,12 @@ export default class Jobs extends react.Component {
             this.setState({ city }, () => console.log(this.state.city))
             this.setState({ updating: false })
         }
-        else {
-            if (!this.state.city.jobs["taxonomy/id"] === e.target.value) {
-            }
-        }
     }
 
     static contextType = CityContext
     render() {
         let city;
         if (!this.state.selectValue.length > 0) {
-            console.log("längd", this.state.selectValue.length)
             city = this.context[this.props.city]
         }
         else {
@@ -58,7 +53,7 @@ export default class Jobs extends react.Component {
                         <select value={this.state.selectValue} onChange={this.handleChange}>
                             <option value={""}>Utan filter</option>
                             {occupations.map((occupation) =>
-                                <option value={occupation["taxonomy/id"]}>{occupation["taxonomy/preferred-label"]}</option>
+                                <option key={occupation["taxonomy/id"]} value={occupation["taxonomy/id"]}>{occupation["taxonomy/preferred-label"]}</option>
                             )}
                         </select>
                         <h2>{city.jobs.total.value}</h2>

@@ -1,9 +1,8 @@
 import react from "react";
 import SearchForm from './search-form.jsx';
 import LoginForm from "./login-form.jsx";
-import { ErrorView } from "../error/error-view.jsx";
+import { ErrorBoundry } from "../error/error-boundry.jsx";
 import { CityProvider } from "../context/city-context.js";
-import { getIt } from "../services/api-scb.js"
 
 export default class Page extends react.Component {
     constructor(props) {
@@ -13,10 +12,6 @@ export default class Page extends react.Component {
         }
     }
 
-    async componentDidMount() {
-        const thing = await getIt();
-        console.log(thing)
-    }
 
     saveLocalStorage = (loggedIn) => {
         this.setState({ loggedIn: loggedIn }, () => {
@@ -33,7 +28,7 @@ export default class Page extends react.Component {
                 {(this.state.loggedIn.bool == true || this.state.loggedIn == true)
                     ? <>
                         <CityProvider>
-                            <ErrorView>
+                            <ErrorBoundry>
                                 <SearchForm saveLocalStorage={this.saveLocalStorage} />
                                 {(this.context.hasCities === true)
                                     ?
@@ -42,7 +37,7 @@ export default class Page extends react.Component {
                                     :
                                     null
                                 }
-                            </ErrorView>
+                            </ErrorBoundry>
                         </CityProvider>
                     </>
                     : <>

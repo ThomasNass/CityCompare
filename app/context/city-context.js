@@ -20,9 +20,6 @@ export const CityProvider = (props) => {
 
     getCities = async (search1, search2) => {
 
-        //Hämtar de hårdkodade städerna som har de hårdkodade företagen
-        // const city1 = await getMockCities("Vetlanda");
-        // const city2 = await getMockCities("Falköping");
         const city1 = {}
         const city2 = {}
 
@@ -50,7 +47,6 @@ export const CityProvider = (props) => {
         setCity1(city1);
         setCity2(city2);
 
-        // throw { code: "Räv", message: "Det är en räv i search-form" }
 
     }
 

@@ -6,6 +6,7 @@ import LineChart from "./line-chart.jsx";
 import PieChart from "./pie-chart.jsx";
 import Jobs from "./jobs.jsx";
 import Button from "./button.jsx";
+import Income from "./income.jsx";
 
 export default class CityComparison extends react.Component {
     constructor(props) {
@@ -21,9 +22,27 @@ export default class CityComparison extends react.Component {
 
             <>
                 <div className="bar-wrapper wrapper">
-                    <h1>Folkmängd 2020</h1>
+                    <h1>Folkmängd 2021</h1>
                     <div className="bar-div">
                         <PopulationBarChart />
+                    </div>
+                </div>
+                <div className="pie-wrapper wrapper">
+                    <h1>Män / Kvinnor 2021</h1>
+                    <div className="pie-div">
+                        <PieChart
+                            city={"city1"} />
+                        <PieChart
+                            city={"city2"} />
+                    </div>
+                </div>
+                <div className="entries-wrapper wrapper">
+                    <h1>Befolkningsförändringar</h1>
+                    <div className="entries-div">
+                        <LineChart
+                            city={"city1"} />
+                        <LineChart
+                            city={"city2"} />
                     </div>
                 </div>
                 <div className="tax-wrapper wrapper">
@@ -31,6 +50,13 @@ export default class CityComparison extends react.Component {
                     <div className="tax-div">
                         <DisplayTax city={"city1"} />
                         <DisplayTax city={"city2"} />
+                    </div>
+                </div>
+                <div className="tax-wrapper wrapper">
+                    <h1>Snittårsinkomst/år 2022</h1>
+                    <div className="tax-div">
+                        <Income city={"city1"} />
+                        <Income city={"city2"} />
                     </div>
                 </div>
                 <div className="job-wrapper wrapper">
@@ -44,24 +70,8 @@ export default class CityComparison extends react.Component {
                             city={"city2"} />
                     </div>
                 </div>
-                <div className="entries-wrapper wrapper">
-                    <h1>Skuldsaneringsansökningar till kronofogden</h1>
-                    <div className="entries-div">
-                        <LineChart
-                            city={"city1"} />
-                        <LineChart
-                            city={"city2"} />
-                    </div>
-                </div>
-                <div className="pie-wrapper wrapper">
-                    <h1>Vräkningar / Vräkningsansökningar 2020</h1>
-                    <div className="pie-div">
-                        <PieChart
-                            city={"city1"} />
-                        <PieChart
-                            city={"city2"} />
-                    </div>
-                </div>
+
+
                 <div className="table-wrapper wrapper">
                     <h1>Butiker och företag</h1>
                     <div className="table-div">

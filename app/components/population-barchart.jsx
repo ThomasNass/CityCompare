@@ -12,7 +12,7 @@ export default class PopulationBarChart extends react.Component {
     render() {
         return (
             <>
-                {(!isNaN(this.context.city1.population) && !isNaN(this.context.city2.population)) ?
+                {(!isNaN(this.context.city1.population.total) && !isNaN(this.context.city2.population.total)) ?
                     <Bar
                         data={{
                             labels: [this.context.city1.name, this.context.city2.name],
@@ -20,7 +20,7 @@ export default class PopulationBarChart extends react.Component {
                                 label: "Folkmängd",
                                 backgroundColor: "pink",
 
-                                data: [this.context.city1.population, this.context.city2.population]
+                                data: [this.context.city1.population.total, this.context.city2.population.total]
                             }
                             ]
                         }}

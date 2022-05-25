@@ -1,9 +1,20 @@
-import { getJobListings, getKronofogdenApplications, getKronofogdenEvictions, getPopulation, getTaxes } from "./api-caller.js";
+import { getJobListings, getKronofogdenApplications, getKronofogdenEvictions, getTaxes } from "./api-caller.js";
+import { getGenPopulation, getIncome, getPopulationGrowth } from "./api-scb.js";
 import { hitta } from "./api-hitta.js";
 import franchises from "./franchises.json"
+
+
 export async function getActualCityData(city1, city2) {
-    const [pop1, pop1err] = await getPopulation(city1.name);
-    const [pop2, pop2err] = await getPopulation(city2.name);
+
+    const [incomeData, incomeError] = await getIncome(city1.lauCode, city2.lauCode)
+    console.log(incomeData)
+    const [populationByGender, genPopError] = await getGenPopulation(city1.lauCode, city2.lauCode);
+    const [growth, growthError] = await getPopulationGrowth(city1.lauCode, city2.lauCode);
+    console.log(city1.lauCode, city2.lauCode)
+    console.log(growth);
+
+
+
     const [taxes1, taxes1error] = await getTaxes(city1.name.toUpperCase());
     const [taxes2, taxes2error] = await getTaxes(city2.name.toUpperCase());
     const applications1 = await getKronofogdenApplications(city1.name);
@@ -34,15 +45,57 @@ export async function getActualCityData(city1, city2) {
     city1.kronofogdenEvictions = getEvictions(evictions1);
     city2.kronofogdenEvictions = getEvictions(evictions2);
 
-    if (pop1 && pop2) {
-        city1.population = parseInt(pop1.results[0]["folkmängd 31 december 2020"].replace(/ /g, ""));
-        city2.population = parseInt(pop2.results[0]["folkmängd 31 december 2020"].replace(/ /g, ""));
-    } else {
-        city1.population = pop1err
-        city2.population = pop2err
+    if (incomeError == null) {
+        city1.income = {
+            average: incomeData.data[0].values[0],
+            median: incomeData.data[0].values[1]
+        }
+        city2.income = {
+            average: incomeData.data[1].values[0],
+            median: incomeData.data[1].values[1]
+        }
+
+    }
+    else {
+        city1.income = incomeError
+        city2.income = incomeError
     }
 
-    console.log(taxes1, taxes1error)
+    if (genPopError == null) {
+        city1.population = {
+            total: parseInt(populationByGender.data[0].values[0]) + parseInt(populationByGender.data[1].values[0]),
+            men: parseInt(populationByGender.data[0].values[0]),
+            fem: parseInt(populationByGender.data[1].values[0])
+        }
+        city2.population = {
+            total: parseInt(populationByGender.data[2].values[0]) + parseInt(populationByGender.data[3].values[0]),
+            men: parseInt(populationByGender.data[2].values[0]),
+            fem: parseInt(populationByGender.data[3].values[0])
+        }
+
+
+    } else {
+        city1.population = genPopError
+        city2.population = genPopError
+    }
+
+    if (!growthError) {
+        city1.population.growth = { year: [], population: [] }
+        city2.population.growth = { year: [], population: [] }
+        growth.data.map((element) => {
+            if (element.key[0] == city1.lauCode) {
+                city1.population.growth.year.push(element.key[1])
+                city1.population.growth.population.push(element.values[0])
+            }
+            if (element.key[0] == city2.lauCode) {
+                city2.population.growth.year.push(element.key[1])
+                city2.population.growth.population.push(element.values[0])
+            }
+
+        })
+    }
+
+
     if (taxes1) {
         city1.tax = parseFloat(taxes1.results[0]["summa, exkl. kyrkoavgift"])
     }
