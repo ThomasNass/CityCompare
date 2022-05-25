@@ -53,7 +53,7 @@ export default class CityComparison extends react.Component {
                     </div>
                 </div>
                 <div className="tax-wrapper wrapper">
-                    <h1>Snittårsinkomst/år 2022</h1>
+                    <h1>Snittårsinkomst 2022</h1>
                     <div className="tax-div">
                         <Income city={"city1"} />
                         <Income city={"city2"} />

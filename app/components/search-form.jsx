@@ -27,7 +27,6 @@ export default class SearchForm extends react.Component {
     }
 
     render() {
-        console.log(this.context)
         return (<>
 
             <Button

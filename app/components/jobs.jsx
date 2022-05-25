@@ -24,12 +24,12 @@ export default class Jobs extends react.Component {
             this.setState({ showJob: false })
             this.setState({ updating: true })
             const jobs = await jobsByField([e.target.value], [this.context[this.props.city].id]);
-            console.log(jobs)
+
             let city = {}
             city.name = this.context[this.props.city].name
             city.jobs = jobs;
 
-            this.setState({ city }, () => console.log(this.state.city))
+            this.setState({ city })
             this.setState({ updating: false })
         }
     }

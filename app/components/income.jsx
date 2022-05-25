@@ -11,8 +11,8 @@ export default class Income extends react.Component {
                 :
                 <div>
                     <h2>{city.name}</h2>
-                    <h2>Medelinkomst: {city.income.average} tkr</h2>
-                    <h2>Medianinkomst: {city.income.median} tkr</h2>
+                    <h2>Medel: {city.income.average} tkr</h2>
+                    <h2>Median: {city.income.median} tkr</h2>
                 </div>
             }
         </>

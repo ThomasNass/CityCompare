@@ -1,7 +1,7 @@
 import react from "react";
 import SearchForm from './search-form.jsx';
 import LoginForm from "./login-form.jsx";
-import { ErrorBoundry } from "../error/error-boundry.jsx";
+import { ErrorView } from "../error/error-view.jsx";
 import { CityProvider } from "../context/city-context.js";
 
 export default class Page extends react.Component {
@@ -28,7 +28,7 @@ export default class Page extends react.Component {
                 {(this.state.loggedIn.bool == true || this.state.loggedIn == true)
                     ? <>
                         <CityProvider>
-                            <ErrorBoundry>
+                            <ErrorView>
                                 <SearchForm saveLocalStorage={this.saveLocalStorage} />
                                 {(this.context.hasCities === true)
                                     ?
@@ -37,7 +37,7 @@ export default class Page extends react.Component {
                                     :
                                     null
                                 }
-                            </ErrorBoundry>
+                            </ErrorView>
                         </CityProvider>
                     </>
                     : <>

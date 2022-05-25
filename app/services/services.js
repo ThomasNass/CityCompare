@@ -1,4 +1,4 @@
-import { getJobListings, getKronofogdenApplications, getKronofogdenEvictions, getTaxes } from "./api-caller.js";
+import { getJobListings, getTaxes } from "./api-caller.js";
 import { getGenPopulation, getIncome, getPopulationGrowth } from "./api-scb.js";
 import { hitta } from "./api-hitta.js";
 import franchises from "./franchises.json"
@@ -7,43 +7,32 @@ import franchises from "./franchises.json"
 export async function getActualCityData(city1, city2) {
 
     const [incomeData, incomeError] = await getIncome(city1.lauCode, city2.lauCode)
-    console.log(incomeData)
     const [populationByGender, genPopError] = await getGenPopulation(city1.lauCode, city2.lauCode);
     const [growth, growthError] = await getPopulationGrowth(city1.lauCode, city2.lauCode);
-    console.log(city1.lauCode, city2.lauCode)
-    console.log(growth);
+
 
 
 
     const [taxes1, taxes1error] = await getTaxes(city1.name.toUpperCase());
     const [taxes2, taxes2error] = await getTaxes(city2.name.toUpperCase());
-    const applications1 = await getKronofogdenApplications(city1.name);
-    const applications2 = await getKronofogdenApplications(city2.name);
-    const evictions1 = await getKronofogdenEvictions(city1.name.toUpperCase());
-    const evictions2 = await getKronofogdenEvictions(city2.name.toUpperCase());
+
 
     const [jobs1, jobs1err] = await getJobListings(city1.name);
     const [jobs2, jobs2err] = await getJobListings(city2.name);
 
-    if (jobs1) {
+    if (jobs1 != null) {
         city1.jobs = jobs1
     }
     else {
         city1.jobs = jobs1err
     }
-    if (jobs2) {
+    if (jobs2 != null) {
         city2.jobs = jobs2
     }
     else {
         city2.jobs = jobs2err
     }
 
-
-
-    city1.kronofogdenApplications = getYearsAndApplications(applications1);
-    city2.kronofogdenApplications = getYearsAndApplications(applications2);
-    city1.kronofogdenEvictions = getEvictions(evictions1);
-    city2.kronofogdenEvictions = getEvictions(evictions2);
 
     if (incomeError == null) {
         city1.income = {
@@ -112,35 +101,6 @@ export async function getActualCityData(city1, city2) {
 
 }
 
-getEvictions = (array) => {
-    const evictionsArray = [];
-    let obj = {};
-    if (array.results.length > 0) {
-        array.results.forEach(eviction => {
-            obj.evictions = eviction["antal genomförda vräkningar"];
-            obj.applications = eviction["antal ansökningar om vräkning"];
-
-        })
-    }
-    else {
-        obj.evictions = 0;
-        obj.applications = 0;
-    }
-
-    evictionsArray.push(obj);
-    return evictionsArray;
-}
-
-getYearsAndApplications = (array) => {
-    const applicationArray = [];
-    array.results.forEach(application => {
-        let obj = {};
-        obj.amount = application["antal ansökningar"];
-        obj.year = application.år;
-        applicationArray.push(obj);
-    });
-    return applicationArray;
-}
 
 //Funktion för att Formatera en sträng till Stor bokstav i början och små bokstäver efter det
 export function formatInput(string) {
@@ -159,7 +119,6 @@ export async function getBuisnesses(city1, city2) {
         comparison.city2 = await hitta(city2, franchises.franchises[franchise])
         citiesCompared.push(comparison);
     }
-    console.log(citiesCompared);
     return citiesCompared;
 
 }

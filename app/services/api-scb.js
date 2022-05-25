@@ -15,7 +15,6 @@ export const getSCBPopulationData = async (body) => {
                 body: JSON.stringify(body)
             });
         const data = await response.json();
-        console.log(data);
         return [data, null]
     }
     catch (err) {
@@ -32,7 +31,6 @@ export const getSCBIncomeData = async (body) => {
                 body: JSON.stringify(body)
             });
         const data = await response.json();
-        console.log(data);
         return [data, null]
     }
     catch (err) {
@@ -97,48 +95,6 @@ export async function getIncome(city1, city2) {
     }
     return await getSCBIncomeData(body);
 }
-
-
-
-
-// export async function getPopulation(city1, city2) {
-//     const body = {
-//         "query": [
-//             {
-//                 "code": "Region",
-//                 "selection": {
-//                     "filter": "vs:RegionKommun07",
-//                     "values": [
-//                         `${city1}`,
-//                         `${city2}`
-//                     ]
-//                 }
-//             },
-//             {
-//                 "code": "ContentsCode",
-//                 "selection": {
-//                     "filter": "item",
-//                     "values": [
-//                         "BE0101N1"
-//                     ]
-//                 }
-//             },
-//             {
-//                 "code": "Tid",
-//                 "selection": {
-//                     "filter": "item",
-//                     "values": [
-//                         "2021"
-//                     ]
-//                 }
-//             }
-//         ],
-//         "response": {
-//             "format": "json"
-//         }
-//     }
-//     return await getSCBPopulationData(body);
-// }
 
 export async function getPopulationGrowth(city1, city2) {
     const body = {

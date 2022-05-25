@@ -1,5 +1,5 @@
 const callerId = "MuniMatch";
-const key = "";
+const key = "GsgD4yGDbIooku02ocUPatpvSug3kawuwjrxlhri";
 let random = makeRandom(16);
 let date = new Date();
 const unixTimestamp = Math.floor(date.getTime() / 1000);
@@ -21,7 +21,6 @@ const getData = async (headers, buisness, city) => {
             headers: headers
         });
     const data = await response.json();
-    console.log(data)
     return data;
 }
 
@@ -36,14 +35,14 @@ export async function hitta(city, buisness) {
         "hitta-hash": hashed
     }
     let data = await getData(headers, city, buisness);
-    console.log(buisness);
-    console.log(data)
+    // console.log(buisness);
+    // console.log(data)
     if (data.result.companies.total > 0) {
-        console.log(data, data.result.companies.company[0].displayName);
+        // console.log(data, data.result.companies.company[0].displayName);
         return "ja";
     }
     else {
-        console.log(data, "nej")
+        // console.log(data, "nej")
         return "nej";
     }
 }
