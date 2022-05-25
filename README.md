@@ -1,6 +1,6 @@
 # CityCompare
 
-En app som jämför kommuner. Tanken är att den ska jämföra städers utbud av butiker, restauranger etc i tabellen som dyker upp längst ner i appen, men jag har ännu inte fått appen att fungera med googles api eller hitta.se:s api, så den datan har mockdata för stunden. 
+En app som jämför kommuner baserat på population, finans och företagsutbud.
 
 För att logga in så är uppgifterna:
 användarnamn: Användare
@@ -11,9 +11,11 @@ Lösenord:   Lösenord
 Clone repo
 run "npm ci"
 
+
 ## start
 
  "npm start" för att starta app och json-server
+open a browser and go to http://localhost:1234/app.html
 
 "npx parcel index.html --open" (För att öppna sidan om appen)
 
@@ -21,27 +23,32 @@ run "npm ci"
 
 ## Externa bibliotek
 axios - Används för att göra http-anrop på ett smidigare sätt än fetch. Min applikation är datadriven, så jag använder detta mycket. 
+
 chart.js - Används för att göra olika diagram. Använder för att presentera datan på ett snyggt och enkelt sätt.
+
 react-chartjs-2 - Används specifikt för react. Det är egentligen detta jag använder, men det fungerar inte utan chart.js
-json-server - Används för att sätta upp ett eget REST-API. Jag använder den till att lagra mockdata för att kunna rendera tabellen med företag i.
+
 npm-run-all - Används för att köra flera scripts samtidigt
+
 PropTypes - Används för att tvinga användingen av rätt type på props i komponenterna.
+
+local-web-server - Används för att kunna skicka https-anrop från localhost i mitt fall. Skriver om anropen i script i package.json
 
 
 ## Tjänster
-Sveriges Kommuner och Regioner - används för att hämta in folkmängd, i mitt fall per kommun https://www.dataportal.se/sv/datasets/653_26835/kommunkod-kommunnamn-folkmangd-20201231-skr-s-kommungrupp-lan-och-region#ref=?p=1&q=&s=2&t=20&f=http%3A%2F%2Fpurl.org%2Fdc%2Fterms%2Fformat%7C%7Capplication%2Fjson%7C%7Cfalse%7C%7Cliteral_s%7C%7CFormat%7C%7Capplication%2Fjson%24http%3A%2F%2Fpurl.org%2Fdc%2Fterms%2Fpublisher%7C%7Chttps%3A%2F%2Fcatalog.skl.se%2Fstore%2F1%2Fresource%2F1%7C%7Cfalse%7C%7Curi%7C%7COrganisation%7C%7CSveriges%20Kommuner%20och%20Regioner%20(SKR)&rt=esterms_IndependentDataService%24esterms_ServedByDataService&c=false
-
 Skatteverket - används för att hämta skattesatser per kommun. https://www.dataportal.se/sv/datasets/6_68000/skattesatser-per-kommun#ref=?p=1&q=&s=8&t=100&f=http%3A%2F%2Fpurl.org%2Fdc%2Fterms%2Fformat%7C%7Capplication%2Fjson%7C%7Cfalse%7C%7Cliteral_s%7C%7CFormat%7C%7Capplication%2Fjson%24http%3A%2F%2Fpurl.org%2Fdc%2Fterms%2Fpublisher%7C%7Chttps%3A%2F%2Fskatteverket.entryscape.net%2Fstore%2F9%2Fresource%2F1%7C%7Cfalse%7C%7Curi%7C%7COrganisation%7C%7CSkatteverket&rt=esterms_IndependentDataService%24esterms_ServedByDataService&c=false
 
-Kronofogden - används för att hämta data relaterat till kronofogdeärenden, i mitt fall så hämtar jag skuldsaneringssöknader och vräkningsansökningar/vräkningar
+SCB - används för att hämta data gällande population och inkomst.
 
-SKULDSANERING: https://www.dataportal.se/sv/datasets/265_3115/antal-skuldsaneringsansokningar-till-kronofogden#ref=?p=1&q=&s=8&t=100&f=http%3A%2F%2Fpurl.org%2Fdc%2Fterms%2Fformat%7C%7Capplication%2Fjson%7C%7Cfalse%7C%7Cliteral_s%7C%7CFormat%7C%7Capplication%2Fjson%24http%3A%2F%2Fpurl.org%2Fdc%2Fterms%2Fpublisher%7C%7Chttps%3A%2F%2Fkronofogden.entryscape.net%2Fstore%2F2%2Fresource%2F1%7C%7Cfalse%7C%7Curi%7C%7COrganisation%7C%7CKronofogdemyndigheten&rt=esterms_IndependentDataService%24esterms_ServedByDataService&c=false
-
-VRÄKNINGSDATA : https://www.dataportal.se/sv/datasets/265_3861/antal-ansokningar-om-vrakning-och-hur-manga-som-genomforts-i-sverige#ref=?p=1&q=&s=8&t=100&f=http%3A%2F%2Fpurl.org%2Fdc%2Fterms%2Fformat%7C%7Capplication%2Fjson%7C%7Cfalse%7C%7Cliteral_s%7C%7CFormat%7C%7Capplication%2Fjson%24http%3A%2F%2Fpurl.org%2Fdc%2Fterms%2Fpublisher%7C%7Chttps%3A%2F%2Fkronofogden.entryscape.net%2Fstore%2F2%2Fresource%2F1%7C%7Cfalse%7C%7Curi%7C%7COrganisation%7C%7CKronofogdemyndigheten&rt=esterms_IndependentDataService%24esterms_ServedByDataService&c=false
+https://www.scb.se/en/services/open-data-api/api-for-the-statistical-database/
 
 JobTechDev - används för att hämta in jobbannonser relevanta för kommunen
 
 https://links.api.jobtechdev.se/
+
+Hitta.se - används för att hämta in företag ifrån de olika städerna.
+
+https://www.hitta.se/api
 
 ## data-list - en genrell och återanvändingsbar komponent
 Komponenten är ett datalist-input element. Den tar en rad egenskaper som man vanligtvis kan sätta på ett html-element så som class, placeholder etc. Den tar även en onChange för att användaren ska kunna bestämma vad som händer när den förändras. Det som är mest spännande med komponenten är att den tar en array som den sedan genererar de olika valen i datalistan som användaren sedan kan klicka på.
