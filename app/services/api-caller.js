@@ -34,16 +34,24 @@ export async function getKronofogdenEvictions(cityName) {
 
 
 export async function getJobListings(cityName) {
-    // const muni = ["K4az_Bm6_hRV"]Kommunkod
-    // const oi = ["j7Cq_ZJe_GkT"]arbetsfält
+
     try {
         const response = await axios.get(`https://links.api.jobtechdev.se/joblinks?q=${cityName}&limit=100`);
-        // const response = await axios.get(`https://links.api.jobtechdev.se/joblinks?municipality=${muni}&occupation-field=${oi}&limit=100`);//Syntax för att söka på specifikt fält
         return [response.data, null];
     }
     catch (err) {
         return [null, err]
     }
+}
+
+export async function jobsByField(occupations, cityName) {
+
+
+    const response = await axios.get(`https://links.api.jobtechdev.se/joblinks?municipality=${cityName}&occupation-field=${occupations}&limit=100`);
+    console.log(response)
+    return response.data;
+
+
 }
 
 
