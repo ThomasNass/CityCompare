@@ -11,8 +11,7 @@ export default class SearchForm extends react.Component {
         super(props);
         this.state = {
             search1: "",
-            search2: "",
-            remove_comparison: true
+            search2: ""
         }
     }
 

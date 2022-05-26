@@ -1,6 +1,4 @@
 
-
-
 const headers = {
     "Content-Type": "application/json",
     "Accept": "application/json"
@@ -93,7 +91,16 @@ export async function getIncome(city1, city2) {
             "format": "json"
         }
     }
-    return await getSCBIncomeData(body);
+    const [data, error] = await getSCBIncomeData(body);
+    if (error == null) {
+        return [data, null]
+    }
+    else {
+        return [null, error]
+    }
+
+
+
 }
 
 export async function getPopulationGrowth(city1, city2) {
@@ -123,7 +130,13 @@ export async function getPopulationGrowth(city1, city2) {
             "format": "json"
         }
     }
-    return await getSCBPopulationData(body);
+    const [data, error] = await getSCBPopulationData(body);
+    if (error == null) {
+        return [data, null]
+    }
+    else {
+        return [null, error]
+    }
 }
 
 export async function getGenPopulation(city1, city2) {
@@ -172,5 +185,11 @@ export async function getGenPopulation(city1, city2) {
             "format": "json"
         }
     }
-    return await getSCBPopulationData(body);
+    const [data, error] = await getSCBPopulationData(body);
+    if (error == null) {
+        return [data, null]
+    }
+    else {
+        return [null, error]
+    }
 }

@@ -22,10 +22,12 @@ export class ErrorView extends react.Component {
     render() {
 
         if (this.state.errCode) {
+            console.log("I Error Boundary", this.state)
             return (
                 <>
-                    <p>"Unrecoverable error occured"</p>
-                    <button onClick={() => window.location.reload()}>Reload page</button>
+                    <p style={{ color: "white", fontSize: "2rem" }}>Ett fel har uppstått</p>
+                    <p style={{ color: "white", fontSize: "2rem" }}>{this.state.errMess}</p>
+                    <button onClick={() => window.location.reload()}>Ladda om</button>
                 </>
             )
         }

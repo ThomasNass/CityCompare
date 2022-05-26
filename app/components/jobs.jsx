@@ -3,7 +3,7 @@ import CityContext from "../context/city-context.js";
 import Button from "./button";
 import JobExtraInfo from "./job-extra-info.jsx";
 import occupations from "../occupations.json"
-import { jobsByField } from "../services/api-caller.js";
+import { jobsByField } from "../services/services.js";
 
 
 export default class Jobs extends react.Component {

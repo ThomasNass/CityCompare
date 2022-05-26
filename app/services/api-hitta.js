@@ -15,13 +15,21 @@ const getHash = async () => {
 
 
 const getData = async (headers, buisness, city) => {
-    const response = await fetch(`/api/hitta/${buisness}/${city}`,
-        {
-            method: "GET",
-            headers: headers
-        });
-    const data = await response.json();
-    return data;
+    try {
+        const response = await fetch(`/api/hitta/${buisness}/${city}`,
+            {
+                method: "GET",
+                headers: headers
+            });
+        const data = await response.json();
+        if ("error" in data) {//Tvungen att göra på detta sättet då hitta inte verkar kasta ett error
+            throw data;
+        }
+        return [data, null];
+    }
+    catch (error) {
+        return [null, error]
+    }
 }
 
 
@@ -34,16 +42,19 @@ export async function hitta(city, buisness) {
         "hitta-random": random,
         "hitta-hash": hashed
     }
-    let data = await getData(headers, city, buisness);
-    // console.log(buisness);
-    // console.log(data)
-    if (data.result.companies.total > 0) {
-        // console.log(data, data.result.companies.company[0].displayName);
-        return "ja";
+    let [data, error] = await getData(headers, city, buisness);
+    if (error == null) {
+        if (data.result.companies.total > 0) {
+
+            return ["ja", null];
+        }
+        else {
+
+            return ["nej", null];
+        }
     }
     else {
-        // console.log(data, "nej")
-        return "nej";
+        return [null, error]
     }
 }
 

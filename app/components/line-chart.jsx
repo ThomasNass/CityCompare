@@ -11,7 +11,7 @@ export default class LineChart extends react.Component {
     render() {
         const city = this.context[this.props.city]
         return (
-            <>
+            <>{("growth" in city.population) ?
                 <div className="line-chart">
                     <Line
                         data={{
@@ -26,6 +26,9 @@ export default class LineChart extends react.Component {
                         }}
                     />
                 </div>
+                :
+                <p>Gick ej att hämta populationsförändringar</p>
+            }
             </>
         )
 

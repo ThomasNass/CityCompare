@@ -22,7 +22,7 @@ export async function getJobListings(cityName) {
     }
 }
 
-export async function jobsByField(occupations, cityName) {
+export async function getJobListingsByField(occupations, cityName) {//Denna behöver inte felhanteras då den inte kommer fungera om inte den ovan fungerar
 
 
     const response = await axios.get(`https://links.api.jobtechdev.se/joblinks?municipality=${cityName}&occupation-field=${occupations}&limit=100`);

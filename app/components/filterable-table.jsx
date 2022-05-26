@@ -16,15 +16,24 @@ export class FilterableTable extends react.Component {
             extraComparison: [],
             done: false,
             extra: false,
+            down: false
         }
     }
 
 
     async componentDidMount() {
-        const citiesCompared = await getBuisnesses(this.context.city1.name.toLowerCase(), this.context.city2.name.toLowerCase());
-        this.setState({ citiesCompared })
-        this.setState({ done: true })
+        const [citiesCompared, error] = await getBuisnesses(this.context.city1.name.toLowerCase(), this.context.city2.name.toLowerCase());
+        console.log(citiesCompared)
+        console.log(error)
+        if (error == null) {
+            this.setState({ citiesCompared })
+            this.setState({ done: true })
+        }
+        else {
+            this.setState({ down: true })
+        }
     }
+
 
     extraSearch = async () => {
         if (!this.state.extraComparison.some(
@@ -52,6 +61,12 @@ export class FilterableTable extends react.Component {
         if (this.state.done) {
             citiesFiltered = this.filteredBuisnesses(this.state.citiesCompared, this.state.filterText);
         }
+
+        //Om denna aktiveras så kastas felet till error-boundary. Jag ser ingen mening med det utan jag hanterar det i komponentent istället
+        // if (this.state.down) {
+        //     throw { code: "hitta", message: "Det går inte att hämta företagen just nu" }
+        // }
+
         return (
             <>
                 {this.state.done ?
@@ -99,7 +114,7 @@ export class FilterableTable extends react.Component {
                     </>
                     :
                     <p>
-                        Rendering..
+                        {(this.state.down) ? "Det går ej att hämta företagen just nu" : "Rendering.."}
                     </p>
 
 
