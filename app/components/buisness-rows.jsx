@@ -7,18 +7,18 @@ export default class BuisenessRows extends react.Component {
             <>
                 {
                     this.props.cities.map((comparison) => (
-                        <tr>
-                            <td>{comparison.buisness}</td>
-                            {(comparison.buisnesses1 == "ja")
+                        <tr key={comparison.buisness + 1}>
+                            <td key={comparison.buisness + 2}>{comparison.buisness}</td>
+                            {(comparison.city1 == "ja")
                                 ?
-                                <td className="green">{comparison.buisnesses1}</td>
+                                <td key={comparison.buisness + 3} className="green">{comparison.city1}</td>
                                 :
-                                <td className="red">{comparison.buisnesses1}</td>}
-                            {(comparison.buisnesses2 == "ja")
+                                <td key={comparison.buisness + 3} className="red">{comparison.city1}</td>}
+                            {(comparison.city2 == "ja")
                                 ?
-                                <td className="green">{comparison.buisnesses2}</td>
+                                <td key={comparison.buisness + 4} className="green">{comparison.city2}</td>
                                 :
-                                <td className="red">{comparison.buisnesses2}</td>}
+                                <td key={comparison.buisness + 4} className="red">{comparison.city2}</td>}
                         </tr>
                     ))
                 }
