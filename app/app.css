@@ -266,4 +266,15 @@ td {
         flex-direction: column;
     }
 
+    .tax-div,
+    .job-div {
+        font-size: 0.7rem;
+        display: flex;
+        text-align: center;
+    }
+
+    .job-hit-div h2 {
+        font-size: 0.8rem;
+    }
+
 }
