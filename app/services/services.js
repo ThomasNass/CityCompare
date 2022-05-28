@@ -2,6 +2,7 @@ import { getJobListings, getTaxes, getJobListingsByField } from "./api-caller.js
 import { getGenPopulation, getIncome, getPopulationGrowth } from "./api-scb.js";
 import { hitta } from "./api-hitta.js";
 import franchises from "./franchises.json"
+import { element } from "prop-types";
 
 
 export async function getActualCityData(city1, city2) {
@@ -9,7 +10,8 @@ export async function getActualCityData(city1, city2) {
     const [incomeData, incomeError] = await getIncome(city1.lauCode, city2.lauCode)
     const [populationByGender, genPopError] = await getGenPopulation(city1.lauCode, city2.lauCode);
     const [growthData, growthError] = await getPopulationGrowth(city1.lauCode, city2.lauCode);
-
+    console.log(populationByGender);
+    console.log(growthData)
 
 
 
@@ -51,17 +53,28 @@ export async function getActualCityData(city1, city2) {
     }
 
     if (genPopError == null) {
-        city1.population = {
-            total: parseInt(populationByGender.data[0].values[0]) + parseInt(populationByGender.data[1].values[0]),
-            men: parseInt(populationByGender.data[0].values[0]),
-            fem: parseInt(populationByGender.data[1].values[0])
-        }
-        city2.population = {
-            total: parseInt(populationByGender.data[2].values[0]) + parseInt(populationByGender.data[3].values[0]),
-            men: parseInt(populationByGender.data[2].values[0]),
-            fem: parseInt(populationByGender.data[3].values[0])
-        }
 
+        populationByGender.data.map((element) => {
+
+            if (element.key[0] == city1.lauCode) {
+                if (element.key[1] == 1) {
+                    city1.population.men = parseInt(element.values[0])
+                }
+                else {
+                    city1.population.fem = parseInt(element.values[0])
+                }
+            }
+            if (element.key[0] == city2.lauCode) {
+                if (element.key[1] == 1) {
+                    city2.population.men = parseInt(element.values[0])
+                }
+                else {
+                    city2.population.fem = parseInt(element.values[0])
+                }
+            }
+            city1.population.total = city1.population.men + city1.population.fem
+            city2.population.total = city2.population.men + city2.population.fem
+        })
 
     } else {
         city1.population = genPopError
@@ -140,10 +153,22 @@ export async function getBuiseness(city1, city2, buisness) {
     let citiesCompared = [];
     let comparison = {};
     comparison.buisness = buisness;
-    comparison.city1 = await hitta(city1, buisness)
-    comparison.city2 = await hitta(city2, buisness)
+    const [result1, error1] = await hitta(city1, buisness)
+    if (error1 == null) {
+        comparison.city1 = result1
+    }
+    else {
+        return [null, error1]
+    }
+    const [result2, error2] = await hitta(city2, buisness)
+    if (error2 == null) {
+        comparison.city2 = result2
+    }
+    else {
+        return [null, error2]
+    }
     citiesCompared.push(comparison);
-    return citiesCompared;
+    return [citiesCompared, null];
 }
 
 export async function jobsByField(occupations, cityName) {
