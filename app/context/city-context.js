@@ -40,7 +40,8 @@ export const CityProvider = (props) => {
                 city2.id = element["taxonomy/id"];
             }
         });
-
+        city1.population = {}
+        city2.population = {}
 
         await getActualCityData(city1, city2);//Här görs alla riktiga API-anrop
 

@@ -40,10 +40,12 @@ export class FilterableTable extends react.Component {
             e => e.buisness ===
                 this.state.search
         )) {
-            const extra = await getBuiseness(this.context.city1.name.toLowerCase(), this.context.city2.name.toLowerCase(), this.state.search);
-            const extraComparison = this.state.extraComparison.concat(extra);
-            this.setState({ extraComparison })
-            this.setState({ extra: true })
+            const [extra, error] = await getBuiseness(this.context.city1.name.toLowerCase(), this.context.city2.name.toLowerCase(), this.state.search);
+            if (error == null) {
+                const extraComparison = this.state.extraComparison.concat(extra);
+                this.setState({ extraComparison })
+                this.setState({ extra: true })
+            }
         }
     }
 
