@@ -18,7 +18,7 @@ export const CityProvider = (props) => {
         }
     }, [city1, city2])
 
-    getCities = async (search1, search2) => {
+    const getCities = async (search1, search2) => {
 
         const city1 = {}
         const city2 = {}

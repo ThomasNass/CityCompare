@@ -2,7 +2,7 @@ import { getJobListings, getTaxes, getJobListingsByField } from "./api-caller.js
 import { getGenPopulation, getIncome, getPopulationGrowth } from "./api-scb.js";
 import { hitta } from "./api-hitta.js";
 import franchises from "./franchises.json"
-import { element } from "prop-types";
+
 
 
 export async function getActualCityData(city1, city2) {
@@ -153,14 +153,14 @@ export async function getBuiseness(city1, city2, buisness) {
     let citiesCompared = [];
     let comparison = {};
     comparison.buisness = buisness;
-    const [result1, error1] = await hitta(city1, buisness)
+    const [result1, error1] = await hitta(buisness, city1)
     if (error1 == null) {
         comparison.city1 = result1
     }
     else {
         return [null, error1]
     }
-    const [result2, error2] = await hitta(city2, buisness)
+    const [result2, error2] = await hitta(buisness, city2)
     if (error2 == null) {
         comparison.city2 = result2
     }

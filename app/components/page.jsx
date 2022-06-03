@@ -24,28 +24,29 @@ export default class Page extends react.Component {
 
     render() {
         return (
+            // <>
+            //     {(this.state.loggedIn.bool == true || this.state.loggedIn == true)
             <>
-                {(this.state.loggedIn.bool == true || this.state.loggedIn == true)
-                    ? <>
-                        <CityProvider>
-                            <ErrorView>
-                                <SearchForm saveLocalStorage={this.saveLocalStorage} />
-                                {(this.context.hasCities === true)
-                                    ?
-                                    <CityComparison
-                                    />
-                                    :
-                                    null
-                                }
-                            </ErrorView>
-                        </CityProvider>
-                    </>
-                    : <>
-                        <LoginForm onClick={this.saveLocalStorage} />
-                    </>
-                }
+                <CityProvider>
+                    <ErrorView>
+                        <SearchForm saveLocalStorage={this.saveLocalStorage} />
+                        {(this.context.hasCities === true)
+                            ?
+                            <CityComparison
+                            />
+                            :
+                            null
+                        }
+                    </ErrorView>
+                </CityProvider>
+            </>
+            // : <>
+            //     <LoginForm onClick={this.saveLocalStorage} />
+            // </>
+            //     }
 
-            </>)
+            // </>
+        )
 
 
 

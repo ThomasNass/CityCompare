@@ -58,7 +58,7 @@ export class FilterableTable extends react.Component {
     filteredBuisnesses = (cities, filter) => cities.filter(city => city.buisness.toLowerCase().indexOf(filter.toLowerCase()) !== -1);
     static contextType = CityContext
     render() {
-
+        console.log(this.context)
         let citiesFiltered;
         if (this.state.done) {
             citiesFiltered = this.filteredBuisnesses(this.state.citiesCompared, this.state.filterText);
