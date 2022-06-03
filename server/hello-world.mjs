@@ -3,6 +3,7 @@ import express from 'express';
 import crypto from "crypto";
 
 
+
 const callerId = "MuniMatch";
 const key = "GsgD4yGDbIooku02ocUPatpvSug3kawuwjrxlhri";
 
@@ -50,6 +51,187 @@ app.get("/api/hitta/:company/:municipality", async (req, res) => {
     res.send(data);
 
 
+})
+
+app.post("/api/scb/income/:city1/:city2", async (req, res) => {
+    const { city1, city2 } = req.params;
+    console.log(city1, city2)
+    const body = {
+        "query": [
+            {
+                "code": "Region",
+                "selection": {
+                    "filter": "vs:RegionKommun07EjAggr",
+                    "values": [
+                        `${city1}`,
+                        `${city2}`
+                    ]
+                }
+            },
+            {
+                "code": "Alder",
+                "selection": {
+                    "filter": "item",
+                    "values": [
+                        "20-64"
+                    ]
+                }
+            },
+            {
+                "code": "Inkomstklass",
+                "selection": {
+                    "filter": "item",
+                    "values": [
+                        "TOT"
+                    ]
+                }
+            },
+            {
+                "code": "ContentsCode",
+                "selection": {
+                    "filter": "item",
+                    "values": [
+                        "HE0110K1",
+                        "HE0110K2"
+                    ]
+                }
+            },
+            {
+                "code": "Tid",
+                "selection": {
+                    "filter": "item",
+                    "values": [
+                        "2020"
+                    ]
+                }
+            }
+        ],
+        "response": {
+            "format": "json"
+        }
+    }
+
+    const response = await fetch("https://api.scb.se/OV0104/v1/doris/sv/ssd/START/HE/HE0110/HE0110A/SamForvInk2", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        body: JSON.stringify(body)
+    })
+    let data = await response.json();
+    console.log(data)
+    res.status(response.status);
+    res.send(data);
+})
+
+app.post("/api/scb/growth/:city1/:city2", async (req, res) => {
+    const { city1, city2 } = req.params;
+    console.log(city1, city2)
+    const body = {
+        "query": [
+            {
+                "code": "Region",
+                "selection": {
+                    "filter": "vs:RegionKommun07",
+                    "values": [
+                        `${city1}`,
+                        `${city2}`
+                    ]
+                }
+            },
+            {
+                "code": "ContentsCode",
+                "selection": {
+                    "filter": "item",
+                    "values": [
+                        "BE0101N1"
+                    ]
+                }
+            }
+        ],
+        "response": {
+            "format": "json"
+        }
+    }
+
+    const response = await fetch("https://api.scb.se/OV0104/v1/doris/sv/ssd/START/BE/BE0101/BE0101A/BefolkningNy", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        body: JSON.stringify(body)
+    })
+    let data = await response.json();
+    console.log(data)
+    res.status(response.status);
+    res.send(data);
+})
+
+
+
+app.post("/api/scb/pop/:city1/:city2", async (req, res) => {
+    const { city1, city2 } = req.params;
+    console.log(city1, city2)
+    const body = {
+        "query": [
+            {
+                "code": "Region",
+                "selection": {
+                    "filter": "vs:RegionKommun07",
+                    "values": [
+                        `${city1}`,
+                        `${city2}`
+                    ]
+                }
+            },
+            {
+                "code": "ContentsCode",
+                "selection": {
+                    "filter": "item",
+                    "values": [
+                        "BE0101N1"
+                    ]
+                }
+            },
+            {
+                "code": "Kon",
+                "selection": {
+                    "filter": "item",
+                    "values": [
+                        "1",
+                        "2"
+                    ]
+                }
+            },
+            {
+                "code": "Tid",
+                "selection": {
+                    "filter": "item",
+                    "values": [
+                        "2021"
+                    ]
+                }
+            }
+        ],
+        "response": {
+            "format": "json"
+        }
+    }
+
+    const response = await fetch("https://api.scb.se/OV0104/v1/doris/sv/ssd/START/BE/BE0101/BE0101A/BefolkningNy", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        body: JSON.stringify(body)
+    })
+    let data = await response.json();
+    console.log(data)
+    res.status(response.status);
+    res.send(data);
 })
 
 app.use(route)

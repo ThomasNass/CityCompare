@@ -28,12 +28,6 @@ export default class SearchForm extends react.Component {
     render() {
         return (<>
 
-            <Button
-                id={"logout-button"}
-                text={"Logga ut"}
-                onClick={() => { this.props.saveLocalStorage(false) }} />
-
-
             <DataList type={"text"} array={cityArray.cities} className={"search-input"} name={"search1"} placeholder={"Ange stad"} onChange={this.handleChange} />
             <DataList type={"text"} array={cityArray.cities} className={"search-input"} name={"search2"} placeholder={"Ange stad"} onChange={this.handleChange} />
 

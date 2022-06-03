@@ -11,7 +11,6 @@ export async function getActualCityData(city1, city2) {
     const [populationByGender, genPopError] = await getGenPopulation(city1.lauCode, city2.lauCode);
     const [growthData, growthError] = await getPopulationGrowth(city1.lauCode, city2.lauCode);
     console.log(populationByGender);
-    console.log(growthData)
 
 
 

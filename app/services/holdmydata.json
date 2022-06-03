@@ -1,7 +1,6 @@
 {
     "franchises": [
         "7-Eleven",
-        "Ångtvättbilen",
         "Autoexperten",
         "Burger King",
         "Coop",
@@ -10,9 +9,7 @@
         "Electrolux Home",
         "McDonald",
         "Meca",
-        "Garageportexperten",
         "Hemglass",
-        "Jaktia",
         "Jula",
         "Länsförsäkringar",
         "Lindex",
@@ -42,8 +39,7 @@
         "Husse",
         "Intersport",
         "Ikea",
-        "Ica Maxi",
-        "Ica Supermarket",
+        "Ica",
         "Jack and Jones",
         "Kandyz",
         "Kappahl",
@@ -53,9 +49,7 @@
         "Max Hamburgerrestauranger",
         "Mekonomen",
         "MIO",
-        "Rent a Wreck",
         "Rusta",
-        "SuperGlass Windshield Repair",
         "Vero Moda",
         "Veteranpoolen"
     ]
