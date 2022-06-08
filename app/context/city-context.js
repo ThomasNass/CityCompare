@@ -18,14 +18,12 @@ export const CityProvider = (props) => {
         }
     }, [city1, city2])
 
-    getCities = async (search1, search2) => {
+    const getCities = async (search1, search2) => {
 
         const city1 = {}
         const city2 = {}
 
-        //Formaterar om till små bokstäver med stor i början
-        search1 = formatInput(search1);
-        search2 = formatInput(search2);
+
         //Ändrar namnet på städerna så att de ska matcha datan som hämtas från sökningarna
         city1.name = search1;
         city2.name = search2;
@@ -40,6 +38,7 @@ export const CityProvider = (props) => {
                 city2.id = element["taxonomy/id"];
             }
         });
+        console.log(city1, city2)
         city1.population = {}
         city2.population = {}
 

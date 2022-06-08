@@ -15,7 +15,8 @@ export default class DataList extends react.Component {
                     type={this.props.type}
                     list={this.props.name + "-data"}
                     onChange={this.props.onChange}
-                    placeholder={this.props.placeholder}>
+                    placeholder={this.props.placeholder}
+                    required>
 
                 </input>
                 <datalist id={this.props.name + "-data"}>

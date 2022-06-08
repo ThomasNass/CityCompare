@@ -1,18 +1,20 @@
 import { getJobListings, getTaxes, getJobListingsByField } from "./api-caller.js";
-import { getGenPopulation, getIncome, getPopulationGrowth } from "./api-scb.js";
+import { getGenPopulation, getIncome, getPopulationGrowth, getHousePrices } from "./api-scb.js";
 import { hitta } from "./api-hitta.js";
-import franchises from "./franchises.json"
-import { element } from "prop-types";
+//import franchises from "./franchises.json"
+
 
 
 export async function getActualCityData(city1, city2) {
 
-    const [incomeData, incomeError] = await getIncome(city1.lauCode, city2.lauCode)
-    const [populationByGender, genPopError] = await getGenPopulation(city1.lauCode, city2.lauCode);
-    const [growthData, growthError] = await getPopulationGrowth(city1.lauCode, city2.lauCode);
-    console.log(populationByGender);
-    console.log(growthData)
-
+    const [incomeData1, incomeError1] = await getIncome(city1.lauCode);
+    const [incomeData2, incomeError2] = await getIncome(city2.lauCode);
+    const [populationByGender1, genPopError1] = await getGenPopulation(city1.lauCode);
+    const [populationByGender2, genPopError2] = await getGenPopulation(city2.lauCode);
+    const [growthData1, growthError1] = await getPopulationGrowth(city1.lauCode);
+    const [growthData2, growthError2] = await getPopulationGrowth(city2.lauCode);
+    const [housePrices1, houseError1] = await getHousePrices(city1.lauCode)
+    const [housePrices2, houseError2] = await getHousePrices(city2.lauCode)
 
 
     const [taxes1, taxes1error] = await getTaxes(city1.name.toUpperCase());
@@ -36,26 +38,41 @@ export async function getActualCityData(city1, city2) {
     }
 
 
-    if (incomeError == null) {
+    if (!incomeError1) {
         city1.income = {
-            average: incomeData.data[0].values[0],
-            median: incomeData.data[0].values[1]
+            average: incomeData1.data[0].values[0],
+            median: incomeData1.data[0].values[1]
         }
-        city2.income = {
-            average: incomeData.data[1].values[0],
-            median: incomeData.data[1].values[1]
-        }
-
     }
     else {
-        city1.income = incomeError
-        city2.income = incomeError
+        city1.income = incomeError1
+    }
+    if (!incomeError2) {
+        city2.income = {
+            average: incomeData2.data[0].values[0],
+            median: incomeData2.data[0].values[1]
+        }
+    }
+    else {
+        city2.income = incomeError2
     }
 
-    if (genPopError == null) {
 
-        populationByGender.data.map((element) => {
+    if (!houseError1) {
+        city1.housePrice = parseInt(housePrices1.data[0].values[0])
+    }
+    else {
+        city1.housePrice = houseError1
+    }
+    if (!houseError2) {
+        city2.housePrice = parseInt(housePrices2.data[0].values[0])
+    }
+    else {
+        city2.housePrice = houseError2
+    }
 
+    if (!genPopError1) {
+        populationByGender1.data.map((element) => {
             if (element.key[0] == city1.lauCode) {
                 if (element.key[1] == 1) {
                     city1.population.men = parseInt(element.values[0])
@@ -64,6 +81,15 @@ export async function getActualCityData(city1, city2) {
                     city1.population.fem = parseInt(element.values[0])
                 }
             }
+            city1.population.total = city1.population.men + city1.population.fem
+        })
+
+    }
+    else {
+        city1.population = genPopError1
+    }
+    if (!genPopError2) {
+        populationByGender2.data.map((element) => {
             if (element.key[0] == city2.lauCode) {
                 if (element.key[1] == 1) {
                     city2.population.men = parseInt(element.values[0])
@@ -72,28 +98,31 @@ export async function getActualCityData(city1, city2) {
                     city2.population.fem = parseInt(element.values[0])
                 }
             }
-            city1.population.total = city1.population.men + city1.population.fem
             city2.population.total = city2.population.men + city2.population.fem
         })
 
-    } else {
-        city1.population = genPopError
-        city2.population = genPopError
+    }
+    else {
+        city2.population = genPopError2
     }
 
-    if (growthError == null) {
+
+    if (!growthError1) {
         city1.population.growth = { year: [], population: [] }
-        city2.population.growth = { year: [], population: [] }
-        growthData.data.map((element) => {
+        growthData1.data.map((element) => {
             if (element.key[0] == city1.lauCode) {
                 city1.population.growth.year.push(element.key[1])
                 city1.population.growth.population.push(element.values[0])
             }
+        })
+    }
+    if (!growthError2) {
+        city2.population.growth = { year: [], population: [] }
+        growthData2.data.map((element) => {
             if (element.key[0] == city2.lauCode) {
                 city2.population.growth.year.push(element.key[1])
                 city2.population.growth.population.push(element.values[0])
             }
-
         })
     }
 
@@ -115,52 +144,69 @@ export async function getActualCityData(city1, city2) {
 
 }
 
-
-//Funktion för att Formatera en sträng till Stor bokstav i början och små bokstäver efter det
-export function formatInput(string) {
-    let lower = string.toLowerCase();
-    let firstUpper = lower.charAt(0).toUpperCase() + lower.substr(1);
-    return firstUpper;
-}
-
-
-export async function getBuisnesses(city1, city2) {
+//This one sends one comparions at a time
+export async function getBuisnesses(city1, city2, franchise) {
     let citiesCompared = [];
-    for (const franchise in franchises.franchises) {
-        let comparison = {}
-        comparison.buisness = franchises.franchises[franchise];
-        const [result1, error1] = await hitta(city1, franchises.franchises[franchise])
-        if (error1 == null) {
-            comparison.city1 = result1
-        }
-        else {
-            return [null, error1]
-        }
-        const [result2, error2] = await hitta(city2, franchises.franchises[franchise])
-        if (error2 == null) {
-            comparison.city2 = result2
-        }
-        else {
-            return [null, error2]
-        }
-        citiesCompared.push(comparison);
-    }
-    return [citiesCompared, null];
-
-}
-
-export async function getBuiseness(city1, city2, buisness) {
-    let citiesCompared = [];
-    let comparison = {};
-    comparison.buisness = buisness;
-    const [result1, error1] = await hitta(city1, buisness)
+    let comparison = {}
+    comparison.buisness = franchise;
+    const [result1, error1] = await hitta(city1, franchise)
     if (error1 == null) {
         comparison.city1 = result1
     }
     else {
         return [null, error1]
     }
-    const [result2, error2] = await hitta(city2, buisness)
+    const [result2, error2] = await hitta(city2, franchise)
+    if (error2 == null) {
+        comparison.city2 = result2
+    }
+    else {
+        return [null, error2]
+    }
+    citiesCompared.push(comparison);
+
+    return [citiesCompared, null];
+
+}
+
+//This one sends all comparison once they're done
+// export async function _getBuisnesses(city1, city2) {
+//     let citiesCompared = [];
+//     for (const franchise in franchises.franchises) {
+//         let comparison = {}
+//         comparison.buisness = franchises.franchises[franchise];
+//         const [result1, error1] = await hitta(city1, franchises.franchises[franchise])
+//         if (error1 == null) {
+//             comparison.city1 = result1
+//         }
+//         else {
+//             return [null, error1]
+//         }
+//         const [result2, error2] = await hitta(city2, franchises.franchises[franchise])
+//         if (error2 == null) {
+//             comparison.city2 = result2
+//         }
+//         else {
+//             return [null, error2]
+//         }
+//         citiesCompared.push(comparison);
+//     }
+//     return [citiesCompared, null];
+
+// }
+
+export async function getBuiseness(city1, city2, buisness) {
+    let citiesCompared = [];
+    let comparison = {};
+    comparison.buisness = buisness;
+    const [result1, error1] = await hitta(buisness, city1)
+    if (error1 == null) {
+        comparison.city1 = result1
+    }
+    else {
+        return [null, error1]
+    }
+    const [result2, error2] = await hitta(buisness, city2)
     if (error2 == null) {
         comparison.city2 = result2
     }

@@ -1,10 +1,6 @@
 # CityCompare
 
-En app som jämför kommuner baserat på population, finans och företagsutbud.
-
-För att logga in så är uppgifterna:
-användarnamn: Användare
-Lösenord:   Lösenord
+En app som jämför kommuner baserat på population, ekonomi, jobb och företagsutbud.
 
 ## Install
 
@@ -14,8 +10,8 @@ run "npm ci"
 
 ## start
 
- "npm start" för att starta app och json-server
-open a browser and go to http://localhost:1234/app.html
+ "npm run start" för att starta app och node-server
+open a browser and go to http://localhost:3000/app.html
 
 "npx parcel index.html --open" (För att öppna sidan om appen)
 
@@ -32,7 +28,7 @@ npm-run-all - Används för att köra flera scripts samtidigt
 
 PropTypes - Används för att tvinga användingen av rätt type på props i komponenterna.
 
-local-web-server - Används för att kunna skicka https-anrop från localhost i mitt fall. Skriver om anropen i script i package.json
+
 
 
 ## Tjänster
