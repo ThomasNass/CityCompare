@@ -316,10 +316,6 @@ app.listen(port, () => {
     console.log(`Example app listening on port${port}`)
 })
 
-// scripts": {
-// "reverse-proxy": "ws --directory dist --port 1234 --rewrite \"/api/hitta/:1/:2 -> https://api.hitta.se/publicsearch/v1/companies?what=:1&where=:2&page.number=1&page.size=20\" --rewrite \"/api/scb/pop -> https://api.scb.se/OV0104/v1/doris/sv/ssd/START/BE/BE0101/BE0101A/BefolkningNy\" --rewrite \"/api/scb/income -> https://api.scb.se/OV0104/v1/doris/sv/ssd/START/HE/HE0110/HE0110A/SamForvInk2\"",
-//     "start-app": "parcel watch app.html",
-//         "start": "run-p start-app reverse-proxy"
 
 
 const cache = {}
