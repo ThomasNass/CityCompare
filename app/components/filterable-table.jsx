@@ -4,7 +4,7 @@ import InputField from "./input-field";
 import { getBuiseness, getBuisnesses } from "../services/services.js";
 import CityContext from "../context/city-context.js";
 import Button from "./button";
-
+import franchises from "../services/franchises.json"
 
 export class FilterableTable extends react.Component {
     constructor(props) {
@@ -22,32 +22,36 @@ export class FilterableTable extends react.Component {
 
 
     async componentDidMount() {
-        const [citiesCompared, error] = await getBuisnesses(this.context.city1.name.toLowerCase(), this.context.city2.name.toLowerCase());
-        console.log(citiesCompared)
-        console.log(error)
-        if (!error) {
-            this.setState({ citiesCompared })
-            this.setState({ done: true })
-        }
-        else {
-            this.setState({ down: true })
-        }
-    }
+        for (const franchise in franchises.franchises) {
+            const [comparison, error] = await getBuisnesses(this.context.city1.name.toLowerCase(), this.context.city2.name.toLowerCase(), franchises.franchises[franchise]);
 
-
-    extraSearch = async () => {
-        if (!this.state.extraComparison.some(
-            e => e.buisness ===
-                this.state.search
-        )) {
-            const [extra, error] = await getBuiseness(this.context.city1.name.toLowerCase(), this.context.city2.name.toLowerCase(), this.state.search);
-            if (error == null) {
-                const extraComparison = this.state.extraComparison.concat(extra);
-                this.setState({ extraComparison })
-                this.setState({ extra: true })
+            if (!error) {
+                this.setState(state => {
+                    const citiesCompared = state.citiesCompared.concat(comparison)
+                    return { citiesCompared }
+                })
+                this.setState({ done: true })
+            }
+            else {
+                this.setState({ down: true })
             }
         }
     }
+
+
+    // extraSearch = async () => {
+    //     if (!this.state.extraComparison.some(
+    //         e => e.buisness ===
+    //             this.state.search
+    //     )) {
+    //         const [extra, error] = await getBuiseness(this.context.city1.name.toLowerCase(), this.context.city2.name.toLowerCase(), this.state.search);
+    //         if (error == null) {
+    //             const extraComparison = this.state.extraComparison.concat(extra);
+    //             this.setState({ extraComparison })
+    //             this.setState({ extra: true })
+    //         }
+    //     }
+    // }
 
     handleChange = (event) => {
         const target = event.target;
@@ -58,7 +62,7 @@ export class FilterableTable extends react.Component {
     filteredBuisnesses = (cities, filter) => cities.filter(city => city.buisness.toLowerCase().indexOf(filter.toLowerCase()) !== -1);
     static contextType = CityContext
     render() {
-        console.log(this.context)
+
         let citiesFiltered;
         if (this.state.done) {
             citiesFiltered = this.filteredBuisnesses(this.state.citiesCompared, this.state.filterText);
@@ -109,7 +113,7 @@ export class FilterableTable extends react.Component {
                                 </table>
                             </div>
                             :
-                            <p>Extra sökningar</p>
+                            <p>Extra sökningar har stängts av</p>
                         }
 
 

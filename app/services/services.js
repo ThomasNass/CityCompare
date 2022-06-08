@@ -1,7 +1,7 @@
 import { getJobListings, getTaxes, getJobListingsByField } from "./api-caller.js";
 import { getGenPopulation, getIncome, getPopulationGrowth, getHousePrices } from "./api-scb.js";
 import { hitta } from "./api-hitta.js";
-import franchises from "./franchises.json"
+//import franchises from "./franchises.json"
 
 
 
@@ -144,32 +144,56 @@ export async function getActualCityData(city1, city2) {
 
 }
 
-
-
-export async function getBuisnesses(city1, city2) {
+//This one sends one comparions at a time
+export async function getBuisnesses(city1, city2, franchise) {
     let citiesCompared = [];
-    for (const franchise in franchises.franchises) {
-        let comparison = {}
-        comparison.buisness = franchises.franchises[franchise];
-        const [result1, error1] = await hitta(city1, franchises.franchises[franchise])
-        if (error1 == null) {
-            comparison.city1 = result1
-        }
-        else {
-            return [null, error1]
-        }
-        const [result2, error2] = await hitta(city2, franchises.franchises[franchise])
-        if (error2 == null) {
-            comparison.city2 = result2
-        }
-        else {
-            return [null, error2]
-        }
-        citiesCompared.push(comparison);
+    let comparison = {}
+    comparison.buisness = franchise;
+    const [result1, error1] = await hitta(city1, franchise)
+    if (error1 == null) {
+        comparison.city1 = result1
     }
+    else {
+        return [null, error1]
+    }
+    const [result2, error2] = await hitta(city2, franchise)
+    if (error2 == null) {
+        comparison.city2 = result2
+    }
+    else {
+        return [null, error2]
+    }
+    citiesCompared.push(comparison);
+
     return [citiesCompared, null];
 
 }
+
+//This one sends all comparison once they're done
+// export async function _getBuisnesses(city1, city2) {
+//     let citiesCompared = [];
+//     for (const franchise in franchises.franchises) {
+//         let comparison = {}
+//         comparison.buisness = franchises.franchises[franchise];
+//         const [result1, error1] = await hitta(city1, franchises.franchises[franchise])
+//         if (error1 == null) {
+//             comparison.city1 = result1
+//         }
+//         else {
+//             return [null, error1]
+//         }
+//         const [result2, error2] = await hitta(city2, franchises.franchises[franchise])
+//         if (error2 == null) {
+//             comparison.city2 = result2
+//         }
+//         else {
+//             return [null, error2]
+//         }
+//         citiesCompared.push(comparison);
+//     }
+//     return [citiesCompared, null];
+
+// }
 
 export async function getBuiseness(city1, city2, buisness) {
     let citiesCompared = [];
