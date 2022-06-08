@@ -12,9 +12,9 @@ export const getHousePrices = async (city) => {
     }
 }
 
-export const getSCBPopulationData = async (city1, city2) => {
+export const getGenPopulation = async (city) => {
     try {
-        const response = await fetch(`/api/scb/pop/${city1}/${city2}`,
+        const response = await fetch(`/api/scb/pop/${city}`,
             {
                 method: "post"
             });
@@ -26,9 +26,9 @@ export const getSCBPopulationData = async (city1, city2) => {
     }
 }
 
-export const getSCBPopulationGrowthData = async (city1, city2) => {
+export const getPopulationGrowth = async (city) => {
     try {
-        const response = await fetch(`/api/scb/growth/${city1}/${city2}`,
+        const response = await fetch(`/api/scb/growth/${city}`,
             {
                 method: "post"
             });
@@ -40,9 +40,9 @@ export const getSCBPopulationGrowthData = async (city1, city2) => {
     }
 }
 
-export const getSCBIncomeData = async (city1, city2) => {
+export const getIncome = async (city) => {
     try {
-        const response = await fetch(`/api/scb/income/${city1}/${city2}`,
+        const response = await fetch(`/api/scb/income/${city}`,
             {
                 method: "POST"
             });
@@ -54,38 +54,26 @@ export const getSCBIncomeData = async (city1, city2) => {
     }
 }
 
-export async function getIncome(city1, city2) {
-
-    const [data, error] = await getSCBIncomeData(city1, city2);
-    if (error == null) {
-        return [data, null]
-    }
-    else {
-        return [null, error]
-    }
 
 
+// export async function getPopulationGrowth(city1, city2) {
 
-}
+//     const [data, error] = await getSCBPopulationGrowthData(city1, city2);
+//     if (error == null) {
+//         return [data, null]
+//     }
+//     else {
+//         return [null, error]
+//     }
+// }
 
-export async function getPopulationGrowth(city1, city2) {
+// export async function getGenPopulation(city1, city2) {
 
-    const [data, error] = await getSCBPopulationGrowthData(city1, city2);
-    if (error == null) {
-        return [data, null]
-    }
-    else {
-        return [null, error]
-    }
-}
-
-export async function getGenPopulation(city1, city2) {
-
-    const [data, error] = await getSCBPopulationData(city1, city2);
-    if (error == null) {
-        return [data, null]
-    }
-    else {
-        return [null, error]
-    }
-}
+//     const [data, error] = await getSCBPopulationData(city1, city2);
+//     if (error == null) {
+//         return [data, null]
+//     }
+//     else {
+//         return [null, error]
+//     }
+// }

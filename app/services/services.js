@@ -7,9 +7,12 @@ import franchises from "./franchises.json"
 
 export async function getActualCityData(city1, city2) {
 
-    const [incomeData, incomeError] = await getIncome(city1.lauCode, city2.lauCode)
-    const [populationByGender, genPopError] = await getGenPopulation(city1.lauCode, city2.lauCode);
-    const [growthData, growthError] = await getPopulationGrowth(city1.lauCode, city2.lauCode);
+    const [incomeData1, incomeError1] = await getIncome(city1.lauCode);
+    const [incomeData2, incomeError2] = await getIncome(city2.lauCode);
+    const [populationByGender1, genPopError1] = await getGenPopulation(city1.lauCode);
+    const [populationByGender2, genPopError2] = await getGenPopulation(city2.lauCode);
+    const [growthData1, growthError1] = await getPopulationGrowth(city1.lauCode);
+    const [growthData2, growthError2] = await getPopulationGrowth(city2.lauCode);
     const [housePrices1, houseError1] = await getHousePrices(city1.lauCode)
     const [housePrices2, houseError2] = await getHousePrices(city2.lauCode)
 
@@ -35,48 +38,41 @@ export async function getActualCityData(city1, city2) {
     }
 
 
-    if (incomeError == null) {
+    if (!incomeError1) {
         city1.income = {
-            average: incomeData.data[0].values[0],
-            median: incomeData.data[0].values[1]
+            average: incomeData1.data[0].values[0],
+            median: incomeData1.data[0].values[1]
         }
-        city2.income = {
-            average: incomeData.data[1].values[0],
-            median: incomeData.data[1].values[1]
-        }
-
     }
     else {
-        city1.income = incomeError
-        city2.income = incomeError
+        city1.income = incomeError1
+    }
+    if (!incomeError2) {
+        city2.income = {
+            average: incomeData2.data[0].values[0],
+            median: incomeData2.data[0].values[1]
+        }
+    }
+    else {
+        city2.income = incomeError2
     }
 
+
     if (!houseError1) {
-        housePrices1.data.map((element) => {
-            if (element.key[0] == city1.lauCode) {
-                city1.housePrice = parseInt(element.values[0])
-                console.log(city1)
-            }
-        })
+        city1.housePrice = parseInt(housePrices1.data[0].values[0])
     }
     else {
         city1.housePrice = houseError1
-    } if (!houseError2) {
-        housePrices2.data.map((element) => {
-            if (element.key[0] == city2.lauCode) {
-                city2.housePrice = parseInt(element.values[0])
-                console.log(city2)
-            }
-        })
+    }
+    if (!houseError2) {
+        city2.housePrice = parseInt(housePrices2.data[0].values[0])
     }
     else {
         city2.housePrice = houseError2
     }
 
-    if (genPopError == null) {
-
-        populationByGender.data.map((element) => {
-
+    if (!genPopError1) {
+        populationByGender1.data.map((element) => {
             if (element.key[0] == city1.lauCode) {
                 if (element.key[1] == 1) {
                     city1.population.men = parseInt(element.values[0])
@@ -85,6 +81,15 @@ export async function getActualCityData(city1, city2) {
                     city1.population.fem = parseInt(element.values[0])
                 }
             }
+            city1.population.total = city1.population.men + city1.population.fem
+        })
+
+    }
+    else {
+        city1.population = genPopError1
+    }
+    if (!genPopError2) {
+        populationByGender2.data.map((element) => {
             if (element.key[0] == city2.lauCode) {
                 if (element.key[1] == 1) {
                     city2.population.men = parseInt(element.values[0])
@@ -93,28 +98,31 @@ export async function getActualCityData(city1, city2) {
                     city2.population.fem = parseInt(element.values[0])
                 }
             }
-            city1.population.total = city1.population.men + city1.population.fem
             city2.population.total = city2.population.men + city2.population.fem
         })
 
-    } else {
-        city1.population = genPopError
-        city2.population = genPopError
+    }
+    else {
+        city2.population = genPopError2
     }
 
-    if (growthError == null) {
+
+    if (!growthError1) {
         city1.population.growth = { year: [], population: [] }
-        city2.population.growth = { year: [], population: [] }
-        growthData.data.map((element) => {
+        growthData1.data.map((element) => {
             if (element.key[0] == city1.lauCode) {
                 city1.population.growth.year.push(element.key[1])
                 city1.population.growth.population.push(element.values[0])
             }
+        })
+    }
+    if (!growthError2) {
+        city2.population.growth = { year: [], population: [] }
+        growthData2.data.map((element) => {
             if (element.key[0] == city2.lauCode) {
                 city2.population.growth.year.push(element.key[1])
                 city2.population.growth.population.push(element.values[0])
             }
-
         })
     }
 
