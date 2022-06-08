@@ -145,13 +145,6 @@ export async function getActualCityData(city1, city2) {
 }
 
 
-//Funktion för att Formatera en sträng till Stor bokstav i början och små bokstäver efter det
-export function formatInput(string) {
-    let lower = string.toLowerCase();
-    let firstUpper = lower.charAt(0).toUpperCase() + lower.substr(1);
-    return firstUpper;
-}
-
 
 export async function getBuisnesses(city1, city2) {
     let citiesCompared = [];

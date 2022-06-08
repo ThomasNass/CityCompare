@@ -5,6 +5,7 @@ import CityComparison from "./city-comparison.jsx";
 import CityContext from "../context/city-context.js";
 import cityArray from "../cities.json";
 import propTypes from "prop-types";
+import { element } from "prop-types";
 
 export default class SearchForm extends react.Component {
     constructor(props) {
@@ -19,11 +20,25 @@ export default class SearchForm extends react.Component {
 
 
     handleChange = (event) => {
+
         const target = event.target;
         const value = target.value;
         const name = target.name;
-        this.setState({ [name]: value })
+        if (cityArray.cities.find(element => element === value)) {
+            this.setState({ [name]: value })
+        }
     }
+
+    onClick = () => {
+        this.context.hasCities = false;
+        if (this.state.search1.length > 0 && this.state.search2.length > 0) {
+            this.context.setContext(this.state.search1, this.state.search2)
+        }
+
+
+
+    }
+
 
     render() {
         return (<>
@@ -34,7 +49,7 @@ export default class SearchForm extends react.Component {
             <Button
                 id={"compare-button"}
                 text={"Jämför"}
-                onClick={() => this.context.setContext(this.state.search1, this.state.search2)} />
+                onClick={this.onClick} />
 
             {(this.context.hasCities === true)
                 ?

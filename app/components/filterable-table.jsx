@@ -25,7 +25,7 @@ export class FilterableTable extends react.Component {
         const [citiesCompared, error] = await getBuisnesses(this.context.city1.name.toLowerCase(), this.context.city2.name.toLowerCase());
         console.log(citiesCompared)
         console.log(error)
-        if (error == null) {
+        if (!error) {
             this.setState({ citiesCompared })
             this.setState({ done: true })
         }
