@@ -1,7 +1,15 @@
 
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json"
+export const getHousePrices = async (city) => {
+    try {
+        const response = await fetch(`/api/scb/houseprice/${city}`, {
+            method: "post"
+        });
+        const data = await response.json();
+        return [data, null]
+    }
+    catch (err) {
+        return [null, err]
+    }
 }
 
 export const getSCBPopulationData = async (city1, city2) => {

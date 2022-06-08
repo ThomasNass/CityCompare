@@ -7,6 +7,7 @@ import PieChart from "./pie-chart.jsx";
 import Jobs from "./jobs.jsx";
 import Button from "./button.jsx";
 import Income from "./income.jsx";
+import HousePrice from "./house-price.jsx";
 
 export default class CityComparison extends react.Component {
     constructor(props) {
@@ -57,6 +58,13 @@ export default class CityComparison extends react.Component {
                     <div className="tax-div">
                         <Income city={"city1"} />
                         <Income city={"city2"} />
+                    </div>
+                </div>
+                <div className="tax-wrapper wrapper">
+                    <h1>Snitthuspriser 2021</h1>
+                    <div className="tax-div">
+                        <HousePrice city={"city1"} />
+                        <HousePrice city={"city2"} />
                     </div>
                 </div>
                 <div className="job-wrapper wrapper">

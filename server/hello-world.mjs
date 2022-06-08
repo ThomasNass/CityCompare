@@ -53,9 +53,71 @@ app.get("/api/hitta/:company/:municipality", async (req, res) => {
 
 })
 
+app.post("/api/scb/houseprice/:city", async (req, res) => {
+    const { city } = req.params;
+    console.log(city)
+    const body = {
+        "query": [
+            {
+                "code": "Region",
+                "selection": {
+                    "filter": "vs:RegionKommun07EjAggr",
+                    "values": [
+                        `${city}`
+
+                    ]
+                }
+            },
+            {
+                "code": "Fastighetstyp",
+                "selection": {
+                    "filter": "item",
+                    "values": [
+                        "220"
+                    ]
+                }
+            },
+            {
+                "code": "ContentsCode",
+                "selection": {
+                    "filter": "item",
+                    "values": [
+                        "BO0501C2"
+                    ]
+                }
+            },
+            {
+                "code": "Tid",
+                "selection": {
+                    "filter": "item",
+                    "values": [
+                        "2021"
+                    ]
+                }
+            }
+        ],
+        "response": {
+            "format": "json"
+        }
+    }
+
+    const response = await fetch("https://api.scb.se/OV0104/v1/doris/sv/ssd/START/BO/BO0501/BO0501B/FastprisSHRegionAr", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        body: JSON.stringify(body)
+    })
+    let data = await response.json();
+    console.log(data)
+    res.status(response.status);
+    res.send(data);
+
+})
+
 app.post("/api/scb/income/:city1/:city2", async (req, res) => {
     const { city1, city2 } = req.params;
-    console.log(city1, city2)
     const body = {
         "query": [
             {
@@ -120,14 +182,12 @@ app.post("/api/scb/income/:city1/:city2", async (req, res) => {
         body: JSON.stringify(body)
     })
     let data = await response.json();
-    console.log(data)
     res.status(response.status);
     res.send(data);
 })
 
 app.post("/api/scb/growth/:city1/:city2", async (req, res) => {
     const { city1, city2 } = req.params;
-    console.log(city1, city2)
     const body = {
         "query": [
             {
@@ -164,7 +224,6 @@ app.post("/api/scb/growth/:city1/:city2", async (req, res) => {
         body: JSON.stringify(body)
     })
     let data = await response.json();
-    console.log(data)
     res.status(response.status);
     res.send(data);
 })
@@ -173,7 +232,6 @@ app.post("/api/scb/growth/:city1/:city2", async (req, res) => {
 
 app.post("/api/scb/pop/:city1/:city2", async (req, res) => {
     const { city1, city2 } = req.params;
-    console.log(city1, city2)
     const body = {
         "query": [
             {
@@ -229,7 +287,6 @@ app.post("/api/scb/pop/:city1/:city2", async (req, res) => {
         body: JSON.stringify(body)
     })
     let data = await response.json();
-    console.log(data)
     res.status(response.status);
     res.send(data);
 })

@@ -1,5 +1,5 @@
 import { getJobListings, getTaxes, getJobListingsByField } from "./api-caller.js";
-import { getGenPopulation, getIncome, getPopulationGrowth } from "./api-scb.js";
+import { getGenPopulation, getIncome, getPopulationGrowth, getHousePrices } from "./api-scb.js";
 import { hitta } from "./api-hitta.js";
 import franchises from "./franchises.json"
 
@@ -10,8 +10,8 @@ export async function getActualCityData(city1, city2) {
     const [incomeData, incomeError] = await getIncome(city1.lauCode, city2.lauCode)
     const [populationByGender, genPopError] = await getGenPopulation(city1.lauCode, city2.lauCode);
     const [growthData, growthError] = await getPopulationGrowth(city1.lauCode, city2.lauCode);
-    console.log(populationByGender);
-
+    const [housePrices1, houseError1] = await getHousePrices(city1.lauCode)
+    const [housePrices2, houseError2] = await getHousePrices(city2.lauCode)
 
 
     const [taxes1, taxes1error] = await getTaxes(city1.name.toUpperCase());
@@ -49,6 +49,28 @@ export async function getActualCityData(city1, city2) {
     else {
         city1.income = incomeError
         city2.income = incomeError
+    }
+
+    if (!houseError1) {
+        housePrices1.data.map((element) => {
+            if (element.key[0] == city1.lauCode) {
+                city1.housePrice = parseInt(element.values[0])
+                console.log(city1)
+            }
+        })
+    }
+    else {
+        city1.housePrice = houseError1
+    } if (!houseError2) {
+        housePrices2.data.map((element) => {
+            if (element.key[0] == city2.lauCode) {
+                city2.housePrice = parseInt(element.values[0])
+                console.log(city2)
+            }
+        })
+    }
+    else {
+        city2.housePrice = houseError2
     }
 
     if (genPopError == null) {
