@@ -18,6 +18,7 @@ const route = express.static("./dist")
 
 app.get("/", (req, res) => {
     res.send("Hello world!")
+    res.render()
 })
 
 app.get("/api/hitta/:company/:municipality", async (req, res) => {
@@ -312,8 +313,8 @@ app.post("/api/scb/pop/:city", async (req, res) => {
 
 app.use(route)
 
-app.listen(port, () => {
-    console.log(`Example app listening on port${port}`)
+app.listen(process.env.PORT || port, () => {
+    console.log(`Example app listening on port${port} or ${process.env.PORT}`)
 })
 
 
