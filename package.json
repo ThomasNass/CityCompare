@@ -17,9 +17,8 @@
   "scripts": {
     "reverse-proxy": "ws --directory dist --port 1234 --rewrite \"/api/hitta/:1/:2 -> https://api.hitta.se/publicsearch/v1/companies?what=:1&where=:2&page.number=1&page.size=20\" --rewrite \"/api/scb/pop -> https://api.scb.se/OV0104/v1/doris/sv/ssd/START/BE/BE0101/BE0101A/BefolkningNy\" --rewrite \"/api/scb/income -> https://api.scb.se/OV0104/v1/doris/sv/ssd/START/HE/HE0110/HE0110A/SamForvInk2\"",
     "start-app": "parcel watch app.html",
-    "build-app": "parcel build app.html",
-    "start": "npx build-app && npm run start-server",
-    "oldstart": "npm run build-app && npm run start-server",
+    "build-app": "npx parcel build app.html",
+    "start": "npm run build-app && npm run start-server",
     "start-server": "node server/city-server.mjs"
   },
   "repository": {
