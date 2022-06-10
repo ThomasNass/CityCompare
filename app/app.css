@@ -135,6 +135,7 @@ input {
 }
 
 table {
+    table-layout: fixed;
     padding: 20px 0;
     color: black;
     text-align: center;
@@ -158,6 +159,7 @@ td {
     width: 33.3%;
     border-bottom: 1px solid rgba(0, 0, 0, 0.143);
     padding: 5px;
+    word-break: break-word;
 }
 
 #extra-search-button {
@@ -250,6 +252,10 @@ td {
         width: auto;
     }
 
+    table {
+        font-size: 1rem;
+    }
+
 }
 
 @media screen and (max-width:600px) {
@@ -275,6 +281,10 @@ td {
 
     .job-hit-div h2 {
         font-size: 0.8rem;
+    }
+
+    table {
+        font-size: .8rem;
     }
 
 }
