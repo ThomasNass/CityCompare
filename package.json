@@ -19,7 +19,7 @@
     "start-app": "parcel watch app.html",
     "build-app": "npx parcel build app.html",
     "start": "npm run build-app && npm run start-server",
-    "start-server": "node server/city-server.mjs"
+    "start-server": "node server/index.mjs"
   },
   "repository": {
     "type": "git",
