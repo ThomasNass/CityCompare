@@ -18,7 +18,6 @@ const route = express.static("./dist")
 
 app.get("/", (req, res) => {
     res.send("Hello world!")
-    res.render(`${route}/app.html`)
 })
 
 app.get("/api/hitta/:company/:municipality", async (req, res) => {
