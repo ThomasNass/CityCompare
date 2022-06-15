@@ -1,7 +1,7 @@
 import fetch from 'node-fetch';
 import express from 'express';
 import crypto from "crypto";
-
+import path from "path";
 
 
 const callerId = "KommunKollen";
@@ -17,7 +17,7 @@ const route = express.static("./dist")
 
 
 app.get("/", (req, res) => {
-    res.render("/app.html")
+    res.sendFile(path.join(__dirname, "/app.html"))
 })
 
 app.get("/api/hitta/:company/:municipality", async (req, res) => {
