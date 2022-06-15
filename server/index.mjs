@@ -17,7 +17,7 @@ const route = express.static("./dist")
 
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "/app.html"))
+    res.sendFile(path.join(route, "/app.html"))
 })
 
 app.get("/api/hitta/:company/:municipality", async (req, res) => {
