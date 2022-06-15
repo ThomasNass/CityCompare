@@ -4,8 +4,8 @@ import crypto from "crypto";
 
 
 
-const callerId = "MuniMatch";
-const key = "GsgD4yGDbIooku02ocUPatpvSug3kawuwjrxlhri";
+const callerId = "KommunKollen";
+const key = "CuhpqFUceLTAKg1hBPHTif0QPamspTUR8qkLa2ZO";
 
 
 
@@ -241,8 +241,6 @@ app.post("/api/scb/growth/:city", async (req, res) => {
     }
     res.send(data);
 })
-
-
 
 app.post("/api/scb/pop/:city", async (req, res) => {
     const { city } = req.params;
