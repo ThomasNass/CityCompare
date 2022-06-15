@@ -13,11 +13,11 @@ const app = express()
 const port = 3000
 
 const route = express.static("./dist")
-
+let __dirname = path.resolve();
 
 
 app.get("/", (req, res) => {
-    res.sendFile("/app.html")
+    res.sendFile(path.join(__dirname, "dist/app.html"))
 })
 
 app.get("/api/hitta/:company/:municipality", async (req, res) => {

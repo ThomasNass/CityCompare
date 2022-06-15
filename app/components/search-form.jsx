@@ -12,7 +12,8 @@ export default class SearchForm extends react.Component {
         super(props);
         this.state = {
             search1: "",
-            search2: ""
+            search2: "",
+            loading: false
         }
     }
 
@@ -29,13 +30,20 @@ export default class SearchForm extends react.Component {
         }
     }
 
+    componentDidUpdate() {
+        if (this.state.loading == true) {
+            if (this.context.hasCities == true) {
+                this.setState({ loading: false })
+            }
+        }
+    }
+
     onClick = () => {
         this.context.hasCities = false;
         if (this.state.search1.length > 0 && this.state.search2.length > 0) {
+            this.setState({ loading: true })
             this.context.setContext(this.state.search1, this.state.search2)
         }
-
-
 
     }
 
@@ -50,15 +58,18 @@ export default class SearchForm extends react.Component {
                 id={"compare-button"}
                 text={"Jämför"}
                 onClick={this.onClick} />
-
-            {(this.context.hasCities === true)
-                ?
-                <CityComparison
-                />
-                :
-                null
+            {(this.state.loading === false) ?
+                <>
+                    {(this.context.hasCities === true)
+                        ?
+                        <CityComparison
+                        />
+                        :
+                        null
+                    }
+                </> :
+                <div className="loader"></div>
             }
-
         </>)
     }
 }
