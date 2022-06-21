@@ -5,7 +5,7 @@ import CityComparison from "./city-comparison.jsx";
 import CityContext from "../context/city-context.js";
 import cityArray from "../cities.json";
 import propTypes from "prop-types";
-import { element } from "prop-types";
+import MuniSelect from "./muni-select.jsx";
 
 export default class SearchForm extends react.Component {
     constructor(props) {
@@ -51,8 +51,8 @@ export default class SearchForm extends react.Component {
     render() {
         return (<>
 
-            <DataList type={"text"} array={cityArray.cities} className={"search-input"} name={"search1"} placeholder={"Ange stad"} onChange={this.handleChange} />
-            <DataList type={"text"} array={cityArray.cities} className={"search-input"} name={"search2"} placeholder={"Ange stad"} onChange={this.handleChange} />
+            <MuniSelect type={"text"} array={cityArray.cities} className={"muni-select"} name={"search1"} onChange={this.handleChange} />
+            <MuniSelect type={"text"} array={cityArray.cities} className={"muni-select"} name={"search2"} onChange={this.handleChange} />
 
             <Button
                 id={"compare-button"}
