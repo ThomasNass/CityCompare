@@ -318,22 +318,22 @@ app.listen(process.env.PORT || port, () => {
 
 const cache = {}
 function getFromCache(cacheKey) {
-    // if (cache[cacheKey]) {
-    //     return cache[cacheKey]
-    // }
-    // else {
-    fs.readFile("./server/cache.json", (err, data) => {
-        if (err) {
-            console.log(err);
-            return;
-        }
-        const jsonCache = JSON.parse(data);
-        console.log(jsonCache)
-        if (jsonCache[cacheKey]) {
-            return jsonCache[cacheKey]
-        }
-    })
-    // }
+    if (cache[cacheKey]) {
+        return cache[cacheKey]
+    }
+    else {
+        fs.readFile("./server/cache.json", (err, data) => {
+            if (err) {
+                console.log(err);
+                return;
+            }
+            const jsonCache = JSON.parse(data);
+            console.log(jsonCache)
+            if (jsonCache[cacheKey]) {
+                return jsonCache[cacheKey]
+            }
+        })
+    }
     return undefined;
 }
 
