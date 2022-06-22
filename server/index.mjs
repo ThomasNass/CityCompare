@@ -2,7 +2,7 @@ import fetch from 'node-fetch';
 import express from 'express';
 import crypto from "crypto";
 import path from "path";
-
+import fs from "fs";
 
 const callerId = "KommunKollen";
 const key = "CuhpqFUceLTAKg1hBPHTif0QPamspTUR8qkLa2ZO";
@@ -318,14 +318,41 @@ app.listen(process.env.PORT || port, () => {
 
 const cache = {}
 function getFromCache(cacheKey) {
-    if (cache[cacheKey]) {
-        return cache[cacheKey]
-    }
+    // if (cache[cacheKey]) {
+    //     return cache[cacheKey]
+    // }
+    // else {
+    fs.readFile("./server/cache.json", (err, data) => {
+        if (err) {
+            console.log(err);
+            return;
+        }
+        const jsonCache = JSON.parse(data);
+        console.log(jsonCache)
+        if (jsonCache[cacheKey]) {
+            return jsonCache[cacheKey]
+        }
+    })
+    // }
     return undefined;
 }
 
-function saveToCache(cacheKey, data) {
-    cache[cacheKey] = data;
+function saveToCache(cacheKey, cityData) {
+    cache[cacheKey] = cityData;
+    fs.readFile("./server/cache.json", (err, data) => {
+        if (err) {
+            console.log(err);
+            return;
+        }
+        const jsonCache = JSON.parse(data);
+        jsonCache[cacheKey] = cityData;
+        fs.writeFileSync("./server/cache.json", JSON.stringify(jsonCache, null, 2), (err) => {
+            if (err) {
+                console.log(err);
+            }
+        });
+
+    })
 
 }
 

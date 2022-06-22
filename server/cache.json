@@ -1,0 +1,9452 @@
+{
+  "income-0182": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Alder",
+        "text": "ålder",
+        "type": "d"
+      },
+      {
+        "code": "Inkomstklass",
+        "text": "inkomstklass",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "HE0110K1",
+        "text": "Medelinkomst, tkr",
+        "comment": "Sammanräknad förvärvsinkomst\r\nSumman av inkomst av tjänst och inkomst av näringsverksamhet.\r\n\r\nDen sammanräknade förvärvsinkomsten består av de sammanlagda löpande skattepliktiga inkomsterna, vilket avser inkomster från anställning, företagande, pension, sjukpenning och andra skattepliktiga transfereringar. I sammanräknad förvärvsinkomst ingår inte inkomst av kapital.\r\n\r\n",
+        "type": "c"
+      },
+      {
+        "code": "HE0110K2",
+        "text": "Medianinkomst, tkr",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0182",
+          "20-64",
+          "TOT",
+          "2020"
+        ],
+        "values": [
+          "483.0",
+          "414.9"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "HE0110",
+        "updated": "2022-01-18T21:58:00Z",
+        "label": "Sammanräknad förvärvsinkomst för boende i Sverige den 31/12 efter region, ålder, inkomstklass, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "income-0181": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Alder",
+        "text": "ålder",
+        "type": "d"
+      },
+      {
+        "code": "Inkomstklass",
+        "text": "inkomstklass",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "HE0110K1",
+        "text": "Medelinkomst, tkr",
+        "comment": "Sammanräknad förvärvsinkomst\r\nSumman av inkomst av tjänst och inkomst av näringsverksamhet.\r\n\r\nDen sammanräknade förvärvsinkomsten består av de sammanlagda löpande skattepliktiga inkomsterna, vilket avser inkomster från anställning, företagande, pension, sjukpenning och andra skattepliktiga transfereringar. I sammanräknad förvärvsinkomst ingår inte inkomst av kapital.\r\n\r\n",
+        "type": "c"
+      },
+      {
+        "code": "HE0110K2",
+        "text": "Medianinkomst, tkr",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0181",
+          "20-64",
+          "TOT",
+          "2020"
+        ],
+        "values": [
+          "307.6",
+          "312.1"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "HE0110",
+        "updated": "2022-01-18T21:58:00Z",
+        "label": "Sammanräknad förvärvsinkomst för boende i Sverige den 31/12 efter region, ålder, inkomstklass, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "pop-0182": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "comment": "År 1968–1998 redovisas enligt regional indelning 1998-01-01.\r\n",
+        "type": "d"
+      },
+      {
+        "code": "Kon",
+        "text": "kön",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BE0101N1",
+        "text": "Folkmängd",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0182",
+          "1",
+          "2021"
+        ],
+        "values": [
+          "53825"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "2",
+          "2021"
+        ],
+        "values": [
+          "54409"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BE0101",
+        "updated": "2022-02-07T14:32:00Z",
+        "label": "Folkmängd efter region, kön, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "pop-0181": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "comment": "År 1968–1998 redovisas enligt regional indelning 1998-01-01.\r\nNy regional indelning fr.o.m. 1999-01-01. Delar av Södertälje kommun (kod 0181) bildar en ny kommun benämnd Nykvarn (kod 0140).\r\n",
+        "type": "d"
+      },
+      {
+        "code": "Kon",
+        "text": "kön",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BE0101N1",
+        "text": "Folkmängd",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0181",
+          "1",
+          "2021"
+        ],
+        "values": [
+          "51867"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "2",
+          "2021"
+        ],
+        "values": [
+          "49342"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BE0101",
+        "updated": "2022-02-07T14:32:00Z",
+        "label": "Folkmängd efter region, kön, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "growth-0182": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BE0101N1",
+        "text": "Folkmängd",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0182",
+          "1968"
+        ],
+        "values": [
+          "42234"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "1969"
+        ],
+        "values": [
+          "44785"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "1970"
+        ],
+        "values": [
+          "48035"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "1971"
+        ],
+        "values": [
+          "50125"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "1972"
+        ],
+        "values": [
+          "51913"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "1973"
+        ],
+        "values": [
+          "52679"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "1974"
+        ],
+        "values": [
+          "54107"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "1975"
+        ],
+        "values": [
+          "55321"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "1976"
+        ],
+        "values": [
+          "55782"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "1977"
+        ],
+        "values": [
+          "55681"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "1978"
+        ],
+        "values": [
+          "55927"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "1979"
+        ],
+        "values": [
+          "56825"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "1980"
+        ],
+        "values": [
+          "57229"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "1981"
+        ],
+        "values": [
+          "58119"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "1982"
+        ],
+        "values": [
+          "58399"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "1983"
+        ],
+        "values": [
+          "58537"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "1984"
+        ],
+        "values": [
+          "59009"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "1985"
+        ],
+        "values": [
+          "59688"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "1986"
+        ],
+        "values": [
+          "60315"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "1987"
+        ],
+        "values": [
+          "61084"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "1988"
+        ],
+        "values": [
+          "61931"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "1989"
+        ],
+        "values": [
+          "63114"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "1990"
+        ],
+        "values": [
+          "64056"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "1991"
+        ],
+        "values": [
+          "65224"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "1992"
+        ],
+        "values": [
+          "66098"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "1993"
+        ],
+        "values": [
+          "67321"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "1994"
+        ],
+        "values": [
+          "69121"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "1995"
+        ],
+        "values": [
+          "70172"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "1996"
+        ],
+        "values": [
+          "71213"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "1997"
+        ],
+        "values": [
+          "72230"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "1998"
+        ],
+        "values": [
+          "73029"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "1999"
+        ],
+        "values": [
+          "73976"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "2000"
+        ],
+        "values": [
+          "74974"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "2001"
+        ],
+        "values": [
+          "75741"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "2002"
+        ],
+        "values": [
+          "76624"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "2003"
+        ],
+        "values": [
+          "77470"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "2004"
+        ],
+        "values": [
+          "78715"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "2005"
+        ],
+        "values": [
+          "80247"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "2006"
+        ],
+        "values": [
+          "82421"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "2007"
+        ],
+        "values": [
+          "84303"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "2008"
+        ],
+        "values": [
+          "85661"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "2009"
+        ],
+        "values": [
+          "88085"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "2010"
+        ],
+        "values": [
+          "90108"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "2011"
+        ],
+        "values": [
+          "91616"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "2012"
+        ],
+        "values": [
+          "92873"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "2013"
+        ],
+        "values": [
+          "94423"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "2014"
+        ],
+        "values": [
+          "96217"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "2015"
+        ],
+        "values": [
+          "97986"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "2016"
+        ],
+        "values": [
+          "99359"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "2017"
+        ],
+        "values": [
+          "101231"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "2018"
+        ],
+        "values": [
+          "103656"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "2019"
+        ],
+        "values": [
+          "105189"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "2020"
+        ],
+        "values": [
+          "106505"
+        ]
+      },
+      {
+        "key": [
+          "0182",
+          "2021"
+        ],
+        "values": [
+          "108234"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BE0101",
+        "updated": "2022-02-07T14:32:00Z",
+        "label": "Folkmängd efter region, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "growth-0181": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BE0101N1",
+        "text": "Folkmängd",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0181",
+          "1968"
+        ],
+        "values": [
+          "68665"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "1969"
+        ],
+        "values": [
+          "72973"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "1970"
+        ],
+        "values": [
+          "75751"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "1971"
+        ],
+        "values": [
+          "76674"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "1972"
+        ],
+        "values": [
+          "77658"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "1973"
+        ],
+        "values": [
+          "77817"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "1974"
+        ],
+        "values": [
+          "77825"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "1975"
+        ],
+        "values": [
+          "77695"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "1976"
+        ],
+        "values": [
+          "77799"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "1977"
+        ],
+        "values": [
+          "77829"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "1978"
+        ],
+        "values": [
+          "78568"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "1979"
+        ],
+        "values": [
+          "79396"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "1980"
+        ],
+        "values": [
+          "80045"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "1981"
+        ],
+        "values": [
+          "80335"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "1982"
+        ],
+        "values": [
+          "79792"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "1983"
+        ],
+        "values": [
+          "79553"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "1984"
+        ],
+        "values": [
+          "79429"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "1985"
+        ],
+        "values": [
+          "79764"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "1986"
+        ],
+        "values": [
+          "80003"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "1987"
+        ],
+        "values": [
+          "80263"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "1988"
+        ],
+        "values": [
+          "80660"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "1989"
+        ],
+        "values": [
+          "81460"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "1990"
+        ],
+        "values": [
+          "81786"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "1991"
+        ],
+        "values": [
+          "81670"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "1992"
+        ],
+        "values": [
+          "81770"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "1993"
+        ],
+        "values": [
+          "81489"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "1994"
+        ],
+        "values": [
+          "81890"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "1995"
+        ],
+        "values": [
+          "82355"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "1996"
+        ],
+        "values": [
+          "82589"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "1997"
+        ],
+        "values": [
+          "82986"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "1998"
+        ],
+        "values": [
+          "75836"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "1999"
+        ],
+        "values": [
+          "76624"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "2000"
+        ],
+        "values": [
+          "77882"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "2001"
+        ],
+        "values": [
+          "78794"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "2002"
+        ],
+        "values": [
+          "79613"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "2003"
+        ],
+        "values": [
+          "80049"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "2004"
+        ],
+        "values": [
+          "80405"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "2005"
+        ],
+        "values": [
+          "80553"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "2006"
+        ],
+        "values": [
+          "81791"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "2007"
+        ],
+        "values": [
+          "83642"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "2008"
+        ],
+        "values": [
+          "84753"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "2009"
+        ],
+        "values": [
+          "85270"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "2010"
+        ],
+        "values": [
+          "86246"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "2011"
+        ],
+        "values": [
+          "87685"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "2012"
+        ],
+        "values": [
+          "89473"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "2013"
+        ],
+        "values": [
+          "91072"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "2014"
+        ],
+        "values": [
+          "92235"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "2015"
+        ],
+        "values": [
+          "93202"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "2016"
+        ],
+        "values": [
+          "94631"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "2017"
+        ],
+        "values": [
+          "96032"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "2018"
+        ],
+        "values": [
+          "97381"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "2019"
+        ],
+        "values": [
+          "98979"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "2020"
+        ],
+        "values": [
+          "100111"
+        ]
+      },
+      {
+        "key": [
+          "0181",
+          "2021"
+        ],
+        "values": [
+          "101209"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BE0101",
+        "updated": "2022-02-07T14:32:00Z",
+        "label": "Folkmängd efter region, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "houseprice-0182": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Fastighetstyp",
+        "text": "fastighetstyp",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BO0501C2",
+        "text": "Köpeskilling, medelvärde i tkr",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0182",
+          "220",
+          "2021"
+        ],
+        "values": [
+          "9849"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BO0501",
+        "updated": "2022-05-30T06:47:00Z",
+        "label": "Köpeskilling för småhus, medelvärde i tkr efter region, fastighetstyp, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "houseprice-0181": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Fastighetstyp",
+        "text": "fastighetstyp",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BO0501C2",
+        "text": "Köpeskilling, medelvärde i tkr",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0181",
+          "220",
+          "2021"
+        ],
+        "values": [
+          "4802"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BO0501",
+        "updated": "2022-05-30T06:47:00Z",
+        "label": "Köpeskilling för småhus, medelvärde i tkr efter region, fastighetstyp, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "income-0183": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Alder",
+        "text": "ålder",
+        "type": "d"
+      },
+      {
+        "code": "Inkomstklass",
+        "text": "inkomstklass",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "HE0110K1",
+        "text": "Medelinkomst, tkr",
+        "comment": "Sammanräknad förvärvsinkomst\r\nSumman av inkomst av tjänst och inkomst av näringsverksamhet.\r\n\r\nDen sammanräknade förvärvsinkomsten består av de sammanlagda löpande skattepliktiga inkomsterna, vilket avser inkomster från anställning, företagande, pension, sjukpenning och andra skattepliktiga transfereringar. I sammanräknad förvärvsinkomst ingår inte inkomst av kapital.\r\n\r\n",
+        "type": "c"
+      },
+      {
+        "code": "HE0110K2",
+        "text": "Medianinkomst, tkr",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0183",
+          "20-64",
+          "TOT",
+          "2020"
+        ],
+        "values": [
+          "387.3",
+          "370.0"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "HE0110",
+        "updated": "2022-01-18T21:58:00Z",
+        "label": "Sammanräknad förvärvsinkomst för boende i Sverige den 31/12 efter region, ålder, inkomstklass, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "income-0184": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Alder",
+        "text": "ålder",
+        "type": "d"
+      },
+      {
+        "code": "Inkomstklass",
+        "text": "inkomstklass",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "HE0110K1",
+        "text": "Medelinkomst, tkr",
+        "comment": "Sammanräknad förvärvsinkomst\r\nSumman av inkomst av tjänst och inkomst av näringsverksamhet.\r\n\r\nDen sammanräknade förvärvsinkomsten består av de sammanlagda löpande skattepliktiga inkomsterna, vilket avser inkomster från anställning, företagande, pension, sjukpenning och andra skattepliktiga transfereringar. I sammanräknad förvärvsinkomst ingår inte inkomst av kapital.\r\n\r\n",
+        "type": "c"
+      },
+      {
+        "code": "HE0110K2",
+        "text": "Medianinkomst, tkr",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0184",
+          "20-64",
+          "TOT",
+          "2020"
+        ],
+        "values": [
+          "401.3",
+          "387.7"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "HE0110",
+        "updated": "2022-01-18T21:58:00Z",
+        "label": "Sammanräknad förvärvsinkomst för boende i Sverige den 31/12 efter region, ålder, inkomstklass, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "pop-0183": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "comment": "År 1968–1998 redovisas enligt regional indelning 1998-01-01.\r\n",
+        "type": "d"
+      },
+      {
+        "code": "Kon",
+        "text": "kön",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BE0101N1",
+        "text": "Folkmängd",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0183",
+          "1",
+          "2021"
+        ],
+        "values": [
+          "26936"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "2",
+          "2021"
+        ],
+        "values": [
+          "26628"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BE0101",
+        "updated": "2022-02-07T14:32:00Z",
+        "label": "Folkmängd efter region, kön, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "pop-0184": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "comment": "År 1968–1998 redovisas enligt regional indelning 1998-01-01.\r\n",
+        "type": "d"
+      },
+      {
+        "code": "Kon",
+        "text": "kön",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BE0101N1",
+        "text": "Folkmängd",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0184",
+          "1",
+          "2021"
+        ],
+        "values": [
+          "42297"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "2",
+          "2021"
+        ],
+        "values": [
+          "41890"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BE0101",
+        "updated": "2022-02-07T14:32:00Z",
+        "label": "Folkmängd efter region, kön, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "growth-0183": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BE0101N1",
+        "text": "Folkmängd",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0183",
+          "1968"
+        ],
+        "values": [
+          "28281"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "1969"
+        ],
+        "values": [
+          "27572"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "1970"
+        ],
+        "values": [
+          "28085"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "1971"
+        ],
+        "values": [
+          "27832"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "1972"
+        ],
+        "values": [
+          "28879"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "1973"
+        ],
+        "values": [
+          "28599"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "1974"
+        ],
+        "values": [
+          "27972"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "1975"
+        ],
+        "values": [
+          "26995"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "1976"
+        ],
+        "values": [
+          "26480"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "1977"
+        ],
+        "values": [
+          "26041"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "1978"
+        ],
+        "values": [
+          "25899"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "1979"
+        ],
+        "values": [
+          "25676"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "1980"
+        ],
+        "values": [
+          "25717"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "1981"
+        ],
+        "values": [
+          "25577"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "1982"
+        ],
+        "values": [
+          "26052"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "1983"
+        ],
+        "values": [
+          "26985"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "1984"
+        ],
+        "values": [
+          "27444"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "1985"
+        ],
+        "values": [
+          "28516"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "1986"
+        ],
+        "values": [
+          "29692"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "1987"
+        ],
+        "values": [
+          "30569"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "1988"
+        ],
+        "values": [
+          "31095"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "1989"
+        ],
+        "values": [
+          "31426"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "1990"
+        ],
+        "values": [
+          "31308"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "1991"
+        ],
+        "values": [
+          "30952"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "1992"
+        ],
+        "values": [
+          "30719"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "1993"
+        ],
+        "values": [
+          "31074"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "1994"
+        ],
+        "values": [
+          "31404"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "1995"
+        ],
+        "values": [
+          "31803"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "1996"
+        ],
+        "values": [
+          "32251"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "1997"
+        ],
+        "values": [
+          "32487"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "1998"
+        ],
+        "values": [
+          "32868"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "1999"
+        ],
+        "values": [
+          "33387"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "2000"
+        ],
+        "values": [
+          "33868"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "2001"
+        ],
+        "values": [
+          "33967"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "2002"
+        ],
+        "values": [
+          "33797"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "2003"
+        ],
+        "values": [
+          "33738"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "2004"
+        ],
+        "values": [
+          "33816"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "2005"
+        ],
+        "values": [
+          "34016"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "2006"
+        ],
+        "values": [
+          "34529"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "2007"
+        ],
+        "values": [
+          "35078"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "2008"
+        ],
+        "values": [
+          "36079"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "2009"
+        ],
+        "values": [
+          "37722"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "2010"
+        ],
+        "values": [
+          "38633"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "2011"
+        ],
+        "values": [
+          "39539"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "2012"
+        ],
+        "values": [
+          "40793"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "2013"
+        ],
+        "values": [
+          "42626"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "2014"
+        ],
+        "values": [
+          "44090"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "2015"
+        ],
+        "values": [
+          "46110"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "2016"
+        ],
+        "values": [
+          "47750"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "2017"
+        ],
+        "values": [
+          "49424"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "2018"
+        ],
+        "values": [
+          "50564"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "2019"
+        ],
+        "values": [
+          "52414"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "2020"
+        ],
+        "values": [
+          "52801"
+        ]
+      },
+      {
+        "key": [
+          "0183",
+          "2021"
+        ],
+        "values": [
+          "53564"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BE0101",
+        "updated": "2022-02-07T14:32:00Z",
+        "label": "Folkmängd efter region, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "growth-0184": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BE0101N1",
+        "text": "Folkmängd",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0184",
+          "1968"
+        ],
+        "values": [
+          "56588"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "1969"
+        ],
+        "values": [
+          "56545"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "1970"
+        ],
+        "values": [
+          "55556"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "1971"
+        ],
+        "values": [
+          "55569"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "1972"
+        ],
+        "values": [
+          "55037"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "1973"
+        ],
+        "values": [
+          "55966"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "1974"
+        ],
+        "values": [
+          "54941"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "1975"
+        ],
+        "values": [
+          "53878"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "1976"
+        ],
+        "values": [
+          "52841"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "1977"
+        ],
+        "values": [
+          "52365"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "1978"
+        ],
+        "values": [
+          "51518"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "1979"
+        ],
+        "values": [
+          "51324"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "1980"
+        ],
+        "values": [
+          "50441"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "1981"
+        ],
+        "values": [
+          "49893"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "1982"
+        ],
+        "values": [
+          "49606"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "1983"
+        ],
+        "values": [
+          "49080"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "1984"
+        ],
+        "values": [
+          "48828"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "1985"
+        ],
+        "values": [
+          "49648"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "1986"
+        ],
+        "values": [
+          "50108"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "1987"
+        ],
+        "values": [
+          "50450"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "1988"
+        ],
+        "values": [
+          "50964"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "1989"
+        ],
+        "values": [
+          "51427"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "1990"
+        ],
+        "values": [
+          "51841"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "1991"
+        ],
+        "values": [
+          "52402"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "1992"
+        ],
+        "values": [
+          "52882"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "1993"
+        ],
+        "values": [
+          "53509"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "1994"
+        ],
+        "values": [
+          "54159"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "1995"
+        ],
+        "values": [
+          "54417"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "1996"
+        ],
+        "values": [
+          "54644"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "1997"
+        ],
+        "values": [
+          "55175"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "1998"
+        ],
+        "values": [
+          "55806"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "1999"
+        ],
+        "values": [
+          "55988"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "2000"
+        ],
+        "values": [
+          "56605"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "2001"
+        ],
+        "values": [
+          "56953"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "2002"
+        ],
+        "values": [
+          "57585"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "2003"
+        ],
+        "values": [
+          "57994"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "2004"
+        ],
+        "values": [
+          "59098"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "2005"
+        ],
+        "values": [
+          "60575"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "2006"
+        ],
+        "values": [
+          "61717"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "2007"
+        ],
+        "values": [
+          "63318"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "2008"
+        ],
+        "values": [
+          "65289"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "2009"
+        ],
+        "values": [
+          "66909"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "2010"
+        ],
+        "values": [
+          "68144"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "2011"
+        ],
+        "values": [
+          "69946"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "2012"
+        ],
+        "values": [
+          "71293"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "2013"
+        ],
+        "values": [
+          "72740"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "2014"
+        ],
+        "values": [
+          "74041"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "2015"
+        ],
+        "values": [
+          "76158"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "2016"
+        ],
+        "values": [
+          "78129"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "2017"
+        ],
+        "values": [
+          "79707"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "2018"
+        ],
+        "values": [
+          "80950"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "2019"
+        ],
+        "values": [
+          "82429"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "2020"
+        ],
+        "values": [
+          "83162"
+        ]
+      },
+      {
+        "key": [
+          "0184",
+          "2021"
+        ],
+        "values": [
+          "84187"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BE0101",
+        "updated": "2022-02-07T14:32:00Z",
+        "label": "Folkmängd efter region, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "houseprice-0183": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Fastighetstyp",
+        "text": "fastighetstyp",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BO0501C2",
+        "text": "Köpeskilling, medelvärde i tkr",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0183",
+          "220",
+          "2021"
+        ],
+        "values": [
+          "9607"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BO0501",
+        "updated": "2022-05-30T06:47:00Z",
+        "label": "Köpeskilling för småhus, medelvärde i tkr efter region, fastighetstyp, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "houseprice-0184": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Fastighetstyp",
+        "text": "fastighetstyp",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BO0501C2",
+        "text": "Köpeskilling, medelvärde i tkr",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0184",
+          "220",
+          "2021"
+        ],
+        "values": [
+          "10788"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BO0501",
+        "updated": "2022-05-30T06:47:00Z",
+        "label": "Köpeskilling för småhus, medelvärde i tkr efter region, fastighetstyp, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "income-0186": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Alder",
+        "text": "ålder",
+        "type": "d"
+      },
+      {
+        "code": "Inkomstklass",
+        "text": "inkomstklass",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "HE0110K1",
+        "text": "Medelinkomst, tkr",
+        "comment": "Sammanräknad förvärvsinkomst\r\nSumman av inkomst av tjänst och inkomst av näringsverksamhet.\r\n\r\nDen sammanräknade förvärvsinkomsten består av de sammanlagda löpande skattepliktiga inkomsterna, vilket avser inkomster från anställning, företagande, pension, sjukpenning och andra skattepliktiga transfereringar. I sammanräknad förvärvsinkomst ingår inte inkomst av kapital.\r\n\r\n",
+        "type": "c"
+      },
+      {
+        "code": "HE0110K2",
+        "text": "Medianinkomst, tkr",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0186",
+          "20-64",
+          "TOT",
+          "2020"
+        ],
+        "values": [
+          "569.6",
+          "420.3"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "HE0110",
+        "updated": "2022-01-18T21:58:00Z",
+        "label": "Sammanräknad förvärvsinkomst för boende i Sverige den 31/12 efter region, ålder, inkomstklass, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "pop-0186": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "comment": "År 1968–1998 redovisas enligt regional indelning 1998-01-01.\r\nFrån och med 2011-01-01 tillhör Storholmen Lidingö (0186) som tidigare tillhörde Vaxholm (0187).\r\n",
+        "type": "d"
+      },
+      {
+        "code": "Kon",
+        "text": "kön",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BE0101N1",
+        "text": "Folkmängd",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0186",
+          "1",
+          "2021"
+        ],
+        "values": [
+          "23570"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "2",
+          "2021"
+        ],
+        "values": [
+          "24592"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BE0101",
+        "updated": "2022-02-07T14:32:00Z",
+        "label": "Folkmängd efter region, kön, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "growth-0186": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BE0101N1",
+        "text": "Folkmängd",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0186",
+          "1968"
+        ],
+        "values": [
+          "35739"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "1969"
+        ],
+        "values": [
+          "36232"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "1970"
+        ],
+        "values": [
+          "36174"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "1971"
+        ],
+        "values": [
+          "35566"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "1972"
+        ],
+        "values": [
+          "35314"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "1973"
+        ],
+        "values": [
+          "35399"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "1974"
+        ],
+        "values": [
+          "35989"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "1975"
+        ],
+        "values": [
+          "36727"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "1976"
+        ],
+        "values": [
+          "36955"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "1977"
+        ],
+        "values": [
+          "37480"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "1978"
+        ],
+        "values": [
+          "37333"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "1979"
+        ],
+        "values": [
+          "37390"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "1980"
+        ],
+        "values": [
+          "37390"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "1981"
+        ],
+        "values": [
+          "37419"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "1982"
+        ],
+        "values": [
+          "37628"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "1983"
+        ],
+        "values": [
+          "37770"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "1984"
+        ],
+        "values": [
+          "37987"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "1985"
+        ],
+        "values": [
+          "38271"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "1986"
+        ],
+        "values": [
+          "38681"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "1987"
+        ],
+        "values": [
+          "38818"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "1988"
+        ],
+        "values": [
+          "38819"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "1989"
+        ],
+        "values": [
+          "38615"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "1990"
+        ],
+        "values": [
+          "38399"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "1991"
+        ],
+        "values": [
+          "38035"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "1992"
+        ],
+        "values": [
+          "38120"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "1993"
+        ],
+        "values": [
+          "38368"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "1994"
+        ],
+        "values": [
+          "38555"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "1995"
+        ],
+        "values": [
+          "39042"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "1996"
+        ],
+        "values": [
+          "39513"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "1997"
+        ],
+        "values": [
+          "39834"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "1998"
+        ],
+        "values": [
+          "40373"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "1999"
+        ],
+        "values": [
+          "40630"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "2000"
+        ],
+        "values": [
+          "40584"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "2001"
+        ],
+        "values": [
+          "40895"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "2002"
+        ],
+        "values": [
+          "41192"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "2003"
+        ],
+        "values": [
+          "41194"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "2004"
+        ],
+        "values": [
+          "41407"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "2005"
+        ],
+        "values": [
+          "41892"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "2006"
+        ],
+        "values": [
+          "42321"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "2007"
+        ],
+        "values": [
+          "42710"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "2008"
+        ],
+        "values": [
+          "43111"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "2009"
+        ],
+        "values": [
+          "43445"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "2010"
+        ],
+        "values": [
+          "44017"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "2011"
+        ],
+        "values": [
+          "44081"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "2012"
+        ],
+        "values": [
+          "44434"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "2013"
+        ],
+        "values": [
+          "45178"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "2014"
+        ],
+        "values": [
+          "45465"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "2015"
+        ],
+        "values": [
+          "46302"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "2016"
+        ],
+        "values": [
+          "46853"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "2017"
+        ],
+        "values": [
+          "47185"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "2018"
+        ],
+        "values": [
+          "47818"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "2019"
+        ],
+        "values": [
+          "48123"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "2020"
+        ],
+        "values": [
+          "48005"
+        ]
+      },
+      {
+        "key": [
+          "0186",
+          "2021"
+        ],
+        "values": [
+          "48162"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BE0101",
+        "updated": "2022-02-07T14:32:00Z",
+        "label": "Folkmängd efter region, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "income-0163": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Alder",
+        "text": "ålder",
+        "type": "d"
+      },
+      {
+        "code": "Inkomstklass",
+        "text": "inkomstklass",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "HE0110K1",
+        "text": "Medelinkomst, tkr",
+        "comment": "Sammanräknad förvärvsinkomst\r\nSumman av inkomst av tjänst och inkomst av näringsverksamhet.\r\n\r\nDen sammanräknade förvärvsinkomsten består av de sammanlagda löpande skattepliktiga inkomsterna, vilket avser inkomster från anställning, företagande, pension, sjukpenning och andra skattepliktiga transfereringar. I sammanräknad förvärvsinkomst ingår inte inkomst av kapital.\r\n\r\n",
+        "type": "c"
+      },
+      {
+        "code": "HE0110K2",
+        "text": "Medianinkomst, tkr",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0163",
+          "20-64",
+          "TOT",
+          "2020"
+        ],
+        "values": [
+          "459.6",
+          "396.9"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "HE0110",
+        "updated": "2022-01-18T21:58:00Z",
+        "label": "Sammanräknad förvärvsinkomst för boende i Sverige den 31/12 efter region, ålder, inkomstklass, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "pop-0163": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "comment": "År 1968–1998 redovisas enligt regional indelning 1998-01-01.\r\n",
+        "type": "d"
+      },
+      {
+        "code": "Kon",
+        "text": "kön",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BE0101N1",
+        "text": "Folkmängd",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0163",
+          "1",
+          "2021"
+        ],
+        "values": [
+          "37772"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "2",
+          "2021"
+        ],
+        "values": [
+          "37336"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BE0101",
+        "updated": "2022-02-07T14:32:00Z",
+        "label": "Folkmängd efter region, kön, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "growth-0163": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BE0101N1",
+        "text": "Folkmängd",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0163",
+          "1968"
+        ],
+        "values": [
+          "35504"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "1969"
+        ],
+        "values": [
+          "36410"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "1970"
+        ],
+        "values": [
+          "37723"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "1971"
+        ],
+        "values": [
+          "38745"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "1972"
+        ],
+        "values": [
+          "39701"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "1973"
+        ],
+        "values": [
+          "41189"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "1974"
+        ],
+        "values": [
+          "42515"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "1975"
+        ],
+        "values": [
+          "43413"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "1976"
+        ],
+        "values": [
+          "44585"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "1977"
+        ],
+        "values": [
+          "45246"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "1978"
+        ],
+        "values": [
+          "45686"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "1979"
+        ],
+        "values": [
+          "45864"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "1980"
+        ],
+        "values": [
+          "45868"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "1981"
+        ],
+        "values": [
+          "46091"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "1982"
+        ],
+        "values": [
+          "46633"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "1983"
+        ],
+        "values": [
+          "46747"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "1984"
+        ],
+        "values": [
+          "47587"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "1985"
+        ],
+        "values": [
+          "48212"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "1986"
+        ],
+        "values": [
+          "49424"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "1987"
+        ],
+        "values": [
+          "49757"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "1988"
+        ],
+        "values": [
+          "50242"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "1989"
+        ],
+        "values": [
+          "50606"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "1990"
+        ],
+        "values": [
+          "51377"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "1991"
+        ],
+        "values": [
+          "51790"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "1992"
+        ],
+        "values": [
+          "52435"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "1993"
+        ],
+        "values": [
+          "53068"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "1994"
+        ],
+        "values": [
+          "53897"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "1995"
+        ],
+        "values": [
+          "54553"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "1996"
+        ],
+        "values": [
+          "55476"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "1997"
+        ],
+        "values": [
+          "56294"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "1998"
+        ],
+        "values": [
+          "57067"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "1999"
+        ],
+        "values": [
+          "57610"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "2000"
+        ],
+        "values": [
+          "58048"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "2001"
+        ],
+        "values": [
+          "58266"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "2002"
+        ],
+        "values": [
+          "58515"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "2003"
+        ],
+        "values": [
+          "58884"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "2004"
+        ],
+        "values": [
+          "58897"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "2005"
+        ],
+        "values": [
+          "59355"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "2006"
+        ],
+        "values": [
+          "60528"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "2007"
+        ],
+        "values": [
+          "61387"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "2008"
+        ],
+        "values": [
+          "62097"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "2009"
+        ],
+        "values": [
+          "63347"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "2010"
+        ],
+        "values": [
+          "64630"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "2011"
+        ],
+        "values": [
+          "65891"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "2012"
+        ],
+        "values": [
+          "66859"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "2013"
+        ],
+        "values": [
+          "68145"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "2014"
+        ],
+        "values": [
+          "69325"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "2015"
+        ],
+        "values": [
+          "70251"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "2016"
+        ],
+        "values": [
+          "71023"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "2017"
+        ],
+        "values": [
+          "71848"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "2018"
+        ],
+        "values": [
+          "72528"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "2019"
+        ],
+        "values": [
+          "73857"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "2020"
+        ],
+        "values": [
+          "73990"
+        ]
+      },
+      {
+        "key": [
+          "0163",
+          "2021"
+        ],
+        "values": [
+          "75108"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BE0101",
+        "updated": "2022-02-07T14:32:00Z",
+        "label": "Folkmängd efter region, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "houseprice-0163": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Fastighetstyp",
+        "text": "fastighetstyp",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BO0501C2",
+        "text": "Köpeskilling, medelvärde i tkr",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0163",
+          "220",
+          "2021"
+        ],
+        "values": [
+          "8021"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BO0501",
+        "updated": "2022-05-30T06:47:00Z",
+        "label": "Köpeskilling för småhus, medelvärde i tkr efter region, fastighetstyp, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "houseprice-0186": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Fastighetstyp",
+        "text": "fastighetstyp",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BO0501C2",
+        "text": "Köpeskilling, medelvärde i tkr",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0186",
+          "220",
+          "2021"
+        ],
+        "values": [
+          "13094"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BO0501",
+        "updated": "2022-05-30T06:47:00Z",
+        "label": "Köpeskilling för småhus, medelvärde i tkr efter region, fastighetstyp, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "income-0180": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Alder",
+        "text": "ålder",
+        "type": "d"
+      },
+      {
+        "code": "Inkomstklass",
+        "text": "inkomstklass",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "HE0110K1",
+        "text": "Medelinkomst, tkr",
+        "comment": "Sammanräknad förvärvsinkomst\r\nSumman av inkomst av tjänst och inkomst av näringsverksamhet.\r\n\r\nDen sammanräknade förvärvsinkomsten består av de sammanlagda löpande skattepliktiga inkomsterna, vilket avser inkomster från anställning, företagande, pension, sjukpenning och andra skattepliktiga transfereringar. I sammanräknad förvärvsinkomst ingår inte inkomst av kapital.\r\n\r\n",
+        "type": "c"
+      },
+      {
+        "code": "HE0110K2",
+        "text": "Medianinkomst, tkr",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0180",
+          "20-64",
+          "TOT",
+          "2020"
+        ],
+        "values": [
+          "413.5",
+          "370.8"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "HE0110",
+        "updated": "2022-01-18T21:58:00Z",
+        "label": "Sammanräknad förvärvsinkomst för boende i Sverige den 31/12 efter region, ålder, inkomstklass, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "income-0162": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Alder",
+        "text": "ålder",
+        "type": "d"
+      },
+      {
+        "code": "Inkomstklass",
+        "text": "inkomstklass",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "HE0110K1",
+        "text": "Medelinkomst, tkr",
+        "comment": "Sammanräknad förvärvsinkomst\r\nSumman av inkomst av tjänst och inkomst av näringsverksamhet.\r\n\r\nDen sammanräknade förvärvsinkomsten består av de sammanlagda löpande skattepliktiga inkomsterna, vilket avser inkomster från anställning, företagande, pension, sjukpenning och andra skattepliktiga transfereringar. I sammanräknad förvärvsinkomst ingår inte inkomst av kapital.\r\n\r\n",
+        "type": "c"
+      },
+      {
+        "code": "HE0110K2",
+        "text": "Medianinkomst, tkr",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0162",
+          "20-64",
+          "TOT",
+          "2020"
+        ],
+        "values": [
+          "694.2",
+          "472.3"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "HE0110",
+        "updated": "2022-01-18T21:58:00Z",
+        "label": "Sammanräknad förvärvsinkomst för boende i Sverige den 31/12 efter region, ålder, inkomstklass, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "pop-0180": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "comment": "År 1968–1998 redovisas enligt regional indelning 1998-01-01.\r\n",
+        "type": "d"
+      },
+      {
+        "code": "Kon",
+        "text": "kön",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BE0101N1",
+        "text": "Folkmängd",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0180",
+          "1",
+          "2021"
+        ],
+        "values": [
+          "484722"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "2",
+          "2021"
+        ],
+        "values": [
+          "494048"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BE0101",
+        "updated": "2022-02-07T14:32:00Z",
+        "label": "Folkmängd efter region, kön, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "pop-0162": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "comment": "År 1968–1998 redovisas enligt regional indelning 1998-01-01.\r\n",
+        "type": "d"
+      },
+      {
+        "code": "Kon",
+        "text": "kön",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BE0101N1",
+        "text": "Folkmängd",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0162",
+          "1",
+          "2021"
+        ],
+        "values": [
+          "16074"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "2",
+          "2021"
+        ],
+        "values": [
+          "16729"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BE0101",
+        "updated": "2022-02-07T14:32:00Z",
+        "label": "Folkmängd efter region, kön, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "growth-0180": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BE0101N1",
+        "text": "Folkmängd",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0180",
+          "1968"
+        ],
+        "values": [
+          "758930"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "1969"
+        ],
+        "values": [
+          "752361"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "1970"
+        ],
+        "values": [
+          "744912"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "1971"
+        ],
+        "values": [
+          "728374"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "1972"
+        ],
+        "values": [
+          "702304"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "1973"
+        ],
+        "values": [
+          "681318"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "1974"
+        ],
+        "values": [
+          "671226"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "1975"
+        ],
+        "values": [
+          "665202"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "1976"
+        ],
+        "values": [
+          "661258"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "1977"
+        ],
+        "values": [
+          "658435"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "1978"
+        ],
+        "values": [
+          "653929"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "1979"
+        ],
+        "values": [
+          "649384"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "1980"
+        ],
+        "values": [
+          "647214"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "1981"
+        ],
+        "values": [
+          "647115"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "1982"
+        ],
+        "values": [
+          "649686"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "1983"
+        ],
+        "values": [
+          "650952"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "1984"
+        ],
+        "values": [
+          "653455"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "1985"
+        ],
+        "values": [
+          "659030"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "1986"
+        ],
+        "values": [
+          "663217"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "1987"
+        ],
+        "values": [
+          "666810"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "1988"
+        ],
+        "values": [
+          "669485"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "1989"
+        ],
+        "values": [
+          "672187"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "1990"
+        ],
+        "values": [
+          "674452"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "1991"
+        ],
+        "values": [
+          "679364"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "1992"
+        ],
+        "values": [
+          "684576"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "1993"
+        ],
+        "values": [
+          "692954"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "1994"
+        ],
+        "values": [
+          "703627"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "1995"
+        ],
+        "values": [
+          "711119"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "1996"
+        ],
+        "values": [
+          "718462"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "1997"
+        ],
+        "values": [
+          "727339"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "1998"
+        ],
+        "values": [
+          "736113"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "1999"
+        ],
+        "values": [
+          "743703"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "2000"
+        ],
+        "values": [
+          "750348"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "2001"
+        ],
+        "values": [
+          "754948"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "2002"
+        ],
+        "values": [
+          "758148"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "2003"
+        ],
+        "values": [
+          "761721"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "2004"
+        ],
+        "values": [
+          "765044"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "2005"
+        ],
+        "values": [
+          "771038"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "2006"
+        ],
+        "values": [
+          "782885"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "2007"
+        ],
+        "values": [
+          "795163"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "2008"
+        ],
+        "values": [
+          "810120"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "2009"
+        ],
+        "values": [
+          "829417"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "2010"
+        ],
+        "values": [
+          "847073"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "2011"
+        ],
+        "values": [
+          "864324"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "2012"
+        ],
+        "values": [
+          "881235"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "2013"
+        ],
+        "values": [
+          "897700"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "2014"
+        ],
+        "values": [
+          "911989"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "2015"
+        ],
+        "values": [
+          "923516"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "2016"
+        ],
+        "values": [
+          "935619"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "2017"
+        ],
+        "values": [
+          "949761"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "2018"
+        ],
+        "values": [
+          "962154"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "2019"
+        ],
+        "values": [
+          "974073"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "2020"
+        ],
+        "values": [
+          "975551"
+        ]
+      },
+      {
+        "key": [
+          "0180",
+          "2021"
+        ],
+        "values": [
+          "978770"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BE0101",
+        "updated": "2022-02-07T14:32:00Z",
+        "label": "Folkmängd efter region, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "growth-0162": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BE0101N1",
+        "text": "Folkmängd",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0162",
+          "1968"
+        ],
+        "values": [
+          "28067"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "1969"
+        ],
+        "values": [
+          "28055"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "1970"
+        ],
+        "values": [
+          "27623"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "1971"
+        ],
+        "values": [
+          "27276"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "1972"
+        ],
+        "values": [
+          "27763"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "1973"
+        ],
+        "values": [
+          "27646"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "1974"
+        ],
+        "values": [
+          "27360"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "1975"
+        ],
+        "values": [
+          "27168"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "1976"
+        ],
+        "values": [
+          "27113"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "1977"
+        ],
+        "values": [
+          "27455"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "1978"
+        ],
+        "values": [
+          "27522"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "1979"
+        ],
+        "values": [
+          "27722"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "1980"
+        ],
+        "values": [
+          "27842"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "1981"
+        ],
+        "values": [
+          "27762"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "1982"
+        ],
+        "values": [
+          "28088"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "1983"
+        ],
+        "values": [
+          "28272"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "1984"
+        ],
+        "values": [
+          "28484"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "1985"
+        ],
+        "values": [
+          "28706"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "1986"
+        ],
+        "values": [
+          "28645"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "1987"
+        ],
+        "values": [
+          "28792"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "1988"
+        ],
+        "values": [
+          "28525"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "1989"
+        ],
+        "values": [
+          "28218"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "1990"
+        ],
+        "values": [
+          "27915"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "1991"
+        ],
+        "values": [
+          "27820"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "1992"
+        ],
+        "values": [
+          "27809"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "1993"
+        ],
+        "values": [
+          "28245"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "1994"
+        ],
+        "values": [
+          "28635"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "1995"
+        ],
+        "values": [
+          "28684"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "1996"
+        ],
+        "values": [
+          "28881"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "1997"
+        ],
+        "values": [
+          "29340"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "1998"
+        ],
+        "values": [
+          "29639"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "1999"
+        ],
+        "values": [
+          "29636"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "2000"
+        ],
+        "values": [
+          "29570"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "2001"
+        ],
+        "values": [
+          "29632"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "2002"
+        ],
+        "values": [
+          "29755"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "2003"
+        ],
+        "values": [
+          "29884"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "2004"
+        ],
+        "values": [
+          "30100"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "2005"
+        ],
+        "values": [
+          "30226"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "2006"
+        ],
+        "values": [
+          "30492"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "2007"
+        ],
+        "values": [
+          "30789"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "2008"
+        ],
+        "values": [
+          "30851"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "2009"
+        ],
+        "values": [
+          "31150"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "2010"
+        ],
+        "values": [
+          "31330"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "2011"
+        ],
+        "values": [
+          "31799"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "2012"
+        ],
+        "values": [
+          "31960"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "2013"
+        ],
+        "values": [
+          "32222"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "2014"
+        ],
+        "values": [
+          "32295"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "2015"
+        ],
+        "values": [
+          "32421"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "2016"
+        ],
+        "values": [
+          "32653"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "2017"
+        ],
+        "values": [
+          "32888"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "2018"
+        ],
+        "values": [
+          "33187"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "2019"
+        ],
+        "values": [
+          "32857"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "2020"
+        ],
+        "values": [
+          "32712"
+        ]
+      },
+      {
+        "key": [
+          "0162",
+          "2021"
+        ],
+        "values": [
+          "32803"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BE0101",
+        "updated": "2022-02-07T14:32:00Z",
+        "label": "Folkmängd efter region, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "houseprice-0180": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Fastighetstyp",
+        "text": "fastighetstyp",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BO0501C2",
+        "text": "Köpeskilling, medelvärde i tkr",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0180",
+          "220",
+          "2021"
+        ],
+        "values": [
+          "8598"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BO0501",
+        "updated": "2022-05-30T06:47:00Z",
+        "label": "Köpeskilling för småhus, medelvärde i tkr efter region, fastighetstyp, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "houseprice-0162": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Fastighetstyp",
+        "text": "fastighetstyp",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BO0501C2",
+        "text": "Köpeskilling, medelvärde i tkr",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0162",
+          "220",
+          "2021"
+        ],
+        "values": [
+          "13345"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BO0501",
+        "updated": "2022-05-30T06:47:00Z",
+        "label": "Köpeskilling för småhus, medelvärde i tkr efter region, fastighetstyp, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "income-0115": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Alder",
+        "text": "ålder",
+        "type": "d"
+      },
+      {
+        "code": "Inkomstklass",
+        "text": "inkomstklass",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "HE0110K1",
+        "text": "Medelinkomst, tkr",
+        "comment": "Sammanräknad förvärvsinkomst\r\nSumman av inkomst av tjänst och inkomst av näringsverksamhet.\r\n\r\nDen sammanräknade förvärvsinkomsten består av de sammanlagda löpande skattepliktiga inkomsterna, vilket avser inkomster från anställning, företagande, pension, sjukpenning och andra skattepliktiga transfereringar. I sammanräknad förvärvsinkomst ingår inte inkomst av kapital.\r\n\r\n",
+        "type": "c"
+      },
+      {
+        "code": "HE0110K2",
+        "text": "Medianinkomst, tkr",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0115",
+          "20-64",
+          "TOT",
+          "2020"
+        ],
+        "values": [
+          "421.1",
+          "393.3"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "HE0110",
+        "updated": "2022-01-18T21:58:00Z",
+        "label": "Sammanräknad förvärvsinkomst för boende i Sverige den 31/12 efter region, ålder, inkomstklass, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "income-0114": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Alder",
+        "text": "ålder",
+        "type": "d"
+      },
+      {
+        "code": "Inkomstklass",
+        "text": "inkomstklass",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "HE0110K1",
+        "text": "Medelinkomst, tkr",
+        "comment": "Sammanräknad förvärvsinkomst\r\nSumman av inkomst av tjänst och inkomst av näringsverksamhet.\r\n\r\nDen sammanräknade förvärvsinkomsten består av de sammanlagda löpande skattepliktiga inkomsterna, vilket avser inkomster från anställning, företagande, pension, sjukpenning och andra skattepliktiga transfereringar. I sammanräknad förvärvsinkomst ingår inte inkomst av kapital.\r\n\r\n",
+        "type": "c"
+      },
+      {
+        "code": "HE0110K2",
+        "text": "Medianinkomst, tkr",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0114",
+          "20-64",
+          "TOT",
+          "2020"
+        ],
+        "values": [
+          "360.1",
+          "346.6"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "HE0110",
+        "updated": "2022-01-18T21:58:00Z",
+        "label": "Sammanräknad förvärvsinkomst för boende i Sverige den 31/12 efter region, ålder, inkomstklass, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "pop-0115": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "comment": "År 1968–1998 redovisas enligt regional indelning 1998-01-01.\r\n",
+        "type": "d"
+      },
+      {
+        "code": "Kon",
+        "text": "kön",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BE0101N1",
+        "text": "Folkmängd",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0115",
+          "1",
+          "2021"
+        ],
+        "values": [
+          "17287"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "2",
+          "2021"
+        ],
+        "values": [
+          "16959"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BE0101",
+        "updated": "2022-02-07T14:32:00Z",
+        "label": "Folkmängd efter region, kön, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "pop-0114": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "comment": "År 1968–1998 redovisas enligt regional indelning 1998-01-01.\r\n",
+        "type": "d"
+      },
+      {
+        "code": "Kon",
+        "text": "kön",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BE0101N1",
+        "text": "Folkmängd",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0114",
+          "1",
+          "2021"
+        ],
+        "values": [
+          "24049"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "2",
+          "2021"
+        ],
+        "values": [
+          "23771"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BE0101",
+        "updated": "2022-02-07T14:32:00Z",
+        "label": "Folkmängd efter region, kön, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "growth-0115": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BE0101N1",
+        "text": "Folkmängd",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0115",
+          "1968"
+        ],
+        "values": [
+          "11380"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "1969"
+        ],
+        "values": [
+          "12223"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "1970"
+        ],
+        "values": [
+          "12711"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "1971"
+        ],
+        "values": [
+          "13399"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "1972"
+        ],
+        "values": [
+          "13866"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "1973"
+        ],
+        "values": [
+          "14406"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "1974"
+        ],
+        "values": [
+          "14604"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "1975"
+        ],
+        "values": [
+          "14886"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "1976"
+        ],
+        "values": [
+          "15562"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "1977"
+        ],
+        "values": [
+          "16113"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "1978"
+        ],
+        "values": [
+          "16908"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "1979"
+        ],
+        "values": [
+          "17158"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "1980"
+        ],
+        "values": [
+          "17603"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "1981"
+        ],
+        "values": [
+          "18226"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "1982"
+        ],
+        "values": [
+          "18793"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "1983"
+        ],
+        "values": [
+          "18987"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "1984"
+        ],
+        "values": [
+          "19189"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "1985"
+        ],
+        "values": [
+          "19511"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "1986"
+        ],
+        "values": [
+          "19912"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "1987"
+        ],
+        "values": [
+          "20343"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "1988"
+        ],
+        "values": [
+          "20823"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "1989"
+        ],
+        "values": [
+          "21618"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "1990"
+        ],
+        "values": [
+          "22186"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "1991"
+        ],
+        "values": [
+          "22435"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "1992"
+        ],
+        "values": [
+          "22717"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "1993"
+        ],
+        "values": [
+          "23061"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "1994"
+        ],
+        "values": [
+          "23309"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "1995"
+        ],
+        "values": [
+          "23457"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "1996"
+        ],
+        "values": [
+          "23684"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "1997"
+        ],
+        "values": [
+          "23901"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "1998"
+        ],
+        "values": [
+          "24246"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "1999"
+        ],
+        "values": [
+          "24640"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "2000"
+        ],
+        "values": [
+          "25228"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "2001"
+        ],
+        "values": [
+          "25643"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "2002"
+        ],
+        "values": [
+          "25905"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "2003"
+        ],
+        "values": [
+          "26306"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "2004"
+        ],
+        "values": [
+          "26889"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "2005"
+        ],
+        "values": [
+          "27397"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "2006"
+        ],
+        "values": [
+          "27868"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "2007"
+        ],
+        "values": [
+          "28382"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "2008"
+        ],
+        "values": [
+          "28954"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "2009"
+        ],
+        "values": [
+          "29361"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "2010"
+        ],
+        "values": [
+          "30114"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "2011"
+        ],
+        "values": [
+          "30715"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "2012"
+        ],
+        "values": [
+          "31215"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "2013"
+        ],
+        "values": [
+          "31616"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "2014"
+        ],
+        "values": [
+          "31969"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "2015"
+        ],
+        "values": [
+          "32380"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "2016"
+        ],
+        "values": [
+          "32785"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "2017"
+        ],
+        "values": [
+          "33175"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "2018"
+        ],
+        "values": [
+          "33432"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "2019"
+        ],
+        "values": [
+          "34090"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "2020"
+        ],
+        "values": [
+          "34119"
+        ]
+      },
+      {
+        "key": [
+          "0115",
+          "2021"
+        ],
+        "values": [
+          "34246"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BE0101",
+        "updated": "2022-02-07T14:32:00Z",
+        "label": "Folkmängd efter region, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "growth-0114": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BE0101N1",
+        "text": "Folkmängd",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0114",
+          "1968"
+        ],
+        "values": [
+          "16230"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "1969"
+        ],
+        "values": [
+          "17835"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "1970"
+        ],
+        "values": [
+          "19032"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "1971"
+        ],
+        "values": [
+          "20621"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "1972"
+        ],
+        "values": [
+          "22948"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "1973"
+        ],
+        "values": [
+          "25523"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "1974"
+        ],
+        "values": [
+          "27350"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "1975"
+        ],
+        "values": [
+          "28810"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "1976"
+        ],
+        "values": [
+          "30048"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "1977"
+        ],
+        "values": [
+          "30911"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "1978"
+        ],
+        "values": [
+          "31180"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "1979"
+        ],
+        "values": [
+          "31600"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "1980"
+        ],
+        "values": [
+          "31961"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "1981"
+        ],
+        "values": [
+          "32117"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "1982"
+        ],
+        "values": [
+          "32164"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "1983"
+        ],
+        "values": [
+          "32441"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "1984"
+        ],
+        "values": [
+          "33477"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "1985"
+        ],
+        "values": [
+          "33912"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "1986"
+        ],
+        "values": [
+          "34642"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "1987"
+        ],
+        "values": [
+          "35023"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "1988"
+        ],
+        "values": [
+          "35294"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "1989"
+        ],
+        "values": [
+          "35553"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "1990"
+        ],
+        "values": [
+          "35963"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "1991"
+        ],
+        "values": [
+          "35884"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "1992"
+        ],
+        "values": [
+          "35884"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "1993"
+        ],
+        "values": [
+          "35764"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "1994"
+        ],
+        "values": [
+          "35848"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "1995"
+        ],
+        "values": [
+          "36277"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "1996"
+        ],
+        "values": [
+          "36415"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "1997"
+        ],
+        "values": [
+          "36372"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "1998"
+        ],
+        "values": [
+          "36789"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "1999"
+        ],
+        "values": [
+          "37116"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "2000"
+        ],
+        "values": [
+          "37576"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "2001"
+        ],
+        "values": [
+          "37524"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "2002"
+        ],
+        "values": [
+          "37444"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "2003"
+        ],
+        "values": [
+          "37397"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "2004"
+        ],
+        "values": [
+          "37517"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "2005"
+        ],
+        "values": [
+          "37624"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "2006"
+        ],
+        "values": [
+          "37848"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "2007"
+        ],
+        "values": [
+          "38055"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "2008"
+        ],
+        "values": [
+          "38248"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "2009"
+        ],
+        "values": [
+          "38641"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "2010"
+        ],
+        "values": [
+          "39289"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "2011"
+        ],
+        "values": [
+          "40194"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "2012"
+        ],
+        "values": [
+          "40723"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "2013"
+        ],
+        "values": [
+          "41449"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "2014"
+        ],
+        "values": [
+          "41816"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "2015"
+        ],
+        "values": [
+          "42661"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "2016"
+        ],
+        "values": [
+          "43891"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "2017"
+        ],
+        "values": [
+          "44605"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "2018"
+        ],
+        "values": [
+          "45543"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "2019"
+        ],
+        "values": [
+          "46786"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "2020"
+        ],
+        "values": [
+          "47184"
+        ]
+      },
+      {
+        "key": [
+          "0114",
+          "2021"
+        ],
+        "values": [
+          "47820"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BE0101",
+        "updated": "2022-02-07T14:32:00Z",
+        "label": "Folkmängd efter region, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "houseprice-0115": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Fastighetstyp",
+        "text": "fastighetstyp",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BO0501C2",
+        "text": "Köpeskilling, medelvärde i tkr",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0115",
+          "220",
+          "2021"
+        ],
+        "values": [
+          "5700"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BO0501",
+        "updated": "2022-05-30T06:47:00Z",
+        "label": "Köpeskilling för småhus, medelvärde i tkr efter region, fastighetstyp, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "houseprice-0114": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Fastighetstyp",
+        "text": "fastighetstyp",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BO0501C2",
+        "text": "Köpeskilling, medelvärde i tkr",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0114",
+          "220",
+          "2021"
+        ],
+        "values": [
+          "5618"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BO0501",
+        "updated": "2022-05-30T06:47:00Z",
+        "label": "Köpeskilling för småhus, medelvärde i tkr efter region, fastighetstyp, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "income-0123": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Alder",
+        "text": "ålder",
+        "type": "d"
+      },
+      {
+        "code": "Inkomstklass",
+        "text": "inkomstklass",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "HE0110K1",
+        "text": "Medelinkomst, tkr",
+        "comment": "Sammanräknad förvärvsinkomst\r\nSumman av inkomst av tjänst och inkomst av näringsverksamhet.\r\n\r\nDen sammanräknade förvärvsinkomsten består av de sammanlagda löpande skattepliktiga inkomsterna, vilket avser inkomster från anställning, företagande, pension, sjukpenning och andra skattepliktiga transfereringar. I sammanräknad förvärvsinkomst ingår inte inkomst av kapital.\r\n\r\n",
+        "type": "c"
+      },
+      {
+        "code": "HE0110K2",
+        "text": "Medianinkomst, tkr",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0123",
+          "20-64",
+          "TOT",
+          "2020"
+        ],
+        "values": [
+          "362.8",
+          "350.5"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "HE0110",
+        "updated": "2022-01-18T21:58:00Z",
+        "label": "Sammanräknad förvärvsinkomst för boende i Sverige den 31/12 efter region, ålder, inkomstklass, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "pop-0123": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "comment": "År 1968–1998 redovisas enligt regional indelning 1998-01-01.\r\n",
+        "type": "d"
+      },
+      {
+        "code": "Kon",
+        "text": "kön",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BE0101N1",
+        "text": "Folkmängd",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0123",
+          "1",
+          "2021"
+        ],
+        "values": [
+          "42314"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "2",
+          "2021"
+        ],
+        "values": [
+          "40856"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BE0101",
+        "updated": "2022-02-07T14:32:00Z",
+        "label": "Folkmängd efter region, kön, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "growth-0123": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BE0101N1",
+        "text": "Folkmängd",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0123",
+          "1968"
+        ],
+        "values": [
+          "44114"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "1969"
+        ],
+        "values": [
+          "46490"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "1970"
+        ],
+        "values": [
+          "49261"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "1971"
+        ],
+        "values": [
+          "50958"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "1972"
+        ],
+        "values": [
+          "52018"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "1973"
+        ],
+        "values": [
+          "52352"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "1974"
+        ],
+        "values": [
+          "52014"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "1975"
+        ],
+        "values": [
+          "51549"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "1976"
+        ],
+        "values": [
+          "51696"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "1977"
+        ],
+        "values": [
+          "52227"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "1978"
+        ],
+        "values": [
+          "52307"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "1979"
+        ],
+        "values": [
+          "52442"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "1980"
+        ],
+        "values": [
+          "53321"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "1981"
+        ],
+        "values": [
+          "54200"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "1982"
+        ],
+        "values": [
+          "54823"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "1983"
+        ],
+        "values": [
+          "55419"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "1984"
+        ],
+        "values": [
+          "55776"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "1985"
+        ],
+        "values": [
+          "56020"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "1986"
+        ],
+        "values": [
+          "56405"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "1987"
+        ],
+        "values": [
+          "56563"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "1988"
+        ],
+        "values": [
+          "56402"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "1989"
+        ],
+        "values": [
+          "56386"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "1990"
+        ],
+        "values": [
+          "56359"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "1991"
+        ],
+        "values": [
+          "56693"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "1992"
+        ],
+        "values": [
+          "57336"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "1993"
+        ],
+        "values": [
+          "57638"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "1994"
+        ],
+        "values": [
+          "58196"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "1995"
+        ],
+        "values": [
+          "58675"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "1996"
+        ],
+        "values": [
+          "58955"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "1997"
+        ],
+        "values": [
+          "59123"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "1998"
+        ],
+        "values": [
+          "59839"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "1999"
+        ],
+        "values": [
+          "60188"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "2000"
+        ],
+        "values": [
+          "60471"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "2001"
+        ],
+        "values": [
+          "61132"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "2002"
+        ],
+        "values": [
+          "61290"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "2003"
+        ],
+        "values": [
+          "61473"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "2004"
+        ],
+        "values": [
+          "61564"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "2005"
+        ],
+        "values": [
+          "61743"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "2006"
+        ],
+        "values": [
+          "62342"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "2007"
+        ],
+        "values": [
+          "63427"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "2008"
+        ],
+        "values": [
+          "64355"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "2009"
+        ],
+        "values": [
+          "65295"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "2010"
+        ],
+        "values": [
+          "66211"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "2011"
+        ],
+        "values": [
+          "67320"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "2012"
+        ],
+        "values": [
+          "68210"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "2013"
+        ],
+        "values": [
+          "69167"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "2014"
+        ],
+        "values": [
+          "70701"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "2015"
+        ],
+        "values": [
+          "72429"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "2016"
+        ],
+        "values": [
+          "74412"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "2017"
+        ],
+        "values": [
+          "76453"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "2018"
+        ],
+        "values": [
+          "78480"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "2019"
+        ],
+        "values": [
+          "79990"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "2020"
+        ],
+        "values": [
+          "81274"
+        ]
+      },
+      {
+        "key": [
+          "0123",
+          "2021"
+        ],
+        "values": [
+          "83170"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BE0101",
+        "updated": "2022-02-07T14:32:00Z",
+        "label": "Folkmängd efter region, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "houseprice-0123": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Fastighetstyp",
+        "text": "fastighetstyp",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BO0501C2",
+        "text": "Köpeskilling, medelvärde i tkr",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0123",
+          "220",
+          "2021"
+        ],
+        "values": [
+          "6116"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BO0501",
+        "updated": "2022-05-30T06:47:00Z",
+        "label": "Köpeskilling för småhus, medelvärde i tkr efter region, fastighetstyp, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "income-0120": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Alder",
+        "text": "ålder",
+        "type": "d"
+      },
+      {
+        "code": "Inkomstklass",
+        "text": "inkomstklass",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "HE0110K1",
+        "text": "Medelinkomst, tkr",
+        "comment": "Sammanräknad förvärvsinkomst\r\nSumman av inkomst av tjänst och inkomst av näringsverksamhet.\r\n\r\nDen sammanräknade förvärvsinkomsten består av de sammanlagda löpande skattepliktiga inkomsterna, vilket avser inkomster från anställning, företagande, pension, sjukpenning och andra skattepliktiga transfereringar. I sammanräknad förvärvsinkomst ingår inte inkomst av kapital.\r\n\r\n",
+        "type": "c"
+      },
+      {
+        "code": "HE0110K2",
+        "text": "Medianinkomst, tkr",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0120",
+          "20-64",
+          "TOT",
+          "2020"
+        ],
+        "values": [
+          "420.2",
+          "389.7"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "HE0110",
+        "updated": "2022-01-18T21:58:00Z",
+        "label": "Sammanräknad förvärvsinkomst för boende i Sverige den 31/12 efter region, ålder, inkomstklass, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "pop-0120": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "comment": "År 1968–1998 redovisas enligt regional indelning 1998-01-01.\r\n",
+        "type": "d"
+      },
+      {
+        "code": "Kon",
+        "text": "kön",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BE0101N1",
+        "text": "Folkmängd",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0120",
+          "1",
+          "2021"
+        ],
+        "values": [
+          "23357"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "2",
+          "2021"
+        ],
+        "values": [
+          "22875"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BE0101",
+        "updated": "2022-02-07T14:32:00Z",
+        "label": "Folkmängd efter region, kön, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "growth-0120": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BE0101N1",
+        "text": "Folkmängd",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0120",
+          "1968"
+        ],
+        "values": [
+          "11154"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "1969"
+        ],
+        "values": [
+          "11949"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "1970"
+        ],
+        "values": [
+          "12882"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "1971"
+        ],
+        "values": [
+          "13367"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "1972"
+        ],
+        "values": [
+          "13912"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "1973"
+        ],
+        "values": [
+          "14534"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "1974"
+        ],
+        "values": [
+          "15434"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "1975"
+        ],
+        "values": [
+          "16050"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "1976"
+        ],
+        "values": [
+          "16577"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "1977"
+        ],
+        "values": [
+          "16905"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "1978"
+        ],
+        "values": [
+          "17300"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "1979"
+        ],
+        "values": [
+          "17607"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "1980"
+        ],
+        "values": [
+          "17846"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "1981"
+        ],
+        "values": [
+          "18093"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "1982"
+        ],
+        "values": [
+          "18265"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "1983"
+        ],
+        "values": [
+          "18500"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "1984"
+        ],
+        "values": [
+          "18719"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "1985"
+        ],
+        "values": [
+          "19173"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "1986"
+        ],
+        "values": [
+          "19582"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "1987"
+        ],
+        "values": [
+          "20169"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "1988"
+        ],
+        "values": [
+          "20660"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "1989"
+        ],
+        "values": [
+          "21210"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "1990"
+        ],
+        "values": [
+          "22067"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "1991"
+        ],
+        "values": [
+          "23064"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "1992"
+        ],
+        "values": [
+          "24391"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "1993"
+        ],
+        "values": [
+          "25193"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "1994"
+        ],
+        "values": [
+          "25949"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "1995"
+        ],
+        "values": [
+          "26548"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "1996"
+        ],
+        "values": [
+          "27318"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "1997"
+        ],
+        "values": [
+          "28378"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "1998"
+        ],
+        "values": [
+          "29396"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "1999"
+        ],
+        "values": [
+          "30319"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "2000"
+        ],
+        "values": [
+          "31260"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "2001"
+        ],
+        "values": [
+          "32096"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "2002"
+        ],
+        "values": [
+          "32664"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "2003"
+        ],
+        "values": [
+          "33134"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "2004"
+        ],
+        "values": [
+          "34029"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "2005"
+        ],
+        "values": [
+          "34933"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "2006"
+        ],
+        "values": [
+          "35803"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "2007"
+        ],
+        "values": [
+          "36870"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "2008"
+        ],
+        "values": [
+          "37376"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "2009"
+        ],
+        "values": [
+          "37756"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "2010"
+        ],
+        "values": [
+          "38301"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "2011"
+        ],
+        "values": [
+          "38894"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "2012"
+        ],
+        "values": [
+          "39387"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "2013"
+        ],
+        "values": [
+          "39784"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "2014"
+        ],
+        "values": [
+          "40541"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "2015"
+        ],
+        "values": [
+          "41107"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "2016"
+        ],
+        "values": [
+          "42000"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "2017"
+        ],
+        "values": [
+          "43444"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "2018"
+        ],
+        "values": [
+          "44397"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "2019"
+        ],
+        "values": [
+          "45000"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "2020"
+        ],
+        "values": [
+          "45566"
+        ]
+      },
+      {
+        "key": [
+          "0120",
+          "2021"
+        ],
+        "values": [
+          "46232"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BE0101",
+        "updated": "2022-02-07T14:32:00Z",
+        "label": "Folkmängd efter region, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "houseprice-0120": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Fastighetstyp",
+        "text": "fastighetstyp",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BO0501C2",
+        "text": "Köpeskilling, medelvärde i tkr",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0120",
+          "220",
+          "2021"
+        ],
+        "values": [
+          "6688"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BO0501",
+        "updated": "2022-05-30T06:47:00Z",
+        "label": "Köpeskilling för småhus, medelvärde i tkr efter region, fastighetstyp, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "income-0128": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Alder",
+        "text": "ålder",
+        "type": "d"
+      },
+      {
+        "code": "Inkomstklass",
+        "text": "inkomstklass",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "HE0110K1",
+        "text": "Medelinkomst, tkr",
+        "comment": "Sammanräknad förvärvsinkomst\r\nSumman av inkomst av tjänst och inkomst av näringsverksamhet.\r\n\r\nDen sammanräknade förvärvsinkomsten består av de sammanlagda löpande skattepliktiga inkomsterna, vilket avser inkomster från anställning, företagande, pension, sjukpenning och andra skattepliktiga transfereringar. I sammanräknad förvärvsinkomst ingår inte inkomst av kapital.\r\n\r\n",
+        "type": "c"
+      },
+      {
+        "code": "HE0110K2",
+        "text": "Medianinkomst, tkr",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0128",
+          "20-64",
+          "TOT",
+          "2020"
+        ],
+        "values": [
+          "395.8",
+          "382.7"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "HE0110",
+        "updated": "2022-01-18T21:58:00Z",
+        "label": "Sammanräknad förvärvsinkomst för boende i Sverige den 31/12 efter region, ålder, inkomstklass, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "pop-0128": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "comment": "År 1968–1998 redovisas enligt regional indelning 1998-01-01.\r\n",
+        "type": "d"
+      },
+      {
+        "code": "Kon",
+        "text": "kön",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BE0101N1",
+        "text": "Folkmängd",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0128",
+          "1",
+          "2021"
+        ],
+        "values": [
+          "8612"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "2",
+          "2021"
+        ],
+        "values": [
+          "8640"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BE0101",
+        "updated": "2022-02-07T14:32:00Z",
+        "label": "Folkmängd efter region, kön, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "growth-0128": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BE0101N1",
+        "text": "Folkmängd",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0128",
+          "1968"
+        ],
+        "values": [
+          "6415"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "1969"
+        ],
+        "values": [
+          "8695"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "1970"
+        ],
+        "values": [
+          "11951"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "1971"
+        ],
+        "values": [
+          "12787"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "1972"
+        ],
+        "values": [
+          "12850"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "1973"
+        ],
+        "values": [
+          "12568"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "1974"
+        ],
+        "values": [
+          "12372"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "1975"
+        ],
+        "values": [
+          "12703"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "1976"
+        ],
+        "values": [
+          "12785"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "1977"
+        ],
+        "values": [
+          "12980"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "1978"
+        ],
+        "values": [
+          "12995"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "1979"
+        ],
+        "values": [
+          "12974"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "1980"
+        ],
+        "values": [
+          "12879"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "1981"
+        ],
+        "values": [
+          "12905"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "1982"
+        ],
+        "values": [
+          "12775"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "1983"
+        ],
+        "values": [
+          "12470"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "1984"
+        ],
+        "values": [
+          "12406"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "1985"
+        ],
+        "values": [
+          "12370"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "1986"
+        ],
+        "values": [
+          "12347"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "1987"
+        ],
+        "values": [
+          "12278"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "1988"
+        ],
+        "values": [
+          "12347"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "1989"
+        ],
+        "values": [
+          "12372"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "1990"
+        ],
+        "values": [
+          "12478"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "1991"
+        ],
+        "values": [
+          "12707"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "1992"
+        ],
+        "values": [
+          "12808"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "1993"
+        ],
+        "values": [
+          "12963"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "1994"
+        ],
+        "values": [
+          "12747"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "1995"
+        ],
+        "values": [
+          "12871"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "1996"
+        ],
+        "values": [
+          "12927"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "1997"
+        ],
+        "values": [
+          "13047"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "1998"
+        ],
+        "values": [
+          "13176"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "1999"
+        ],
+        "values": [
+          "13474"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "2000"
+        ],
+        "values": [
+          "13766"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "2001"
+        ],
+        "values": [
+          "13839"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "2002"
+        ],
+        "values": [
+          "13875"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "2003"
+        ],
+        "values": [
+          "14057"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "2004"
+        ],
+        "values": [
+          "14127"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "2005"
+        ],
+        "values": [
+          "14334"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "2006"
+        ],
+        "values": [
+          "14715"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "2007"
+        ],
+        "values": [
+          "15065"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "2008"
+        ],
+        "values": [
+          "15177"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "2009"
+        ],
+        "values": [
+          "15313"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "2010"
+        ],
+        "values": [
+          "15391"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "2011"
+        ],
+        "values": [
+          "15694"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "2012"
+        ],
+        "values": [
+          "15881"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "2013"
+        ],
+        "values": [
+          "16001"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "2014"
+        ],
+        "values": [
+          "16140"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "2015"
+        ],
+        "values": [
+          "16426"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "2016"
+        ],
+        "values": [
+          "16615"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "2017"
+        ],
+        "values": [
+          "16665"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "2018"
+        ],
+        "values": [
+          "16786"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "2019"
+        ],
+        "values": [
+          "16750"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "2020"
+        ],
+        "values": [
+          "16959"
+        ]
+      },
+      {
+        "key": [
+          "0128",
+          "2021"
+        ],
+        "values": [
+          "17252"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BE0101",
+        "updated": "2022-02-07T14:32:00Z",
+        "label": "Folkmängd efter region, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "houseprice-0128": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Fastighetstyp",
+        "text": "fastighetstyp",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BO0501C2",
+        "text": "Köpeskilling, medelvärde i tkr",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0128",
+          "220",
+          "2021"
+        ],
+        "values": [
+          "5627"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BO0501",
+        "updated": "2022-05-30T06:47:00Z",
+        "label": "Köpeskilling för småhus, medelvärde i tkr efter region, fastighetstyp, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "income-0117": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Alder",
+        "text": "ålder",
+        "type": "d"
+      },
+      {
+        "code": "Inkomstklass",
+        "text": "inkomstklass",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "HE0110K1",
+        "text": "Medelinkomst, tkr",
+        "comment": "Sammanräknad förvärvsinkomst\r\nSumman av inkomst av tjänst och inkomst av näringsverksamhet.\r\n\r\nDen sammanräknade förvärvsinkomsten består av de sammanlagda löpande skattepliktiga inkomsterna, vilket avser inkomster från anställning, företagande, pension, sjukpenning och andra skattepliktiga transfereringar. I sammanräknad förvärvsinkomst ingår inte inkomst av kapital.\r\n\r\n",
+        "type": "c"
+      },
+      {
+        "code": "HE0110K2",
+        "text": "Medianinkomst, tkr",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0117",
+          "20-64",
+          "TOT",
+          "2020"
+        ],
+        "values": [
+          "419.2",
+          "384.1"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "HE0110",
+        "updated": "2022-01-18T21:58:00Z",
+        "label": "Sammanräknad förvärvsinkomst för boende i Sverige den 31/12 efter region, ålder, inkomstklass, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "pop-0117": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "comment": "År 1968–1998 redovisas enligt regional indelning 1998-01-01.\r\n",
+        "type": "d"
+      },
+      {
+        "code": "Kon",
+        "text": "kön",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BE0101N1",
+        "text": "Folkmängd",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0117",
+          "1",
+          "2021"
+        ],
+        "values": [
+          "24453"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "2",
+          "2021"
+        ],
+        "values": [
+          "23781"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BE0101",
+        "updated": "2022-02-07T14:32:00Z",
+        "label": "Folkmängd efter region, kön, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "growth-0117": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BE0101N1",
+        "text": "Folkmängd",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0117",
+          "1968"
+        ],
+        "values": [
+          "13595"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "1969"
+        ],
+        "values": [
+          "14519"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "1970"
+        ],
+        "values": [
+          "15527"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "1971"
+        ],
+        "values": [
+          "16798"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "1972"
+        ],
+        "values": [
+          "18525"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "1973"
+        ],
+        "values": [
+          "19806"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "1974"
+        ],
+        "values": [
+          "21135"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "1975"
+        ],
+        "values": [
+          "22664"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "1976"
+        ],
+        "values": [
+          "23885"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "1977"
+        ],
+        "values": [
+          "24582"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "1978"
+        ],
+        "values": [
+          "25173"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "1979"
+        ],
+        "values": [
+          "25342"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "1980"
+        ],
+        "values": [
+          "25631"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "1981"
+        ],
+        "values": [
+          "24783"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "1982"
+        ],
+        "values": [
+          "25039"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "1983"
+        ],
+        "values": [
+          "25255"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "1984"
+        ],
+        "values": [
+          "25810"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "1985"
+        ],
+        "values": [
+          "26324"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "1986"
+        ],
+        "values": [
+          "26881"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "1987"
+        ],
+        "values": [
+          "27644"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "1988"
+        ],
+        "values": [
+          "28362"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "1989"
+        ],
+        "values": [
+          "29147"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "1990"
+        ],
+        "values": [
+          "30230"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "1991"
+        ],
+        "values": [
+          "30800"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "1992"
+        ],
+        "values": [
+          "31308"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "1993"
+        ],
+        "values": [
+          "31600"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "1994"
+        ],
+        "values": [
+          "32004"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "1995"
+        ],
+        "values": [
+          "32140"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "1996"
+        ],
+        "values": [
+          "32655"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "1997"
+        ],
+        "values": [
+          "33064"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "1998"
+        ],
+        "values": [
+          "33396"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "1999"
+        ],
+        "values": [
+          "33861"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "2000"
+        ],
+        "values": [
+          "34427"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "2001"
+        ],
+        "values": [
+          "35108"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "2002"
+        ],
+        "values": [
+          "35633"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "2003"
+        ],
+        "values": [
+          "36183"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "2004"
+        ],
+        "values": [
+          "36867"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "2005"
+        ],
+        "values": [
+          "37336"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "2006"
+        ],
+        "values": [
+          "37879"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "2007"
+        ],
+        "values": [
+          "38286"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "2008"
+        ],
+        "values": [
+          "38720"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "2009"
+        ],
+        "values": [
+          "39173"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "2010"
+        ],
+        "values": [
+          "39521"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "2011"
+        ],
+        "values": [
+          "39792"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "2012"
+        ],
+        "values": [
+          "40269"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "2013"
+        ],
+        "values": [
+          "40495"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "2014"
+        ],
+        "values": [
+          "41180"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "2015"
+        ],
+        "values": [
+          "42130"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "2016"
+        ],
+        "values": [
+          "43293"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "2017"
+        ],
+        "values": [
+          "44130"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "2018"
+        ],
+        "values": [
+          "44831"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "2019"
+        ],
+        "values": [
+          "45574"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "2020"
+        ],
+        "values": [
+          "46644"
+        ]
+      },
+      {
+        "key": [
+          "0117",
+          "2021"
+        ],
+        "values": [
+          "48234"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BE0101",
+        "updated": "2022-02-07T14:32:00Z",
+        "label": "Folkmängd efter region, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "houseprice-0117": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Fastighetstyp",
+        "text": "fastighetstyp",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BO0501C2",
+        "text": "Köpeskilling, medelvärde i tkr",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "0117",
+          "220",
+          "2021"
+        ],
+        "values": [
+          "5947"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BO0501",
+        "updated": "2022-05-30T06:47:00Z",
+        "label": "Köpeskilling för småhus, medelvärde i tkr efter region, fastighetstyp, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  }
+}
