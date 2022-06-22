@@ -4,8 +4,8 @@ import crypto from "crypto";
 import path from "path";
 import fs from "fs";
 
-const callerId = "KommunKollen";
-const key = "CuhpqFUceLTAKg1hBPHTif0QPamspTUR8qkLa2ZO";
+const callerId = "MuniCompare";
+const key = "DbsoVfUXV4uwO2x1DUfJLAffujihfOasQmBoyAx9";
 
 
 
