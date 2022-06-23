@@ -44,9 +44,7 @@ export default class CityComparison extends react.Component {
                     <h4>Källa: SCB</h4>
                     <div className="entries-div">
                         <LineChart
-                            city={"city1"} />
-                        <LineChart
-                            city={"city2"} />
+                        />
                     </div>
                 </div>
                 <div className="tax-wrapper wrapper">

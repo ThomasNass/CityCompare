@@ -9,18 +9,25 @@ export default class LineChart extends react.Component {
 
     static contextType = CityContext
     render() {
-        const city = this.context[this.props.city]
+        const city1 = this.context.city1
+        const city2 = this.context.city2
         return (
-            <>{("growth" in city.population) ?
+            <>{("growth" in city1.population && "growth" in city2.population) ?
                 <div className="line-chart">
                     <Line
                         data={{
-                            labels: city.population.growth.year.map((element) => element),
+                            labels: city1.population.growth.year.map((element) => element),
                             datasets: [{
-                                label: `${city.name}`,
+                                label: `${city1.name}`,
                                 backgroundColor: "pink",
-
-                                data: city.population.growth.population.map((pop) => pop)
+                                borderColor: "pink",
+                                data: city1.population.growth.population.map((pop) => pop)
+                            },
+                            {
+                                label: `${city2.name}`,
+                                backgroundColor: "red",
+                                borderColor: "red",
+                                data: city2.population.growth.population.map((pop) => pop)
                             }
                             ]
                         }}

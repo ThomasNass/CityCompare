@@ -10,6 +10,13 @@ export default class PieChart extends react.Component {
     static contextType = CityContext
     render() {
         const city = this.context[this.props.city]
+        let menPercent;
+        let womenPercent;
+        if (city.population.men > 0 || city.population.fem > 0) {
+            menPercent = Math.round((city.population.men / city.population.total) * 100)
+            womenPercent = Math.round((city.population.fem / city.population.total) * 100)
+
+        }
         return (
             <>
                 <div className="pie-chart">
@@ -17,7 +24,7 @@ export default class PieChart extends react.Component {
                     {(city.population.men > 0 || city.population.fem > 0) ?
                         <Pie
                             data={{
-                                labels: ["Män", "Kvinnor"],
+                                labels: [`Män ${menPercent}%`, `Kvinnor ${womenPercent}%`],
                                 datasets: [{
                                     label: `${this.props.cityName}`,
                                     backgroundColor: ["red", "pink"],
