@@ -5,35 +5,30 @@ import CityContext from "../context/city-context";
 
 
 
-export default class PieChart extends react.Component {
+export default class ElectionPieChart extends react.Component {
 
     static contextType = CityContext
     render() {
         const city = this.context[this.props.city]
-        let menPercent;
-        let womenPercent;
-        if (city.population.men > 0 || city.population.fem > 0) {
-            menPercent = Math.round((city.population.men / city.population.total) * 100)
-            womenPercent = Math.round((city.population.fem / city.population.total) * 100)
 
-        }
         return (
             <>
                 <div className="pie-chart">
                     <h2>{city.name}</h2>
-                    {(city.population.men > 0 || city.population.fem > 0) ?
+                    {("parties" in city.electionData) ?
                         <Pie
                             data={{
-                                labels: [`Män ${menPercent}%`, `Kvinnor ${womenPercent}%`],
+                                labels: city.electionData.parties.map((element) => element),
                                 datasets: [{
                                     label: `${this.props.cityName}`,
-                                    backgroundColor: ["red", "pink"],
+                                    backgroundColor: ["#1eaed6", "#57b557", "#0084ff", "#00284d", "#004d0e", "#ff2403", "#8a1503", "#fffb00", "#b0aeae"],
 
-                                    data: [city.population.men, city.population.fem],
+                                    data: city.electionData.share.map((element) => element),
                                     borderWidth: 0
                                 }
                                 ]
                             }}
+
                         /> :
                         <h2>Gick ej att hämta data</h2>}
                 </div>
