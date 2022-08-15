@@ -39,19 +39,19 @@ export class FilterableTable extends react.Component {
     }
 
 
-    // extraSearch = async () => {
-    //     if (!this.state.extraComparison.some(
-    //         e => e.buisness ===
-    //             this.state.search
-    //     )) {
-    //         const [extra, error] = await getBuiseness(this.context.city1.name.toLowerCase(), this.context.city2.name.toLowerCase(), this.state.search);
-    //         if (error == null) {
-    //             const extraComparison = this.state.extraComparison.concat(extra);
-    //             this.setState({ extraComparison })
-    //             this.setState({ extra: true })
-    //         }
-    //     }
-    // }
+    extraSearch = async () => {
+        if (!this.state.extraComparison.some(
+            e => e.buisness ===
+                this.state.search
+        )) {
+            const [extra, error] = await getBuiseness(this.context.city1.name.toLowerCase(), this.context.city2.name.toLowerCase(), this.state.search);
+            if (error == null) {
+                const extraComparison = this.state.extraComparison.concat(extra);
+                this.setState({ extraComparison })
+                this.setState({ extra: true })
+            }
+        }
+    }
 
     handleChange = (event) => {
         const target = event.target;
@@ -113,7 +113,7 @@ export class FilterableTable extends react.Component {
                                 </table>
                             </div>
                             :
-                            <p>Extra sökningar har stängts av</p>
+                            <p></p>
                         }
 
 

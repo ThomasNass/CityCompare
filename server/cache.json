@@ -25519,7 +25519,7 @@
           },
           {
             "name": "result.executiontime",
-            "value": "180"
+            "value": "177"
           },
           {
             "name": "result.sort",
@@ -25638,7 +25638,7 @@
       "attribute": [
         {
           "name": "result.executiontime",
-          "value": "183"
+          "value": "179"
         },
         {
           "name": "result.prio",
@@ -25719,7 +25719,7 @@
             "id": "hcpbdhmrs",
             "displayName": "Meca Täby",
             "metadata": {
-              "score": 183.02735900878906
+              "score": 183.0099334716797
             },
             "attribute": [
               {
@@ -25782,7 +25782,7 @@
             "id": "kgqqyeko",
             "displayName": "Mela Konsult AB",
             "metadata": {
-              "score": 117.31607818603516
+              "score": 117.30465698242188
             },
             "attribute": [
               {
@@ -25841,7 +25841,7 @@
       "attribute": [
         {
           "name": "result.executiontime",
-          "value": "28"
+          "value": "27"
         },
         {
           "name": "result.prio",
@@ -26186,7 +26186,7 @@
           },
           {
             "name": "result.executiontime",
-            "value": "159"
+            "value": "153"
           },
           {
             "name": "result.sort",
@@ -26260,7 +26260,7 @@
       "attribute": [
         {
           "name": "result.executiontime",
-          "value": "161"
+          "value": "155"
         },
         {
           "name": "result.prio",
@@ -26329,7 +26329,7 @@
           },
           {
             "name": "result.executiontime",
-            "value": "214"
+            "value": "235"
           },
           {
             "name": "result.industrytitle",
@@ -26456,7 +26456,7 @@
       "attribute": [
         {
           "name": "result.executiontime",
-          "value": "216"
+          "value": "237"
         },
         {
           "name": "result.prio",
@@ -26548,7 +26548,7 @@
       "attribute": [
         {
           "name": "result.executiontime",
-          "value": "124"
+          "value": "131"
         },
         {
           "name": "result.prio",
@@ -26636,7 +26636,7 @@
       "attribute": [
         {
           "name": "result.executiontime",
-          "value": "155"
+          "value": "151"
         },
         {
           "name": "result.prio",
@@ -26724,7 +26724,7 @@
       "attribute": [
         {
           "name": "result.executiontime",
-          "value": "87"
+          "value": "85"
         },
         {
           "name": "result.prio",
@@ -26793,7 +26793,7 @@
           },
           {
             "name": "result.executiontime",
-            "value": "106"
+            "value": "105"
           },
           {
             "name": "result.sort",
@@ -27103,7 +27103,7 @@
           },
           {
             "name": "result.executiontime",
-            "value": "51"
+            "value": "43"
           },
           {
             "name": "result.sort",
@@ -27115,7 +27115,7 @@
             "id": "hccqbeigt",
             "displayName": "Willys Vetlanda",
             "metadata": {
-              "score": 829.0986938476562
+              "score": 829.4025268554688
             },
             "attribute": [
               {
@@ -27149,7 +27149,7 @@
             "id": "nrrvhioop",
             "displayName": "Willy:s AB - Vetlanda",
             "metadata": {
-              "score": 652.626220703125
+              "score": 652.0955810546875
             },
             "attribute": [
               {
@@ -27211,7 +27211,7 @@
       "attribute": [
         {
           "name": "result.executiontime",
-          "value": "53"
+          "value": "45"
         },
         {
           "name": "result.prio",
@@ -27373,7 +27373,7 @@
           },
           {
             "name": "result.executiontime",
-            "value": "26"
+            "value": "23"
           },
           {
             "name": "result.sort",
@@ -27385,7 +27385,7 @@
             "id": "acgsxinr",
             "displayName": "ICA Maxi Vetlanda",
             "metadata": {
-              "score": 1510.0220947265625
+              "score": 1510
             },
             "attribute": [
               {
@@ -27435,7 +27435,7 @@
             "id": "ilqbiiov",
             "displayName": "Apotek Hjärtat AB - Apotek Hjärtat Ica Maxi Vetlanda",
             "metadata": {
-              "score": 674.6400146484375
+              "score": 674.6302490234375
             },
             "attribute": [
               {
@@ -27497,7 +27497,7 @@
       "attribute": [
         {
           "name": "result.executiontime",
-          "value": "27"
+          "value": "26"
         },
         {
           "name": "result.prio",
@@ -27701,7 +27701,7 @@
           },
           {
             "name": "result.executiontime",
-            "value": "1"
+            "value": "12"
           },
           {
             "name": "result.sort",
@@ -27720,7 +27720,7 @@
       "attribute": [
         {
           "name": "result.executiontime",
-          "value": "59"
+          "value": "65"
         },
         {
           "name": "result.prio",
@@ -27789,7 +27789,7 @@
           },
           {
             "name": "result.executiontime",
-            "value": "162"
+            "value": "179"
           },
           {
             "name": "result.sort",
@@ -27867,7 +27867,7 @@
       "attribute": [
         {
           "name": "result.executiontime",
-          "value": "164"
+          "value": "181"
         },
         {
           "name": "result.prio",
@@ -27936,7 +27936,7 @@
           },
           {
             "name": "result.executiontime",
-            "value": "141"
+            "value": "156"
           },
           {
             "name": "result.sort",
@@ -28021,7 +28021,7 @@
       "attribute": [
         {
           "name": "result.executiontime",
-          "value": "143"
+          "value": "158"
         },
         {
           "name": "result.prio",
@@ -28090,7 +28090,7 @@
           },
           {
             "name": "result.executiontime",
-            "value": "55"
+            "value": "45"
           },
           {
             "name": "result.sort",
@@ -28102,7 +28102,7 @@
             "id": "lstdlgpu",
             "displayName": "Kappahl Sverige AB - Vetlanda",
             "metadata": {
-              "score": 1005.8531494140625
+              "score": 1005.8455810546875
             },
             "attribute": [
               {
@@ -28150,7 +28150,7 @@
       "attribute": [
         {
           "name": "result.executiontime",
-          "value": "57"
+          "value": "47"
         },
         {
           "name": "result.prio",
@@ -28219,7 +28219,7 @@
           },
           {
             "name": "result.executiontime",
-            "value": "157"
+            "value": "164"
           },
           {
             "name": "result.sort",
@@ -28339,7 +28339,7 @@
       "attribute": [
         {
           "name": "result.executiontime",
-          "value": "159"
+          "value": "167"
         },
         {
           "name": "result.prio",
@@ -28505,7 +28505,7 @@
           },
           {
             "name": "result.executiontime",
-            "value": "134"
+            "value": "138"
           },
           {
             "name": "result.sort",
@@ -28647,7 +28647,7 @@
       "attribute": [
         {
           "name": "result.executiontime",
-          "value": "137"
+          "value": "141"
         },
         {
           "name": "result.prio",
@@ -28716,7 +28716,7 @@
           },
           {
             "name": "result.executiontime",
-            "value": "100"
+            "value": "110"
           },
           {
             "name": "result.sort",
@@ -28837,7 +28837,7 @@
       "attribute": [
         {
           "name": "result.executiontime",
-          "value": "103"
+          "value": "113"
         },
         {
           "name": "result.prio",
@@ -29020,7 +29020,7 @@
           },
           {
             "name": "result.executiontime",
-            "value": "132"
+            "value": "134"
           },
           {
             "name": "result.sort",
@@ -29139,7 +29139,7 @@
       "attribute": [
         {
           "name": "result.executiontime",
-          "value": "134"
+          "value": "135"
         },
         {
           "name": "result.prio",
@@ -29252,7 +29252,7 @@
           },
           {
             "name": "result.executiontime",
-            "value": "181"
+            "value": "209"
           },
           {
             "name": "result.sort",
@@ -29367,7 +29367,7 @@
       "attribute": [
         {
           "name": "result.executiontime",
-          "value": "184"
+          "value": "212"
         },
         {
           "name": "result.prio",
@@ -29568,7 +29568,7 @@
           },
           {
             "name": "result.executiontime",
-            "value": "199"
+            "value": "181"
           },
           {
             "name": "result.sort",
@@ -29702,7 +29702,7 @@
       "attribute": [
         {
           "name": "result.executiontime",
-          "value": "202"
+          "value": "184"
         },
         {
           "name": "result.prio",
@@ -29826,7 +29826,7 @@
           },
           {
             "name": "result.executiontime",
-            "value": "1"
+            "value": "0"
           },
           {
             "name": "result.sort",
@@ -29845,7 +29845,7 @@
       "attribute": [
         {
           "name": "result.executiontime",
-          "value": "118"
+          "value": "108"
         },
         {
           "name": "result.prio",
@@ -29933,7 +29933,7 @@
       "attribute": [
         {
           "name": "result.executiontime",
-          "value": "105"
+          "value": "113"
         },
         {
           "name": "result.prio",
@@ -30002,7 +30002,7 @@
           },
           {
             "name": "result.executiontime",
-            "value": "167"
+            "value": "166"
           },
           {
             "name": "result.sort",
@@ -30205,7 +30205,7 @@
           },
           {
             "name": "result.executiontime",
-            "value": "179"
+            "value": "167"
           },
           {
             "name": "result.sort",
@@ -30339,7 +30339,7 @@
       "attribute": [
         {
           "name": "result.executiontime",
-          "value": "184"
+          "value": "170"
         },
         {
           "name": "result.prio",
@@ -30408,7 +30408,7 @@
           },
           {
             "name": "result.executiontime",
-            "value": "0"
+            "value": "1"
           },
           {
             "name": "result.sort",
@@ -30427,7 +30427,7 @@
       "attribute": [
         {
           "name": "result.executiontime",
-          "value": "94"
+          "value": "91"
         },
         {
           "name": "result.prio",
@@ -30752,7 +30752,7 @@
           },
           {
             "name": "result.executiontime",
-            "value": "108"
+            "value": "111"
           },
           {
             "name": "result.sort",
@@ -30826,7 +30826,7 @@
       "attribute": [
         {
           "name": "result.executiontime",
-          "value": "110"
+          "value": "114"
         },
         {
           "name": "result.prio",
@@ -30907,7 +30907,7 @@
             "id": "lgbbzlquv",
             "displayName": "Handelsbolaget Svenska Bio Lidingö - Saga",
             "metadata": {
-              "score": 71.38835906982422
+              "score": 71.39532470703125
             },
             "attribute": [
               {
@@ -30969,7 +30969,7 @@
       "attribute": [
         {
           "name": "result.executiontime",
-          "value": "26"
+          "value": "25"
         },
         {
           "name": "result.prio",
@@ -31150,7 +31150,7 @@
           },
           {
             "name": "result.executiontime",
-            "value": "8"
+            "value": "7"
           },
           {
             "name": "result.industrytitle",
@@ -31237,7 +31237,7 @@
       "attribute": [
         {
           "name": "result.executiontime",
-          "value": "10"
+          "value": "9"
         },
         {
           "name": "result.prio",
@@ -37540,5 +37540,3579 @@
         "source": "SCB"
       }
     ]
+  },
+  "hitta-falköping-autoexperten": {
+    "result": {
+      "companies": {
+        "total": 3,
+        "included": 2,
+        "attribute": [
+          {
+            "name": "response.error.code",
+            "value": "0"
+          },
+          {
+            "name": "result.besthit",
+            "value": "Exact"
+          },
+          {
+            "name": "result.executiontime",
+            "value": "191"
+          },
+          {
+            "name": "result.sort",
+            "value": "relevance"
+          }
+        ],
+        "company": [
+          {
+            "id": "imsbhngvb",
+            "displayName": "Autoexperten / Bilskadecenter Falköping",
+            "metadata": {
+              "score": 34.400001525878906
+            },
+            "attribute": [
+              {
+                "name": "email",
+                "value": "nille@bilskadecenter.net"
+              },
+              {
+                "name": "isofficial",
+                "value": "1"
+              },
+              {
+                "name": "offices",
+                "value": "4.0"
+              },
+              {
+                "name": "parentcategories",
+                "value": "Bil, Båt & Motor"
+              },
+              {
+                "name": "publish-code",
+                "value": "ok"
+              }
+            ],
+            "address": [
+              {
+                "type": "visitingAddress",
+                "usageCode": "AN",
+                "isWorkAddress": false,
+                "city": "Falköping",
+                "cityPreposition": "i",
+                "zipcode": 52136,
+                "street": "Sidvallsgatan",
+                "number": "13",
+                "community": "Falköping",
+                "coordinate": {
+                  "north": 6453096.000002565,
+                  "east": 1368427.0000000854,
+                  "system": "EPSG:3021"
+                },
+                "routeCoordinate": {
+                  "type": "Point",
+                  "coordinates": [
+                    13.569042329398394,
+                    58.18179375204785
+                  ]
+                }
+              }
+            ],
+            "phone": [
+              {
+                "label": "Tel",
+                "callTo": "+46515711827",
+                "displayAs": "0515-71 18 27"
+              }
+            ]
+          },
+          {
+            "id": "lopudicm",
+            "displayName": "Autoexperten / A Berggrens Bilservice AB",
+            "metadata": {
+              "score": 15
+            },
+            "attribute": [
+              {
+                "name": "email",
+                "value": "kontakt@berggrensbilservice.se"
+              },
+              {
+                "name": "offices",
+                "value": "2.0"
+              },
+              {
+                "name": "parentcategories",
+                "value": "Bil, Båt & Motor"
+              },
+              {
+                "name": "publish-code",
+                "value": "ok"
+              }
+            ],
+            "address": [
+              {
+                "type": "visitingAddress",
+                "usageCode": "AN",
+                "isWorkAddress": false,
+                "city": "Floby",
+                "cityPreposition": "i",
+                "zipcode": 52156,
+                "street": "Torrevalla Brunnsparken",
+                "community": "Falköping",
+                "coordinate": {
+                  "north": 6449491.000002556,
+                  "east": 1354010.0000000943,
+                  "system": "EPSG:3021"
+                },
+                "routeCoordinate": {
+                  "type": "Point",
+                  "coordinates": [
+                    13.325985897212503,
+                    58.145036835234755
+                  ]
+                }
+              }
+            ],
+            "phone": [
+              {
+                "label": "Tel",
+                "callTo": "+4651540057",
+                "displayAs": "0515-400 57"
+              }
+            ]
+          }
+        ]
+      },
+      "persons": {
+        "total": 0,
+        "included": 0
+      },
+      "locations": {
+        "total": 0,
+        "included": 0
+      },
+      "attribute": [
+        {
+          "name": "result.executiontime",
+          "value": "194"
+        },
+        {
+          "name": "result.prio",
+          "value": "cmp"
+        }
+      ]
+    }
+  },
+  "hitta-falköping-meca": {
+    "result": {
+      "companies": {
+        "total": 2,
+        "included": 2,
+        "attribute": [
+          {
+            "name": "response.error.code",
+            "value": "0"
+          },
+          {
+            "name": "result.besthit",
+            "value": "Fuzzy"
+          },
+          {
+            "name": "result.executiontime",
+            "value": "28"
+          },
+          {
+            "name": "result.sort",
+            "value": "relevance"
+          }
+        ],
+        "company": [
+          {
+            "id": "ffkoooubx",
+            "displayName": "Meta, Bekim",
+            "metadata": {
+              "score": 134.26678466796875
+            },
+            "attribute": [
+              {
+                "name": "offices",
+                "value": "2.0"
+              },
+              {
+                "name": "parentcategories",
+                "value": ""
+              },
+              {
+                "name": "publish-code",
+                "value": "ok"
+              }
+            ],
+            "address": [
+              {
+                "type": "visitingAddress",
+                "usageCode": "FB",
+                "isWorkAddress": false,
+                "city": "Falköping",
+                "cityPreposition": "i",
+                "zipcode": 52137,
+                "street": "Bergsliden",
+                "number": "13",
+                "apartmentNo": "1303",
+                "community": "Falköping",
+                "coordinate": {
+                  "north": 6453371.000002568,
+                  "east": 1367470.0000000861,
+                  "system": "EPSG:3021"
+                },
+                "routeCoordinate": {
+                  "type": "Point",
+                  "coordinates": [
+                    13.552272167801794,
+                    58.18456118940484
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "hgpbykor",
+            "displayName": "MobiExpress Falköping",
+            "metadata": {
+              "score": 2.9135513305664062
+            },
+            "attribute": [
+              {
+                "name": "email",
+                "value": "service@mobiexpress.se"
+              },
+              {
+                "name": "offices",
+                "value": "2.0"
+              },
+              {
+                "name": "parentcategories",
+                "value": "Butiker & Shopping|IT, Media & Elektronik"
+              },
+              {
+                "name": "publish-code",
+                "value": "ok"
+              }
+            ],
+            "address": [
+              {
+                "type": "visitingAddress",
+                "usageCode": "AN",
+                "isWorkAddress": false,
+                "city": "Falköping",
+                "cityPreposition": "i",
+                "zipcode": 52135,
+                "street": "Sankt Olofsgatan",
+                "number": "51",
+                "community": "Falköping",
+                "coordinate": {
+                  "north": 6452115.000002561,
+                  "east": 1367379.0000000857,
+                  "system": "EPSG:3021"
+                },
+                "routeCoordinate": {
+                  "type": "Point",
+                  "coordinates": [
+                    13.551554122333332,
+                    58.17281001620275
+                  ]
+                }
+              }
+            ],
+            "phone": [
+              {
+                "label": "Butiken",
+                "callTo": "+46793047901",
+                "displayAs": "079-304 79 01"
+              }
+            ]
+          }
+        ]
+      },
+      "persons": {
+        "total": 0,
+        "included": 0
+      },
+      "locations": {
+        "total": 0,
+        "included": 0
+      },
+      "attribute": [
+        {
+          "name": "result.executiontime",
+          "value": "30"
+        },
+        {
+          "name": "result.prio",
+          "value": "cmp"
+        }
+      ]
+    }
+  },
+  "hitta-falköping-burger king": {
+    "result": {
+      "companies": {
+        "total": 0,
+        "included": 0,
+        "attribute": [
+          {
+            "name": "response.error.code",
+            "value": "0"
+          },
+          {
+            "name": "result.besthit",
+            "value": "Fuzzy"
+          },
+          {
+            "name": "result.executiontime",
+            "value": "1"
+          },
+          {
+            "name": "result.sort",
+            "value": "relevance"
+          }
+        ]
+      },
+      "persons": {
+        "total": 0,
+        "included": 0
+      },
+      "locations": {
+        "total": 0,
+        "included": 0
+      },
+      "attribute": [
+        {
+          "name": "result.executiontime",
+          "value": "100"
+        },
+        {
+          "name": "result.prio",
+          "value": "cmp"
+        }
+      ]
+    }
+  },
+  "hitta-falköping-mcdonalds": {
+    "result": {
+      "companies": {
+        "total": 1,
+        "included": 1,
+        "attribute": [
+          {
+            "name": "response.error.code",
+            "value": "0"
+          },
+          {
+            "name": "result.besthit",
+            "value": "Exact"
+          },
+          {
+            "name": "result.executiontime",
+            "value": "177"
+          },
+          {
+            "name": "result.sort",
+            "value": "relevance"
+          }
+        ],
+        "company": [
+          {
+            "id": "anpqtbikl",
+            "displayName": "Food Folk Sverige AB - Mc Donald's Falköping",
+            "metadata": {
+              "score": 16.700000762939453
+            },
+            "attribute": [
+              {
+                "name": "offices",
+                "value": "39.0"
+              },
+              {
+                "name": "parentcategories",
+                "value": ""
+              },
+              {
+                "name": "publish-code",
+                "value": "ok"
+              }
+            ],
+            "address": [
+              {
+                "type": "visitingAddress",
+                "usageCode": "FB",
+                "isWorkAddress": false,
+                "city": "Falköping",
+                "cityPreposition": "i",
+                "zipcode": 52140,
+                "street": "Rastvägen",
+                "number": "2",
+                "community": "Falköping",
+                "coordinate": {
+                  "north": 6450550.000002559,
+                  "east": 1368577.0000000848,
+                  "system": "EPSG:3021"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "persons": {
+        "total": 0,
+        "included": 0
+      },
+      "locations": {
+        "total": 0,
+        "included": 0
+      },
+      "attribute": [
+        {
+          "name": "result.executiontime",
+          "value": "179"
+        },
+        {
+          "name": "result.prio",
+          "value": "cmp"
+        }
+      ]
+    }
+  },
+  "hitta-falköping-max hamburgerrestauranger": {
+    "result": {
+      "companies": {
+        "total": 1,
+        "included": 1,
+        "attribute": [
+          {
+            "name": "response.error.code",
+            "value": "0"
+          },
+          {
+            "name": "result.besthit",
+            "value": "Exact"
+          },
+          {
+            "name": "result.executiontime",
+            "value": "219"
+          },
+          {
+            "name": "result.industrytitle",
+            "value": "hamburgerrestauranger"
+          },
+          {
+            "name": "result.sort",
+            "value": "relevance"
+          }
+        ],
+        "company": [
+          {
+            "id": "jkkpxakc",
+            "displayName": "Sofie Wilhelmsson Garderob 20 AB",
+            "metadata": {
+              "score": 2.5
+            },
+            "attribute": [
+              {
+                "name": "category",
+                "value": "EAT,EAT"
+              },
+              {
+                "name": "parentcategories",
+                "value": "Restaurang, Mat & Dryck"
+              },
+              {
+                "name": "publish-code",
+                "value": "ok"
+              }
+            ],
+            "address": [
+              {
+                "type": "visitingAddress",
+                "usageCode": "AN",
+                "isWorkAddress": false,
+                "city": "Falköping",
+                "cityPreposition": "i",
+                "zipcode": 52144,
+                "street": "Dotorpsgatan",
+                "number": "58",
+                "entrance": "B",
+                "community": "Falköping",
+                "coordinate": {
+                  "north": 6451795.000002563,
+                  "east": 1367958.0000000857,
+                  "system": "EPSG:3021"
+                },
+                "routeCoordinate": {
+                  "type": "Point",
+                  "coordinates": [
+                    13.560916706141873,
+                    58.17017301010923
+                  ]
+                }
+              }
+            ],
+            "phone": [
+              {
+                "label": "Tel",
+                "callTo": "+46515605030",
+                "displayAs": "0515-60 50 30"
+              }
+            ]
+          }
+        ]
+      },
+      "persons": {
+        "total": 0,
+        "included": 0
+      },
+      "locations": {
+        "total": 0,
+        "included": 0
+      },
+      "attribute": [
+        {
+          "name": "result.executiontime",
+          "value": "221"
+        },
+        {
+          "name": "result.prio",
+          "value": "cmp"
+        }
+      ]
+    }
+  },
+  "hitta-falköping-o'learys trademark": {
+    "result": {
+      "companies": {
+        "total": 0,
+        "included": 0,
+        "attribute": [
+          {
+            "name": "response.error.code",
+            "value": "0"
+          },
+          {
+            "name": "result.besthit",
+            "value": "Fuzzy"
+          },
+          {
+            "name": "result.executiontime",
+            "value": "1"
+          },
+          {
+            "name": "result.sort",
+            "value": "relevance"
+          }
+        ]
+      },
+      "persons": {
+        "total": 0,
+        "included": 0
+      },
+      "locations": {
+        "total": 0,
+        "included": 0
+      },
+      "attribute": [
+        {
+          "name": "result.executiontime",
+          "value": "138"
+        },
+        {
+          "name": "result.prio",
+          "value": "cmp"
+        }
+      ]
+    }
+  },
+  "hitta-falköping-sibylla": {
+    "result": {
+      "companies": {
+        "total": 1,
+        "included": 1,
+        "attribute": [
+          {
+            "name": "response.error.code",
+            "value": "0"
+          },
+          {
+            "name": "result.besthit",
+            "value": "Exact"
+          },
+          {
+            "name": "result.executiontime",
+            "value": "48"
+          },
+          {
+            "name": "result.sort",
+            "value": "relevance"
+          }
+        ],
+        "company": [
+          {
+            "id": "nryykoxak",
+            "displayName": "Jacobsson, Sibylla (enskild firma)",
+            "metadata": {
+              "score": 177.9865264892578
+            },
+            "attribute": [
+              {
+                "name": "parentcategories",
+                "value": ""
+              },
+              {
+                "name": "publish-code",
+                "value": "ok"
+              }
+            ],
+            "address": [
+              {
+                "type": "visitingAddress",
+                "usageCode": "FB",
+                "isWorkAddress": false,
+                "city": "Åsarp",
+                "cityPreposition": "i",
+                "zipcode": 52171,
+                "street": "Alvared Hinsagården",
+                "community": "Falköping",
+                "coordinate": {
+                  "north": 6435783.000002515,
+                  "east": 1367076.0000000836,
+                  "system": "EPSG:3021"
+                },
+                "routeCoordinate": {
+                  "type": "Point",
+                  "coordinates": [
+                    13.55542628869683,
+                    58.02617736933448
+                  ]
+                }
+              }
+            ],
+            "phone": [
+              {
+                "label": "Tel",
+                "callTo": "+4651550048",
+                "displayAs": "0515-500 48"
+              }
+            ]
+          }
+        ]
+      },
+      "persons": {
+        "total": 0,
+        "included": 0
+      },
+      "locations": {
+        "total": 0,
+        "included": 0
+      },
+      "attribute": [
+        {
+          "name": "result.executiontime",
+          "value": "50"
+        },
+        {
+          "name": "result.prio",
+          "value": "cmp"
+        }
+      ]
+    }
+  },
+  "hitta-falköping-pinchos": {
+    "result": {
+      "companies": {
+        "total": 0,
+        "included": 0,
+        "attribute": [
+          {
+            "name": "response.error.code",
+            "value": "0"
+          },
+          {
+            "name": "result.besthit",
+            "value": "Fuzzy"
+          },
+          {
+            "name": "result.executiontime",
+            "value": "1"
+          },
+          {
+            "name": "result.sort",
+            "value": "relevance"
+          }
+        ]
+      },
+      "persons": {
+        "total": 0,
+        "included": 0
+      },
+      "locations": {
+        "total": 0,
+        "included": 0
+      },
+      "attribute": [
+        {
+          "name": "result.executiontime",
+          "value": "88"
+        },
+        {
+          "name": "result.prio",
+          "value": "cmp"
+        }
+      ]
+    }
+  },
+  "hitta-falköping-coop": {
+    "result": {
+      "companies": {
+        "total": 4,
+        "included": 2,
+        "attribute": [
+          {
+            "name": "response.error.code",
+            "value": "0"
+          },
+          {
+            "name": "result.besthit",
+            "value": "Exact"
+          },
+          {
+            "name": "result.executiontime",
+            "value": "121"
+          },
+          {
+            "name": "result.sort",
+            "value": "relevance"
+          }
+        ],
+        "company": [
+          {
+            "id": "flqsdfalc",
+            "displayName": "Coop Falköping",
+            "metadata": {
+              "score": 34.400001525878906
+            },
+            "attribute": [
+              {
+                "name": "offices",
+                "value": "205.0"
+              },
+              {
+                "name": "parentcategories",
+                "value": "Butiker & Shopping"
+              },
+              {
+                "name": "publish-code",
+                "value": "ok"
+              }
+            ],
+            "address": [
+              {
+                "type": "visitingAddress",
+                "usageCode": "AN",
+                "isWorkAddress": false,
+                "city": "Falköping",
+                "cityPreposition": "i",
+                "zipcode": 52140,
+                "street": "Warodells Väg",
+                "number": "5",
+                "community": "Falköping",
+                "coordinate": {
+                  "north": 6449600.0000025565,
+                  "east": 1367596.0000000852,
+                  "system": "EPSG:3021"
+                },
+                "routeCoordinate": {
+                  "type": "Point",
+                  "coordinates": [
+                    13.556918974137174,
+                    58.150846775462504
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "akpuxfcpq",
+            "displayName": "Coop Väst AB - Coop Falköping",
+            "metadata": {
+              "score": 34.400001525878906
+            },
+            "attribute": [
+              {
+                "name": "offices",
+                "value": "205.0"
+              },
+              {
+                "name": "parentcategories",
+                "value": ""
+              },
+              {
+                "name": "publish-code",
+                "value": "ok"
+              }
+            ],
+            "address": [
+              {
+                "type": "visitingAddress",
+                "usageCode": "FB",
+                "isWorkAddress": false,
+                "city": "Falköping",
+                "cityPreposition": "i",
+                "zipcode": 52142,
+                "street": "Dotorpsgatan",
+                "number": "4",
+                "community": "Falköping",
+                "coordinate": {
+                  "north": 6450910.000002559,
+                  "east": 1367504.0000000857,
+                  "system": "EPSG:3021"
+                },
+                "routeCoordinate": {
+                  "type": "Point",
+                  "coordinates": [
+                    13.554020109135717,
+                    58.162040151470734
+                  ]
+                }
+              }
+            ],
+            "phone": [
+              {
+                "label": "Tel",
+                "callTo": "+46346696000",
+                "displayAs": "0346-69 60 00"
+              }
+            ]
+          }
+        ]
+      },
+      "persons": {
+        "total": 0,
+        "included": 0
+      },
+      "locations": {
+        "total": 0,
+        "included": 0
+      },
+      "attribute": [
+        {
+          "name": "result.executiontime",
+          "value": "123"
+        },
+        {
+          "name": "result.prio",
+          "value": "cmp"
+        }
+      ]
+    }
+  },
+  "hitta-falköping-willys": {
+    "result": {
+      "companies": {
+        "total": 3,
+        "included": 2,
+        "attribute": [
+          {
+            "name": "response.error.code",
+            "value": "0"
+          },
+          {
+            "name": "result.besthit",
+            "value": "Exact"
+          },
+          {
+            "name": "result.executiontime",
+            "value": "46"
+          },
+          {
+            "name": "result.sort",
+            "value": "relevance"
+          }
+        ],
+        "company": [
+          {
+            "id": "hlrrzfhlc",
+            "displayName": "Willys Falköping Ålleberg C",
+            "metadata": {
+              "score": 664.1849975585938
+            },
+            "attribute": [
+              {
+                "name": "offices",
+                "value": "272.0"
+              },
+              {
+                "name": "parentcategories",
+                "value": "Butiker & Shopping"
+              },
+              {
+                "name": "publish-code",
+                "value": "ok"
+              }
+            ],
+            "address": [
+              {
+                "type": "visitingAddress",
+                "usageCode": "AN",
+                "isWorkAddress": false,
+                "city": "Falköping",
+                "cityPreposition": "i",
+                "zipcode": 52140,
+                "street": "Gunnestorpsgatan",
+                "number": "11",
+                "community": "Falköping",
+                "coordinate": {
+                  "north": 6449174.000002555,
+                  "east": 1367809.0000000852,
+                  "system": "EPSG:3021"
+                }
+              }
+            ],
+            "phone": [
+              {
+                "label": "Tel",
+                "callTo": "+46515776530",
+                "displayAs": "0515-77 65 30"
+              }
+            ]
+          },
+          {
+            "id": "mqyhcsdj",
+            "displayName": "Berglund, Willy",
+            "metadata": {
+              "score": 161.15371704101562
+            },
+            "attribute": [
+              {
+                "name": "parentcategories",
+                "value": ""
+              },
+              {
+                "name": "publish-code",
+                "value": "ok"
+              }
+            ],
+            "address": [
+              {
+                "type": "visitingAddress",
+                "usageCode": "FB",
+                "isWorkAddress": false,
+                "city": "Falköping",
+                "cityPreposition": "i",
+                "zipcode": 52191,
+                "street": "Näs Stommen",
+                "number": "1",
+                "community": "Falköping",
+                "coordinate": {
+                  "north": 6441976.000002536,
+                  "east": 1377973.0000000775,
+                  "system": "EPSG:3021"
+                },
+                "routeCoordinate": {
+                  "type": "Point",
+                  "coordinates": [
+                    13.7365045737679,
+                    58.084870202130006
+                  ]
+                }
+              }
+            ],
+            "phone": [
+              {
+                "label": "Tel",
+                "callTo": "+4651513773",
+                "displayAs": "0515-137 73"
+              }
+            ]
+          }
+        ]
+      },
+      "persons": {
+        "total": 0,
+        "included": 0
+      },
+      "locations": {
+        "total": 0,
+        "included": 0
+      },
+      "attribute": [
+        {
+          "name": "result.executiontime",
+          "value": "48"
+        },
+        {
+          "name": "result.prio",
+          "value": "cmp"
+        }
+      ]
+    }
+  },
+  "hitta-falköping-ica": {
+    "result": {
+      "companies": {
+        "total": 13,
+        "included": 2,
+        "attribute": [
+          {
+            "name": "response.error.code",
+            "value": "0"
+          },
+          {
+            "name": "result.besthit",
+            "value": "Exact"
+          },
+          {
+            "name": "result.executiontime",
+            "value": "24"
+          },
+          {
+            "name": "result.sort",
+            "value": "relevance"
+          }
+        ],
+        "company": [
+          {
+            "id": "hcnudlmt",
+            "displayName": "ICA Maxi Falköping",
+            "metadata": {
+              "score": 1425.7896728515625
+            },
+            "attribute": [
+              {
+                "name": "category",
+                "value": "FOODSTORE"
+              },
+              {
+                "name": "display.company.info.hide",
+                "value": "1"
+              },
+              {
+                "name": "isofficial",
+                "value": "1"
+              },
+              {
+                "name": "offices",
+                "value": "1.0"
+              },
+              {
+                "name": "parentcategories",
+                "value": "Kultur, Nöjen & Evenemang|Butiker & Shopping|Restaurang, Mat & Dryck|Sport & Hobby"
+              },
+              {
+                "name": "publish-code",
+                "value": "ok"
+              }
+            ],
+            "address": [
+              {
+                "type": "visitingAddress",
+                "usageCode": "AN",
+                "isWorkAddress": false,
+                "city": "Falköping",
+                "cityPreposition": "i",
+                "zipcode": 52140,
+                "street": "Lönnerbladsgatan",
+                "number": "2",
+                "community": "Falköping",
+                "coordinate": {
+                  "north": 6450007.0000025565,
+                  "east": 1367994.0000000852,
+                  "system": "EPSG:3021"
+                },
+                "routeCoordinate": {
+                  "type": "Point",
+                  "coordinates": [
+                    13.562305322783375,
+                    58.153797709657596
+                  ]
+                }
+              }
+            ],
+            "phone": [
+              {
+                "label": "Tel",
+                "callTo": "+46515776440",
+                "displayAs": "0515-77 64 40"
+              }
+            ]
+          },
+          {
+            "id": "hntvvxxde",
+            "displayName": "ICA Supermarket Falköping",
+            "metadata": {
+              "score": 552.9583129882812
+            },
+            "attribute": [
+              {
+                "name": "offices",
+                "value": "2.0"
+              },
+              {
+                "name": "parentcategories",
+                "value": "Butiker & Shopping"
+              },
+              {
+                "name": "publish-code",
+                "value": "ok"
+              }
+            ],
+            "address": [
+              {
+                "type": "visitingAddress",
+                "usageCode": "AN",
+                "isWorkAddress": false,
+                "city": "Falköping",
+                "cityPreposition": "i",
+                "zipcode": 52135,
+                "street": "S:t Sigfridsgatan",
+                "number": "48"
+              }
+            ]
+          }
+        ]
+      },
+      "persons": {
+        "total": 0,
+        "included": 0
+      },
+      "locations": {
+        "total": 0,
+        "included": 0
+      },
+      "attribute": [
+        {
+          "name": "result.executiontime",
+          "value": "26"
+        },
+        {
+          "name": "result.prio",
+          "value": "cmp"
+        }
+      ]
+    }
+  },
+  "hitta-falköping-cubus": {
+    "result": {
+      "companies": {
+        "total": 0,
+        "included": 0,
+        "attribute": [
+          {
+            "name": "response.error.code",
+            "value": "0"
+          },
+          {
+            "name": "result.besthit",
+            "value": "Fuzzy"
+          },
+          {
+            "name": "result.executiontime",
+            "value": "1"
+          },
+          {
+            "name": "result.sort",
+            "value": "relevance"
+          }
+        ]
+      },
+      "persons": {
+        "total": 0,
+        "included": 0
+      },
+      "locations": {
+        "total": 0,
+        "included": 0
+      },
+      "attribute": [
+        {
+          "name": "result.executiontime",
+          "value": "58"
+        },
+        {
+          "name": "result.prio",
+          "value": "cmp"
+        }
+      ]
+    }
+  },
+  "hitta-falköping-dressmann": {
+    "result": {
+      "companies": {
+        "total": 1,
+        "included": 1,
+        "attribute": [
+          {
+            "name": "response.error.code",
+            "value": "0"
+          },
+          {
+            "name": "result.besthit",
+            "value": "Exact"
+          },
+          {
+            "name": "result.executiontime",
+            "value": "168"
+          },
+          {
+            "name": "result.sort",
+            "value": "relevance"
+          }
+        ],
+        "company": [
+          {
+            "id": "mnuefjamn",
+            "displayName": "Dressmann",
+            "metadata": {
+              "score": 17
+            },
+            "attribute": [
+              {
+                "name": "category",
+                "value": "STORE"
+              },
+              {
+                "name": "offices",
+                "value": "209.0"
+              },
+              {
+                "name": "parentcategories",
+                "value": "Butiker & Shopping"
+              },
+              {
+                "name": "publish-code",
+                "value": "ok"
+              }
+            ],
+            "address": [
+              {
+                "type": "visitingAddress",
+                "usageCode": "AN",
+                "isWorkAddress": false,
+                "city": "Falköping",
+                "cityPreposition": "i",
+                "zipcode": 52142,
+                "street": "Storgatan",
+                "number": "8",
+                "entrance": "A",
+                "community": "Falköping",
+                "coordinate": {
+                  "north": 6450818.000002557,
+                  "east": 1367589.0000000854,
+                  "system": "EPSG:3021"
+                },
+                "routeCoordinate": {
+                  "type": "Point",
+                  "coordinates": [
+                    13.555267885218113,
+                    58.16084971000087
+                  ]
+                }
+              }
+            ],
+            "phone": [
+              {
+                "label": "Tel",
+                "callTo": "+46102068910",
+                "displayAs": "010-206 89 10"
+              }
+            ]
+          }
+        ]
+      },
+      "persons": {
+        "total": 0,
+        "included": 0
+      },
+      "locations": {
+        "total": 0,
+        "included": 0
+      },
+      "attribute": [
+        {
+          "name": "result.executiontime",
+          "value": "170"
+        },
+        {
+          "name": "result.prio",
+          "value": "cmp"
+        }
+      ]
+    }
+  },
+  "hitta-falköping-jack and jones": {
+    "result": {
+      "companies": {
+        "total": 0,
+        "included": 0,
+        "attribute": [
+          {
+            "name": "response.error.code",
+            "value": "0"
+          },
+          {
+            "name": "result.besthit",
+            "value": "Fuzzy"
+          },
+          {
+            "name": "result.executiontime",
+            "value": "1"
+          },
+          {
+            "name": "result.sort",
+            "value": "relevance"
+          }
+        ]
+      },
+      "persons": {
+        "total": 0,
+        "included": 0
+      },
+      "locations": {
+        "total": 0,
+        "included": 0
+      },
+      "attribute": [
+        {
+          "name": "result.executiontime",
+          "value": "92"
+        },
+        {
+          "name": "result.prio",
+          "value": "cmp"
+        }
+      ]
+    }
+  },
+  "hitta-falköping-kappahl": {
+    "result": {
+      "companies": {
+        "total": 1,
+        "included": 1,
+        "attribute": [
+          {
+            "name": "response.error.code",
+            "value": "0"
+          },
+          {
+            "name": "result.besthit",
+            "value": "Exact"
+          },
+          {
+            "name": "result.executiontime",
+            "value": "45"
+          },
+          {
+            "name": "result.sort",
+            "value": "relevance"
+          }
+        ],
+        "company": [
+          {
+            "id": "llcrxfjop",
+            "displayName": "KappAhl",
+            "metadata": {
+              "score": 223.5098419189453
+            },
+            "attribute": [
+              {
+                "name": "category",
+                "value": "STORE"
+              },
+              {
+                "name": "offices",
+                "value": "177.0"
+              },
+              {
+                "name": "parentcategories",
+                "value": "Butiker & Shopping"
+              },
+              {
+                "name": "publish-code",
+                "value": "ok"
+              }
+            ],
+            "address": [
+              {
+                "type": "visitingAddress",
+                "usageCode": "AN",
+                "isWorkAddress": false,
+                "city": "Falköping",
+                "cityPreposition": "i",
+                "zipcode": 52142,
+                "street": "Stora Torget",
+                "number": "5",
+                "community": "Falköping",
+                "coordinate": {
+                  "north": 6450766.000002559,
+                  "east": 1367533.0000000857,
+                  "system": "EPSG:3021"
+                },
+                "routeCoordinate": {
+                  "type": "Point",
+                  "coordinates": [
+                    13.554697569506313,
+                    58.16073186799336
+                  ]
+                }
+              }
+            ],
+            "phone": [
+              {
+                "label": "Varuhuset Ryttaren",
+                "callTo": "+4651580920",
+                "displayAs": "0515-809 20"
+              }
+            ]
+          }
+        ]
+      },
+      "persons": {
+        "total": 0,
+        "included": 0
+      },
+      "locations": {
+        "total": 0,
+        "included": 0
+      },
+      "attribute": [
+        {
+          "name": "result.executiontime",
+          "value": "47"
+        },
+        {
+          "name": "result.prio",
+          "value": "cmp"
+        }
+      ]
+    }
+  },
+  "hitta-falköping-lindex": {
+    "result": {
+      "companies": {
+        "total": 8,
+        "included": 2,
+        "attribute": [
+          {
+            "name": "response.error.code",
+            "value": "0"
+          },
+          {
+            "name": "result.besthit",
+            "value": "Exact"
+          },
+          {
+            "name": "result.executiontime",
+            "value": "194"
+          },
+          {
+            "name": "result.sort",
+            "value": "relevance"
+          }
+        ],
+        "company": [
+          {
+            "id": "jpvfklcm",
+            "displayName": "Lindex Sverige AB - Lindex",
+            "metadata": {
+              "score": 17
+            },
+            "attribute": [
+              {
+                "name": "offices",
+                "value": "223.0"
+              },
+              {
+                "name": "parentcategories",
+                "value": ""
+              },
+              {
+                "name": "publish-code",
+                "value": "ok"
+              }
+            ],
+            "address": [
+              {
+                "type": "visitingAddress",
+                "usageCode": "FB",
+                "isWorkAddress": false,
+                "city": "Falköping",
+                "cityPreposition": "i",
+                "zipcode": 52142,
+                "street": "Stora Torget",
+                "number": "21",
+                "community": "Falköping",
+                "coordinate": {
+                  "north": 6450827.0000025565,
+                  "east": 1367450.0000000854,
+                  "system": "EPSG:3021"
+                },
+                "routeCoordinate": {
+                  "type": "Point",
+                  "coordinates": [
+                    13.553254118399979,
+                    58.16125423440158
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "fhccoqxhi",
+            "displayName": "LINDEX",
+            "metadata": {
+              "score": 17
+            },
+            "attribute": [
+              {
+                "name": "category",
+                "value": "STORE"
+              },
+              {
+                "name": "offices",
+                "value": "13.0"
+              },
+              {
+                "name": "parentcategories",
+                "value": "Butiker & Shopping"
+              },
+              {
+                "name": "publish-code",
+                "value": "ok"
+              }
+            ],
+            "address": [
+              {
+                "type": "visitingAddress",
+                "usageCode": "AN",
+                "isWorkAddress": false,
+                "city": "Falköping",
+                "cityPreposition": "i",
+                "zipcode": 52142,
+                "street": "Stora Torget",
+                "number": "21",
+                "community": "Falköping",
+                "coordinate": {
+                  "north": 6450827.0000025565,
+                  "east": 1367450.0000000854,
+                  "system": "EPSG:3021"
+                },
+                "routeCoordinate": {
+                  "type": "Point",
+                  "coordinates": [
+                    13.553254118399979,
+                    58.16125423440158
+                  ]
+                }
+              }
+            ],
+            "phone": [
+              {
+                "label": "Tel",
+                "callTo": "+46104526122",
+                "displayAs": "010-452 61 22"
+              }
+            ]
+          }
+        ]
+      },
+      "persons": {
+        "total": 0,
+        "included": 0
+      },
+      "locations": {
+        "total": 0,
+        "included": 0
+      },
+      "attribute": [
+        {
+          "name": "result.executiontime",
+          "value": "197"
+        },
+        {
+          "name": "result.prio",
+          "value": "cmp"
+        }
+      ]
+    }
+  },
+  "hitta-falköping-vero moda": {
+    "result": {
+      "companies": {
+        "total": 0,
+        "included": 0,
+        "attribute": [
+          {
+            "name": "response.error.code",
+            "value": "0"
+          },
+          {
+            "name": "result.besthit",
+            "value": "Fuzzy"
+          },
+          {
+            "name": "result.executiontime",
+            "value": "1"
+          },
+          {
+            "name": "result.sort",
+            "value": "relevance"
+          }
+        ]
+      },
+      "persons": {
+        "total": 0,
+        "included": 0
+      },
+      "locations": {
+        "total": 0,
+        "included": 0
+      },
+      "attribute": [
+        {
+          "name": "result.executiontime",
+          "value": "85"
+        },
+        {
+          "name": "result.prio",
+          "value": "cmp"
+        }
+      ]
+    }
+  },
+  "hitta-falköping-h&m": {
+    "result": {
+      "companies": {
+        "total": 426,
+        "included": 2,
+        "attribute": [
+          {
+            "name": "response.error.code",
+            "value": "0"
+          },
+          {
+            "name": "result.besthit",
+            "value": "Exact"
+          },
+          {
+            "name": "result.executiontime",
+            "value": "120"
+          },
+          {
+            "name": "result.sort",
+            "value": "relevance"
+          }
+        ],
+        "company": [
+          {
+            "id": "nuvvxhaor",
+            "displayName": "Kreativt Arbete Falköping Handelsbolag",
+            "metadata": {
+              "score": 26.700000762939453
+            },
+            "attribute": [
+              {
+                "name": "email",
+                "value": "Info@workcreative.se"
+              },
+              {
+                "name": "parentcategories",
+                "value": ""
+              },
+              {
+                "name": "publish-code",
+                "value": "ok"
+              }
+            ],
+            "address": [
+              {
+                "type": "visitingAddress",
+                "usageCode": "FB",
+                "isWorkAddress": false,
+                "city": "Falköping",
+                "cityPreposition": "i",
+                "zipcode": 52141,
+                "street": "Trädgårdsgatan",
+                "number": "52",
+                "entrance": "H",
+                "community": "Falköping",
+                "coordinate": {
+                  "north": 6450624.000002561,
+                  "east": 1367901.0000000852,
+                  "system": "EPSG:3021"
+                },
+                "routeCoordinate": {
+                  "type": "Point",
+                  "coordinates": [
+                    13.561642770936361,
+                    58.16027050695673
+                  ]
+                }
+              },
+              {
+                "type": "deliveryAddress",
+                "usageCode": "AN",
+                "isWorkAddress": false,
+                "city": "Falköping",
+                "cityPreposition": "i",
+                "zipcode": 52146,
+                "street": "Jakobsgatan",
+                "number": "1",
+                "entrance": "C",
+                "community": "Falköping",
+                "coordinate": {
+                  "north": 6450949.000002563,
+                  "east": 1367575.0000000857,
+                  "system": "EPSG:3021"
+                },
+                "routeCoordinate": {
+                  "type": "Point",
+                  "coordinates": [
+                    13.555634375131541,
+                    58.16231114086759
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "hlcpvxjop",
+            "displayName": "H & M Hennes & Mauritz Sverige AB - H&m",
+            "metadata": {
+              "score": 15.5
+            },
+            "attribute": [
+              {
+                "name": "offices",
+                "value": "218.0"
+              },
+              {
+                "name": "parentcategories",
+                "value": ""
+              },
+              {
+                "name": "publish-code",
+                "value": "ok"
+              }
+            ],
+            "address": [
+              {
+                "type": "visitingAddress",
+                "usageCode": "FB",
+                "isWorkAddress": false,
+                "city": "Falköping",
+                "cityPreposition": "i",
+                "zipcode": 52142,
+                "street": "Nygatan",
+                "number": "25",
+                "community": "Falköping",
+                "coordinate": {
+                  "north": 6450756.00000256,
+                  "east": 1367379.000000086,
+                  "system": "EPSG:3021"
+                },
+                "routeCoordinate": {
+                  "type": "Point",
+                  "coordinates": [
+                    13.552311044021005,
+                    58.16058193931603
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "persons": {
+        "total": 0,
+        "included": 0
+      },
+      "locations": {
+        "total": 0,
+        "included": 0
+      },
+      "attribute": [
+        {
+          "name": "result.executiontime",
+          "value": "122"
+        },
+        {
+          "name": "result.prio",
+          "value": "cmp"
+        }
+      ]
+    }
+  },
+  "hitta-falköping-jula": {
+    "result": {
+      "companies": {
+        "total": 62,
+        "included": 2,
+        "attribute": [
+          {
+            "name": "response.error.code",
+            "value": "0"
+          },
+          {
+            "name": "result.besthit",
+            "value": "Exact"
+          },
+          {
+            "name": "result.executiontime",
+            "value": "171"
+          },
+          {
+            "name": "result.sort",
+            "value": "relevance"
+          }
+        ],
+        "company": [
+          {
+            "id": "ffkqqtyz",
+            "displayName": "Jula Sverige AB - Jula Butik",
+            "metadata": {
+              "score": 17
+            },
+            "attribute": [
+              {
+                "name": "offices",
+                "value": "64.0"
+              },
+              {
+                "name": "parentcategories",
+                "value": ""
+              },
+              {
+                "name": "publish-code",
+                "value": "ok"
+              }
+            ],
+            "address": [
+              {
+                "type": "visitingAddress",
+                "usageCode": "FB",
+                "isWorkAddress": false,
+                "city": "Falköping",
+                "cityPreposition": "i",
+                "zipcode": 52140,
+                "street": "Gunnestorpsgatan",
+                "number": "9",
+                "community": "Falköping",
+                "coordinate": {
+                  "north": 6449205.000002556,
+                  "east": 1367846.0000000857,
+                  "system": "EPSG:3021"
+                }
+              }
+            ]
+          },
+          {
+            "id": "almrxzzk",
+            "displayName": "Jäla Plåtslageri AB",
+            "metadata": {
+              "score": 3.700000047683716
+            },
+            "attribute": [
+              {
+                "name": "offices",
+                "value": "1.0"
+              },
+              {
+                "name": "parentcategories",
+                "value": "Hus & Hem|Bygg & Byggmaterial"
+              },
+              {
+                "name": "publish-code",
+                "value": "ok"
+              }
+            ],
+            "address": [
+              {
+                "type": "visitingAddress",
+                "usageCode": "AN",
+                "isWorkAddress": false,
+                "city": "Falköping",
+                "cityPreposition": "i",
+                "zipcode": 52136,
+                "street": "Sidvallsgatan",
+                "number": "11",
+                "community": "Falköping",
+                "coordinate": {
+                  "north": 6453018.000002564,
+                  "east": 1368406.0000000848,
+                  "system": "EPSG:3021"
+                },
+                "routeCoordinate": {
+                  "type": "Point",
+                  "coordinates": [
+                    13.568522453475081,
+                    58.18113798906609
+                  ]
+                }
+              }
+            ],
+            "phone": [
+              {
+                "label": "Tel",
+                "callTo": "+46703028525",
+                "displayAs": "070-302 85 25"
+              }
+            ],
+            "image": [
+              {
+                "type": "small",
+                "absoluteUrl": "https://static.hitta.se/static/products/images/InfoText/jala_il.gif"
+              }
+            ]
+          }
+        ]
+      },
+      "persons": {
+        "total": 0,
+        "included": 0
+      },
+      "locations": {
+        "total": 0,
+        "included": 0
+      },
+      "attribute": [
+        {
+          "name": "result.executiontime",
+          "value": "174"
+        },
+        {
+          "name": "result.prio",
+          "value": "cmp"
+        }
+      ]
+    }
+  },
+  "hitta-falköping-rusta": {
+    "result": {
+      "companies": {
+        "total": 9,
+        "included": 2,
+        "attribute": [
+          {
+            "name": "response.error.code",
+            "value": "0"
+          },
+          {
+            "name": "result.besthit",
+            "value": "Exact"
+          },
+          {
+            "name": "result.executiontime",
+            "value": "205"
+          },
+          {
+            "name": "result.sort",
+            "value": "relevance"
+          }
+        ],
+        "company": [
+          {
+            "id": "ictuuyfic",
+            "displayName": "Rusta AB - Falköping",
+            "metadata": {
+              "score": 34.400001525878906
+            },
+            "attribute": [
+              {
+                "name": "email",
+                "value": "falkoping.101@rusta.com"
+              },
+              {
+                "name": "offices",
+                "value": "108.0"
+              },
+              {
+                "name": "parentcategories",
+                "value": ""
+              },
+              {
+                "name": "publish-code",
+                "value": "ok"
+              },
+              {
+                "name": "rating",
+                "value": "AAA_AB"
+              }
+            ],
+            "address": [
+              {
+                "type": "visitingAddress",
+                "usageCode": "FB",
+                "isWorkAddress": false,
+                "city": "Falköping",
+                "cityPreposition": "i",
+                "zipcode": 52140,
+                "street": "Agnestadsgatan",
+                "number": "6",
+                "community": "Falköping",
+                "coordinate": {
+                  "north": 6449644.000002559,
+                  "east": 1368080.0000000852,
+                  "system": "EPSG:3021"
+                },
+                "routeCoordinate": {
+                  "type": "Point",
+                  "coordinates": [
+                    13.564173990290314,
+                    58.15110027990354
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "kmqruhcg",
+            "displayName": "Ryds Bilglas Falköping",
+            "metadata": {
+              "score": 6.599999904632568
+            },
+            "attribute": [
+              {
+                "name": "offices",
+                "value": "2.0"
+              },
+              {
+                "name": "parentcategories",
+                "value": "Bil, Båt & Motor"
+              },
+              {
+                "name": "publish-code",
+                "value": "ok"
+              }
+            ],
+            "address": [
+              {
+                "type": "visitingAddress",
+                "usageCode": "AN",
+                "isWorkAddress": false,
+                "city": "Falköping",
+                "cityPreposition": "i",
+                "zipcode": 52141,
+                "street": "Verkstadsgatan",
+                "number": "8",
+                "community": "Falköping",
+                "coordinate": {
+                  "north": 6450923.000002563,
+                  "east": 1368426.0000000854,
+                  "system": "EPSG:3021"
+                },
+                "routeCoordinate": {
+                  "type": "Point",
+                  "coordinates": [
+                    13.570575880880005,
+                    58.16305890624913
+                  ]
+                }
+              }
+            ],
+            "phone": [
+              {
+                "label": "Telefonnummer",
+                "callTo": "+46771411411",
+                "displayAs": "0771-411 411"
+              }
+            ]
+          }
+        ]
+      },
+      "persons": {
+        "total": 0,
+        "included": 0
+      },
+      "locations": {
+        "total": 0,
+        "included": 0
+      },
+      "attribute": [
+        {
+          "name": "result.executiontime",
+          "value": "208"
+        },
+        {
+          "name": "result.prio",
+          "value": "cmp"
+        }
+      ]
+    }
+  },
+  "hitta-falköping-biltema": {
+    "result": {
+      "companies": {
+        "total": 3,
+        "included": 2,
+        "attribute": [
+          {
+            "name": "response.error.code",
+            "value": "0"
+          },
+          {
+            "name": "result.besthit",
+            "value": "Exact"
+          },
+          {
+            "name": "result.executiontime",
+            "value": "203"
+          },
+          {
+            "name": "result.sort",
+            "value": "relevance"
+          }
+        ],
+        "company": [
+          {
+            "id": "immuhkrzd",
+            "displayName": "Biltema Sweden AB",
+            "metadata": {
+              "score": 15
+            },
+            "attribute": [
+              {
+                "name": "email",
+                "value": "biltema@biltema.com"
+              },
+              {
+                "name": "offices",
+                "value": "69.0"
+              },
+              {
+                "name": "parentcategories",
+                "value": "Butiker & Shopping"
+              },
+              {
+                "name": "publish-code",
+                "value": "ok"
+              }
+            ],
+            "address": [
+              {
+                "type": "deliveryAddress",
+                "usageCode": "AN",
+                "isWorkAddress": false,
+                "city": "Helsingborg",
+                "cityPreposition": "i",
+                "zipcode": 25466,
+                "street": "Garnisonsgatan",
+                "number": "26",
+                "community": "Helsingborg",
+                "coordinate": {
+                  "north": 6220929.000001949,
+                  "east": 1308821.0000000785,
+                  "system": "EPSG:3021"
+                },
+                "routeCoordinate": {
+                  "type": "Point",
+                  "coordinates": [
+                    12.733865920529604,
+                    56.07874422836437
+                  ]
+                }
+              }
+            ],
+            "phone": [
+              {
+                "label": "Tel",
+                "callTo": "+46775200000",
+                "displayAs": "077-520 00 00"
+              }
+            ]
+          },
+          {
+            "id": "akqyeigs",
+            "displayName": "Besikta Bilprovning i Sverige AB",
+            "metadata": {
+              "score": 3.5999999046325684
+            },
+            "attribute": [
+              {
+                "name": "email",
+                "value": "kundtjanst@besikta.se"
+              },
+              {
+                "name": "offices",
+                "value": "193.0"
+              },
+              {
+                "name": "parentcategories",
+                "value": "Bil, Båt & Motor"
+              },
+              {
+                "name": "publish-code",
+                "value": "ok"
+              }
+            ],
+            "address": [
+              {
+                "type": "deliveryAddress",
+                "usageCode": "AN",
+                "isWorkAddress": false,
+                "city": "Falköping",
+                "cityPreposition": "i",
+                "zipcode": 52139,
+                "street": "Österängsgatan",
+                "number": "2",
+                "community": "Falköping",
+                "coordinate": {
+                  "north": 6451798.000002565,
+                  "east": 1369099.0000000848,
+                  "system": "EPSG:3021"
+                }
+              }
+            ],
+            "phone": [
+              {
+                "label": "Besikta Bilprovning i Sverige AB",
+                "callTo": "0774400800",
+                "displayAs": "0774-400 800"
+              }
+            ]
+          }
+        ]
+      },
+      "persons": {
+        "total": 0,
+        "included": 0
+      },
+      "locations": {
+        "total": 0,
+        "included": 0
+      },
+      "attribute": [
+        {
+          "name": "result.executiontime",
+          "value": "206"
+        },
+        {
+          "name": "result.prio",
+          "value": "cmp"
+        }
+      ]
+    }
+  },
+  "hitta-falköping-stadium": {
+    "result": {
+      "companies": {
+        "total": 1,
+        "included": 1,
+        "attribute": [
+          {
+            "name": "response.error.code",
+            "value": "0"
+          },
+          {
+            "name": "result.besthit",
+            "value": "Exact"
+          },
+          {
+            "name": "result.executiontime",
+            "value": "204"
+          },
+          {
+            "name": "result.sort",
+            "value": "relevance"
+          }
+        ],
+        "company": [
+          {
+            "id": "kqbfnvxxy",
+            "displayName": "Stadig, Carina",
+            "metadata": {
+              "score": 3.5
+            },
+            "attribute": [
+              {
+                "name": "parentcategories",
+                "value": ""
+              },
+              {
+                "name": "publish-code",
+                "value": "ok"
+              }
+            ],
+            "address": [
+              {
+                "type": "visitingAddress",
+                "usageCode": "FB",
+                "isWorkAddress": false,
+                "city": "Vartofta",
+                "cityPreposition": "i",
+                "zipcode": 52197,
+                "street": "Slöta Valltorp",
+                "number": "1",
+                "community": "Falköping",
+                "coordinate": {
+                  "north": 6443166.000002537,
+                  "east": 1370407.000000083,
+                  "system": "EPSG:3021"
+                },
+                "routeCoordinate": {
+                  "type": "Point",
+                  "coordinates": [
+                    13.607688498902636,
+                    58.09339955591346
+                  ]
+                }
+              }
+            ],
+            "phone": [
+              {
+                "label": "Tel",
+                "callTo": "+4651530049",
+                "displayAs": "0515-300 49"
+              }
+            ]
+          }
+        ]
+      },
+      "persons": {
+        "total": 0,
+        "included": 0
+      },
+      "locations": {
+        "total": 0,
+        "included": 0
+      },
+      "attribute": [
+        {
+          "name": "result.executiontime",
+          "value": "205"
+        },
+        {
+          "name": "result.prio",
+          "value": "cmp"
+        }
+      ]
+    }
+  },
+  "hitta-falköping-team sportia": {
+    "result": {
+      "companies": {
+        "total": 0,
+        "included": 0,
+        "attribute": [
+          {
+            "name": "response.error.code",
+            "value": "0"
+          },
+          {
+            "name": "result.besthit",
+            "value": "Fuzzy"
+          },
+          {
+            "name": "result.executiontime",
+            "value": "1"
+          },
+          {
+            "name": "result.sort",
+            "value": "relevance"
+          }
+        ]
+      },
+      "persons": {
+        "total": 0,
+        "included": 0
+      },
+      "locations": {
+        "total": 0,
+        "included": 0
+      },
+      "attribute": [
+        {
+          "name": "result.executiontime",
+          "value": "116"
+        },
+        {
+          "name": "result.prio",
+          "value": "cmp"
+        }
+      ]
+    }
+  },
+  "hitta-falköping-intersport": {
+    "result": {
+      "companies": {
+        "total": 2,
+        "included": 2,
+        "attribute": [
+          {
+            "name": "response.error.code",
+            "value": "0"
+          },
+          {
+            "name": "result.besthit",
+            "value": "Exact"
+          },
+          {
+            "name": "result.executiontime",
+            "value": "177"
+          },
+          {
+            "name": "result.sort",
+            "value": "relevance"
+          }
+        ],
+        "company": [
+          {
+            "id": "acgbilob",
+            "displayName": "Intersport",
+            "metadata": {
+              "score": 17
+            },
+            "attribute": [
+              {
+                "name": "category",
+                "value": "STORE"
+              },
+              {
+                "name": "offices",
+                "value": "1.0"
+              },
+              {
+                "name": "parentcategories",
+                "value": "Butiker & Shopping|Sport & Hobby"
+              },
+              {
+                "name": "publish-code",
+                "value": "ok"
+              }
+            ],
+            "address": [
+              {
+                "type": "visitingAddress",
+                "usageCode": "AN",
+                "isWorkAddress": false,
+                "city": "Falköping",
+                "cityPreposition": "i",
+                "zipcode": 52142,
+                "street": "Storgatan",
+                "number": "22",
+                "community": "Falköping",
+                "coordinate": {
+                  "north": 6450880.00000256,
+                  "east": 1367400.0000000861,
+                  "system": "EPSG:3021"
+                },
+                "routeCoordinate": {
+                  "type": "Point",
+                  "coordinates": [
+                    13.552293290100154,
+                    58.1616683584461
+                  ]
+                }
+              }
+            ],
+            "phone": [
+              {
+                "label": "Tel",
+                "callTo": "+46515711707",
+                "displayAs": "0515-71 17 07"
+              }
+            ]
+          },
+          {
+            "id": "jnqydfcs",
+            "displayName": "I-Sport Retail 7 AB - Intersport",
+            "metadata": {
+              "score": 17
+            },
+            "attribute": [
+              {
+                "name": "offices",
+                "value": "1.0"
+              },
+              {
+                "name": "parentcategories",
+                "value": ""
+              },
+              {
+                "name": "publish-code",
+                "value": "ok"
+              }
+            ],
+            "address": [
+              {
+                "type": "visitingAddress",
+                "usageCode": "FB",
+                "isWorkAddress": false,
+                "city": "Falköping",
+                "cityPreposition": "i",
+                "zipcode": 52142,
+                "street": "Storgatan",
+                "number": "22",
+                "community": "Falköping",
+                "coordinate": {
+                  "north": 6450880.00000256,
+                  "east": 1367400.0000000861,
+                  "system": "EPSG:3021"
+                },
+                "routeCoordinate": {
+                  "type": "Point",
+                  "coordinates": [
+                    13.552293290100154,
+                    58.1616683584461
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "persons": {
+        "total": 0,
+        "included": 0
+      },
+      "locations": {
+        "total": 0,
+        "included": 0
+      },
+      "attribute": [
+        {
+          "name": "result.executiontime",
+          "value": "180"
+        },
+        {
+          "name": "result.prio",
+          "value": "cmp"
+        }
+      ]
+    }
+  },
+  "hitta-falköping-elgiganten": {
+    "result": {
+      "companies": {
+        "total": 1,
+        "included": 1,
+        "attribute": [
+          {
+            "name": "response.error.code",
+            "value": "0"
+          },
+          {
+            "name": "result.besthit",
+            "value": "Exact"
+          },
+          {
+            "name": "result.executiontime",
+            "value": "174"
+          },
+          {
+            "name": "result.sort",
+            "value": "relevance"
+          }
+        ],
+        "company": [
+          {
+            "id": "agqbjcmtu",
+            "displayName": "Elgiganten",
+            "metadata": {
+              "score": 17
+            },
+            "attribute": [
+              {
+                "name": "email",
+                "value": "kundcenter@elgiganten.se"
+              },
+              {
+                "name": "offices",
+                "value": "146.0"
+              },
+              {
+                "name": "parentcategories",
+                "value": "Butiker & Shopping|IT, Media & Elektronik|Bil, Båt & Motor"
+              },
+              {
+                "name": "publish-code",
+                "value": "ok"
+              }
+            ],
+            "address": [
+              {
+                "type": "visitingAddress",
+                "usageCode": "AN",
+                "isWorkAddress": false,
+                "city": "Falköping",
+                "cityPreposition": "i",
+                "zipcode": 52142,
+                "street": "Storgatan",
+                "number": "5",
+                "entrance": "A",
+                "community": "Falköping",
+                "coordinate": {
+                  "north": 6450766.000002559,
+                  "east": 1367563.0000000852,
+                  "system": "EPSG:3021"
+                },
+                "routeCoordinate": {
+                  "type": "Point",
+                  "coordinates": [
+                    13.553105841972034,
+                    58.161449202766065
+                  ]
+                }
+              }
+            ],
+            "phone": [
+              {
+                "label": "Tel",
+                "callTo": "+46771115115",
+                "displayAs": "0771-115 115"
+              }
+            ]
+          }
+        ]
+      },
+      "persons": {
+        "total": 0,
+        "included": 0
+      },
+      "locations": {
+        "total": 0,
+        "included": 0
+      },
+      "attribute": [
+        {
+          "name": "result.executiontime",
+          "value": "176"
+        },
+        {
+          "name": "result.prio",
+          "value": "cmp"
+        }
+      ]
+    }
+  },
+  "hitta-falköping-mediamarkt": {
+    "result": {
+      "companies": {
+        "total": 0,
+        "included": 0,
+        "attribute": [
+          {
+            "name": "response.error.code",
+            "value": "0"
+          },
+          {
+            "name": "result.besthit",
+            "value": "Fuzzy"
+          },
+          {
+            "name": "result.executiontime",
+            "value": "1"
+          },
+          {
+            "name": "result.sort",
+            "value": "relevance"
+          }
+        ]
+      },
+      "persons": {
+        "total": 0,
+        "included": 0
+      },
+      "locations": {
+        "total": 0,
+        "included": 0
+      },
+      "attribute": [
+        {
+          "name": "result.executiontime",
+          "value": "102"
+        },
+        {
+          "name": "result.prio",
+          "value": "cmp"
+        }
+      ]
+    }
+  },
+  "hitta-falköping-ikea": {
+    "result": {
+      "companies": {
+        "total": 2,
+        "included": 2,
+        "attribute": [
+          {
+            "name": "response.error.code",
+            "value": "0"
+          },
+          {
+            "name": "result.besthit",
+            "value": "Exact"
+          },
+          {
+            "name": "result.executiontime",
+            "value": "126"
+          },
+          {
+            "name": "result.sort",
+            "value": "relevance"
+          }
+        ],
+        "company": [
+          {
+            "id": "hntvvxxde",
+            "displayName": "ICA Supermarket Falköping",
+            "metadata": {
+              "score": 13.699999809265137
+            },
+            "attribute": [
+              {
+                "name": "offices",
+                "value": "2.0"
+              },
+              {
+                "name": "parentcategories",
+                "value": "Butiker & Shopping"
+              },
+              {
+                "name": "publish-code",
+                "value": "ok"
+              }
+            ],
+            "address": [
+              {
+                "type": "visitingAddress",
+                "usageCode": "AN",
+                "isWorkAddress": false,
+                "city": "Falköping",
+                "cityPreposition": "i",
+                "zipcode": 52135,
+                "street": "S:t Sigfridsgatan",
+                "number": "48"
+              }
+            ]
+          },
+          {
+            "id": "hcnudlmt",
+            "displayName": "ICA Maxi Falköping",
+            "metadata": {
+              "score": 13.699999809265137
+            },
+            "attribute": [
+              {
+                "name": "category",
+                "value": "FOODSTORE"
+              },
+              {
+                "name": "display.company.info.hide",
+                "value": "1"
+              },
+              {
+                "name": "isofficial",
+                "value": "1"
+              },
+              {
+                "name": "offices",
+                "value": "1.0"
+              },
+              {
+                "name": "parentcategories",
+                "value": "Kultur, Nöjen & Evenemang|Butiker & Shopping|Restaurang, Mat & Dryck|Sport & Hobby"
+              },
+              {
+                "name": "publish-code",
+                "value": "ok"
+              }
+            ],
+            "address": [
+              {
+                "type": "visitingAddress",
+                "usageCode": "AN",
+                "isWorkAddress": false,
+                "city": "Falköping",
+                "cityPreposition": "i",
+                "zipcode": 52140,
+                "street": "Lönnerbladsgatan",
+                "number": "2",
+                "community": "Falköping",
+                "coordinate": {
+                  "north": 6450007.0000025565,
+                  "east": 1367994.0000000852,
+                  "system": "EPSG:3021"
+                },
+                "routeCoordinate": {
+                  "type": "Point",
+                  "coordinates": [
+                    13.562305322783375,
+                    58.153797709657596
+                  ]
+                }
+              }
+            ],
+            "phone": [
+              {
+                "label": "Tel",
+                "callTo": "+46515776440",
+                "displayAs": "0515-77 64 40"
+              }
+            ]
+          }
+        ]
+      },
+      "persons": {
+        "total": 0,
+        "included": 0
+      },
+      "locations": {
+        "total": 0,
+        "included": 0
+      },
+      "attribute": [
+        {
+          "name": "result.executiontime",
+          "value": "130"
+        },
+        {
+          "name": "result.prio",
+          "value": "cmp"
+        }
+      ]
+    }
+  },
+  "hitta-falköping-jysk": {
+    "result": {
+      "companies": {
+        "total": 1,
+        "included": 1,
+        "attribute": [
+          {
+            "name": "response.error.code",
+            "value": "0"
+          },
+          {
+            "name": "result.besthit",
+            "value": "Exact"
+          },
+          {
+            "name": "result.executiontime",
+            "value": "106"
+          },
+          {
+            "name": "result.sort",
+            "value": "relevance"
+          }
+        ],
+        "company": [
+          {
+            "id": "hkmuyecr",
+            "displayName": "JYSK",
+            "metadata": {
+              "score": 17
+            },
+            "attribute": [
+              {
+                "name": "category",
+                "value": "STORE"
+              },
+              {
+                "name": "offices",
+                "value": "165.0"
+              },
+              {
+                "name": "parentcategories",
+                "value": "Hus & Hem|Butiker & Shopping"
+              },
+              {
+                "name": "publish-code",
+                "value": "ok"
+              }
+            ],
+            "address": [
+              {
+                "type": "deliveryAddress",
+                "usageCode": "AN",
+                "isWorkAddress": false,
+                "city": "Falköping",
+                "cityPreposition": "i",
+                "zipcode": 52130,
+                "street": "Göteborgsvägen",
+                "number": "12",
+                "community": "Falköping",
+                "coordinate": {
+                  "north": 6451516.000002562,
+                  "east": 1366659.000000086,
+                  "system": "EPSG:3021"
+                },
+                "routeCoordinate": {
+                  "type": "Point",
+                  "coordinates": [
+                    13.539321297986499,
+                    58.16683621078858
+                  ]
+                }
+              }
+            ],
+            "phone": [
+              {
+                "label": "Tel",
+                "callTo": "+46770457457",
+                "displayAs": "077-045 74 57"
+              }
+            ]
+          }
+        ]
+      },
+      "persons": {
+        "total": 0,
+        "included": 0
+      },
+      "locations": {
+        "total": 0,
+        "included": 0
+      },
+      "attribute": [
+        {
+          "name": "result.executiontime",
+          "value": "108"
+        },
+        {
+          "name": "result.prio",
+          "value": "cmp"
+        }
+      ]
+    }
+  },
+  "hitta-falköping-mio": {
+    "result": {
+      "companies": {
+        "total": 3,
+        "included": 2,
+        "attribute": [
+          {
+            "name": "response.error.code",
+            "value": "0"
+          },
+          {
+            "name": "result.besthit",
+            "value": "Fuzzy"
+          },
+          {
+            "name": "result.executiontime",
+            "value": "25"
+          },
+          {
+            "name": "result.sort",
+            "value": "relevance"
+          }
+        ],
+        "company": [
+          {
+            "id": "klggbeilc",
+            "displayName": "Del Rosario, Mia",
+            "metadata": {
+              "score": 143.58934020996094
+            },
+            "attribute": [
+              {
+                "name": "parentcategories",
+                "value": ""
+              },
+              {
+                "name": "publish-code",
+                "value": "ok"
+              }
+            ],
+            "address": [
+              {
+                "type": "visitingAddress",
+                "usageCode": "FB",
+                "isWorkAddress": false,
+                "city": "Falköping",
+                "cityPreposition": "i",
+                "zipcode": 52144,
+                "street": "Fredriksbergsparken",
+                "number": "11",
+                "community": "Falköping",
+                "coordinate": {
+                  "north": 6451788.000002561,
+                  "east": 1368196.0000000852,
+                  "system": "EPSG:3021"
+                },
+                "routeCoordinate": {
+                  "type": "Point",
+                  "coordinates": [
+                    13.56521964399163,
+                    58.17013192214341
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "ntfamtbx",
+            "displayName": "Sörensson, Mim",
+            "metadata": {
+              "score": 102.71549224853516
+            },
+            "attribute": [
+              {
+                "name": "parentcategories",
+                "value": ""
+              },
+              {
+                "name": "publish-code",
+                "value": "ok"
+              }
+            ],
+            "address": [
+              {
+                "type": "visitingAddress",
+                "usageCode": "FB",
+                "isWorkAddress": false,
+                "city": "Floby",
+                "cityPreposition": "i",
+                "zipcode": 52151,
+                "street": "Köpmansgatan",
+                "number": "12",
+                "community": "Falköping",
+                "coordinate": {
+                  "north": 6448648.000002552,
+                  "east": 1354567.0000000936,
+                  "system": "EPSG:3021"
+                },
+                "routeCoordinate": {
+                  "type": "Point",
+                  "coordinates": [
+                    13.336120317889467,
+                    58.13777860880328
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "persons": {
+        "total": 0,
+        "included": 0
+      },
+      "locations": {
+        "total": 0,
+        "included": 0
+      },
+      "attribute": [
+        {
+          "name": "result.executiontime",
+          "value": "28"
+        },
+        {
+          "name": "result.prio",
+          "value": "cmp"
+        }
+      ]
+    }
+  },
+  "hitta-falköping-systembolaget": {
+    "result": {
+      "companies": {
+        "total": 2,
+        "included": 2,
+        "attribute": [
+          {
+            "name": "response.error.code",
+            "value": "0"
+          },
+          {
+            "name": "result.besthit",
+            "value": "Exact"
+          },
+          {
+            "name": "result.executiontime",
+            "value": "9"
+          },
+          {
+            "name": "result.industrytitle",
+            "value": "systembolag"
+          },
+          {
+            "name": "result.sort",
+            "value": "relevance"
+          }
+        ],
+        "company": [
+          {
+            "id": "cmsvfcov",
+            "displayName": "Handelsboden",
+            "metadata": {
+              "score": 2.1213202476501465
+            },
+            "attribute": [
+              {
+                "name": "category",
+                "value": "FOODSTORE,STORE"
+              },
+              {
+                "name": "offices",
+                "value": "2.0"
+              },
+              {
+                "name": "parentcategories",
+                "value": "Butiker & Shopping|Restaurang, Mat & Dryck"
+              },
+              {
+                "name": "publish-code",
+                "value": "ok"
+              }
+            ],
+            "address": [
+              {
+                "type": "visitingAddress",
+                "usageCode": "AN",
+                "isWorkAddress": false,
+                "city": "Kättilstorp",
+                "cityPreposition": "i",
+                "zipcode": 52195,
+                "street": "Storgatan",
+                "number": "22",
+                "community": "Falköping",
+                "coordinate": {
+                  "north": 6437236.000002519,
+                  "east": 1376373.0000000778,
+                  "system": "EPSG:3021"
+                },
+                "routeCoordinate": {
+                  "type": "Point",
+                  "coordinates": [
+                    13.711685572501775,
+                    58.041966595225965
+                  ]
+                }
+              }
+            ],
+            "phone": [
+              {
+                "label": "Tel",
+                "callTo": "+4651586468",
+                "displayAs": "0515-864 68"
+              }
+            ]
+          },
+          {
+            "id": "jmquxjost",
+            "displayName": "Systembolaget",
+            "metadata": {
+              "score": 1.5
+            },
+            "attribute": [
+              {
+                "name": "category",
+                "value": "STORE"
+              },
+              {
+                "name": "offices",
+                "value": "470.0"
+              },
+              {
+                "name": "parentcategories",
+                "value": "Butiker & Shopping|Restaurang, Mat & Dryck"
+              },
+              {
+                "name": "publish-code",
+                "value": "ok"
+              }
+            ],
+            "address": [
+              {
+                "type": "visitingAddress",
+                "usageCode": "AN",
+                "isWorkAddress": false,
+                "city": "Falköping",
+                "cityPreposition": "i",
+                "zipcode": 52142,
+                "street": "Stora Torget",
+                "number": "17",
+                "community": "Falköping",
+                "coordinate": {
+                  "north": 6450806.00000256,
+                  "east": 1367442.0000000857,
+                  "system": "EPSG:3021"
+                },
+                "routeCoordinate": {
+                  "type": "Point",
+                  "coordinates": [
+                    13.553130238971823,
+                    58.16106343953499
+                  ]
+                }
+              }
+            ],
+            "phone": [
+              {
+                "label": "Tel",
+                "callTo": "+4651510025",
+                "displayAs": "0515-100 25"
+              }
+            ]
+          }
+        ]
+      },
+      "persons": {
+        "total": 0,
+        "included": 0
+      },
+      "locations": {
+        "total": 0,
+        "included": 0
+      },
+      "attribute": [
+        {
+          "name": "result.executiontime",
+          "value": "11"
+        },
+        {
+          "name": "result.prio",
+          "value": "cmp"
+        }
+      ]
+    }
+  },
+  "hitta-cervera-falköping": {
+    "result": {
+      "companies": {
+        "total": 1,
+        "included": 1,
+        "attribute": [
+          {
+            "name": "response.error.code",
+            "value": "0"
+          },
+          {
+            "name": "result.besthit",
+            "value": "Exact"
+          },
+          {
+            "name": "result.executiontime",
+            "value": "209"
+          },
+          {
+            "name": "result.sort",
+            "value": "relevance"
+          }
+        ],
+        "company": [
+          {
+            "id": "aakqbhklc",
+            "displayName": "Cervera Falköping",
+            "metadata": {
+              "score": 47.29999923706055
+            },
+            "attribute": [
+              {
+                "name": "email",
+                "value": "falkoping@cervera.se"
+              },
+              {
+                "name": "offices",
+                "value": "1.0"
+              },
+              {
+                "name": "parentcategories",
+                "value": "Hus & Hem|Butiker & Shopping"
+              },
+              {
+                "name": "publish-code",
+                "value": "ok"
+              }
+            ],
+            "address": [
+              {
+                "type": "visitingAddress",
+                "usageCode": "FB",
+                "isWorkAddress": false,
+                "city": "Falköping",
+                "cityPreposition": "i",
+                "zipcode": 52142,
+                "street": "Repslagaregatan",
+                "number": "42",
+                "community": "Falköping",
+                "coordinate": {
+                  "north": 6450718.00000256,
+                  "east": 1367336.000000086,
+                  "system": "EPSG:3021"
+                }
+              }
+            ],
+            "phone": [
+              {
+                "label": "Butik",
+                "callTo": "+4651519000",
+                "displayAs": "0515-190 00"
+              }
+            ],
+            "image": [
+              {
+                "type": "small",
+                "absoluteUrl": "https://static.hitta.se/static/products/images/InfoText/cervera.t.jpg"
+              }
+            ]
+          }
+        ]
+      },
+      "persons": {
+        "total": 0,
+        "included": 0
+      },
+      "locations": {
+        "total": 0,
+        "included": 0
+      },
+      "attribute": [
+        {
+          "name": "result.executiontime",
+          "value": "211"
+        },
+        {
+          "name": "result.prio",
+          "value": "cmp"
+        }
+      ]
+    }
+  },
+  "hitta-cervera-vetlanda": {
+    "result": {
+      "companies": {
+        "total": 0,
+        "included": 0,
+        "attribute": [
+          {
+            "name": "response.error.code",
+            "value": "0"
+          },
+          {
+            "name": "result.besthit",
+            "value": "Fuzzy"
+          },
+          {
+            "name": "result.executiontime",
+            "value": "1"
+          },
+          {
+            "name": "result.sort",
+            "value": "relevance"
+          }
+        ]
+      },
+      "persons": {
+        "total": 0,
+        "included": 0
+      },
+      "locations": {
+        "total": 0,
+        "included": 0
+      },
+      "attribute": [
+        {
+          "name": "result.executiontime",
+          "value": "115"
+        },
+        {
+          "name": "result.prio",
+          "value": "cmp"
+        }
+      ]
+    }
+  },
+  "hitta-espresso house-falköping": {
+    "result": {
+      "companies": {
+        "total": 1,
+        "included": 1,
+        "attribute": [
+          {
+            "name": "response.error.code",
+            "value": "0"
+          },
+          {
+            "name": "result.besthit",
+            "value": "Exact"
+          },
+          {
+            "name": "result.executiontime",
+            "value": "227"
+          },
+          {
+            "name": "result.sort",
+            "value": "relevance"
+          }
+        ],
+        "company": [
+          {
+            "id": "klnnotxd",
+            "displayName": "Espresso House Sweden AB - Falköping",
+            "metadata": {
+              "score": 24.200000762939453
+            },
+            "attribute": [
+              {
+                "name": "offices",
+                "value": "333.0"
+              },
+              {
+                "name": "parentcategories",
+                "value": ""
+              },
+              {
+                "name": "publish-code",
+                "value": "ok"
+              }
+            ],
+            "address": [
+              {
+                "type": "visitingAddress",
+                "usageCode": "FB",
+                "isWorkAddress": false,
+                "city": "Falköping",
+                "cityPreposition": "i",
+                "zipcode": 52142,
+                "street": "Storgatan",
+                "number": "18",
+                "community": "Falköping",
+                "coordinate": {
+                  "north": 6450854.00000256,
+                  "east": 1367445.000000086,
+                  "system": "EPSG:3021"
+                },
+                "routeCoordinate": {
+                  "type": "Point",
+                  "coordinates": [
+                    13.553105841972034,
+                    58.161449202766065
+                  ]
+                }
+              }
+            ],
+            "phone": [
+              {
+                "label": "Tel",
+                "callTo": "+46765219387",
+                "displayAs": "076-521 93 87"
+              }
+            ]
+          }
+        ]
+      },
+      "persons": {
+        "total": 0,
+        "included": 0
+      },
+      "locations": {
+        "total": 0,
+        "included": 0
+      },
+      "attribute": [
+        {
+          "name": "result.executiontime",
+          "value": "229"
+        },
+        {
+          "name": "result.prio",
+          "value": "cmp"
+        }
+      ]
+    }
+  },
+  "hitta-espresso house-vetlanda": {
+    "result": {
+      "companies": {
+        "total": 1,
+        "included": 1,
+        "attribute": [
+          {
+            "name": "response.error.code",
+            "value": "0"
+          },
+          {
+            "name": "result.besthit",
+            "value": "Exact"
+          },
+          {
+            "name": "result.executiontime",
+            "value": "200"
+          },
+          {
+            "name": "result.sort",
+            "value": "relevance"
+          }
+        ],
+        "company": [
+          {
+            "id": "iikcosbbx",
+            "displayName": "Espresso House Sweden AB - Vetlanda",
+            "metadata": {
+              "score": 24.200000762939453
+            },
+            "attribute": [
+              {
+                "name": "offices",
+                "value": "333.0"
+              },
+              {
+                "name": "parentcategories",
+                "value": ""
+              },
+              {
+                "name": "publish-code",
+                "value": "ok"
+              }
+            ],
+            "address": [
+              {
+                "type": "visitingAddress",
+                "usageCode": "FB",
+                "isWorkAddress": false,
+                "city": "Vetlanda",
+                "cityPreposition": "i",
+                "zipcode": 57432,
+                "street": "Storgatan",
+                "number": "2",
+                "entrance": "A",
+                "community": "Vetlanda",
+                "coordinate": {
+                  "north": 6366983.000002319,
+                  "east": 1456797.0000000242,
+                  "system": "EPSG:3021"
+                },
+                "routeCoordinate": {
+                  "type": "Point",
+                  "coordinates": [
+                    15.086018620816496,
+                    57.42621528073368
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "persons": {
+        "total": 0,
+        "included": 0
+      },
+      "locations": {
+        "total": 0,
+        "included": 0
+      },
+      "attribute": [
+        {
+          "name": "result.executiontime",
+          "value": "203"
+        },
+        {
+          "name": "result.prio",
+          "value": "cmp"
+        }
+      ]
+    }
   }
 }
