@@ -51,8 +51,8 @@ export default class SearchForm extends react.Component {
     render() {
         return (<>
 
-            <MuniSelect type={"text"} array={cityArray.cities} className={"muni-select"} name={"search1"} onChange={this.handleChange} />
-            <MuniSelect type={"text"} array={cityArray.cities} className={"muni-select"} name={"search2"} onChange={this.handleChange} />
+            <MuniSelect type={"text"} array={cityArray.cities.sort()} className={"muni-select"} name={"search1"} onChange={this.handleChange} />
+            <MuniSelect type={"text"} array={cityArray.cities.sort()} className={"muni-select"} name={"search2"} onChange={this.handleChange} />
 
             <Button
                 id={"compare-button"}
