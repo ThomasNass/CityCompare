@@ -4,6 +4,7 @@ import PopulationBarChart from "./population-barchart.jsx";
 import DisplayTax from "./display-tax.jsx";
 import LineChart from "./line-chart.jsx";
 import PieChart from "./pie-chart.jsx";
+import ElectionPieChart from "./election-pie-chart.jsx";
 import Jobs from "./jobs.jsx";
 import Button from "./button.jsx";
 import Income from "./income.jsx";
@@ -45,6 +46,16 @@ export default class CityComparison extends react.Component {
                     <div className="entries-div">
                         <LineChart
                         />
+                    </div>
+                </div>
+                <div className="pie-wrapper wrapper">
+                    <h1>Röstresultat 2018</h1>
+                    <h4>Källa: SCB</h4>
+                    <div className="pie-div">
+                        <ElectionPieChart
+                            city={"city1"} />
+                        <ElectionPieChart
+                            city={"city2"} />
                     </div>
                 </div>
                 <div className="tax-wrapper wrapper">

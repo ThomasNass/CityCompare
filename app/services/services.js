@@ -1,5 +1,5 @@
 import { getJobListings, getTaxes, getJobListingsByField } from "./api-caller.js";
-import { getGenPopulation, getIncome, getPopulationGrowth, getHousePrices } from "./api-scb.js";
+import { getGenPopulation, getIncome, getPopulationGrowth, getHousePrices, getElectionData } from "./api-scb.js";
 import { hitta } from "./api-hitta.js";
 //import franchises from "./franchises.json"
 
@@ -7,6 +7,8 @@ import { hitta } from "./api-hitta.js";
 
 export async function getActualCityData(city1, city2) {
 
+    const [electionData1, electionError1] = await getElectionData(city1.lauCode);
+    const [electionData2, electionError2] = await getElectionData(city2.lauCode);
     const [incomeData1, incomeError1] = await getIncome(city1.lauCode);
     const [incomeData2, incomeError2] = await getIncome(city2.lauCode);
     const [populationByGender1, genPopError1] = await getGenPopulation(city1.lauCode);
@@ -23,6 +25,7 @@ export async function getActualCityData(city1, city2) {
 
     const [jobs1, jobs1err] = await getJobListings(city1.name);
     const [jobs2, jobs2err] = await getJobListings(city2.name);
+
 
     if (jobs1 != null) {
         city1.jobs = jobs1
@@ -105,6 +108,31 @@ export async function getActualCityData(city1, city2) {
     else {
         city2.population = genPopError2
     }
+
+    if (!electionError1) {
+        city1.electionData = { parties: [], share: [] }
+        electionData1.data.map((element) => {
+            if (element.key[1] != "FP") { city1.electionData.parties.push(element.key[1]) }
+            else {
+                city1.electionData.parties.push("L")
+            }
+            city1.electionData.share.push(parseFloat(element.values[0]))
+        })
+    }
+    else { city1.electionData = electionError1 }
+
+    if (!electionError2) {
+        city2.electionData = { parties: [], share: [] }
+        electionData2.data.map((element) => {
+            if (element.key[1] != "FP") { city2.electionData.parties.push(element.key[1]) }
+            else {
+                city2.electionData.parties.push("L")
+            }
+
+            city2.electionData.share.push(element.values[0])
+        })
+    }
+    else { city2.electionData = electionError2 }
 
 
     if (!growthError1) {
