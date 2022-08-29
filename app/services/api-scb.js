@@ -12,6 +12,19 @@ export const getElectionData = async (city) => {
     }
 }
 
+export const getMuniElectionData = async (city) => {
+    try {
+        const response = await fetch(`/api/scb/election-muni/${city}`, {
+            method: "post"
+        });
+        const data = await response.json();
+        return [data, null]
+    }
+    catch (err) {
+        return [null, err]
+    }
+}
+
 export const getHousePrices = async (city) => {
     try {
         const response = await fetch(`/api/scb/houseprice/${city}`, {

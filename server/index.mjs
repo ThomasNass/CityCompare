@@ -380,6 +380,78 @@ app.post("/api/scb/election/:city", async (req, res) => {
     res.send(data);
 })
 
+app.post("/api/scb/election-muni/:city", async (req, res) => {
+    const { city } = req.params;
+    const cacheKey = `election-muni-${city.toLowerCase()}`
+    let data = getFromCache(cacheKey);
+    if (!data) {
+        const body = {
+            "query": [
+                {
+                    "code": "Region",
+                    "selection": {
+                        "filter": "vs:RegionKommun07+BaraEjAggr",
+                        "values": [
+                            `${city}`
+                        ]
+                    }
+                },
+                {
+                    "code": "Partimm",
+                    "selection": {
+                        "filter": "item",
+                        "values": [
+                            "M",
+                            "C",
+                            "FP",
+                            "KD",
+                            "MP",
+                            "S",
+                            "V",
+                            "SD",
+                            "ÖVRIGA"
+                        ]
+                    }
+                },
+                {
+                    "code": "ContentsCode",
+                    "selection": {
+                        "filter": "item",
+                        "values": [
+                            "ME0104B2"
+                        ]
+                    }
+                },
+                {
+                    "code": "Tid",
+                    "selection": {
+                        "filter": "item",
+                        "values": [
+                            "2018"
+                        ]
+                    }
+                }
+            ],
+            "response": {
+                "format": "json"
+            }
+        }
+
+        const response = await fetch("https://api.scb.se/OV0104/v1/doris/sv/ssd/START/ME/ME0104/ME0104A/ME0104T1", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify(body)
+        })
+        data = await response.json();
+        res.status(response.status);
+        saveToCache(cacheKey, data);
+    }
+    res.send(data);
+})
+
 app.use(route)
 
 app.listen(process.env.PORT || port, () => {

@@ -41114,5 +41114,303 @@
         }
       ]
     }
+  },
+  "election-muni-1499": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "comment": "1998 flyttades Mullsjö och Habo kommuner från Skaraborgs län till Jönköpings län. Riksdagen beslutade 2005-11-30 att Heby kommun skall överföras från Västmanlands län till Uppsala län 2007-01-01.\r\nEn kommun har upphört under tidsperioden. Det är Bara kommun som 1976 slogs samman med Svedala kommun och bildade en ny kommun, vilken också den fick namnet Svedala kommun. Ett antal nya kommuner har tillkommit under tidsperioden. 2002 är Knivsta ny kommun i valet. Knivsta har brutits ut ur Uppsala kommun. 1998 är Nykvarn ny kommun i valet. Nykvarn har brutits ut ur Södertälje kommun. 1994 är Bollebygd och Lekeberg nya kommuner i valet. Bollebygd har brutits ut ur Borås kommun och Lekeberg har brutits ut ur Örebro kommun. 1991 är Gnesta och Trosa nya kommuner i valet. Gnesta och Trosa har brutits ut ur Nyköpings kommun. 1982 är Salem, Österåker, Essunga, Malå och Bjurholm nya kommuner i valet. Salem har brutits ut ur Botkyrka kommun, Österåker har brutits ut ur Vaxholms kommun, Essunga har brutits ut ur Vara kommun, Malå har brutits ut ur Norsjö kommun och Bjurholm har brutits ut ur Vännäs kommun. 1979 är Vadstena och Dorotea nya kommuner i valet. Vadstena har brutits ut ur Motala kommun och Dorotea har brutits ut ur Åsele kommun.\r\n",
+        "type": "d"
+      },
+      {
+        "code": "Partimm",
+        "text": "parti mm",
+        "comment": "I de valresultat som redovisas här ingår Sverigedemokraterna i kategorin ”Övriga partier” från och med 1988 års val till och med 1998 års val. I SCB:s publikationsserie Allmänna valen, vilken finns tillgänglig på SCB:s webbplats, är valresultat för Sverigedemokraterna vid dessa val redovisade för de kommuner där partiet har erhållit mandat.\r\n",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "valår",
+        "comment": "Uppdatering 2019-06-18: Valet till kommunfullmäktige i Falun överklagades och omval ägde rum den 7 april 2019. De uppgifter som här redovisas avser omvalet.\r\n",
+        "type": "t"
+      },
+      {
+        "code": "ME0104B2",
+        "text": "Andel röster (av giltiga röster)",
+        "type": "c"
+      }
+    ],
+    "comments": [
+      {
+        "variable": "Partimm",
+        "value": "FP",
+        "comment": "I 2018 års val återfinns Liberalerna (tidigare Folkpartiet liberalerna, FP) under sitt nya namn Liberalerna (L). \r\n"
+      },
+      {
+        "variable": "Partimm",
+        "value": "KD",
+        "comment": "I 1998 års val återfinns Kristdemokratiska Samhällspartiet (tidigare Kristen Demokratisk Samling) under sitt nya namn Kristdemokraterna (Kd).\r\n"
+      },
+      {
+        "variable": "Partimm",
+        "value": "V",
+        "comment": "Från och med 1991 års val återfinns Vänsterpartiet Kommunisterna under sitt nya namn Vänsterpartiet  (V). \r\n"
+      },
+      {
+        "variable": "Partimm",
+        "value": "ÖVRIGA",
+        "comment": "Ny Demokrati redovisas under Övriga partier 1991 och 1994. För Ny Demokratis valresultat 1991 och 1994 hänvisas till publikationsserien Allmänna valen 1991 och Allmänna valen 1994.\r\n"
+      }
+    ],
+    "data": [
+      {
+        "key": [
+          "1499",
+          "M",
+          "2018"
+        ],
+        "values": [
+          "16.8"
+        ]
+      },
+      {
+        "key": [
+          "1499",
+          "C",
+          "2018"
+        ],
+        "values": [
+          "13.8"
+        ]
+      },
+      {
+        "key": [
+          "1499",
+          "FP",
+          "2018"
+        ],
+        "values": [
+          "3.3"
+        ]
+      },
+      {
+        "key": [
+          "1499",
+          "KD",
+          "2018"
+        ],
+        "values": [
+          "9.1"
+        ]
+      },
+      {
+        "key": [
+          "1499",
+          "MP",
+          "2018"
+        ],
+        "values": [
+          "2.7"
+        ]
+      },
+      {
+        "key": [
+          "1499",
+          "S",
+          "2018"
+        ],
+        "values": [
+          "31.0"
+        ]
+      },
+      {
+        "key": [
+          "1499",
+          "V",
+          "2018"
+        ],
+        "values": [
+          "5.5"
+        ]
+      },
+      {
+        "key": [
+          "1499",
+          "SD",
+          "2018"
+        ],
+        "values": [
+          "17.2"
+        ]
+      },
+      {
+        "key": [
+          "1499",
+          "ÖVRIGA",
+          "2018"
+        ],
+        "values": [
+          "0.5"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "ME0104",
+        "updated": "2019-05-20T08:51:00Z",
+        "label": "Kommunfullmäktigval - valresultat, andel röster (av giltiga röster) efter region, parti mm, valår och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "election-muni-0685": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "comment": "1998 flyttades Mullsjö och Habo kommuner från Skaraborgs län till Jönköpings län. Riksdagen beslutade 2005-11-30 att Heby kommun skall överföras från Västmanlands län till Uppsala län 2007-01-01.\r\nEn kommun har upphört under tidsperioden. Det är Bara kommun som 1976 slogs samman med Svedala kommun och bildade en ny kommun, vilken också den fick namnet Svedala kommun. Ett antal nya kommuner har tillkommit under tidsperioden. 2002 är Knivsta ny kommun i valet. Knivsta har brutits ut ur Uppsala kommun. 1998 är Nykvarn ny kommun i valet. Nykvarn har brutits ut ur Södertälje kommun. 1994 är Bollebygd och Lekeberg nya kommuner i valet. Bollebygd har brutits ut ur Borås kommun och Lekeberg har brutits ut ur Örebro kommun. 1991 är Gnesta och Trosa nya kommuner i valet. Gnesta och Trosa har brutits ut ur Nyköpings kommun. 1982 är Salem, Österåker, Essunga, Malå och Bjurholm nya kommuner i valet. Salem har brutits ut ur Botkyrka kommun, Österåker har brutits ut ur Vaxholms kommun, Essunga har brutits ut ur Vara kommun, Malå har brutits ut ur Norsjö kommun och Bjurholm har brutits ut ur Vännäs kommun. 1979 är Vadstena och Dorotea nya kommuner i valet. Vadstena har brutits ut ur Motala kommun och Dorotea har brutits ut ur Åsele kommun.\r\n",
+        "type": "d"
+      },
+      {
+        "code": "Partimm",
+        "text": "parti mm",
+        "comment": "I de valresultat som redovisas här ingår Sverigedemokraterna i kategorin ”Övriga partier” från och med 1988 års val till och med 1998 års val. I SCB:s publikationsserie Allmänna valen, vilken finns tillgänglig på SCB:s webbplats, är valresultat för Sverigedemokraterna vid dessa val redovisade för de kommuner där partiet har erhållit mandat.\r\n",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "valår",
+        "comment": "Uppdatering 2019-06-18: Valet till kommunfullmäktige i Falun överklagades och omval ägde rum den 7 april 2019. De uppgifter som här redovisas avser omvalet.\r\n",
+        "type": "t"
+      },
+      {
+        "code": "ME0104B2",
+        "text": "Andel röster (av giltiga röster)",
+        "type": "c"
+      }
+    ],
+    "comments": [
+      {
+        "variable": "Partimm",
+        "value": "FP",
+        "comment": "I 2018 års val återfinns Liberalerna (tidigare Folkpartiet liberalerna, FP) under sitt nya namn Liberalerna (L). \r\n"
+      },
+      {
+        "variable": "Partimm",
+        "value": "KD",
+        "comment": "I 1998 års val återfinns Kristdemokratiska Samhällspartiet (tidigare Kristen Demokratisk Samling) under sitt nya namn Kristdemokraterna (Kd).\r\n"
+      },
+      {
+        "variable": "Partimm",
+        "value": "V",
+        "comment": "Från och med 1991 års val återfinns Vänsterpartiet Kommunisterna under sitt nya namn Vänsterpartiet  (V). \r\n"
+      },
+      {
+        "variable": "Partimm",
+        "value": "ÖVRIGA",
+        "comment": "Ny Demokrati redovisas under Övriga partier 1991 och 1994. För Ny Demokratis valresultat 1991 och 1994 hänvisas till publikationsserien Allmänna valen 1991 och Allmänna valen 1994.\r\n"
+      }
+    ],
+    "data": [
+      {
+        "key": [
+          "0685",
+          "M",
+          "2018"
+        ],
+        "values": [
+          "15.4"
+        ]
+      },
+      {
+        "key": [
+          "0685",
+          "C",
+          "2018"
+        ],
+        "values": [
+          "10.8"
+        ]
+      },
+      {
+        "key": [
+          "0685",
+          "FP",
+          "2018"
+        ],
+        "values": [
+          "3.0"
+        ]
+      },
+      {
+        "key": [
+          "0685",
+          "KD",
+          "2018"
+        ],
+        "values": [
+          "10.3"
+        ]
+      },
+      {
+        "key": [
+          "0685",
+          "MP",
+          "2018"
+        ],
+        "values": [
+          "1.3"
+        ]
+      },
+      {
+        "key": [
+          "0685",
+          "S",
+          "2018"
+        ],
+        "values": [
+          "26.1"
+        ]
+      },
+      {
+        "key": [
+          "0685",
+          "V",
+          "2018"
+        ],
+        "values": [
+          "3.3"
+        ]
+      },
+      {
+        "key": [
+          "0685",
+          "SD",
+          "2018"
+        ],
+        "values": [
+          "11.5"
+        ]
+      },
+      {
+        "key": [
+          "0685",
+          "ÖVRIGA",
+          "2018"
+        ],
+        "values": [
+          "18.3"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "ME0104",
+        "updated": "2019-05-20T08:51:00Z",
+        "label": "Kommunfullmäktigval - valresultat, andel röster (av giltiga röster) efter region, parti mm, valår och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
   }
 }
