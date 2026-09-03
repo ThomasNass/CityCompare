@@ -1,0 +1,302 @@
+.compare-layout {
+  --background: rgba(0, 0, 0, 0.369);
+  --color: rgb(255, 255, 255);
+  --green: rgb(172, 255, 47);
+  --red: rgb(252, 69, 69);
+  min-height: 100%;
+  background-image: url("/images/citysky.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInAnimation ease 4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.compare-layout ::placeholder {
+  color: rgba(255, 255, 255, 0.785);
+}
+
+.compare-layout main {
+  width: 80%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.compare-layout #site-name {
+  color: white;
+  font-size: 12rem;
+  margin: 0;
+}
+
+.compare-layout .compare-root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  transition: height 1s linear;
+  padding-bottom: 50px;
+}
+
+.compare-layout .home-link {
+  color: white;
+  margin-bottom: 1rem;
+  text-decoration: underline;
+}
+
+.compare-layout .loader {
+  margin-top: 10px;
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid pink;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.compare-layout button {
+  color: var(--color);
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid white;
+  background-color: var(--background);
+  cursor: pointer;
+}
+
+.compare-layout button:hover {
+  background-color: rgba(255, 255, 255, 0.101);
+}
+
+.compare-layout #job-button,
+.compare-layout #job-extra,
+.compare-layout #table-button,
+.compare-layout #extra-search-button {
+  background-color: black;
+}
+
+.compare-layout #job-button:hover,
+.compare-layout #job-extra:hover,
+.compare-layout #table-button:hover,
+.compare-layout #extra-search-button:hover {
+  background-color: pink;
+}
+
+.compare-layout input {
+  border: none;
+  background-color: var(--background);
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 2px;
+  text-align: center;
+  padding: 8px 0;
+  width: 100%;
+}
+
+.compare-layout .muni-select {
+  width: 100%;
+  padding: 8px;
+  text-align: center;
+  background-color: var(--background);
+  color: white;
+  font-size: 1.2rem;
+}
+
+.compare-layout .filter-input {
+  width: 100%;
+}
+
+.compare-layout .filter-input::placeholder {
+  color: var(--color);
+}
+
+.compare-layout #compare-button,
+.compare-layout #login-button,
+.compare-layout #table-button {
+  width: 100%;
+}
+
+.compare-layout .table-div {
+  padding: 20px 0;
+}
+
+.compare-layout .Table {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.compare-layout table {
+  table-layout: fixed;
+  padding: 20px 0;
+  color: black;
+  text-align: center;
+  font-size: 1.2rem;
+  width: 100%;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.compare-layout thead {
+  background-color: rgba(255, 192, 203, 0.889);
+}
+
+.compare-layout tr,
+.compare-layout thead,
+.compare-layout tbody {
+  width: 100%;
+}
+
+.compare-layout td {
+  width: 33.3%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.143);
+  padding: 5px;
+  word-break: break-word;
+}
+
+.compare-layout #extra-search-button {
+  width: 15%;
+}
+
+.compare-layout .extra-search-input {
+  width: 85%;
+}
+
+.compare-layout .bar-div,
+.compare-layout .tax-div,
+.compare-layout .entries-div,
+.compare-layout .pie-div,
+.compare-layout .job-div,
+.compare-layout .table-div {
+  justify-content: space-around;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: rgb(255, 255, 255);
+}
+
+.compare-layout .pie-div {
+  display: flex;
+  flex-direction: row;
+}
+
+.compare-layout .wrapper {
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+  margin-top: 3%;
+  background-color: rgba(255, 192, 203, 0.889);
+}
+
+.compare-layout .job-wrapper {
+  justify-content: center;
+  align-items: center;
+}
+
+.compare-layout .tax-div,
+.compare-layout .job-div {
+  display: flex;
+  text-align: center;
+}
+
+.compare-layout .job-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.compare-layout .job-hit-div {
+  text-align: left;
+  width: 80%;
+  margin: 20px 0;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.compare-layout .job-hit-div h2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.compare-layout .job-hit-div h2 button {
+  margin-right: 5px;
+}
+
+.compare-layout .green {
+  background-color: var(--green);
+}
+
+.compare-layout .red {
+  background-color: var(--red);
+}
+
+@media screen and (max-width: 1200px) {
+  .compare-layout #site-name {
+    font-size: 5rem;
+  }
+
+  .compare-layout .compare-root {
+    width: auto;
+  }
+
+  .compare-layout table {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .compare-layout #site-name {
+    font-size: 2rem;
+  }
+
+  .compare-layout .wrapper h1 {
+    font-size: medium;
+  }
+
+  .compare-layout .pie-div {
+    flex-direction: column;
+  }
+
+  .compare-layout .tax-div,
+  .compare-layout .job-div {
+    font-size: 0.7rem;
+    display: flex;
+    text-align: center;
+  }
+
+  .compare-layout .job-hit-div h2 {
+    font-size: 0.8rem;
+  }
+
+  .compare-layout table {
+    font-size: 0.8rem;
+  }
+}
