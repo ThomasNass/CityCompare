@@ -6,9 +6,16 @@ body,
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
   color: inherit;
+}
+
+button,
+input,
+select {
+  font-family: inherit;
 }

@@ -15,7 +15,7 @@ export default function PopulationBarChart() {
         datasets: [
           {
             label: "Folkmängd",
-            backgroundColor: "pink",
+            backgroundColor: ["#14b8a6", "#fb7185"],
             data: [city1.population.total, city2.population.total],
           },
         ],

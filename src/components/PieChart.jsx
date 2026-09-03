@@ -20,7 +20,7 @@ export default function PieChart({ city: cityKey }) {
             labels: [`Män ${menPercent}%`, `Kvinnor ${womenPercent}%`],
             datasets: [
               {
-                backgroundColor: ["red", "pink"],
+                backgroundColor: ["#14b8a6", "#fb7185"],
                 data: [city.population.men, city.population.fem],
                 borderWidth: 0,
               },

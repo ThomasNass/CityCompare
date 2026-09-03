@@ -8,10 +8,10 @@ export default function Income({ city: cityKey }) {
   }
 
   return (
-    <div>
-      <h2>{city.name}</h2>
-      <h2>Medel: {Math.round(city.income.average)} tkr</h2>
-      <h2>Median: {Math.round(city.income.median)} tkr</h2>
+    <div className="stat-card">
+      <p className="stat-label">{city.name}</p>
+      <p className="stat-value">{Math.round(city.income.average)} tkr</p>
+      <p className="stat-sub">Median {Math.round(city.income.median)} tkr</p>
     </div>
   );
 }

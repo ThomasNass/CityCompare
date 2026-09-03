@@ -7,7 +7,6 @@ import {
   getElectionData,
   getMuniElectionData,
 } from "./api-scb.js";
-import { hitta } from "./api-hitta.js";
 
 function mapElection(data) {
   const electionData = { parties: [], share: [] };
@@ -121,40 +120,6 @@ export async function getActualCityData(city1, city2) {
     taxes1error == null ? parseFloat(taxes1.results[0]["summa, exkl. kyrkoavgift"]) : taxes1error;
   city2.tax =
     taxes2error == null ? parseFloat(taxes2.results[0]["summa, exkl. kyrkoavgift"]) : taxes2error;
-}
-
-export async function getBuisnesses(city1, city2, franchise) {
-  const comparison = { buisness: franchise };
-  const [result1, error1] = await hitta(city1, franchise);
-  if (error1 != null) {
-    return [null, error1];
-  }
-  comparison.city1 = result1;
-
-  const [result2, error2] = await hitta(city2, franchise);
-  if (error2 != null) {
-    return [null, error2];
-  }
-  comparison.city2 = result2;
-
-  return [[comparison], null];
-}
-
-export async function getBuiseness(city1, city2, buisness) {
-  const comparison = { buisness };
-  const [result1, error1] = await hitta(buisness, city1);
-  if (error1 != null) {
-    return [null, error1];
-  }
-  comparison.city1 = result1;
-
-  const [result2, error2] = await hitta(buisness, city2);
-  if (error2 != null) {
-    return [null, error2];
-  }
-  comparison.city2 = result2;
-
-  return [[comparison], null];
 }
 
 export async function jobsByField(occupations, cityName) {
