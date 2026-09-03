@@ -31,11 +31,14 @@
 }
 
 .compare-layout main {
-  width: 80%;
+  width: 90%;
+  max-width: 1200px;
   min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 
 .compare-layout #site-name {
@@ -126,6 +129,67 @@
   background-color: var(--background);
   color: white;
   font-size: 1.2rem;
+}
+
+.compare-layout .searchable-select {
+  position: relative;
+  width: 100%;
+  margin-bottom: 2px;
+}
+
+.compare-layout .searchable-select-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  background-color: var(--background);
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.compare-layout .searchable-select-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.compare-layout .searchable-select-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 250px;
+  overflow-y: auto;
+  background: rgba(20, 20, 20, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 100;
+}
+
+.compare-layout .searchable-select-item {
+  padding: 8px 12px;
+  color: white;
+  cursor: pointer;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.compare-layout .searchable-select-item.highlighted {
+  background-color: rgba(255, 192, 203, 0.5);
+}
+
+.compare-layout .searchable-select-item.selected {
+  background-color: rgba(255, 192, 203, 0.3);
+}
+
+.compare-layout .searchable-select-item.no-results {
+  color: rgba(255, 255, 255, 0.5);
+  cursor: default;
+  text-align: center;
+  font-style: italic;
 }
 
 .compare-layout .filter-input {
@@ -265,7 +329,7 @@
   }
 
   .compare-layout .compare-root {
-    width: auto;
+    width: 95%;
   }
 
   .compare-layout table {
@@ -273,31 +337,93 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
+  .compare-layout main {
+    width: 100%;
+    padding: 0 5px;
+  }
+
   .compare-layout #site-name {
-    font-size: 2rem;
+    font-size: 3rem;
+  }
+
+  .compare-layout .compare-root {
+    width: 100%;
+    padding-bottom: 30px;
   }
 
   .compare-layout .wrapper h1 {
-    font-size: medium;
+    font-size: 1rem;
+  }
+
+  .compare-layout .wrapper h4 {
+    font-size: 0.8rem;
   }
 
   .compare-layout .pie-div {
     flex-direction: column;
   }
 
-  .compare-layout .tax-div,
+  .compare-layout .tax-div {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .compare-layout .tax-div > div,
+  .compare-layout .tax-div > p {
+    margin-bottom: 10px;
+  }
+
   .compare-layout .job-div {
-    font-size: 0.7rem;
-    display: flex;
-    text-align: center;
+    font-size: 0.8rem;
+  }
+
+  .compare-layout .job-hit-div {
+    width: 95%;
   }
 
   .compare-layout .job-hit-div h2 {
     font-size: 0.8rem;
+    flex-wrap: wrap;
+    gap: 4px;
   }
 
   .compare-layout table {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+  }
+
+  .compare-layout button {
+    font-size: 1rem;
+    padding: 8px;
+  }
+
+  .compare-layout input {
+    font-size: 1rem;
+  }
+
+  .compare-layout .muni-select {
+    font-size: 1rem;
+  }
+
+  .compare-layout #extra-search-button {
+    width: 25%;
+  }
+
+  .compare-layout .extra-search-input {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .compare-layout #site-name {
+    font-size: 2rem;
+  }
+
+  .compare-layout .wrapper h1 {
+    font-size: 0.9rem;
+  }
+
+  .compare-layout table {
+    font-size: 0.65rem;
   }
 }

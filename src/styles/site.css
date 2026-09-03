@@ -137,6 +137,36 @@
 
 @media screen and (max-width: 800px) {
   .site-layout .container {
-    padding: 5px;
+    padding: 10px 15px;
+  }
+
+  .site-layout .container p {
+    font-size: 1rem;
+  }
+
+  .site-layout .page-content {
+    padding: 1rem 0;
+  }
+
+  .site-layout .page-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .site-layout .page-content h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .site-layout .CC {
+    font-size: 1.5rem !important;
+  }
+
+  .site-layout .container {
+    padding: 8px 10px;
+  }
+
+  .site-layout .contact-list h2 {
+    font-size: 1rem;
   }
 }

@@ -1,5 +1,5 @@
-import { useMemo, useState } from "react";
-import MuniSelect from "./MuniSelect.jsx";
+import { useCallback, useMemo, useState } from "react";
+import SearchableSelect from "./SearchableSelect.jsx";
 import Button from "./Button.jsx";
 import CityComparison from "./CityComparison.jsx";
 import { useCities } from "../context/city-context.jsx";
@@ -12,12 +12,15 @@ export default function SearchForm() {
   const [loading, setLoading] = useState(false);
   const cities = useMemo(() => [...cityArray.cities].sort(), []);
 
-  function handleChange(event) {
-    const { name, value } = event.target;
-    if (!cityArray.cities.includes(value)) return;
-    if (name === "search1") setSearch1(value);
-    if (name === "search2") setSearch2(value);
-  }
+  const handleChange = useCallback(
+    (event) => {
+      const { name, value } = event.target;
+      if (!cityArray.cities.includes(value)) return;
+      if (name === "search1") setSearch1(value);
+      if (name === "search2") setSearch2(value);
+    },
+    []
+  );
 
   async function onClick() {
     if (search1.length === 0 || search2.length === 0) return;
@@ -31,8 +34,8 @@ export default function SearchForm() {
 
   return (
     <>
-      <MuniSelect className="muni-select" name="search1" array={cities} onChange={handleChange} />
-      <MuniSelect className="muni-select" name="search2" array={cities} onChange={handleChange} />
+      <SearchableSelect name="search1" array={cities} onChange={handleChange} placeholder="Sök stad 1..." />
+      <SearchableSelect name="search2" array={cities} onChange={handleChange} placeholder="Sök stad 2..." />
       <Button id="compare-button" text="Jämför" onClick={onClick} />
       {loading ? <div className="loader" /> : hasCities ? <CityComparison /> : null}
     </>
