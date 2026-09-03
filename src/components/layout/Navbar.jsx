@@ -16,7 +16,7 @@ export default function Navbar() {
       <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
           <Link className="navbar-item" to="/" onClick={() => setOpen(false)}>
-            <h1 className="title is-1 CC">CityCompare</h1>
+            <h1 className="title is-1 brand">Kommunkollen</h1>
           </Link>
           <button
             type="button"

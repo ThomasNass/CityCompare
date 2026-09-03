@@ -3,7 +3,7 @@ export default function Footer() {
     <footer>
       <div>
         <p>
-          <strong>CityCompare</strong> by{" "}
+          <strong>Kommunkollen</strong> by{" "}
           <a href="https://github.com/ThomasNass">Thomas Näss</a>.
         </p>
       </div>

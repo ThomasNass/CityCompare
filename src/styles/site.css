@@ -13,7 +13,7 @@
   background-repeat: no-repeat;
 }
 
-.site-layout .CC {
+.site-layout .brand {
   color: var(--yellow);
 }
 
@@ -158,7 +158,7 @@
 }
 
 @media screen and (max-width: 480px) {
-  .site-layout .CC {
+  .site-layout .brand {
     font-size: 1.5rem !important;
   }
 

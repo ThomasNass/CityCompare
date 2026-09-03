@@ -1,4 +1,4 @@
-# CityCompare
+# Kommunkollen
 
 En app som jämför kommuner baserat på population, ekonomi, jobb och företagsutbud.
 
