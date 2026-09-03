@@ -44806,5 +44806,1004 @@
         "source": "SCB"
       }
     ]
+  },
+  "election-muni-1489": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "comment": "1998 flyttades Mullsjö och Habo kommuner från Skaraborgs län till Jönköpings län. Riksdagen beslutade 2005-11-30 att Heby kommun skall överföras från Västmanlands län till Uppsala län 2007-01-01.\r\nEn kommun har upphört under tidsperioden. Det är Bara kommun som 1976 slogs samman med Svedala kommun och bildade en ny kommun, vilken också den fick namnet Svedala kommun. Ett antal nya kommuner har tillkommit under tidsperioden. 2002 är Knivsta ny kommun i valet. Knivsta har brutits ut ur Uppsala kommun. 1998 är Nykvarn ny kommun i valet. Nykvarn har brutits ut ur Södertälje kommun. 1994 är Bollebygd och Lekeberg nya kommuner i valet. Bollebygd har brutits ut ur Borås kommun och Lekeberg har brutits ut ur Örebro kommun. 1991 är Gnesta och Trosa nya kommuner i valet. Gnesta och Trosa har brutits ut ur Nyköpings kommun. 1982 är Salem, Österåker, Essunga, Malå och Bjurholm nya kommuner i valet. Salem har brutits ut ur Botkyrka kommun, Österåker har brutits ut ur Vaxholms kommun, Essunga har brutits ut ur Vara kommun, Malå har brutits ut ur Norsjö kommun och Bjurholm har brutits ut ur Vännäs kommun. 1979 är Vadstena och Dorotea nya kommuner i valet. Vadstena har brutits ut ur Motala kommun och Dorotea har brutits ut ur Åsele kommun.\r\n",
+        "type": "d"
+      },
+      {
+        "code": "Partimm",
+        "text": "parti mm",
+        "comment": "I de valresultat som redovisas här ingår Sverigedemokraterna i kategorin ”Övriga partier” från och med 1988 års val till och med 1998 års val. I SCB:s publikationsserie Allmänna valen, vilken finns tillgänglig på SCB:s webbplats, är valresultat för Sverigedemokraterna vid dessa val redovisade för de kommuner där partiet har erhållit mandat.\r\n",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "valår",
+        "comment": "Uppdatering 2019-06-18: Valet till kommunfullmäktige i Falun överklagades och omval ägde rum den 7 april 2019. De uppgifter som här redovisas avser omvalet.\r\n",
+        "type": "t"
+      },
+      {
+        "code": "ME0104B2",
+        "text": "Andel röster (av giltiga röster)",
+        "type": "c"
+      }
+    ],
+    "comments": [
+      {
+        "variable": "Partimm",
+        "value": "FP",
+        "comment": "I 2018 års val återfinns Liberalerna (tidigare Folkpartiet liberalerna, FP) under sitt nya namn Liberalerna (L). \r\n"
+      },
+      {
+        "variable": "Partimm",
+        "value": "KD",
+        "comment": "I 1998 års val återfinns Kristdemokratiska Samhällspartiet (tidigare Kristen Demokratisk Samling) under sitt nya namn Kristdemokraterna (Kd).\r\n"
+      },
+      {
+        "variable": "Partimm",
+        "value": "V",
+        "comment": "Från och med 1991 års val återfinns Vänsterpartiet Kommunisterna under sitt nya namn Vänsterpartiet  (V). \r\n"
+      },
+      {
+        "variable": "Partimm",
+        "value": "ÖVRIGA",
+        "comment": "Ny Demokrati redovisas under Övriga partier 1991 och 1994. För Ny Demokratis valresultat 1991 och 1994 hänvisas till publikationsserien Allmänna valen 1991 och Allmänna valen 1994.\r\n"
+      }
+    ],
+    "data": [
+      {
+        "key": [
+          "1489",
+          "M",
+          "2018"
+        ],
+        "values": [
+          "15.8"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "C",
+          "2018"
+        ],
+        "values": [
+          "12.5"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "FP",
+          "2018"
+        ],
+        "values": [
+          "11.1"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "KD",
+          "2018"
+        ],
+        "values": [
+          "6.8"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "MP",
+          "2018"
+        ],
+        "values": [
+          "6.1"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "S",
+          "2018"
+        ],
+        "values": [
+          "27.0"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "V",
+          "2018"
+        ],
+        "values": [
+          "7.0"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "SD",
+          "2018"
+        ],
+        "values": [
+          "12.4"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "ÖVRIGA",
+          "2018"
+        ],
+        "values": [
+          "1.3"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "ME0104",
+        "updated": "2022-11-21T07:00:00Z",
+        "label": "Kommunfullmäktigval - valresultat, andel röster (av giltiga röster) efter region, parti mm, valår och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "election-1489": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "comment": "Vid 1994 års val ändrades valkretsindelningen. Fyrstadskretsen och Malmöhus läns valkrets delades upp och bildade Malmö kommuns valkrets, Malmöhus läns norra samt Malmöhus läns södra valkrets. Jämförelser över tid kan ej göras. 1998 namnändrades vissa riksdagsvalkretsar enligt följande. Kristianstads läns valkrets blev Skåne läns norra och östra valkrets, Malmöhus läns norra blev Skåne läns västra valkrets och Malmöhus läns södra blev Skåne läns södra valkrets. Bohusläns valkrets blev Västra Götalands läns västra, Älvsborgs läns norra blev Västra Götalands läns norra, Älvsborgs läns södra blev Västra Götalands läns södra och Skaraborgs läns blev Västra Götalands läns östra valkrets. Från Skaraborgs läns valkrets flyttade kommunerna Mullsjö och Habo till Jönköpings läns valkrets. Kopparbergs läns valkrets blev Dalarnas läns valkrets. Riksdagen beslutade 2005-11-30 att Heby kommun skall överföras från Västmanlands län till Uppsala län 2007-01-01.\r\nEn kommun har upphört under tidsperioden. Det är Bara kommun som 1976 slogs samman med Svedala kommun och bildade en ny kommun, vilken också den fick namnet Svedala kommun. Ett antal nya kommuner har tillkommit under tidsperioden. 2002 är Knivsta ny kommun i valet. Knivsta har brutits ut ur Uppsala kommun. 1998 är Nykvarn ny kommun i valet. Nykvarn har brutits ut ur Södertälje kommun. 1994 är Bollebygd och Lekeberg nya kommuner i valet. Bollebygd har brutits ut ur Borås kommun och Lekeberg har brutits ut ur Örebro kommun. 1991 är Gnesta och Trosa nya kommuner i valet. Gnesta och Trosa har brutits ut ur Nyköpings kommun. 1982 är Salem, Österåker, Essunga, Malå och Bjurholm nya kommuner i valet. Salem har brutits ut ur Botkyrka kommun, Österåker har brutits ut ur Vaxholms kommun, Essunga har brutits ut ur Vara kommun, Malå har brutits ut ur Norsjö kommun och Bjurholm har brutits ut ur Vännäs kommun. 1979 är Vadstena och Dorotea nya kommuner i valet. Vadstena har brutits ut ur Motala kommun och Dorotea har brutits ut ur Åsele kommun.\r\n",
+        "type": "d"
+      },
+      {
+        "code": "Partimm",
+        "text": "parti mm",
+        "comment": "I de valresultat som redovisas här ingår Sverigedemokraterna i kategorin ”Övriga partier” från och med 1988 års val till och med 1994 års val.\r\n",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "valår",
+        "type": "t"
+      },
+      {
+        "code": "ME0104B7",
+        "text": "Andel röster (av giltiga röster)",
+        "type": "c"
+      }
+    ],
+    "comments": [
+      {
+        "variable": "Partimm",
+        "value": "FP",
+        "comment": "I 2018 års val återfinns Liberalerna (tidigare Folkpartiet liberalerna, FP) under sitt nya namn Liberalerna (L). \r\n"
+      },
+      {
+        "variable": "Partimm",
+        "value": "KD",
+        "comment": "I 1998 års val återfinns Kristdemokratiska Samhällspartiet (tidigare Kristen Demokratisk Samling) under sitt nya namn Kristdemokraterna (Kd).\r\n"
+      },
+      {
+        "variable": "Partimm",
+        "value": "V",
+        "comment": "Från och med 1991 års val återfinns Vänsterpartiet Kommunisterna under sitt nya namn Vänsterpartiet  (V). \r\n"
+      },
+      {
+        "variable": "Partimm",
+        "value": "ÖVRIGA",
+        "comment": "Ny Demokrati redovisas under Övriga partier 1991 och 1994. För Ny Demokratis valresultat 1991 och 1994 hänvisas till publikationsserien Allmänna valen 1991 och Allmänna valen 1994.\r\n"
+      }
+    ],
+    "data": [
+      {
+        "key": [
+          "1489",
+          "M",
+          "2018"
+        ],
+        "values": [
+          "18.3"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "C",
+          "2018"
+        ],
+        "values": [
+          "9.8"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "FP",
+          "2018"
+        ],
+        "values": [
+          "6.7"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "KD",
+          "2018"
+        ],
+        "values": [
+          "8.6"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "MP",
+          "2018"
+        ],
+        "values": [
+          "5.8"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "S",
+          "2018"
+        ],
+        "values": [
+          "26.4"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "V",
+          "2018"
+        ],
+        "values": [
+          "7.8"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "SD",
+          "2018"
+        ],
+        "values": [
+          "15.3"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "ÖVRIGA",
+          "2018"
+        ],
+        "values": [
+          "1.4"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "ME0104",
+        "updated": "2022-11-21T07:00:00Z",
+        "label": "Riksdagsval - valresultat, andel röster efter region, parti mm, valår och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "growth-1489": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BE0101N1",
+        "text": "Folkmängd",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "1489",
+          "1968"
+        ],
+        "values": [
+          "26071"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "1969"
+        ],
+        "values": [
+          "26350"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "1970"
+        ],
+        "values": [
+          "26529"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "1971"
+        ],
+        "values": [
+          "26633"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "1972"
+        ],
+        "values": [
+          "26741"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "1973"
+        ],
+        "values": [
+          "26954"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "1974"
+        ],
+        "values": [
+          "27509"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "1975"
+        ],
+        "values": [
+          "27796"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "1976"
+        ],
+        "values": [
+          "28172"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "1977"
+        ],
+        "values": [
+          "28519"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "1978"
+        ],
+        "values": [
+          "28698"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "1979"
+        ],
+        "values": [
+          "29109"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "1980"
+        ],
+        "values": [
+          "29637"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "1981"
+        ],
+        "values": [
+          "29979"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "1982"
+        ],
+        "values": [
+          "30355"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "1983"
+        ],
+        "values": [
+          "30758"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "1984"
+        ],
+        "values": [
+          "31074"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "1985"
+        ],
+        "values": [
+          "31394"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "1986"
+        ],
+        "values": [
+          "31718"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "1987"
+        ],
+        "values": [
+          "32051"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "1988"
+        ],
+        "values": [
+          "32402"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "1989"
+        ],
+        "values": [
+          "33043"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "1990"
+        ],
+        "values": [
+          "33626"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "1991"
+        ],
+        "values": [
+          "33936"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "1992"
+        ],
+        "values": [
+          "34088"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "1993"
+        ],
+        "values": [
+          "34212"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "1994"
+        ],
+        "values": [
+          "34525"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "1995"
+        ],
+        "values": [
+          "34758"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "1996"
+        ],
+        "values": [
+          "34775"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "1997"
+        ],
+        "values": [
+          "34824"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "1998"
+        ],
+        "values": [
+          "34930"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "1999"
+        ],
+        "values": [
+          "34963"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "2000"
+        ],
+        "values": [
+          "35153"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "2001"
+        ],
+        "values": [
+          "35257"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "2002"
+        ],
+        "values": [
+          "35327"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "2003"
+        ],
+        "values": [
+          "35530"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "2004"
+        ],
+        "values": [
+          "35761"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "2005"
+        ],
+        "values": [
+          "36010"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "2006"
+        ],
+        "values": [
+          "36481"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "2007"
+        ],
+        "values": [
+          "36739"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "2008"
+        ],
+        "values": [
+          "37247"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "2009"
+        ],
+        "values": [
+          "37515"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "2010"
+        ],
+        "values": [
+          "37796"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "2011"
+        ],
+        "values": [
+          "38053"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "2012"
+        ],
+        "values": [
+          "38355"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "2013"
+        ],
+        "values": [
+          "38619"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "2014"
+        ],
+        "values": [
+          "39188"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "2015"
+        ],
+        "values": [
+          "39602"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "2016"
+        ],
+        "values": [
+          "40045"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "2017"
+        ],
+        "values": [
+          "40390"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "2018"
+        ],
+        "values": [
+          "41070"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "2019"
+        ],
+        "values": [
+          "41420"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "2020"
+        ],
+        "values": [
+          "41602"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "2021"
+        ],
+        "values": [
+          "41853"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "2022"
+        ],
+        "values": [
+          "42199"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "2023"
+        ],
+        "values": [
+          "42382"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "2024"
+        ],
+        "values": [
+          "42722"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BE0101",
+        "updated": "2025-02-21T07:00:00Z",
+        "label": "Folkmängd efter region, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "houseprice-1489": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Fastighetstyp",
+        "text": "fastighetstyp",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BO0501C2",
+        "text": "Köpeskilling, medelvärde i tkr",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "1489",
+          "220",
+          "2021"
+        ],
+        "values": [
+          "4245"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BO0501",
+        "updated": "2026-06-05T06:00:00Z",
+        "label": "Köpeskilling för småhus, medelvärde i tkr efter region, fastighetstyp, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "pop-1489": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "comment": "År 1968–1998 redovisas enligt regional indelning 1998-01-01.\r\n",
+        "type": "d"
+      },
+      {
+        "code": "Kon",
+        "text": "kön",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "BE0101N1",
+        "text": "Folkmängd",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "1489",
+          "1",
+          "2021"
+        ],
+        "values": [
+          "20752"
+        ]
+      },
+      {
+        "key": [
+          "1489",
+          "2",
+          "2021"
+        ],
+        "values": [
+          "21101"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "BE0101",
+        "updated": "2025-02-21T07:00:00Z",
+        "label": "Folkmängd efter region, kön, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
+  },
+  "income-1489": {
+    "columns": [
+      {
+        "code": "Region",
+        "text": "region",
+        "type": "d"
+      },
+      {
+        "code": "Alder",
+        "text": "ålder",
+        "type": "d"
+      },
+      {
+        "code": "Inkomstklass",
+        "text": "inkomstklass",
+        "type": "d"
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "type": "t"
+      },
+      {
+        "code": "HE0110K1",
+        "text": "Medelinkomst, tkr",
+        "comment": "Sammanräknad förvärvsinkomst \r\n  Summan av inkomst av tjänst och inkomst av näringsverksamhet. \r\n  Den sammanräknade förvärvsinkomsten består av de sammanlagda löpande skattepliktiga inkomsterna, vilket avser inkomster från anställning, företagande, pension, sjukpenning och andra skattepliktiga transfereringar. I sammanräknad förvärvsinkomst ingår inte inkomst av kapital.\r\n",
+        "type": "c"
+      },
+      {
+        "code": "HE0110K2",
+        "text": "Medianinkomst, tkr",
+        "type": "c"
+      }
+    ],
+    "comments": [],
+    "data": [
+      {
+        "key": [
+          "1489",
+          "20-64",
+          "TOT",
+          "2020"
+        ],
+        "values": [
+          "359.4",
+          "350.9"
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "infofile": "HE0110",
+        "updated": "2026-01-20T07:00:00Z",
+        "label": "Sammanräknad förvärvsinkomst för boende i Sverige den 31/12 efter region, ålder, inkomstklass, år och tabellinnehåll",
+        "source": "SCB"
+      }
+    ]
   }
 }

@@ -12,12 +12,6 @@ const Compare = lazy(() => import("./pages/Compare.jsx"));
 export default function App() {
   return (
     <Routes>
-      <Route element={<SiteLayout />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/produktide" element={<ProductIdea />} />
-        <Route path="/affarside" element={<BusinessPlan />} />
-        <Route path="/kontakt" element={<Contact />} />
-      </Route>
       <Route path="/app" element={<CompareLayout />}>
         <Route
           index
@@ -28,8 +22,14 @@ export default function App() {
           }
         />
       </Route>
+      <Route element={<SiteLayout />}>
+        <Route path="/produktide" element={<ProductIdea />} />
+        <Route path="/affarside" element={<BusinessPlan />} />
+        <Route path="/kontakt" element={<Contact />} />
+      </Route>
+      <Route path="/" element={<Navigate to="/app" replace />} />
       <Route path="/app.html" element={<Navigate to="/app" replace />} />
-      <Route path="/index.html" element={<Navigate to="/" replace />} />
+      <Route path="/index.html" element={<Navigate to="/app" replace />} />
     </Routes>
   );
 }
