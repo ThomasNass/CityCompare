@@ -1,0 +1,172 @@
+:root {
+  --blue: rgba(1, 68, 156, 0.652);
+  --yellow: rgb(255, 238, 0);
+}
+
+.site-layout {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: url("/images/sundsvall.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.site-layout .CC {
+  color: var(--yellow);
+}
+
+.site-layout .navbar {
+  height: 100%;
+  position: relative;
+  background-color: var(--blue);
+}
+
+.site-layout .navbar-brand {
+  height: 100%;
+}
+
+.site-layout header {
+  height: 8%;
+}
+
+.site-layout .navbar-menu {
+  background-color: var(--blue);
+}
+
+.site-layout .container {
+  position: relative;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.732);
+  flex: 1;
+  overflow: auto;
+  padding: 10px 200px;
+  color: black;
+}
+
+.site-layout .container p {
+  font-size: 1.3rem;
+}
+
+.site-layout footer {
+  text-align: center;
+  width: 100%;
+  min-height: 5%;
+  background-color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-layout footer p,
+.site-layout footer strong,
+.site-layout footer a {
+  color: var(--yellow);
+}
+
+.site-layout .container::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+.site-layout .container::-webkit-scrollbar {
+  width: 12px;
+  background-color: #f5f5f5;
+}
+
+.site-layout .container::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+}
+
+.site-layout .column {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.site-layout .navbar-start .navbar-item {
+  user-select: none;
+  color: var(--yellow);
+  transition: 0.5s;
+}
+
+.site-layout .navbar-start .navbar-item:hover,
+.site-layout .navbar-start .navbar-item.is-active {
+  font-size: 120%;
+  background-color: var(--yellow);
+  color: var(--blue);
+}
+
+.site-layout .navbar-burger {
+  color: var(--yellow);
+}
+
+.site-layout .page-content {
+  padding: 2rem 0;
+  text-align: left;
+}
+
+.site-layout .page-content h1,
+.site-layout .page-content h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.site-layout .page-content p {
+  margin-bottom: 1rem;
+}
+
+.site-layout .contact-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.site-layout .contact-list h2 a {
+  color: var(--blue);
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 800px) {
+  .site-layout .container {
+    padding: 10px 15px;
+  }
+
+  .site-layout .container p {
+    font-size: 1rem;
+  }
+
+  .site-layout .page-content {
+    padding: 1rem 0;
+  }
+
+  .site-layout .page-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .site-layout .page-content h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .site-layout .CC {
+    font-size: 1.5rem !important;
+  }
+
+  .site-layout .container {
+    padding: 8px 10px;
+  }
+
+  .site-layout .contact-list h2 {
+    font-size: 1rem;
+  }
+}

@@ -1,40 +1,42 @@
 {
-  "dependencies": {
-    "axios": "^0.27.2",
-    "bulma": "^0.9.3",
-    "chart.js": "^3.7.1",
-    "express": "^4.18.1",
-    "local-web-server": "^5.2.0",
-    "node-fetch": "^3.2.4",
-    "prop-types": "^15.8.1",
-    "react": "^17.0.2",
-    "react-chartjs-2": "^4.1.0",
-    "react-dom": "^17.0.2"
-  },
   "name": "citycompare",
-  "description": "En framtida tjänst för att jämföra städer baserat på utbud",
-  "version": "1.0.0",
+  "description": "En tjänst för att jämföra städer baserat på utbud",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "start-app": "parcel watch app.html",
-    "build": "parcel build app.html",
-    "start-d": "npm run build-app && npm run start-server",
-    "start": "node server/index.mjs"
+    "dev": "concurrently -k -n server,client -c blue,green \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:server": "node --watch server/index.mjs",
+    "dev:client": "vite",
+    "build": "vite build",
+    "start": "NODE_ENV=production node server/index.mjs",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ThomasNass/CityCompare.git"
   },
   "keywords": [],
-  "author": "Thomas Näss <tn900323@gmail.com",
+  "author": "Thomas Näss <tn900323@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ThomasNass/CityCompare/issues"
   },
   "homepage": "https://github.com/ThomasNass/CityCompare#readme",
+  "dependencies": {
+    "axios": "^1.20.0",
+    "bulma": "^1.0.4",
+    "chart.js": "^4.5.1",
+    "express": "^5.2.1",
+    "react": "^19.2.8",
+    "react-chartjs-2": "^5.3.1",
+    "react-dom": "^19.2.8",
+    "react-error-boundary": "^6.1.4",
+    "react-router-dom": "^7.18.3"
+  },
   "devDependencies": {
-    "buffer": "^6.0.3",
-    "npm-run-all": "^4.1.5",
-    "parcel": "^2.4.1",
-    "process": "^0.11.10"
+    "@vitejs/plugin-react": "^6.1.1",
+    "concurrently": "^10.0.5",
+    "vite": "^8.2.2"
   }
 }
