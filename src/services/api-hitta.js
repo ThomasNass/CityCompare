@@ -1,8 +1,11 @@
 async function getData(buisness, city) {
   try {
-    const response = await fetch(`/api/hitta/${buisness}/${city}`, {
-      method: "GET",
-    });
+    const response = await fetch(
+      `/api/hitta/${encodeURIComponent(buisness)}/${encodeURIComponent(city)}`,
+      {
+        method: "GET",
+      }
+    );
     const data = await response.json();
     if ("error" in data) {
       throw data;

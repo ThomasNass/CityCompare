@@ -105,8 +105,9 @@ app.get("/api/hitta/:company/:municipality", async (req, res) => {
       }
     );
     data = await response.json();
-    res.status(response.status);
-    await saveToCache(cacheKey, data);
+    if (response.ok) {
+      await saveToCache(cacheKey, data);
+    }
   }
 
   res.send(data);

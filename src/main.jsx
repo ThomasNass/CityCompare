@@ -2,7 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App.jsx";
-import "bulma/css/bulma.min.css";
+import "bulma/css/versions/bulma-no-dark-mode.min.css";
 import "./styles/global.css";
 
 createRoot(document.getElementById("root")).render(
