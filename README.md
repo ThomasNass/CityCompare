@@ -41,4 +41,3 @@ npm start
 - **Skatteverket** – skattesatser per kommun
 - **SCB** – population, inkomst, huspriser och valdata
 - **JobTechDev** – jobbannonser
-- **Hitta.se** – företag i kommunerna

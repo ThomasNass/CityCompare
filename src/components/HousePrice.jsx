@@ -8,9 +8,9 @@ export default function HousePrice({ city: cityKey }) {
   }
 
   return (
-    <div>
-      <h2>{city.name}</h2>
-      <h2>{city.housePrice} tkr</h2>
+    <div className="stat-card">
+      <p className="stat-label">{city.name}</p>
+      <p className="stat-value">{city.housePrice} tkr</p>
     </div>
   );
 }

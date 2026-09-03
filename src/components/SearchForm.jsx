@@ -12,15 +12,12 @@ export default function SearchForm() {
   const [loading, setLoading] = useState(false);
   const cities = useMemo(() => [...cityArray.cities].sort(), []);
 
-  const handleChange = useCallback(
-    (event) => {
-      const { name, value } = event.target;
-      if (!cityArray.cities.includes(value)) return;
-      if (name === "search1") setSearch1(value);
-      if (name === "search2") setSearch2(value);
-    },
-    []
-  );
+  const handleChange = useCallback((event) => {
+    const { name, value } = event.target;
+    if (!cityArray.cities.includes(value)) return;
+    if (name === "search1") setSearch1(value);
+    if (name === "search2") setSearch2(value);
+  }, []);
 
   async function onClick() {
     if (search1.length === 0 || search2.length === 0) return;
@@ -34,9 +31,24 @@ export default function SearchForm() {
 
   return (
     <>
-      <SearchableSelect name="search1" array={cities} onChange={handleChange} placeholder="Sök stad 1..." />
-      <SearchableSelect name="search2" array={cities} onChange={handleChange} placeholder="Sök stad 2..." />
-      <Button id="compare-button" text="Jämför" onClick={onClick} />
+      <div className="search-panel">
+        <div className="search-fields">
+          <SearchableSelect
+            name="search1"
+            array={cities}
+            onChange={handleChange}
+            placeholder="Första kommunen"
+          />
+          <span className="search-vs">mot</span>
+          <SearchableSelect
+            name="search2"
+            array={cities}
+            onChange={handleChange}
+            placeholder="Andra kommunen"
+          />
+        </div>
+        <Button id="compare-button" text="Jämför kommuner" onClick={onClick} />
+      </div>
       {loading ? <div className="loader" /> : hasCities ? <CityComparison /> : null}
     </>
   );
