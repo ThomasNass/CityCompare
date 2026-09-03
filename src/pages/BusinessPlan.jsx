@@ -3,7 +3,7 @@ export default function BusinessPlan() {
     <div className="page-content">
       <h1 className="title is-1">Affärsidé</h1>
       <p>
-        Kommunkollen är en tjänst för att jämföra städer i Sverige. Det som jämförs städerna
+        MuniMatch är en tjänst för att jämföra städer i Sverige. Det som jämförs städerna
         emellan är levnadsförhållanden och ekonomi i kommunerna de ligger i samt utbud när det
         kommer till butiker, restauranger, skolor, sjukhus med mera. Det finns för närvarande
         ingen tjänst som gör detta, så den har ett First mover advantage.
