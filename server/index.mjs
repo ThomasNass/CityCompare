@@ -279,5 +279,5 @@ if (isProduction) {
 }
 
 app.listen(port, () => {
-  console.log(`CityCompare API listening on port ${port}`);
+  console.log(`MuniMatch API listening on port ${port}`);
 });

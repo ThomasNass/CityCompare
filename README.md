@@ -1,4 +1,4 @@
-# CityCompare
+# MuniMatch
 
 En app som jämför kommuner baserat på population, ekonomi, jobb och företagsutbud.
 
@@ -25,7 +25,7 @@ npm run build
 npm start
 ```
 
-Öppna [http://localhost:3000](http://localhost:3000). Jämförelseappen ligger på `/app`.
+Öppna [http://localhost:3000](http://localhost:3000). Jämförelseappen ligger på startsidan.
 
 ## Stack
 

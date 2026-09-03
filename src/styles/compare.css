@@ -43,8 +43,10 @@
 
 .compare-layout #site-name {
   color: white;
-  font-size: 12rem;
+  font-size: 8rem;
   margin: 0;
+  text-align: center;
+  line-height: 1.05;
 }
 
 .compare-layout .compare-root {
