@@ -4,7 +4,7 @@ import { useCities } from "../context/city-context.jsx";
 export default function LineChart() {
   const { city1, city2 } = useCities();
 
-  if (!("growth" in city1.population) || !("growth" in city2.population)) {
+  if (!city1.population?.growth || !city2.population?.growth) {
     return <p>Gick ej att hämta populationsförändringar</p>;
   }
 

@@ -8,7 +8,7 @@ export default function ElectionPieChart({ city: cityKey, dataKey }) {
   return (
     <div className="pie-chart">
       <h2>{city.name}</h2>
-      {"parties" in electionData ? (
+      {Array.isArray(electionData?.parties) && electionData.parties.length > 0 ? (
         <Pie
           data={{
             labels: electionData.parties,
