@@ -91,12 +91,12 @@ export default function CityComparison() {
         ) : (
           <div className="entries-div">
             <SeriesLineChart
-              labels={city1.population.genderSeries?.year ?? []}
+              labels={city1.population?.genderSeries?.year ?? []}
               series={[
-                { label: `${city1.name} män`, data: city1.population.genderSeries?.men ?? [], color: "#14b8a6" },
-                { label: `${city1.name} kvinnor`, data: city1.population.genderSeries?.fem ?? [], color: "#0f766e" },
-                { label: `${city2.name} män`, data: city2.population.genderSeries?.men ?? [], color: "#fb7185" },
-                { label: `${city2.name} kvinnor`, data: city2.population.genderSeries?.fem ?? [], color: "#9f1239" },
+                { label: `${city1.name} män`, data: city1.population?.genderSeries?.men ?? [], color: "#14b8a6" },
+                { label: `${city1.name} kvinnor`, data: city1.population?.genderSeries?.fem ?? [], color: "#0f766e" },
+                { label: `${city2.name} män`, data: city2.population?.genderSeries?.men ?? [], color: "#fb7185" },
+                { label: `${city2.name} kvinnor`, data: city2.population?.genderSeries?.fem ?? [], color: "#9f1239" },
               ]}
             />
           </div>
@@ -178,12 +178,12 @@ export default function CityComparison() {
         ) : (
           <div className="entries-div">
             <SeriesLineChart
-              labels={city1.income.series?.year ?? []}
+              labels={city1.income?.series?.year ?? []}
               series={[
-                { label: `${city1.name} medel`, data: city1.income.series?.average ?? [], color: "#14b8a6" },
-                { label: `${city1.name} median`, data: city1.income.series?.median ?? [], color: "#0f766e" },
-                { label: `${city2.name} medel`, data: city2.income.series?.average ?? [], color: "#fb7185" },
-                { label: `${city2.name} median`, data: city2.income.series?.median ?? [], color: "#9f1239" },
+                { label: `${city1.name} medel`, data: city1.income?.series?.average ?? [], color: "#14b8a6" },
+                { label: `${city1.name} median`, data: city1.income?.series?.median ?? [], color: "#0f766e" },
+                { label: `${city2.name} medel`, data: city2.income?.series?.average ?? [], color: "#fb7185" },
+                { label: `${city2.name} median`, data: city2.income?.series?.median ?? [], color: "#9f1239" },
               ]}
               ySuffix="tkr"
             />

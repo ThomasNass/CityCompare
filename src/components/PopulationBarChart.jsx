@@ -4,7 +4,7 @@ import { useCities } from "../context/city-context.jsx";
 export default function PopulationBarChart() {
   const { city1, city2 } = useCities();
 
-  if (Number.isNaN(city1.population.total) || Number.isNaN(city2.population.total)) {
+  if (!Number.isFinite(city1.population?.total) || !Number.isFinite(city2.population?.total)) {
     return <p>Kunde inte hämta populationsdata</p>;
   }
 

@@ -3,7 +3,7 @@ import { useCities } from "../context/city-context.jsx";
 
 export default function PieChart({ city: cityKey }) {
   const city = useCities()[cityKey];
-  const hasPopulation = city.population.men > 0 || city.population.fem > 0;
+  const hasPopulation = city.population?.men > 0 || city.population?.fem > 0;
   const menPercent = hasPopulation
     ? Math.round((city.population.men / city.population.total) * 100)
     : 0;
