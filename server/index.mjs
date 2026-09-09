@@ -3,6 +3,7 @@ import express from "express";
 import fs from "fs/promises";
 import path from "path";
 import { fileURLToPath } from "url";
+import { fetchScbTable, isScbTable } from "../lib/scb-fetch.js";
 import { SCB_ENDPOINTS } from "../lib/scb-queries.js";
 
 const callerId = "MuniPare";
@@ -57,40 +58,26 @@ function sha256(message) {
   return crypto.createHash("sha256").update(message).digest("hex");
 }
 
-async function fetchScb(url, query) {
-  const response = await fetch(url, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json",
-    },
-    body: JSON.stringify({
-      query,
-      response: { format: "json" },
-    }),
-  });
-  return {
-    status: response.status,
-    data: await response.json(),
-  };
-}
-
 function scbRoute(endpoint) {
   return async (req, res) => {
-    const { city } = req.params;
-    const cacheKey = `${endpoint.cachePrefix}-${city.toLowerCase()}`;
-    let data = getFromCache(cacheKey);
+    try {
+      const { city } = req.params;
+      const cacheKey = `${endpoint.cachePrefix}-${city.toLowerCase()}`;
+      let data = getFromCache(cacheKey);
 
-    if (!data) {
-      const result = await fetchScb(endpoint.url, endpoint.query(city));
-      data = result.data;
-      res.status(result.status);
-      if (result.status >= 200 && result.status < 300) {
-        await saveToCache(cacheKey, data);
+      if (!data) {
+        const result = await fetchScbTable(endpoint.url, endpoint.query(city));
+        data = result.data;
+        res.status(result.status);
+        if (result.status >= 200 && result.status < 300 && isScbTable(data)) {
+          await saveToCache(cacheKey, data);
+        }
       }
-    }
 
-    res.send(data);
+      res.send(data);
+    } catch (error) {
+      res.status(502).json({ error: error.message || "SCB-anropet misslyckades" });
+    }
   };
 }
 

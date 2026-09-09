@@ -24,6 +24,8 @@ export default function SearchForm() {
     setLoading(true);
     try {
       await setContext(search1, search2);
+    } catch (error) {
+      console.error(error);
     } finally {
       setLoading(false);
     }

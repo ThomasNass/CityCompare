@@ -3,7 +3,10 @@ async function postScb(path, city) {
     const response = await fetch(`/api/scb/${path}/${city}`, {
       method: "POST",
     });
-    const data = await response.json();
+    const data = await response.json().catch(() => null);
+    if (!response.ok || !Array.isArray(data?.data)) {
+      return [null, new Error(data?.error || `Kunde inte hämta ${path}`)];
+    }
     return [data, null];
   } catch (err) {
     return [null, err];
