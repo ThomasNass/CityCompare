@@ -3,6 +3,7 @@ import express from "express";
 import fs from "fs/promises";
 import path from "path";
 import { fileURLToPath } from "url";
+import { SCB_ENDPOINTS } from "../lib/scb-queries.js";
 
 const callerId = "MuniPare";
 const key = "eoPB4V74FT33z4Yv8zyoyoBg7cG9Y9zlNxO8k49D";
@@ -24,13 +25,22 @@ try {
   fileCache = {};
 }
 
+const CACHE_TTL_MS = 7 * 24 * 60 * 60 * 1000;
+
 function getFromCache(cacheKey) {
-  return memoryCache[cacheKey] ?? fileCache[cacheKey];
+  const entry = memoryCache[cacheKey] ?? fileCache[cacheKey];
+  if (!entry) return undefined;
+  if (entry.cachedAt) {
+    if (Date.now() - entry.cachedAt > CACHE_TTL_MS) return undefined;
+    return entry.payload;
+  }
+  return entry;
 }
 
 async function saveToCache(cacheKey, cityData) {
-  memoryCache[cacheKey] = cityData;
-  fileCache[cacheKey] = cityData;
+  const entry = { cachedAt: Date.now(), payload: cityData };
+  memoryCache[cacheKey] = entry;
+  fileCache[cacheKey] = entry;
   await fs.writeFile(cachePath, JSON.stringify(fileCache, null, 2));
 }
 
@@ -65,17 +75,19 @@ async function fetchScb(url, query) {
   };
 }
 
-function scbRoute(cachePrefix, url, buildQuery) {
+function scbRoute(endpoint) {
   return async (req, res) => {
     const { city } = req.params;
-    const cacheKey = `${cachePrefix}-${city.toLowerCase()}`;
+    const cacheKey = `${endpoint.cachePrefix}-${city.toLowerCase()}`;
     let data = getFromCache(cacheKey);
 
     if (!data) {
-      const result = await fetchScb(url, buildQuery(city));
+      const result = await fetchScb(endpoint.url, endpoint.query(city));
       data = result.data;
       res.status(result.status);
-      await saveToCache(cacheKey, data);
+      if (result.status >= 200 && result.status < 300) {
+        await saveToCache(cacheKey, data);
+      }
     }
 
     res.send(data);
@@ -113,163 +125,9 @@ app.get("/api/hitta/:company/:municipality", async (req, res) => {
   res.send(data);
 });
 
-app.post(
-  "/api/scb/houseprice/:city",
-  scbRoute(
-    "houseprice",
-    "https://api.scb.se/OV0104/v1/doris/sv/ssd/START/BO/BO0501/BO0501B/FastprisSHRegionAr",
-    (city) => [
-      {
-        code: "Region",
-        selection: { filter: "vs:RegionKommun07EjAggr", values: [city] },
-      },
-      {
-        code: "Fastighetstyp",
-        selection: { filter: "item", values: ["220"] },
-      },
-      {
-        code: "ContentsCode",
-        selection: { filter: "item", values: ["BO0501C2"] },
-      },
-      {
-        code: "Tid",
-        selection: { filter: "item", values: ["2021"] },
-      },
-    ]
-  )
-);
-
-app.post(
-  "/api/scb/income/:city",
-  scbRoute(
-    "income",
-    "https://api.scb.se/OV0104/v1/doris/sv/ssd/START/HE/HE0110/HE0110A/SamForvInk2",
-    (city) => [
-      {
-        code: "Region",
-        selection: { filter: "vs:RegionKommun07EjAggr", values: [city] },
-      },
-      {
-        code: "Alder",
-        selection: { filter: "item", values: ["20-64"] },
-      },
-      {
-        code: "Inkomstklass",
-        selection: { filter: "item", values: ["TOT"] },
-      },
-      {
-        code: "ContentsCode",
-        selection: { filter: "item", values: ["HE0110K1", "HE0110K2"] },
-      },
-      {
-        code: "Tid",
-        selection: { filter: "item", values: ["2020"] },
-      },
-    ]
-  )
-);
-
-app.post(
-  "/api/scb/growth/:city",
-  scbRoute(
-    "growth",
-    "https://api.scb.se/OV0104/v1/doris/sv/ssd/START/BE/BE0101/BE0101A/BefolkningNy",
-    (city) => [
-      {
-        code: "Region",
-        selection: { filter: "vs:RegionKommun07", values: [city] },
-      },
-      {
-        code: "ContentsCode",
-        selection: { filter: "item", values: ["BE0101N1"] },
-      },
-    ]
-  )
-);
-
-app.post(
-  "/api/scb/pop/:city",
-  scbRoute(
-    "pop",
-    "https://api.scb.se/OV0104/v1/doris/sv/ssd/START/BE/BE0101/BE0101A/BefolkningNy",
-    (city) => [
-      {
-        code: "Region",
-        selection: { filter: "vs:RegionKommun07", values: [city] },
-      },
-      {
-        code: "ContentsCode",
-        selection: { filter: "item", values: ["BE0101N1"] },
-      },
-      {
-        code: "Kon",
-        selection: { filter: "item", values: ["1", "2"] },
-      },
-      {
-        code: "Tid",
-        selection: { filter: "item", values: ["2021"] },
-      },
-    ]
-  )
-);
-
-app.post(
-  "/api/scb/election/:city",
-  scbRoute(
-    "election",
-    "https://api.scb.se/OV0104/v1/doris/sv/ssd/START/ME/ME0104/ME0104C/ME0104T3",
-    (city) => [
-      {
-        code: "Region",
-        selection: { filter: "vs:RegionKommun07+BaraEjAggr", values: [city] },
-      },
-      {
-        code: "Partimm",
-        selection: {
-          filter: "item",
-          values: ["M", "C", "FP", "KD", "MP", "S", "V", "SD", "ÖVRIGA"],
-        },
-      },
-      {
-        code: "ContentsCode",
-        selection: { filter: "item", values: ["ME0104B7"] },
-      },
-      {
-        code: "Tid",
-        selection: { filter: "item", values: ["2018"] },
-      },
-    ]
-  )
-);
-
-app.post(
-  "/api/scb/election-muni/:city",
-  scbRoute(
-    "election-muni",
-    "https://api.scb.se/OV0104/v1/doris/sv/ssd/START/ME/ME0104/ME0104A/ME0104T1",
-    (city) => [
-      {
-        code: "Region",
-        selection: { filter: "vs:RegionKommun07+BaraEjAggr", values: [city] },
-      },
-      {
-        code: "Partimm",
-        selection: {
-          filter: "item",
-          values: ["M", "C", "FP", "KD", "MP", "S", "V", "SD", "ÖVRIGA"],
-        },
-      },
-      {
-        code: "ContentsCode",
-        selection: { filter: "item", values: ["ME0104B2"] },
-      },
-      {
-        code: "Tid",
-        selection: { filter: "item", values: ["2018"] },
-      },
-    ]
-  )
-);
+for (const [type, endpoint] of Object.entries(SCB_ENDPOINTS)) {
+  app.post(`/api/scb/${type}/:city`, scbRoute(endpoint));
+}
 
 if (isProduction) {
   app.use(express.static(distDir));
