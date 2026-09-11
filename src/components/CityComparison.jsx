@@ -12,6 +12,7 @@ import HousePrice from "./HousePrice.jsx";
 import ViewToggle from "./ViewToggle.jsx";
 import Section from "./Section.jsx";
 import SchoolComparison from "./SchoolComparison.jsx";
+import QualityComparison from "./QualityComparison.jsx";
 import { useCities } from "../context/city-context.jsx";
 
 export default function CityComparison() {
@@ -217,6 +218,7 @@ export default function CityComparison() {
       </Section>
 
       <SchoolComparison modeFor={modeFor} setSectionMode={setSectionMode} />
+      <QualityComparison modeFor={modeFor} setSectionMode={setSectionMode} />
 
       <Section title="Lediga jobb" source="Källa: JobTech" className="job-wrapper">
         <div className="job-div">

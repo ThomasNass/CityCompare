@@ -22,3 +22,4 @@ export const getPopulationGrowth = (city) => postScb("growth", city);
 export const getIncome = (city) => postScb("income", city);
 export const getEducation = (city) => postScb("education", city);
 export const getMunicipalTax = (city) => postScb("tax", city);
+export const getGreenSpace = (city) => postScb("green", city);

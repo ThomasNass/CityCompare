@@ -8,9 +8,12 @@ import {
   getGenPopulation,
   getEducation,
   getMunicipalTax,
+  getGreenSpace,
 } from "./api-scb.js";
 import { getKoladaSchool, getUpperSchoolUnits, getPreschoolUnits, getCompulsoryUnits, getPreschoolStaff, getUpperResults } from "./api-schools.js";
-import { KOLADA_KPIS } from "../../lib/kolada.js";
+import { getBeaches, getAirQuality, getRegionCare } from "./api-live.js";
+import { CARE_KPIS, KOLADA_KPIS } from "../../lib/kolada.js";
+import { regionFromLau } from "../../lib/regions.js";
 
 function yearFromKey(key) {
   return [...key].reverse().find((part) => /^\d{4}$/.test(part));
@@ -120,6 +123,45 @@ function mapIncome(data, lauCode) {
     average: latestFinite(average),
     median: latestFinite(median),
     series: { year: years, average, median },
+  };
+}
+
+function mapGreen(data, lauCode) {
+  const byYear = {};
+  for (const element of data.data ?? []) {
+    if (element.key[0] !== lauCode) continue;
+    const year = yearFromKey(element.key);
+    const value = toNumber(element.values[0]);
+    if (!year || value == null) continue;
+    byYear[year] = value;
+  }
+  const years = Object.keys(byYear).sort();
+  return {
+    green: {
+      year: years.at(-1),
+      value: byYear[years.at(-1)],
+      series: { year: years, values: years.map((year) => byYear[year]) },
+    },
+  };
+}
+
+function mapCare(data, region) {
+  const byKpi = {};
+  for (const row of data.values ?? []) {
+    const total = (row.values ?? []).find((item) => item.gender === "T") ?? row.values?.[0];
+    const value = toNumber(total?.value);
+    if (value == null || row.period == null) continue;
+    if (!byKpi[row.kpi]) byKpi[row.kpi] = {};
+    byKpi[row.kpi][String(row.period)] = value;
+  }
+  const pick = (id) => seriesFromMap(byKpi[id] ?? {});
+  return {
+    care: {
+      regionId: region?.regionId,
+      regionName: region?.name,
+      primaryCare: pick(CARE_KPIS.primaryCare3days),
+      specialist: pick(CARE_KPIS.specialist90days),
+    },
   };
 }
 
@@ -308,6 +350,14 @@ export async function getActualCityData(city1, city2) {
     [preschoolStaff2, preschoolStaffError2],
     [upperResults1, upperResultsError1],
     [upperResults2, upperResultsError2],
+    [green1, greenError1],
+    [green2, greenError2],
+    [beaches1, beachesError1],
+    [beaches2, beachesError2],
+    [air1],
+    [air2],
+    [care1, careError1],
+    [care2, careError2],
   ] = await Promise.all([
     getElectionData(city1.lauCode),
     getElectionData(city2.lauCode),
@@ -339,6 +389,14 @@ export async function getActualCityData(city1, city2) {
     getPreschoolStaff(city2.lauCode),
     getUpperResults(city1.lauCode),
     getUpperResults(city2.lauCode),
+    getGreenSpace(city1.lauCode),
+    getGreenSpace(city2.lauCode),
+    getBeaches(city1.lauCode, city1.name),
+    getBeaches(city2.lauCode, city2.name),
+    getAirQuality(city1.lauCode, city1.name),
+    getAirQuality(city2.lauCode, city2.name),
+    getRegionCare(regionFromLau(city1.lauCode)?.regionId),
+    getRegionCare(regionFromLau(city2.lauCode)?.regionId),
   ]);
 
   city1.jobs = jobs1;
@@ -461,6 +519,17 @@ export async function getActualCityData(city1, city2) {
 
   applySkolverketStaffAndResults(city1, preschoolStaffError1, preschoolStaff1, upperResultsError1, upperResults1);
   applySkolverketStaffAndResults(city2, preschoolStaffError2, preschoolStaff2, upperResultsError2, upperResults2);
+
+  assignMapped(city1, greenError1, green1, (data) => mapGreen(data, city1.lauCode));
+  assignMapped(city2, greenError2, green2, (data) => mapGreen(data, city2.lauCode));
+
+  if (!beachesError1 && beaches1) city1.beaches = beaches1;
+  if (!beachesError2 && beaches2) city2.beaches = beaches2;
+  if (air1) city1.air = air1;
+  if (air2) city2.air = air2;
+
+  assignMapped(city1, careError1, care1, (data) => mapCare(data, regionFromLau(city1.lauCode)));
+  assignMapped(city2, careError2, care2, (data) => mapCare(data, regionFromLau(city2.lauCode)));
 }
 
 export async function jobsByField(occupations, cityName) {
