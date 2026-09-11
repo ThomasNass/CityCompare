@@ -140,10 +140,11 @@ export default function CityComparison() {
 
       <Section
         title={taxMode === "latest" ? `Skattesats ${city1.taxYear ?? ""}` : "Skattesats över tid"}
-        source="Källa: Skatteverket"
+        source="Källa: SCB"
         mode={taxMode}
         onModeChange={(mode) => setSectionMode("tax", mode)}
       >
+        <p className="school-note">Total kommunal skattesats: kommunskatt plus regionskatt, utan kyrkoavgift.</p>
         {taxMode === "latest" ? (
           <div className="tax-div">
             <DisplayTax city="city1" />

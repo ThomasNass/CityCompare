@@ -1,4 +1,4 @@
-import { getJobListings, getTaxes, getJobListingsByField } from "./api-caller.js";
+import { getJobListings, getJobListingsByField } from "./api-caller.js";
 import {
   getElectionData,
   getMuniElectionData,
@@ -7,6 +7,7 @@ import {
   getHousePrices,
   getGenPopulation,
   getEducation,
+  getMunicipalTax,
 } from "./api-scb.js";
 import { getKoladaSchool, getUpperSchoolUnits, getPreschoolUnits, getCompulsoryUnits, getPreschoolStaff, getUpperResults } from "./api-schools.js";
 import { KOLADA_KPIS } from "../../lib/kolada.js";
@@ -122,11 +123,12 @@ function mapIncome(data, lauCode) {
   };
 }
 
-function mapTaxes(data) {
+function mapTaxes(data, lauCode) {
   const byYear = {};
-  for (const row of data.results ?? []) {
-    const year = String(row["år"]);
-    const tax = toNumber(row["summa, exkl. kyrkoavgift"]);
+  for (const element of data.data ?? []) {
+    if (element.key[0] !== lauCode) continue;
+    const year = yearFromKey(element.key);
+    const tax = toNumber(element.values[0]);
     if (!year || tax == null) continue;
     byYear[year] = tax;
   }
@@ -319,8 +321,8 @@ export async function getActualCityData(city1, city2) {
     getGenPopulation(city2.lauCode),
     getHousePrices(city1.lauCode),
     getHousePrices(city2.lauCode),
-    getTaxes(city1.name.toUpperCase()),
-    getTaxes(city2.name.toUpperCase()),
+    getMunicipalTax(city1.lauCode),
+    getMunicipalTax(city2.lauCode),
     getJobListings(city1.name),
     getJobListings(city2.name),
     getKoladaSchool(city1.lauCode),
@@ -386,8 +388,8 @@ export async function getActualCityData(city1, city2) {
     electionRegionData: mapElection(data, city2.lauCode),
   }));
 
-  assignMapped(city1, taxes1error, taxes1, mapTaxes);
-  assignMapped(city2, taxes2error, taxes2, mapTaxes);
+  assignMapped(city1, taxes1error, taxes1, (data) => mapTaxes(data, city1.lauCode));
+  assignMapped(city2, taxes2error, taxes2, (data) => mapTaxes(data, city2.lauCode));
 
   assignMapped(city1, koladaError1, kolada1, mapKolada);
   assignMapped(city2, koladaError2, kolada2, mapKolada);
