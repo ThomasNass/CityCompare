@@ -1,3 +1,4 @@
+import { fetchAirQuality } from "../../lib/air.js";
 import { fetchKoladaRegionCare, fetchKoladaSociety, isKoladaPayload } from "../../lib/kolada.js";
 
 async function getJson(path) {
@@ -22,8 +23,24 @@ export async function getBeaches(lauCode, cityName) {
 
 export async function getAirQuality(lauCode, cityName) {
   const query = cityName ? `?name=${encodeURIComponent(cityName)}` : "";
-  const [data] = await getJson(`/api/air/${lauCode}${query}`);
-  return [data ?? { missing: true }, null];
+  try {
+    const response = await fetch(`/api/air/${lauCode}${query}`, {
+      signal: AbortSignal.timeout(8000),
+    });
+    const data = await response.json().catch(() => null);
+    if (response.ok && data && data.missing === false && data.value != null) {
+      return [data, null];
+    }
+  } catch {
+    // Vercel Hobby often times out against SMHI. Fall through from the browser.
+  }
+
+  try {
+    const data = await fetchAirQuality(lauCode, cityName);
+    return [data ?? { missing: true }, null];
+  } catch {
+    return [{ missing: true }, null];
+  }
 }
 
 export async function getRegionCare(regionId) {
