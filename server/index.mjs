@@ -131,7 +131,7 @@ app.get("/api/kolada/:city", async (req, res) => {
       const result = await fetchKoladaCity(city);
       data = result.data;
       res.status(result.status);
-      if (result.status >= 200 && result.status < 300 && Array.isArray(data?.values)) {
+      if (result.status >= 200 && result.status < 300 && Array.isArray(data?.values) && data.values.length) {
         await saveToCache(cacheKey, data);
       }
     }

@@ -102,10 +102,34 @@ export default function SchoolComparison({ modeFor, setSectionMode }) {
   const eduA = city1.education;
   const eduB = city2.education;
 
+  const hasValue = (...stats) => stats.some((stat) => stat?.value != null);
+
   const hasUnits = Boolean(schoolA || schoolB || unitsA || unitsB);
-  const hasTeachers = Boolean(schoolA || schoolB);
-  const hasGrades = Boolean(compulsoryA || compulsoryB);
-  const hasUpper = Boolean(upperA || upperB);
+  const hasTeachers = hasValue(
+    preschoolA?.qualified,
+    preschoolB?.qualified,
+    preschoolA?.childrenPerStaff,
+    preschoolB?.childrenPerStaff,
+    compulsoryA?.qualified,
+    compulsoryB?.qualified,
+    compulsoryA?.pupilsPerTeacher,
+    compulsoryB?.pupilsPerTeacher,
+    upperA?.qualified,
+    upperB?.qualified,
+    upperA?.pupilsPerTeacher,
+    upperB?.pupilsPerTeacher
+  );
+  const hasGrades = hasValue(compulsoryA?.merit, compulsoryB?.merit, compulsoryA?.eligible, compulsoryB?.eligible);
+  const hasUpper = hasValue(
+    upperA?.exam,
+    upperB?.exam,
+    upperA?.gradePoints,
+    upperB?.gradePoints,
+    upperA?.uniEligible,
+    upperB?.uniEligible,
+    upperA?.uniAfter,
+    upperB?.uniAfter
+  );
   const hasEducation = Boolean(eduA || eduB);
 
   if (!hasUnits && !hasTeachers && !hasGrades && !hasUpper && !hasEducation) return null;

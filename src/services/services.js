@@ -8,7 +8,7 @@ import {
   getGenPopulation,
   getEducation,
 } from "./api-scb.js";
-import { getKoladaSchool, getUpperSchoolUnits, getPreschoolUnits, getCompulsoryUnits } from "./api-schools.js";
+import { getKoladaSchool, getUpperSchoolUnits, getPreschoolUnits, getCompulsoryUnits, getPreschoolStaff, getUpperResults } from "./api-schools.js";
 import { KOLADA_KPIS } from "../../lib/kolada.js";
 
 function yearFromKey(key) {
@@ -302,6 +302,10 @@ export async function getActualCityData(city1, city2) {
     [preschoolUnits2, preschoolUnitsError2],
     [compulsoryUnits1, compulsoryUnitsError1],
     [compulsoryUnits2, compulsoryUnitsError2],
+    [preschoolStaff1, preschoolStaffError1],
+    [preschoolStaff2, preschoolStaffError2],
+    [upperResults1, upperResultsError1],
+    [upperResults2, upperResultsError2],
   ] = await Promise.all([
     getElectionData(city1.lauCode),
     getElectionData(city2.lauCode),
@@ -329,6 +333,10 @@ export async function getActualCityData(city1, city2) {
     getPreschoolUnits(city2.lauCode),
     getCompulsoryUnits(city1.lauCode),
     getCompulsoryUnits(city2.lauCode),
+    getPreschoolStaff(city1.lauCode),
+    getPreschoolStaff(city2.lauCode),
+    getUpperResults(city1.lauCode),
+    getUpperResults(city2.lauCode),
   ]);
 
   city1.jobs = jobs1;
@@ -417,6 +425,40 @@ export async function getActualCityData(city1, city2) {
 
   applySkolverketUnits(city1, preschoolUnitsError1, preschoolUnits1, compulsoryUnitsError1, compulsoryUnits1);
   applySkolverketUnits(city2, preschoolUnitsError2, preschoolUnits2, compulsoryUnitsError2, compulsoryUnits2);
+
+  function applySkolverketStaffAndResults(city, staffError, staffData, resultsError, resultsData) {
+    if (!staffError && staffData) {
+      try {
+        const staff = mapSkolverketMeasures(staffData, city.lauCode, {
+          childrenPerStaff: "3",
+          qualified: "12",
+        });
+        mergeSchoolLevel(city, "preschool", {
+          qualified: preferSeries(city.school?.preschool?.qualified, staff.qualified),
+          childrenPerStaff: preferSeries(city.school?.preschool?.childrenPerStaff, staff.childrenPerStaff),
+        });
+      } catch {
+        // Keep Kolada values if Skolverket cannot be parsed.
+      }
+    }
+    if (!resultsError && resultsData) {
+      try {
+        const results = mapSkolverketMeasures(resultsData, city.lauCode, {
+          gradePoints: "7",
+          exam: "34",
+        });
+        mergeSchoolLevel(city, "upper", {
+          exam: preferSeries(city.school?.upper?.exam, results.exam),
+          gradePoints: preferSeries(city.school?.upper?.gradePoints, results.gradePoints),
+        });
+      } catch {
+        // Keep Kolada values if Skolverket cannot be parsed.
+      }
+    }
+  }
+
+  applySkolverketStaffAndResults(city1, preschoolStaffError1, preschoolStaff1, upperResultsError1, upperResults1);
+  applySkolverketStaffAndResults(city2, preschoolStaffError2, preschoolStaff2, upperResultsError2, upperResults2);
 }
 
 export async function jobsByField(occupations, cityName) {
