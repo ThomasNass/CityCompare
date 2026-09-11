@@ -3,8 +3,10 @@ import express from "express";
 import fs from "fs/promises";
 import path from "path";
 import { fileURLToPath } from "url";
+import { fetchKoladaCity } from "../lib/kolada.js";
 import { fetchScbTable, isScbTable } from "../lib/scb-fetch.js";
 import { SCB_ENDPOINTS } from "../lib/scb-queries.js";
+import { SKOLVERKET_ENDPOINTS } from "../lib/skolverket-queries.js";
 
 const callerId = "MuniPare";
 const key = "eoPB4V74FT33z4Yv8zyoyoBg7cG9Y9zlNxO8k49D";
@@ -115,6 +117,29 @@ app.get("/api/hitta/:company/:municipality", async (req, res) => {
 for (const [type, endpoint] of Object.entries(SCB_ENDPOINTS)) {
   app.post(`/api/scb/${type}/:city`, scbRoute(endpoint));
 }
+
+for (const [type, endpoint] of Object.entries(SKOLVERKET_ENDPOINTS)) {
+  app.post(`/api/skolverket/${type}/:city`, scbRoute(endpoint));
+}
+
+app.get("/api/kolada/:city", async (req, res) => {
+  try {
+    const { city } = req.params;
+    const cacheKey = `kolada-school-${city.toLowerCase()}`;
+    let data = getFromCache(cacheKey);
+    if (!data) {
+      const result = await fetchKoladaCity(city);
+      data = result.data;
+      res.status(result.status);
+      if (result.status >= 200 && result.status < 300 && Array.isArray(data?.values)) {
+        await saveToCache(cacheKey, data);
+      }
+    }
+    res.send(data);
+  } catch (error) {
+    res.status(502).json({ error: error.message || "Kolada-anropet misslyckades" });
+  }
+});
 
 if (isProduction) {
   app.use(express.static(distDir));

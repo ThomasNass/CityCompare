@@ -10,22 +10,9 @@ import Jobs from "./Jobs.jsx";
 import Income from "./Income.jsx";
 import HousePrice from "./HousePrice.jsx";
 import ViewToggle from "./ViewToggle.jsx";
+import Section from "./Section.jsx";
+import SchoolComparison from "./SchoolComparison.jsx";
 import { useCities } from "../context/city-context.jsx";
-
-function Section({ title, source, mode, onModeChange, children, className = "" }) {
-  return (
-    <section className={`wrapper ${className}`}>
-      <div className="card-header">
-        <div>
-          <h1>{title}</h1>
-          <p className="card-source">{source}</p>
-        </div>
-        {onModeChange ? <ViewToggle value={mode} onChange={onModeChange} size="sm" /> : null}
-      </div>
-      {children}
-    </section>
-  );
-}
 
 export default function CityComparison() {
   const { city1, city2 } = useCities();
@@ -215,6 +202,8 @@ export default function CityComparison() {
           </div>
         )}
       </Section>
+
+      <SchoolComparison modeFor={modeFor} setSectionMode={setSectionMode} />
 
       <Section title="Lediga jobb" source="Källa: JobTech" className="job-wrapper">
         <div className="job-div">

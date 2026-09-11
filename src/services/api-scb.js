@@ -19,3 +19,4 @@ export const getHousePrices = (city) => postScb("houseprice", city);
 export const getGenPopulation = (city) => postScb("pop", city);
 export const getPopulationGrowth = (city) => postScb("growth", city);
 export const getIncome = (city) => postScb("income", city);
+export const getEducation = (city) => postScb("education", city);

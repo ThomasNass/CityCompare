@@ -5,7 +5,10 @@ import {
   getHousePrices,
   getElectionData,
   getMuniElectionData,
+  getEducation,
 } from "./api-scb.js";
+import { getKoladaSchool, getUpperSchoolUnits } from "./api-schools.js";
+import { KOLADA_KPIS } from "../../lib/kolada.js";
 
 function yearFromKey(key) {
   return [...key].reverse().find((part) => /^\d{4}$/.test(part));
@@ -134,6 +137,120 @@ function mapTaxes(data) {
   };
 }
 
+function seriesFromMap(byYear) {
+  const years = Object.keys(byYear).sort();
+  return {
+    year: years.at(-1),
+    value: byYear[years.at(-1)],
+    series: { year: years, values: years.map((year) => byYear[year]) },
+  };
+}
+
+function mapKolada(data) {
+  const byKpi = {};
+  for (const row of data.values ?? []) {
+    const total = (row.values ?? []).find((item) => item.gender === "T") ?? row.values?.[0];
+    const value = toNumber(total?.value);
+    if (value == null || row.period == null) continue;
+    const kpi = row.kpi;
+    if (!byKpi[kpi]) byKpi[kpi] = {};
+    byKpi[kpi][String(row.period)] = value;
+  }
+
+  const pick = (id) => seriesFromMap(byKpi[id] ?? {});
+
+  return {
+    school: {
+      preschool: {
+        qualified: pick(KOLADA_KPIS.preschoolQualified),
+        childrenPerStaff: pick(KOLADA_KPIS.preschoolChildrenPerStaff),
+        municipalUnits: pick(KOLADA_KPIS.preschoolMunicipal),
+        independentUnits: pick(KOLADA_KPIS.preschoolIndependent),
+      },
+      compulsory: {
+        qualified: pick(KOLADA_KPIS.compulsoryQualified),
+        pupilsPerTeacher: pick(KOLADA_KPIS.compulsoryPupilsPerTeacher),
+        merit: pick(KOLADA_KPIS.compulsoryMerit),
+        eligible: pick(KOLADA_KPIS.compulsoryEligible),
+        municipalSchools: pick(KOLADA_KPIS.compulsoryMunicipalSchools),
+        independentSchools: pick(KOLADA_KPIS.compulsoryIndependentSchools),
+      },
+      upper: {
+        qualified: pick(KOLADA_KPIS.upperQualified),
+        pupilsPerTeacher: pick(KOLADA_KPIS.upperPupilsPerTeacher),
+        exam: pick(KOLADA_KPIS.upperExam),
+        uniEligible: pick(KOLADA_KPIS.upperUniEligible),
+        uniAfter: pick(KOLADA_KPIS.upperUniAfter),
+        independentShare: pick(KOLADA_KPIS.upperIndependentShare),
+      },
+    },
+  };
+}
+
+function mapEducation(data, lauCode) {
+  const byYear = {};
+  for (const element of data.data ?? []) {
+    if (element.key[0] !== lauCode) continue;
+    const level = element.key.find((part) => /^[1-7]$|^US$/.test(part));
+    const year = yearFromKey(element.key);
+    const count = toNumber(element.values[0]);
+    if (!year || count == null || !level || level === "US") continue;
+    if (!byYear[year]) byYear[year] = { pre: 0, gym: 0, post: 0 };
+    if (level === "1" || level === "2") byYear[year].pre += count;
+    else if (level === "3" || level === "4") byYear[year].gym += count;
+    else byYear[year].post += count;
+  }
+  const years = Object.keys(byYear).sort();
+  const shares = years.map((year) => {
+    const total = byYear[year].pre + byYear[year].gym + byYear[year].post;
+    const pct = (value) => (total ? (value / total) * 100 : null);
+    return {
+      pre: pct(byYear[year].pre),
+      gym: pct(byYear[year].gym),
+      post: pct(byYear[year].post),
+    };
+  });
+  const latest = shares.at(-1) ?? {};
+  return {
+    education: {
+      year: years.at(-1),
+      preSecondary: latest.pre,
+      secondary: latest.gym,
+      postSecondary: latest.post,
+      series: {
+        year: years,
+        preSecondary: shares.map((item) => item.pre),
+        secondary: shares.map((item) => item.gym),
+        postSecondary: shares.map((item) => item.post),
+      },
+    },
+  };
+}
+
+function mapUpperUnits(data, lauCode) {
+  const totals = {};
+  const municipal = {};
+  const independent = {};
+  for (const element of data.data ?? []) {
+    const measure = element.key[0];
+    const region = element.key[1];
+    if (region !== lauCode) continue;
+    const year = yearFromKey(element.key) ?? element.key.at(-1);
+    const value = toNumber(element.values[0]);
+    if (!year || value == null) continue;
+    if (measure === "9") totals[year] = value;
+    if (measure === "11") municipal[year] = value;
+    if (measure === "10") independent[year] = value;
+  }
+  return {
+    upperUnits: {
+      total: seriesFromMap(totals),
+      municipal: seriesFromMap(municipal),
+      independent: seriesFromMap(independent),
+    },
+  };
+}
+
 function assignMapped(target, error, data, mapper) {
   if (error || !data) return;
   try {
@@ -160,6 +277,12 @@ export async function getActualCityData(city1, city2) {
     [taxes2, taxes2error],
     [jobs1],
     [jobs2],
+    [kolada1, koladaError1],
+    [kolada2, koladaError2],
+    [education1, educationError1],
+    [education2, educationError2],
+    [upperUnits1, upperUnitsError1],
+    [upperUnits2, upperUnitsError2],
   ] = await Promise.all([
     getElectionData(city1.lauCode),
     getElectionData(city2.lauCode),
@@ -175,6 +298,12 @@ export async function getActualCityData(city1, city2) {
     getTaxes(city2.name.toUpperCase()),
     getJobListings(city1.name),
     getJobListings(city2.name),
+    getKoladaSchool(city1.lauCode),
+    getKoladaSchool(city2.lauCode),
+    getEducation(city1.lauCode),
+    getEducation(city2.lauCode),
+    getUpperSchoolUnits(city1.lauCode),
+    getUpperSchoolUnits(city2.lauCode),
   ]);
 
   city1.jobs = jobs1;
@@ -220,6 +349,13 @@ export async function getActualCityData(city1, city2) {
 
   assignMapped(city1, taxes1error, taxes1, mapTaxes);
   assignMapped(city2, taxes2error, taxes2, mapTaxes);
+
+  assignMapped(city1, koladaError1, kolada1, mapKolada);
+  assignMapped(city2, koladaError2, kolada2, mapKolada);
+  assignMapped(city1, educationError1, education1, (data) => mapEducation(data, city1.lauCode));
+  assignMapped(city2, educationError2, education2, (data) => mapEducation(data, city2.lauCode));
+  assignMapped(city1, upperUnitsError1, upperUnits1, (data) => mapUpperUnits(data, city1.lauCode));
+  assignMapped(city2, upperUnitsError2, upperUnits2, (data) => mapUpperUnits(data, city2.lauCode));
 }
 
 export async function jobsByField(occupations, cityName) {

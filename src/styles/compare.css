@@ -417,6 +417,38 @@
   font-weight: 600;
 }
 
+.compare-layout .school-note {
+  margin: 0 20px 8px;
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+.compare-layout .school-table td:first-child,
+.compare-layout .school-table th:first-child {
+  text-align: left;
+  font-weight: 600;
+}
+
+.compare-layout .school-row-indent td:first-child {
+  padding-left: 22px;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.compare-layout .series-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 8px 12px;
+}
+
+.compare-layout .school-chart h2 {
+  margin: 8px 18px 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
 .compare-layout .job-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
