@@ -1,13 +1,14 @@
 import { getJobListings, getTaxes, getJobListingsByField } from "./api-caller.js";
 import {
-  getGenPopulation,
-  getIncome,
-  getHousePrices,
   getElectionData,
   getMuniElectionData,
+  getRegionElectionData,
+  getIncome,
+  getHousePrices,
+  getGenPopulation,
   getEducation,
 } from "./api-scb.js";
-import { getKoladaSchool, getUpperSchoolUnits } from "./api-schools.js";
+import { getKoladaSchool, getUpperSchoolUnits, getPreschoolUnits, getCompulsoryUnits } from "./api-schools.js";
 import { KOLADA_KPIS } from "../../lib/kolada.js";
 
 function yearFromKey(key) {
@@ -182,6 +183,7 @@ function mapKolada(data) {
         uniEligible: pick(KOLADA_KPIS.upperUniEligible),
         uniAfter: pick(KOLADA_KPIS.upperUniAfter),
         independentShare: pick(KOLADA_KPIS.upperIndependentShare),
+        gradePoints: pick(KOLADA_KPIS.upperGradePoints),
       },
     },
   };
@@ -227,10 +229,8 @@ function mapEducation(data, lauCode) {
   };
 }
 
-function mapUpperUnits(data, lauCode) {
-  const totals = {};
-  const municipal = {};
-  const independent = {};
+function mapSkolverketMeasures(data, lauCode, measures) {
+  const buckets = Object.fromEntries(Object.keys(measures).map((name) => [name, {}]));
   for (const element of data.data ?? []) {
     const measure = element.key[0];
     const region = element.key[1];
@@ -238,16 +238,29 @@ function mapUpperUnits(data, lauCode) {
     const year = yearFromKey(element.key) ?? element.key.at(-1);
     const value = toNumber(element.values[0]);
     if (!year || value == null) continue;
-    if (measure === "9") totals[year] = value;
-    if (measure === "11") municipal[year] = value;
-    if (measure === "10") independent[year] = value;
+    for (const [name, code] of Object.entries(measures)) {
+      if (measure === code) buckets[name][year] = value;
+    }
   }
+  return Object.fromEntries(Object.entries(buckets).map(([name, byYear]) => [name, seriesFromMap(byYear)]));
+}
+
+function preferSeries(preferred, fallback) {
+  return preferred?.value != null ? preferred : fallback;
+}
+
+function mergeSchoolLevel(city, level, patch) {
+  if (!city.school) city.school = { preschool: {}, compulsory: {}, upper: {} };
+  city.school[level] = { ...(city.school[level] ?? {}), ...patch };
+}
+
+function mapUpperUnits(data, lauCode) {
   return {
-    upperUnits: {
-      total: seriesFromMap(totals),
-      municipal: seriesFromMap(municipal),
-      independent: seriesFromMap(independent),
-    },
+    upperUnits: mapSkolverketMeasures(data, lauCode, {
+      total: "9",
+      independent: "10",
+      municipal: "11",
+    }),
   };
 }
 
@@ -267,6 +280,8 @@ export async function getActualCityData(city1, city2) {
     [electionData2, electionError2],
     [electionMuniData1, electionMuniError1],
     [electionMuniData2, electionMuniError2],
+    [electionRegionData1, electionRegionError1],
+    [electionRegionData2, electionRegionError2],
     [incomeData1, incomeError1],
     [incomeData2, incomeError2],
     [populationByGender1, genPopError1],
@@ -283,11 +298,17 @@ export async function getActualCityData(city1, city2) {
     [education2, educationError2],
     [upperUnits1, upperUnitsError1],
     [upperUnits2, upperUnitsError2],
+    [preschoolUnits1, preschoolUnitsError1],
+    [preschoolUnits2, preschoolUnitsError2],
+    [compulsoryUnits1, compulsoryUnitsError1],
+    [compulsoryUnits2, compulsoryUnitsError2],
   ] = await Promise.all([
     getElectionData(city1.lauCode),
     getElectionData(city2.lauCode),
     getMuniElectionData(city1.lauCode),
     getMuniElectionData(city2.lauCode),
+    getRegionElectionData(city1.lauCode),
+    getRegionElectionData(city2.lauCode),
     getIncome(city1.lauCode),
     getIncome(city2.lauCode),
     getGenPopulation(city1.lauCode),
@@ -304,6 +325,10 @@ export async function getActualCityData(city1, city2) {
     getEducation(city2.lauCode),
     getUpperSchoolUnits(city1.lauCode),
     getUpperSchoolUnits(city2.lauCode),
+    getPreschoolUnits(city1.lauCode),
+    getPreschoolUnits(city2.lauCode),
+    getCompulsoryUnits(city1.lauCode),
+    getCompulsoryUnits(city2.lauCode),
   ]);
 
   city1.jobs = jobs1;
@@ -346,6 +371,12 @@ export async function getActualCityData(city1, city2) {
   assignMapped(city2, electionMuniError2, electionMuniData2, (data) => ({
     electionMuniData: mapElection(data, city2.lauCode),
   }));
+  assignMapped(city1, electionRegionError1, electionRegionData1, (data) => ({
+    electionRegionData: mapElection(data, city1.lauCode),
+  }));
+  assignMapped(city2, electionRegionError2, electionRegionData2, (data) => ({
+    electionRegionData: mapElection(data, city2.lauCode),
+  }));
 
   assignMapped(city1, taxes1error, taxes1, mapTaxes);
   assignMapped(city2, taxes2error, taxes2, mapTaxes);
@@ -356,6 +387,36 @@ export async function getActualCityData(city1, city2) {
   assignMapped(city2, educationError2, education2, (data) => mapEducation(data, city2.lauCode));
   assignMapped(city1, upperUnitsError1, upperUnits1, (data) => mapUpperUnits(data, city1.lauCode));
   assignMapped(city2, upperUnitsError2, upperUnits2, (data) => mapUpperUnits(data, city2.lauCode));
+
+  function applySkolverketUnits(city, preschoolError, preschoolData, compulsoryError, compulsoryData) {
+    if (!preschoolError && preschoolData) {
+      try {
+        const preschool = mapSkolverketMeasures(preschoolData, city.lauCode, {
+          municipal: "0",
+          independent: "1",
+        });
+        mergeSchoolLevel(city, "preschool", {
+          municipalUnits: preferSeries(preschool.municipal, city.school?.preschool?.municipalUnits),
+          independentUnits: preferSeries(preschool.independent, city.school?.preschool?.independentUnits),
+        });
+      } catch {
+        // Keep Kolada values if Skolverket cannot be parsed.
+      }
+    }
+    if (!compulsoryError && compulsoryData) {
+      try {
+        const compulsory = mapSkolverketMeasures(compulsoryData, city.lauCode, { municipal: "0" });
+        mergeSchoolLevel(city, "compulsory", {
+          municipalSchools: preferSeries(compulsory.municipal, city.school?.compulsory?.municipalSchools),
+        });
+      } catch {
+        // Keep Kolada values if Skolverket cannot be parsed.
+      }
+    }
+  }
+
+  applySkolverketUnits(city1, preschoolUnitsError1, preschoolUnits1, compulsoryUnitsError1, compulsoryUnits1);
+  applySkolverketUnits(city2, preschoolUnitsError2, preschoolUnits2, compulsoryUnitsError2, compulsoryUnits2);
 }
 
 export async function jobsByField(occupations, cityName) {

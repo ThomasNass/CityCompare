@@ -35,6 +35,7 @@ export default function CityComparison() {
   const populationMode = modeFor("population");
   const genderMode = modeFor("gender");
   const electionMode = modeFor("election");
+  const regionElectionMode = modeFor("electionRegion");
   const muniElectionMode = modeFor("electionMuni");
   const taxMode = modeFor("tax");
   const incomeMode = modeFor("income");
@@ -100,6 +101,23 @@ export default function CityComparison() {
           <ElectionCompare dataKey="electionData" />
         ) : (
           <ElectionTrendChart dataKey="electionData" />
+        )}
+      </Section>
+
+      <Section
+        title={
+          regionElectionMode === "latest"
+            ? `Regionvalet ${city1.electionRegionData?.year ?? ""}`
+            : "Regionval över tid"
+        }
+        source="Källa: SCB"
+        mode={regionElectionMode}
+        onModeChange={(mode) => setSectionMode("electionRegion", mode)}
+      >
+        {regionElectionMode === "latest" ? (
+          <ElectionCompare dataKey="electionRegionData" />
+        ) : (
+          <ElectionTrendChart dataKey="electionRegionData" />
         )}
       </Section>
 

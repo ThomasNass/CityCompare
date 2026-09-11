@@ -25,3 +25,5 @@ export async function getKoladaSchool(city) {
 }
 
 export const getUpperSchoolUnits = (city) => postJson("skolverket/upper-units", city);
+export const getPreschoolUnits = (city) => postJson("skolverket/preschool-units", city);
+export const getCompulsoryUnits = (city) => postJson("skolverket/compulsory-units", city);

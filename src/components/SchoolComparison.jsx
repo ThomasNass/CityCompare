@@ -110,7 +110,6 @@ export default function SchoolComparison({ modeFor, setSectionMode }) {
 
   if (!hasUnits && !hasTeachers && !hasGrades && !hasUpper && !hasEducation) return null;
 
-  const unitsMode = modeFor("schools");
   const teacherMode = modeFor("teachers");
   const gradeMode = modeFor("grades");
   const upperMode = modeFor("upper");
@@ -133,96 +132,90 @@ export default function SchoolComparison({ modeFor, setSectionMode }) {
     upperB?.qualified
   );
   const gradeYear = latestYear(compulsoryA?.merit, compulsoryB?.merit, compulsoryA?.eligible, compulsoryB?.eligible);
-  const examYear = latestYear(upperA?.exam, upperB?.exam, upperA?.uniEligible, upperB?.uniEligible, upperA?.uniAfter, upperB?.uniAfter);
+  const examYear = latestYear(
+    upperA?.exam,
+    upperB?.exam,
+    upperA?.gradePoints,
+    upperB?.gradePoints,
+    upperA?.uniEligible,
+    upperB?.uniEligible,
+    upperA?.uniAfter,
+    upperB?.uniAfter
+  );
   const eduYear = latestYear(eduA, eduB);
 
   return (
     <>
       {hasUnits ? (
-        <Section
-          title={unitsMode === "latest" ? `Skolenheter ${unitYear ?? ""}`.trim() : "Skolenheter över tid"}
-          source="Källa: Kolada / Skolverket"
-          mode={unitsMode}
-          onModeChange={(mode) => setSectionMode("schools", mode)}
-        >
+        <Section title={`Skolenheter ${unitYear ?? ""}`.trim()} source="Källa: Skolverket / Kolada">
           <p className="school-note">
-            Antal förskolor och grundskolor avser enheter i kommunen. Gymnasieskolor kommer från Skolverkets
-            kommunala jämförelsetal. Högskolor redovisas inte per kommun; se övergång till högskola och
-            befolkningens utbildningsnivå längre ner.
+            Förskolor och grundskolor kommer från Skolverkets kommunala jämförelsetal för enheter i kommunen.
+            Fristående grundskolor kompletteras från Kolada när uppgiften finns. Gymnasieskolor kommer från samma
+            Skolverkskälla. Högskolor redovisas inte per kommun; se övergång till högskola och befolkningens
+            utbildningsnivå längre ner.
           </p>
-          {unitsMode === "latest" ? (
-            <SchoolTable
-              cityA={city1}
-              cityB={city2}
-              rows={[
-                {
-                  label: "Förskolor totalt",
-                  a: formatCount(totalUnits(preschoolA?.municipalUnits?.value, preschoolA?.independentUnits?.value)),
-                  b: formatCount(totalUnits(preschoolB?.municipalUnits?.value, preschoolB?.independentUnits?.value)),
-                },
-                {
-                  label: "Kommunala förskolor",
-                  indent: true,
-                  a: formatCount(preschoolA?.municipalUnits?.value),
-                  b: formatCount(preschoolB?.municipalUnits?.value),
-                },
-                {
-                  label: "Fristående förskolor",
-                  indent: true,
-                  a: formatCount(preschoolA?.independentUnits?.value),
-                  b: formatCount(preschoolB?.independentUnits?.value),
-                },
-                {
-                  label: "Grundskolor totalt",
-                  a: formatCount(totalUnits(compulsoryA?.municipalSchools?.value, compulsoryA?.independentSchools?.value)),
-                  b: formatCount(totalUnits(compulsoryB?.municipalSchools?.value, compulsoryB?.independentSchools?.value)),
-                },
-                {
-                  label: "Kommunala grundskolor",
-                  indent: true,
-                  a: formatCount(compulsoryA?.municipalSchools?.value),
-                  b: formatCount(compulsoryB?.municipalSchools?.value),
-                },
-                {
-                  label: "Fristående grundskolor",
-                  indent: true,
-                  a: formatCount(compulsoryA?.independentSchools?.value),
-                  b: formatCount(compulsoryB?.independentSchools?.value),
-                },
-                {
-                  label: "Gymnasieskolor totalt",
-                  a: formatCount(unitsA?.total?.value),
-                  b: formatCount(unitsB?.total?.value),
-                },
-                {
-                  label: "Kommunala gymnasieskolor",
-                  indent: true,
-                  a: formatCount(unitsA?.municipal?.value),
-                  b: formatCount(unitsB?.municipal?.value),
-                },
-                {
-                  label: "Fristående gymnasieskolor",
-                  indent: true,
-                  a: formatCount(unitsA?.independent?.value),
-                  b: formatCount(unitsB?.independent?.value),
-                },
-                {
-                  label: "Elever i fristående gymnasium",
-                  a: formatPercent(upperA?.independentShare?.value),
-                  b: formatPercent(upperB?.independentShare?.value),
-                },
-              ]}
-            />
-          ) : (
-            <div className="series-stack">
-              <SchoolChart title="Kommunala förskolor" statA={preschoolA?.municipalUnits} statB={preschoolB?.municipalUnits} cityA={city1} cityB={city2} />
-              <SchoolChart title="Fristående förskolor" statA={preschoolA?.independentUnits} statB={preschoolB?.independentUnits} cityA={city1} cityB={city2} />
-              <SchoolChart title="Kommunala grundskolor" statA={compulsoryA?.municipalSchools} statB={compulsoryB?.municipalSchools} cityA={city1} cityB={city2} />
-              <SchoolChart title="Fristående grundskolor" statA={compulsoryA?.independentSchools} statB={compulsoryB?.independentSchools} cityA={city1} cityB={city2} />
-              <SchoolChart title="Gymnasieskolor totalt" statA={unitsA?.total} statB={unitsB?.total} cityA={city1} cityB={city2} />
-              <SchoolChart title="Elever i fristående gymnasium" statA={upperA?.independentShare} statB={upperB?.independentShare} cityA={city1} cityB={city2} ySuffix="%" />
-            </div>
-          )}
+          <SchoolTable
+            cityA={city1}
+            cityB={city2}
+            rows={[
+              {
+                label: "Förskolor totalt",
+                a: formatCount(totalUnits(preschoolA?.municipalUnits?.value, preschoolA?.independentUnits?.value)),
+                b: formatCount(totalUnits(preschoolB?.municipalUnits?.value, preschoolB?.independentUnits?.value)),
+              },
+              {
+                label: "Kommunala förskolor",
+                indent: true,
+                a: formatCount(preschoolA?.municipalUnits?.value),
+                b: formatCount(preschoolB?.municipalUnits?.value),
+              },
+              {
+                label: "Fristående förskolor",
+                indent: true,
+                a: formatCount(preschoolA?.independentUnits?.value),
+                b: formatCount(preschoolB?.independentUnits?.value),
+              },
+              {
+                label: "Grundskolor totalt",
+                a: formatCount(totalUnits(compulsoryA?.municipalSchools?.value, compulsoryA?.independentSchools?.value)),
+                b: formatCount(totalUnits(compulsoryB?.municipalSchools?.value, compulsoryB?.independentSchools?.value)),
+              },
+              {
+                label: "Kommunala grundskolor",
+                indent: true,
+                a: formatCount(compulsoryA?.municipalSchools?.value),
+                b: formatCount(compulsoryB?.municipalSchools?.value),
+              },
+              {
+                label: "Fristående grundskolor",
+                indent: true,
+                a: formatCount(compulsoryA?.independentSchools?.value),
+                b: formatCount(compulsoryB?.independentSchools?.value),
+              },
+              {
+                label: "Gymnasieskolor totalt",
+                a: formatCount(unitsA?.total?.value),
+                b: formatCount(unitsB?.total?.value),
+              },
+              {
+                label: "Kommunala gymnasieskolor",
+                indent: true,
+                a: formatCount(unitsA?.municipal?.value),
+                b: formatCount(unitsB?.municipal?.value),
+              },
+              {
+                label: "Fristående gymnasieskolor",
+                indent: true,
+                a: formatCount(unitsA?.independent?.value),
+                b: formatCount(unitsB?.independent?.value),
+              },
+              {
+                label: "Elever i fristående gymnasium",
+                a: formatPercent(upperA?.independentShare?.value),
+                b: formatPercent(upperB?.independentShare?.value),
+              },
+            ]}
+          />
         </Section>
       ) : null}
 
@@ -290,6 +283,9 @@ export default function SchoolComparison({ modeFor, setSectionMode }) {
           mode={gradeMode}
           onModeChange={(mode) => setSectionMode("grades", mode)}
         >
+          <p className="school-note">
+            Meritvärde är grundskolans snittbetyg i åk 9: summan av de 17 bästa ämnesbetygen, max 340 poäng.
+          </p>
           {gradeMode === "latest" ? (
             <SchoolTable
               cityA={city1}
@@ -324,8 +320,8 @@ export default function SchoolComparison({ modeFor, setSectionMode }) {
           onModeChange={(mode) => setSectionMode("upper", mode)}
         >
           <p className="school-note">
-            Examen och högskolebehörighet avser elever folkbokförda i kommunen (hemkommun), inte bara skolor som
-            ligger i kommunen.
+            Examen, betygspoäng och högskoleövergång avser elever folkbokförda i kommunen (hemkommun). Betygspoäng
+            vid examen ligger vanligtvis mellan 10 och 20.
           </p>
           {upperMode === "latest" ? (
             <SchoolTable
@@ -336,6 +332,11 @@ export default function SchoolComparison({ modeFor, setSectionMode }) {
                   label: "Examen inom 3 år, hemkommun",
                   a: formatPercent(upperA?.exam?.value),
                   b: formatPercent(upperB?.exam?.value),
+                },
+                {
+                  label: "Betygspoäng vid examen, hemkommun",
+                  a: formatMerit(upperA?.gradePoints?.value),
+                  b: formatMerit(upperB?.gradePoints?.value),
                 },
                 {
                   label: "Högskolebehörighet inom 3 år",
@@ -352,6 +353,7 @@ export default function SchoolComparison({ modeFor, setSectionMode }) {
           ) : (
             <div className="series-stack">
               <SchoolChart title="Gymnasieexamen inom 3 år" statA={upperA?.exam} statB={upperB?.exam} cityA={city1} cityB={city2} ySuffix="%" />
+              <SchoolChart title="Betygspoäng vid examen" statA={upperA?.gradePoints} statB={upperB?.gradePoints} cityA={city1} cityB={city2} />
               <SchoolChart title="Högskolebehörighet inom 3 år" statA={upperA?.uniEligible} statB={upperB?.uniEligible} cityA={city1} cityB={city2} ySuffix="%" />
               <SchoolChart title="På högskola 2 år efter examen" statA={upperA?.uniAfter} statB={upperB?.uniAfter} cityA={city1} cityB={city2} ySuffix="%" />
             </div>
