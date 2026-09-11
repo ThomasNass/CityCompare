@@ -3,8 +3,12 @@ import express from "express";
 import fs from "fs/promises";
 import path from "path";
 import { fileURLToPath } from "url";
+import { fetchKoladaCity, fetchKoladaRegionCare, fetchKoladaSociety } from "../lib/kolada.js";
 import { fetchScbTable, isScbTable } from "../lib/scb-fetch.js";
 import { SCB_ENDPOINTS } from "../lib/scb-queries.js";
+import { SKOLVERKET_ENDPOINTS } from "../lib/skolverket-queries.js";
+import { fetchBathingWaters, summarizeBeaches } from "../lib/hav.js";
+import { fetchAirQuality } from "../lib/air.js";
 
 const callerId = "MuniPare";
 const key = "eoPB4V74FT33z4Yv8zyoyoBg7cG9Y9zlNxO8k49D";
@@ -115,6 +119,90 @@ app.get("/api/hitta/:company/:municipality", async (req, res) => {
 for (const [type, endpoint] of Object.entries(SCB_ENDPOINTS)) {
   app.post(`/api/scb/${type}/:city`, scbRoute(endpoint));
 }
+
+for (const [type, endpoint] of Object.entries(SKOLVERKET_ENDPOINTS)) {
+  app.post(`/api/skolverket/${type}/:city`, scbRoute(endpoint));
+}
+
+app.get("/api/kolada/region/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const cacheKey = `kolada-care-${id.toLowerCase()}`;
+    let data = getFromCache(cacheKey);
+    if (!data) {
+      const result = await fetchKoladaRegionCare(id);
+      data = result.data;
+      res.status(result.status);
+      if (result.status >= 200 && result.status < 300 && Array.isArray(data?.values) && data.values.length) {
+        await saveToCache(cacheKey, data);
+      }
+    }
+    res.send(data);
+  } catch (error) {
+    res.status(502).json({ error: error.message || "Kolada-anropet misslyckades" });
+  }
+});
+
+app.get("/api/kolada/society/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const cacheKey = `kolada-society-${id.toLowerCase()}`;
+    let data = getFromCache(cacheKey);
+    if (!data) {
+      const result = await fetchKoladaSociety(id);
+      data = result.data;
+      res.status(result.status);
+      if (result.status >= 200 && result.status < 300 && Array.isArray(data?.values) && data.values.length) {
+        await saveToCache(cacheKey, data);
+      }
+    }
+    res.send(data);
+  } catch (error) {
+    res.status(502).json({ error: error.message || "Kolada-anropet misslyckades" });
+  }
+});
+
+app.get("/api/kolada/:city", async (req, res) => {
+  try {
+    const { city } = req.params;
+    const cacheKey = `kolada-school-${city.toLowerCase()}`;
+    let data = getFromCache(cacheKey);
+    if (!data) {
+      const result = await fetchKoladaCity(city);
+      data = result.data;
+      res.status(result.status);
+      if (result.status >= 200 && result.status < 300 && Array.isArray(data?.values) && data.values.length) {
+        await saveToCache(cacheKey, data);
+      }
+    }
+    res.send(data);
+  } catch (error) {
+    res.status(502).json({ error: error.message || "Kolada-anropet misslyckades" });
+  }
+});
+
+app.get("/api/hav/:city", async (req, res) => {
+  try {
+    const { city } = req.params;
+    const { name } = req.query;
+    const { status, data } = await fetchBathingWaters();
+    if (status >= 400 || !Array.isArray(data)) {
+      return res.status(status >= 400 ? status : 502).json(data ?? { error: "HaV-anropet misslyckades" });
+    }
+    return res.json(summarizeBeaches(data, city, name));
+  } catch (error) {
+    res.status(502).json({ error: error.message || "HaV-anropet misslyckades" });
+  }
+});
+
+app.get("/api/air/:city", async (req, res) => {
+  try {
+    const data = await fetchAirQuality(req.params.city, req.query.name);
+    res.json(data);
+  } catch (error) {
+    res.status(502).json({ error: error.message || "Luftkvalitetsanropet misslyckades", missing: true });
+  }
+});
 
 if (isProduction) {
   app.use(express.static(distDir));

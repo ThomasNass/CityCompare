@@ -49,7 +49,7 @@ export default function SearchForm() {
             placeholder="Andra kommunen"
           />
         </div>
-        <Button id="compare-button" text="Jämför kommuner" onClick={onClick} />
+        <Button id="compare-button" text="Jämför" onClick={onClick} />
       </div>
       {loading ? <div className="loader" /> : hasCities ? <CityComparison /> : null}
     </>
