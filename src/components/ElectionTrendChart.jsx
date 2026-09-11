@@ -1,23 +1,12 @@
 import { Line } from "react-chartjs-2";
 import { useCities } from "../context/city-context.jsx";
-
-const PARTY_COLORS = {
-  M: "#1eaed6",
-  C: "#57b557",
-  L: "#0084ff",
-  KD: "#00284d",
-  MP: "#004d0e",
-  S: "#ff2403",
-  V: "#8a1503",
-  SD: "#fffb00",
-  ÖVRIGA: "#b0aeae",
-};
+import { partyColor } from "../lib/parties.js";
 
 export default function ElectionTrendChart({ dataKey }) {
   const { city1, city2 } = useCities();
 
   return (
-    <div className="pie-div">
+    <div className="election-trend-stack">
       <ElectionCityTrend city={city1} dataKey={dataKey} />
       <ElectionCityTrend city={city2} dataKey={dataKey} />
     </div>
@@ -27,35 +16,56 @@ export default function ElectionTrendChart({ dataKey }) {
 function ElectionCityTrend({ city, dataKey }) {
   const election = city[dataKey];
   if (!election?.years?.length) {
-    return <h2>Gick ej att hämta data</h2>;
+    return <p className="election-empty">Gick ej att hämta data</p>;
   }
 
   const parties = election.parties;
   return (
-    <div className="pie-chart">
+    <div className="election-trend-chart">
       <h2>{city.name}</h2>
-      <Line
-        data={{
-          labels: election.years,
-          datasets: parties.map((party) => ({
-            label: party,
-            borderColor: PARTY_COLORS[party] ?? "#64748b",
-            backgroundColor: PARTY_COLORS[party] ?? "#64748b",
-            borderWidth: 2,
-            tension: 0.25,
-            pointRadius: 2,
-            data: election.years.map((year) => {
-              const snapshot = election.byYear[year];
-              const index = snapshot.parties.indexOf(party);
-              return index >= 0 ? snapshot.share[index] : null;
-            }),
-          })),
-        }}
-        options={{
-          plugins: { legend: { position: "bottom" } },
-          scales: { y: { title: { display: true, text: "%" } } },
-        }}
-      />
+      <div className="election-trend-canvas">
+        <Line
+          data={{
+            labels: election.years,
+            datasets: parties.map((party) => ({
+              label: party,
+              borderColor: partyColor(party),
+              backgroundColor: partyColor(party),
+              borderWidth: 2.5,
+              tension: 0.2,
+              pointRadius: 3,
+              pointHoverRadius: 5,
+              fill: false,
+              spanGaps: true,
+              data: election.years.map((year) => {
+                const snapshot = election.byYear[year];
+                const index = snapshot?.parties.indexOf(party) ?? -1;
+                return index >= 0 ? snapshot.share[index] : null;
+              }),
+            })),
+          }}
+          options={{
+            maintainAspectRatio: false,
+            interaction: { mode: "index", intersect: false },
+            plugins: {
+              legend: {
+                position: "bottom",
+                labels: { usePointStyle: true, pointStyle: "circle", padding: 16 },
+              },
+            },
+            scales: {
+              y: {
+                beginAtZero: true,
+                ticks: { callback: (value) => `${value} %` },
+                grid: { color: "rgba(15, 23, 42, 0.06)" },
+              },
+              x: {
+                grid: { display: false },
+              },
+            },
+          }}
+        />
+      </div>
     </div>
   );
 }

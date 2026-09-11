@@ -3,7 +3,7 @@ import PopulationBarChart from "./PopulationBarChart.jsx";
 import DisplayTax from "./DisplayTax.jsx";
 import LineChart from "./LineChart.jsx";
 import PieChart from "./PieChart.jsx";
-import ElectionPieChart from "./ElectionPieChart.jsx";
+import ElectionCompare from "./ElectionCompare.jsx";
 import ElectionTrendChart from "./ElectionTrendChart.jsx";
 import SeriesLineChart from "./SeriesLineChart.jsx";
 import Jobs from "./Jobs.jsx";
@@ -97,10 +97,7 @@ export default function CityComparison() {
         onModeChange={(mode) => setSectionMode("election", mode)}
       >
         {electionMode === "latest" ? (
-          <div className="pie-div">
-            <ElectionPieChart city="city1" dataKey="electionData" />
-            <ElectionPieChart city="city2" dataKey="electionData" />
-          </div>
+          <ElectionCompare dataKey="electionData" />
         ) : (
           <ElectionTrendChart dataKey="electionData" />
         )}
@@ -117,10 +114,7 @@ export default function CityComparison() {
         onModeChange={(mode) => setSectionMode("electionMuni", mode)}
       >
         {muniElectionMode === "latest" ? (
-          <div className="pie-div">
-            <ElectionPieChart city="city1" dataKey="electionMuniData" />
-            <ElectionPieChart city="city2" dataKey="electionMuniData" />
-          </div>
+          <ElectionCompare dataKey="electionMuniData" />
         ) : (
           <ElectionTrendChart dataKey="electionMuniData" />
         )}
