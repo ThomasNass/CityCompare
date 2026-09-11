@@ -17,6 +17,21 @@ function formatUg(value) {
   return `${Number(value).toLocaleString("sv-SE", { maximumFractionDigits: 1 })} µg/m³`;
 }
 
+function formatPer100k(value) {
+  if (value == null || Number.isNaN(Number(value))) return "—";
+  return `${Number(value).toLocaleString("sv-SE", { maximumFractionDigits: 0 })} per 100 000`;
+}
+
+function hasValue(...stats) {
+  return stats.some((stat) => stat?.value != null);
+}
+
+function withYear(formatted, stat, other) {
+  if (formatted === "—" || !stat?.year) return formatted;
+  if (other?.year && other.year !== stat.year) return `${formatted} (${stat.year})`;
+  return formatted;
+}
+
 function latestYear(...stats) {
   return stats
     .map((stat) => stat?.year)
@@ -32,6 +47,24 @@ function alignedYears(statA, statB) {
 function valuesForYears(stat, years) {
   const lookup = Object.fromEntries((stat?.series?.year ?? []).map((year, index) => [year, stat.series.values[index]]));
   return years.map((year) => lookup[year] ?? null);
+}
+
+function StatChart({ title, statA, statB, cityA, cityB, ySuffix = "" }) {
+  const years = alignedYears(statA, statB);
+  if (!years.length) return null;
+  return (
+    <div className="school-chart">
+      <h2>{title}</h2>
+      <SeriesLineChart
+        labels={years}
+        series={[
+          { label: cityA.name, data: valuesForYears(statA, years) },
+          { label: cityB.name, data: valuesForYears(statB, years) },
+        ]}
+        ySuffix={ySuffix}
+      />
+    </div>
+  );
 }
 
 function CompareTable({ cityA, cityB, rows }) {
@@ -79,18 +112,67 @@ export default function QualityComparison({ modeFor, setSectionMode }) {
   const airB = city2.air;
   const careA = city1.care;
   const careB = city2.care;
+  const unemploymentA = city1.unemployment;
+  const unemploymentB = city2.unemployment;
+  const crimeA = city1.crime;
+  const crimeB = city2.crime;
+  const safetyA = city1.safety;
+  const safetyB = city2.safety;
 
   const hasBeaches = Boolean(beachesA || beachesB);
   const hasGreen = greenA?.value != null || greenB?.value != null;
   const hasAir = Boolean(airA || airB);
   const hasCare = careA?.primaryCare?.value != null || careB?.primaryCare?.value != null || careA?.specialist?.value != null || careB?.specialist?.value != null;
+  const hasUnemployment = hasValue(unemploymentA, unemploymentB);
+  const hasCrime = hasValue(
+    crimeA?.violence,
+    crimeB?.violence,
+    crimeA?.vandalism,
+    crimeB?.vandalism,
+    crimeA?.burglary,
+    crimeB?.burglary,
+    crimeA?.theft,
+    crimeB?.theft,
+    crimeA?.traffic,
+    crimeB?.traffic,
+  );
+  const hasSafety = hasValue(
+    safetyA?.darkOutdoors,
+    safetyB?.darkOutdoors,
+    safetyA?.burglaryTheft,
+    safetyB?.burglaryTheft,
+    safetyA?.disturbingTraffic,
+    safetyB?.disturbingTraffic,
+  );
+  const hasCrimeSafety = hasCrime || hasSafety;
 
-  if (!hasBeaches && !hasGreen && !hasAir && !hasCare) return null;
+  if (!hasBeaches && !hasGreen && !hasAir && !hasCare && !hasUnemployment && !hasCrimeSafety) return null;
 
   const greenMode = modeFor("green");
   const careMode = modeFor("care");
+  const unemploymentMode = modeFor("unemployment");
+  const crimeMode = modeFor("crime");
   const greenYear = latestYear(greenA, greenB);
   const careYear = latestYear(careA?.primaryCare, careB?.primaryCare, careA?.specialist, careB?.specialist);
+  const unemploymentYear = latestYear(unemploymentA, unemploymentB);
+  const crimeYear = latestYear(
+    crimeA?.violence,
+    crimeB?.violence,
+    crimeA?.vandalism,
+    crimeB?.vandalism,
+    crimeA?.burglary,
+    crimeB?.burglary,
+    crimeA?.theft,
+    crimeB?.theft,
+    crimeA?.traffic,
+    crimeB?.traffic,
+    safetyA?.darkOutdoors,
+    safetyB?.darkOutdoors,
+    safetyA?.burglaryTheft,
+    safetyB?.burglaryTheft,
+    safetyA?.disturbingTraffic,
+    safetyB?.disturbingTraffic,
+  );
   const greenYears = alignedYears(greenA, greenB);
   const carePrimaryYears = alignedYears(careA?.primaryCare, careB?.primaryCare);
   const careSpecYears = alignedYears(careA?.specialist, careB?.specialist);
@@ -253,6 +335,180 @@ export default function QualityComparison({ modeFor, setSectionMode }) {
                     ySuffix="%"
                   />
                 </div>
+              ) : null}
+            </div>
+          )}
+        </Section>
+      ) : null}
+
+      {hasUnemployment ? (
+        <Section
+          title={unemploymentMode === "latest" ? `Arbetslöshet ${unemploymentYear ?? ""}`.trim() : "Arbetslöshet över tid"}
+          source="Källa: Kolada / Arbetsförmedlingen (BAS)"
+          mode={unemploymentMode}
+          onModeChange={(mode) => setSectionMode("unemployment", mode)}
+        >
+          <p className="school-note">
+            Andel arbetslösa av befolkningen 20–64 år enligt SCB:s BAS. Senaste tillgängliga helårsdata.
+          </p>
+          {unemploymentMode === "latest" ? (
+            <CompareTable
+              cityA={city1}
+              cityB={city2}
+              rows={[
+                {
+                  label: "Arbetslösa, 20–64 år",
+                  a: withYear(formatPercent(unemploymentA?.value), unemploymentA, unemploymentB),
+                  b: withYear(formatPercent(unemploymentB?.value), unemploymentB, unemploymentA),
+                },
+              ]}
+            />
+          ) : (
+            <div className="series-stack">
+              <StatChart
+                title="Arbetslösa, 20–64 år"
+                statA={unemploymentA}
+                statB={unemploymentB}
+                cityA={city1}
+                cityB={city2}
+                ySuffix="%"
+              />
+            </div>
+          )}
+        </Section>
+      ) : null}
+
+      {hasCrimeSafety ? (
+        <Section
+          title={crimeMode === "latest" ? `Brott och trygghet ${crimeYear ?? ""}`.trim() : "Brott och trygghet över tid"}
+          source="Källa: Kolada / Brå och SCB Medborgarundersökning"
+          mode={crimeMode}
+          onModeChange={(mode) => setSectionMode("crime", mode)}
+        >
+          <p className="school-note">
+            Anmälda brott redovisas per 100 000 invånare (Brå). Trygghet kommer från SCB:s medborgarundersökning och
+            visar andelen som känner sig trygga eller upplever få problem. Alla kommuner deltar inte varje år; saknas
+            senaste året visas senaste tillgängliga värde.
+          </p>
+          {crimeMode === "latest" ? (
+            <>
+              {hasCrime ? (
+                <>
+                  <h2 className="school-subgroup">Anmälda brott</h2>
+                  <CompareTable
+                    cityA={city1}
+                    cityB={city2}
+                    rows={[
+                      {
+                        label: "Våldsbrott",
+                        a: withYear(formatPer100k(crimeA?.violence?.value), crimeA?.violence, crimeB?.violence),
+                        b: withYear(formatPer100k(crimeB?.violence?.value), crimeB?.violence, crimeA?.violence),
+                      },
+                      {
+                        label: "Skadegörelse",
+                        a: withYear(formatPer100k(crimeA?.vandalism?.value), crimeA?.vandalism, crimeB?.vandalism),
+                        b: withYear(formatPer100k(crimeB?.vandalism?.value), crimeB?.vandalism, crimeA?.vandalism),
+                      },
+                      {
+                        label: "Bostadsinbrott",
+                        a: withYear(formatPer100k(crimeA?.burglary?.value), crimeA?.burglary, crimeB?.burglary),
+                        b: withYear(formatPer100k(crimeB?.burglary?.value), crimeB?.burglary, crimeA?.burglary),
+                      },
+                      {
+                        label: "Stöld- och tillgreppsbrott",
+                        a: withYear(formatPer100k(crimeA?.theft?.value), crimeA?.theft, crimeB?.theft),
+                        b: withYear(formatPer100k(crimeB?.theft?.value), crimeB?.theft, crimeA?.theft),
+                      },
+                      {
+                        label: "Trafikbrott",
+                        a: withYear(formatPer100k(crimeA?.traffic?.value), crimeA?.traffic, crimeB?.traffic),
+                        b: withYear(formatPer100k(crimeB?.traffic?.value), crimeB?.traffic, crimeA?.traffic),
+                      },
+                    ]}
+                  />
+                </>
+              ) : null}
+              {hasSafety ? (
+                <>
+                  <h2 className="school-subgroup">Upplevd trygghet</h2>
+                  <CompareTable
+                    cityA={city1}
+                    cityB={city2}
+                    rows={[
+                      {
+                        label: "Trygg utomhus när det är mörkt",
+                        a: withYear(formatPercent(safetyA?.darkOutdoors?.value), safetyA?.darkOutdoors, safetyB?.darkOutdoors),
+                        b: withYear(formatPercent(safetyB?.darkOutdoors?.value), safetyB?.darkOutdoors, safetyA?.darkOutdoors),
+                      },
+                      {
+                        label: "Få problem med inbrott eller stölder",
+                        a: withYear(formatPercent(safetyA?.burglaryTheft?.value), safetyA?.burglaryTheft, safetyB?.burglaryTheft),
+                        b: withYear(formatPercent(safetyB?.burglaryTheft?.value), safetyB?.burglaryTheft, safetyA?.burglaryTheft),
+                      },
+                      {
+                        label: "Få problem med störande trafik",
+                        a: withYear(
+                          formatPercent(safetyA?.disturbingTraffic?.value),
+                          safetyA?.disturbingTraffic,
+                          safetyB?.disturbingTraffic,
+                        ),
+                        b: withYear(
+                          formatPercent(safetyB?.disturbingTraffic?.value),
+                          safetyB?.disturbingTraffic,
+                          safetyA?.disturbingTraffic,
+                        ),
+                      },
+                    ]}
+                  />
+                </>
+              ) : null}
+            </>
+          ) : (
+            <div className="series-stack">
+              {hasCrime ? (
+                <>
+                  <h2 className="school-subgroup">Anmälda brott</h2>
+                  <StatChart title="Våldsbrott" statA={crimeA?.violence} statB={crimeB?.violence} cityA={city1} cityB={city2} />
+                  <StatChart title="Skadegörelse" statA={crimeA?.vandalism} statB={crimeB?.vandalism} cityA={city1} cityB={city2} />
+                  <StatChart title="Bostadsinbrott" statA={crimeA?.burglary} statB={crimeB?.burglary} cityA={city1} cityB={city2} />
+                  <StatChart
+                    title="Stöld- och tillgreppsbrott"
+                    statA={crimeA?.theft}
+                    statB={crimeB?.theft}
+                    cityA={city1}
+                    cityB={city2}
+                  />
+                  <StatChart title="Trafikbrott" statA={crimeA?.traffic} statB={crimeB?.traffic} cityA={city1} cityB={city2} />
+                </>
+              ) : null}
+              {hasSafety ? (
+                <>
+                  <h2 className="school-subgroup">Upplevd trygghet</h2>
+                  <StatChart
+                    title="Trygg utomhus när det är mörkt"
+                    statA={safetyA?.darkOutdoors}
+                    statB={safetyB?.darkOutdoors}
+                    cityA={city1}
+                    cityB={city2}
+                    ySuffix="%"
+                  />
+                  <StatChart
+                    title="Få problem med inbrott eller stölder"
+                    statA={safetyA?.burglaryTheft}
+                    statB={safetyB?.burglaryTheft}
+                    cityA={city1}
+                    cityB={city2}
+                    ySuffix="%"
+                  />
+                  <StatChart
+                    title="Få problem med störande trafik"
+                    statA={safetyA?.disturbingTraffic}
+                    statB={safetyB?.disturbingTraffic}
+                    cityA={city1}
+                    cityB={city2}
+                    ySuffix="%"
+                  />
+                </>
               ) : null}
             </div>
           )}

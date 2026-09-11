@@ -3,7 +3,7 @@ import express from "express";
 import fs from "fs/promises";
 import path from "path";
 import { fileURLToPath } from "url";
-import { fetchKoladaCity, fetchKoladaRegionCare } from "../lib/kolada.js";
+import { fetchKoladaCity, fetchKoladaRegionCare, fetchKoladaSociety } from "../lib/kolada.js";
 import { fetchScbTable, isScbTable } from "../lib/scb-fetch.js";
 import { SCB_ENDPOINTS } from "../lib/scb-queries.js";
 import { SKOLVERKET_ENDPOINTS } from "../lib/skolverket-queries.js";
@@ -131,6 +131,25 @@ app.get("/api/kolada/region/:id", async (req, res) => {
     let data = getFromCache(cacheKey);
     if (!data) {
       const result = await fetchKoladaRegionCare(id);
+      data = result.data;
+      res.status(result.status);
+      if (result.status >= 200 && result.status < 300 && Array.isArray(data?.values) && data.values.length) {
+        await saveToCache(cacheKey, data);
+      }
+    }
+    res.send(data);
+  } catch (error) {
+    res.status(502).json({ error: error.message || "Kolada-anropet misslyckades" });
+  }
+});
+
+app.get("/api/kolada/society/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const cacheKey = `kolada-society-${id.toLowerCase()}`;
+    let data = getFromCache(cacheKey);
+    if (!data) {
+      const result = await fetchKoladaSociety(id);
       data = result.data;
       res.status(result.status);
       if (result.status >= 200 && result.status < 300 && Array.isArray(data?.values) && data.values.length) {

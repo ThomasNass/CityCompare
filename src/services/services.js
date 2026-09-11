@@ -11,8 +11,8 @@ import {
   getGreenSpace,
 } from "./api-scb.js";
 import { getKoladaSchool, getUpperSchoolUnits, getPreschoolUnits, getCompulsoryUnits, getPreschoolStaff, getUpperResults } from "./api-schools.js";
-import { getBeaches, getAirQuality, getRegionCare } from "./api-live.js";
-import { CARE_KPIS, KOLADA_KPIS } from "../../lib/kolada.js";
+import { getBeaches, getAirQuality, getRegionCare, getKoladaSociety } from "./api-live.js";
+import { CARE_KPIS, KOLADA_KPIS, SOCIETY_KPIS } from "../../lib/kolada.js";
 import { regionFromLau } from "../../lib/regions.js";
 
 function yearFromKey(key) {
@@ -191,7 +191,7 @@ function seriesFromMap(byYear) {
   };
 }
 
-function mapKolada(data) {
+function koladaByKpi(data) {
   const byKpi = {};
   for (const row of data.values ?? []) {
     const total = (row.values ?? []).find((item) => item.gender === "T") ?? row.values?.[0];
@@ -201,7 +201,11 @@ function mapKolada(data) {
     if (!byKpi[kpi]) byKpi[kpi] = {};
     byKpi[kpi][String(row.period)] = value;
   }
+  return byKpi;
+}
 
+function mapKolada(data) {
+  const byKpi = koladaByKpi(data);
   const pick = (id) => seriesFromMap(byKpi[id] ?? {});
 
   return {
@@ -229,6 +233,26 @@ function mapKolada(data) {
         independentShare: pick(KOLADA_KPIS.upperIndependentShare),
         gradePoints: pick(KOLADA_KPIS.upperGradePoints),
       },
+    },
+  };
+}
+
+function mapKoladaSociety(data) {
+  const byKpi = koladaByKpi(data);
+  const pick = (id) => seriesFromMap(byKpi[id] ?? {});
+  return {
+    unemployment: pick(SOCIETY_KPIS.unemployment),
+    crime: {
+      violence: pick(SOCIETY_KPIS.crimeViolence),
+      vandalism: pick(SOCIETY_KPIS.crimeVandalism),
+      burglary: pick(SOCIETY_KPIS.crimeBurglary),
+      theft: pick(SOCIETY_KPIS.crimeTheft),
+      traffic: pick(SOCIETY_KPIS.crimeTraffic),
+    },
+    safety: {
+      darkOutdoors: pick(SOCIETY_KPIS.safetyDarkOutdoors),
+      burglaryTheft: pick(SOCIETY_KPIS.safetyBurglaryTheft),
+      disturbingTraffic: pick(SOCIETY_KPIS.safetyDisturbingTraffic),
     },
   };
 }
@@ -358,6 +382,8 @@ export async function getActualCityData(city1, city2) {
     [air2],
     [care1, careError1],
     [care2, careError2],
+    [society1, societyError1],
+    [society2, societyError2],
   ] = await Promise.all([
     getElectionData(city1.lauCode),
     getElectionData(city2.lauCode),
@@ -397,6 +423,8 @@ export async function getActualCityData(city1, city2) {
     getAirQuality(city2.lauCode, city2.name),
     getRegionCare(regionFromLau(city1.lauCode)?.regionId),
     getRegionCare(regionFromLau(city2.lauCode)?.regionId),
+    getKoladaSociety(city1.lauCode),
+    getKoladaSociety(city2.lauCode),
   ]);
 
   city1.jobs = jobs1;
@@ -451,6 +479,8 @@ export async function getActualCityData(city1, city2) {
 
   assignMapped(city1, koladaError1, kolada1, mapKolada);
   assignMapped(city2, koladaError2, kolada2, mapKolada);
+  assignMapped(city1, societyError1, society1, mapKoladaSociety);
+  assignMapped(city2, societyError2, society2, mapKoladaSociety);
   assignMapped(city1, educationError1, education1, (data) => mapEducation(data, city1.lauCode));
   assignMapped(city2, educationError2, education2, (data) => mapEducation(data, city2.lauCode));
   assignMapped(city1, upperUnitsError1, upperUnits1, (data) => mapUpperUnits(data, city1.lauCode));

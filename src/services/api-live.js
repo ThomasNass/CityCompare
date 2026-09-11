@@ -1,4 +1,4 @@
-import { fetchKoladaRegionCare, isKoladaPayload } from "../../lib/kolada.js";
+import { fetchKoladaRegionCare, fetchKoladaSociety, isKoladaPayload } from "../../lib/kolada.js";
 
 async function getJson(path) {
   try {
@@ -46,6 +46,30 @@ export async function getRegionCare(regionId) {
       return [data, null];
     }
     return [null, new Error(data?.error || "Kunde inte hämta vårdstatistik")];
+  } catch (err) {
+    return [null, err];
+  }
+}
+
+export async function getKoladaSociety(city) {
+  try {
+    const response = await fetch(`/api/kolada/society/${city}`, {
+      signal: AbortSignal.timeout(6000),
+    });
+    const data = await response.json().catch(() => null);
+    if (response.ok && isKoladaPayload(data)) {
+      return [data, null];
+    }
+  } catch {
+    // Vercel Hobby cuts serverless functions off after ~10s. Fall through to Kolada.
+  }
+
+  try {
+    const { status, data } = await fetchKoladaSociety(city);
+    if (status < 400 && isKoladaPayload(data)) {
+      return [data, null];
+    }
+    return [null, new Error(data?.error || "Kunde inte hämta brott- och arbetsmarknadsstatistik")];
   } catch (err) {
     return [null, err];
   }

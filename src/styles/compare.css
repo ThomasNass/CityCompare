@@ -558,10 +558,15 @@
   padding: 0 8px 12px;
 }
 
-.compare-layout .school-chart h2 {
+.compare-layout .school-chart h2,
+.compare-layout .school-subgroup {
   margin: 8px 18px 0;
   font-size: 0.95rem;
   font-weight: 700;
+}
+
+.compare-layout .school-subgroup {
+  margin: 16px 20px 0;
 }
 
 .compare-layout .job-wrapper {
