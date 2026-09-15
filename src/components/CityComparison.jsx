@@ -3,29 +3,17 @@ import PopulationBarChart from "./PopulationBarChart.jsx";
 import DisplayTax from "./DisplayTax.jsx";
 import LineChart from "./LineChart.jsx";
 import PieChart from "./PieChart.jsx";
-import ElectionPieChart from "./ElectionPieChart.jsx";
+import ElectionCompare from "./ElectionCompare.jsx";
 import ElectionTrendChart from "./ElectionTrendChart.jsx";
 import SeriesLineChart from "./SeriesLineChart.jsx";
 import Jobs from "./Jobs.jsx";
 import Income from "./Income.jsx";
 import HousePrice from "./HousePrice.jsx";
 import ViewToggle from "./ViewToggle.jsx";
+import Section from "./Section.jsx";
+import SchoolComparison from "./SchoolComparison.jsx";
+import QualityComparison from "./QualityComparison.jsx";
 import { useCities } from "../context/city-context.jsx";
-
-function Section({ title, source, mode, onModeChange, children, className = "" }) {
-  return (
-    <section className={`wrapper ${className}`}>
-      <div className="card-header">
-        <div>
-          <h1>{title}</h1>
-          <p className="card-source">{source}</p>
-        </div>
-        {onModeChange ? <ViewToggle value={mode} onChange={onModeChange} size="sm" /> : null}
-      </div>
-      {children}
-    </section>
-  );
-}
 
 export default function CityComparison() {
   const { city1, city2 } = useCities();
@@ -48,6 +36,7 @@ export default function CityComparison() {
   const populationMode = modeFor("population");
   const genderMode = modeFor("gender");
   const electionMode = modeFor("election");
+  const regionElectionMode = modeFor("electionRegion");
   const muniElectionMode = modeFor("electionMuni");
   const taxMode = modeFor("tax");
   const incomeMode = modeFor("income");
@@ -110,12 +99,26 @@ export default function CityComparison() {
         onModeChange={(mode) => setSectionMode("election", mode)}
       >
         {electionMode === "latest" ? (
-          <div className="pie-div">
-            <ElectionPieChart city="city1" dataKey="electionData" />
-            <ElectionPieChart city="city2" dataKey="electionData" />
-          </div>
+          <ElectionCompare dataKey="electionData" />
         ) : (
           <ElectionTrendChart dataKey="electionData" />
+        )}
+      </Section>
+
+      <Section
+        title={
+          regionElectionMode === "latest"
+            ? `Regionvalet ${city1.electionRegionData?.year ?? ""}`
+            : "Regionval över tid"
+        }
+        source="Källa: SCB"
+        mode={regionElectionMode}
+        onModeChange={(mode) => setSectionMode("electionRegion", mode)}
+      >
+        {regionElectionMode === "latest" ? (
+          <ElectionCompare dataKey="electionRegionData" />
+        ) : (
+          <ElectionTrendChart dataKey="electionRegionData" />
         )}
       </Section>
 
@@ -130,10 +133,7 @@ export default function CityComparison() {
         onModeChange={(mode) => setSectionMode("electionMuni", mode)}
       >
         {muniElectionMode === "latest" ? (
-          <div className="pie-div">
-            <ElectionPieChart city="city1" dataKey="electionMuniData" />
-            <ElectionPieChart city="city2" dataKey="electionMuniData" />
-          </div>
+          <ElectionCompare dataKey="electionMuniData" />
         ) : (
           <ElectionTrendChart dataKey="electionMuniData" />
         )}
@@ -141,10 +141,11 @@ export default function CityComparison() {
 
       <Section
         title={taxMode === "latest" ? `Skattesats ${city1.taxYear ?? ""}` : "Skattesats över tid"}
-        source="Källa: Skatteverket"
+        source="Källa: SCB"
         mode={taxMode}
         onModeChange={(mode) => setSectionMode("tax", mode)}
       >
+        <p className="school-note">Total kommunal skattesats: kommunskatt plus regionskatt, utan kyrkoavgift.</p>
         {taxMode === "latest" ? (
           <div className="tax-div">
             <DisplayTax city="city1" />
@@ -215,6 +216,9 @@ export default function CityComparison() {
           </div>
         )}
       </Section>
+
+      <SchoolComparison modeFor={modeFor} setSectionMode={setSectionMode} />
+      <QualityComparison modeFor={modeFor} setSectionMode={setSectionMode} />
 
       <Section title="Lediga jobb" source="Källa: JobTech" className="job-wrapper">
         <div className="job-div">
